@@ -31,11 +31,11 @@ public class AuthorFeed {
         }
     }
 
-    private String actor;
-    private Integer limit = null;
-    private String cursor = null;
+    private final String actor;
+    private Integer limit;
+    private String cursor;
     private FilterType filter;
-    private Boolean includePins = null;
+    private Boolean includePins;
 
     public AuthorFeed(String actor) {
         this.actor = actor;

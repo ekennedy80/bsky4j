@@ -36,40 +36,38 @@ public class Main {
         String did = client.target(BSKY_URL+DID_URL)
                 .queryParam("handle",HANDLE)
                 .request(MediaType.TEXT_PLAIN).get(String.class);
-        System.out.println("Bsky did: "+did);
+        System.out.println("Bsky DID: "+did);
 
         ObjectMapper mapper = new ObjectMapper();
         ObjectNode user = mapper.createObjectNode();
         user.put("identifier",HANDLE);
         user.put("password",APP_TOKEN);
-
         Response response = client.target(BSKY_URL+API_KEY_URL)
                 .request(MediaType.APPLICATION_JSON)
                 .post(Entity.json(user.toString()));
-
         String bskySession = response.readEntity(String.class);
+        System.out.println("\n\nSession: "+bskySession);
         BlueskySession session = mapper.readValue(bskySession, BlueskySession.class);
         String jwtToken = session.getAccessJwt();
-        System.out.println(session);
+        System.out.println("\n\nSession: "+session);
 
         String jsonResponse = client.target(BSKY_URL+FEED_URL)
                 .queryParam("actor", HANDLE)
                 .queryParam("limit", 2)
                 .request(MediaType.APPLICATION_JSON).header("Authorization","Bearer "+jwtToken)
                 .get(String.class);
-
-        System.out.println("\n\n\n"+jsonResponse);
+        System.out.println("\n\nFeed: "+jsonResponse);
 
         jsonResponse = client.target(BSKY_URL+PREFERENCES)
                 .request(MediaType.APPLICATION_JSON).header("Authorization","Bearer "+jwtToken)
                 .get(String.class);
-        System.out.println("\n\n\n"+jsonResponse);
+        System.out.println("\n\nPreferences: "+jsonResponse);
 
         String jsonProfile = client.target(BSKY_URL+PROFILE)
                 .queryParam("actor", HANDLE)
                 .request(MediaType.APPLICATION_JSON)
                 .header("Authorization","Bearer "+jwtToken)
                 .get(String.class);
-        System.out.println("\n\n\n"+jsonProfile);
+        System.out.println("\n\nProfile: "+jsonProfile);
     }
 }
