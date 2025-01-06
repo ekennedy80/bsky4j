@@ -1,5 +1,6 @@
 package org.example;
 
+import api.rest.app.bsky.actor.preferences.Preferences;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
@@ -9,6 +10,10 @@ import jakarta.ws.rs.client.ClientBuilder;
 import jakarta.ws.rs.client.Entity;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
@@ -21,7 +26,8 @@ public class Main {
     private static final String DID_URL = "xrpc/com.atproto.identity.resolveHandle";
     private static final String PREFERENCES = "xrpc/app.bsky.actor.getPreferences";
     private static final String PROFILE = "xrpc/app.bsky.actor.getProfile";
-    public static void main(String[] args) throws JsonProcessingException {
+
+    public static void main(String[] args) {
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
         // to see how IntelliJ IDEA suggests fixing it.
         System.out.printf("Hello and welcome!%n");
@@ -47,7 +53,12 @@ public class Main {
                 .post(Entity.json(user.toString()));
         String bskySession = response.readEntity(String.class);
         System.out.println("\n\nSession: "+bskySession);
-        BlueskySession session = mapper.readValue(bskySession, BlueskySession.class);
+        BlueskySession session = null;
+        try {
+            session = mapper.readValue(bskySession, BlueskySession.class);
+        } catch (JsonProcessingException e) {
+            throw new RuntimeException(e);
+        }
         String jwtToken = session.getAccessJwt();
         System.out.println("\n\nSession: "+session);
 
@@ -58,10 +69,12 @@ public class Main {
                 .get(String.class);
         System.out.println("\n\nFeed: "+jsonResponse);
 
-        jsonResponse = client.target(BSKY_URL+PREFERENCES)
+        Preferences prefs = client.target(BSKY_URL+PREFERENCES)
                 .request(MediaType.APPLICATION_JSON).header("Authorization","Bearer "+jwtToken)
-                .get(String.class);
-        System.out.println("\n\nPreferences: "+jsonResponse);
+                .get(Preferences.class);
+
+        System.out.println("\n\nPreferences1: "+prefs.asJsonString());
+
 
         String jsonProfile = client.target(BSKY_URL+PROFILE)
                 .queryParam("actor", HANDLE)
@@ -69,5 +82,17 @@ public class Main {
                 .header("Authorization","Bearer "+jwtToken)
                 .get(String.class);
         System.out.println("\n\nProfile: "+jsonProfile);
+
+        String date = "2019-07-14T18:30:00.000Z";
+        SimpleDateFormat inputFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
+        SimpleDateFormat outputFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss a");
+        Date parsedDate = null;
+        try {
+            parsedDate = inputFormat.parse(date);
+        } catch (ParseException e) {
+            throw new RuntimeException(e);
+        }
+        String formattedDate = outputFormat.format(parsedDate);
+        System.out.println("Date: "+parsedDate.getTime()+"\nParsed Date: "+formattedDate);
     }
 }
