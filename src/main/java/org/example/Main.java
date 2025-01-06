@@ -72,10 +72,8 @@ public class Main {
         Preferences prefs = client.target(BSKY_URL+PREFERENCES)
                 .request(MediaType.APPLICATION_JSON).header("Authorization","Bearer "+jwtToken)
                 .get(Preferences.class);
-
         System.out.println("\n\nPreferences1: "+prefs.asJsonString());
-
-
+        
         String jsonProfile = client.target(BSKY_URL+PROFILE)
                 .queryParam("actor", HANDLE)
                 .request(MediaType.APPLICATION_JSON)
