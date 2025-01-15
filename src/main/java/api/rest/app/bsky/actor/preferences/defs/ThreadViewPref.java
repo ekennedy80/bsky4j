@@ -5,7 +5,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import jakarta.annotation.Nullable;
 
-public class ThreadViewPref extends PreferenceDef {
+public class ThreadViewPref extends AbstractPreferenceDef {
 
     public enum Sort {
         OLDEST("oldest"),

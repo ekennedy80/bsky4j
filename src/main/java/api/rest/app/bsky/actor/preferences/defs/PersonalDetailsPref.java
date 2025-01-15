@@ -15,7 +15,7 @@ import java.util.Date;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class PersonalDetailsPref extends PreferenceDef {
+public class PersonalDetailsPref extends AbstractPreferenceDef {
 
     @Nullable
     @JsonProperty("birthDate")

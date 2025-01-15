@@ -7,7 +7,6 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -18,7 +17,7 @@ import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor
-public class BskyAppStatePref extends PreferenceDef{
+public class BskyAppStatePref extends AbstractPreferenceDef {
 
     @Data
     @NoArgsConstructor

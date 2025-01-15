@@ -1,6 +1,5 @@
-package api.rest.app.bsky.actor.preferences;
+package api.rest.app.bsky.actor.preferences.defs;
 
-import api.rest.app.bsky.actor.preferences.defs.PreferenceDef;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -23,11 +22,11 @@ import java.util.List;
 @AllArgsConstructor
 @Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class Preferences {
+public class PreferencesDef {
 
     @Nonnull
     @JsonProperty("preferences")
-    private List<PreferenceDef> preferences;
+    private List<AbstractPreferenceDef> preferences;
 
     public String asJsonString() {
         ObjectWriter ow = new ObjectMapper().writer().withDefaultPrettyPrinter();

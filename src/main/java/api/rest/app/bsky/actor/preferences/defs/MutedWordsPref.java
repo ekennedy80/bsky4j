@@ -16,7 +16,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
-public class MutedWordsPref extends PreferenceDef {
+public class MutedWordsPref extends AbstractPreferenceDef {
 
     @Data
     @NoArgsConstructor

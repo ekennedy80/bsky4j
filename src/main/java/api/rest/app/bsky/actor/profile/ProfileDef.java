@@ -1,4 +1,4 @@
-package api.rest.app.bsky.actor;
+package api.rest.app.bsky.actor.profile;
 
 
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -18,7 +18,9 @@ import java.net.URI;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Profile {
+public class ProfileDef {
+
+
 
     @Nonnull
     @JsonProperty("did")
@@ -51,6 +53,10 @@ public class Profile {
     @Nullable
     @JsonProperty("followsCount")
     private Integer followsCount;
+
+    @Nullable
+    @JsonProperty("postsCount")
+    private Integer postsCount;
 
     @Nullable
     @JsonProperty("postsCount")

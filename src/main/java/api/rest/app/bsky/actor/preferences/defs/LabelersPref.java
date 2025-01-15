@@ -15,7 +15,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class LabelersPref extends PreferenceDef {
+public class LabelersPref extends AbstractPreferenceDef {
 
     @Data
     @NoArgsConstructor

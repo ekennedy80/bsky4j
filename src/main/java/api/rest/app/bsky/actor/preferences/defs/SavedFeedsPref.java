@@ -14,7 +14,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class SavedFeedsPref extends PreferenceDef {
+public class SavedFeedsPref extends AbstractPreferenceDef {
 
     @Nonnull
     @JsonProperty("pinned")

@@ -7,13 +7,12 @@ import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class FeedViewPref extends PreferenceDef {
+public class FeedViewPref extends AbstractPreferenceDef {
 
     @Nonnull
     @JsonProperty("feed")

@@ -15,7 +15,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class SavedFeedsPrefV2 extends PreferenceDef {
+public class SavedFeedsPrefV2 extends AbstractPreferenceDef {
 
     @Data
     @NoArgsConstructor

@@ -1,10 +1,9 @@
 package org.example;
 
-import api.rest.app.bsky.actor.preferences.Preferences;
+import api.rest.app.bsky.actor.preferences.defs.PreferencesDef;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
-import com.fasterxml.jackson.databind.util.JSONPObject;
 import jakarta.ws.rs.client.Client;
 import jakarta.ws.rs.client.ClientBuilder;
 import jakarta.ws.rs.client.Entity;
@@ -69,11 +68,11 @@ public class Main {
                 .get(String.class);
         System.out.println("\n\nFeed: "+jsonResponse);
 
-        Preferences prefs = client.target(BSKY_URL+PREFERENCES)
+        PreferencesDef prefs = client.target(BSKY_URL+PREFERENCES)
                 .request(MediaType.APPLICATION_JSON).header("Authorization","Bearer "+jwtToken)
-                .get(Preferences.class);
+                .get(PreferencesDef.class);
         System.out.println("\n\nPreferences1: "+prefs.asJsonString());
-        
+
         String jsonProfile = client.target(BSKY_URL+PROFILE)
                 .queryParam("actor", HANDLE)
                 .request(MediaType.APPLICATION_JSON)

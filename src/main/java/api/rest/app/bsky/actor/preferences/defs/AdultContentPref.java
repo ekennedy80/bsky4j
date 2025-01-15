@@ -1,8 +1,6 @@
 package api.rest.app.bsky.actor.preferences.defs;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import jakarta.annotation.Nonnull;
 import lombok.*;
@@ -10,7 +8,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class AdultContentPref extends PreferenceDef {
+public class AdultContentPref extends AbstractPreferenceDef {
 
     @Nonnull
     @JsonProperty("enabled")
