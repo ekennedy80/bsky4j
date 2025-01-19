@@ -1,5 +1,6 @@
 package api.rest.app.bsky.actor.preferences.defs;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -17,11 +18,13 @@ import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class BskyAppStatePref extends AbstractPreferenceDef {
 
     @Data
     @NoArgsConstructor
     @AllArgsConstructor
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     public class ActiveProgressGuide {
         @Nonnull
         @JsonProperty("guide")
@@ -30,6 +33,7 @@ public class BskyAppStatePref extends AbstractPreferenceDef {
 
     @Data
     @NoArgsConstructor
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     static class Nuxs {
         @Nonnull
         @JsonProperty("id")
@@ -49,12 +53,10 @@ public class BskyAppStatePref extends AbstractPreferenceDef {
 
         @JsonSetter("expiresAt")
         public void setExpiresAt(String date) throws ParseException {
-            SimpleDateFormat inputFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
-            this.expiresAt = inputFormat.parse(date);
-        }
-
-        public Date getExpiresAt() {
-            return expiresAt;
+            if(date != null) {
+                SimpleDateFormat inputFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
+                this.expiresAt = inputFormat.parse(date);
+            }
         }
     }
 

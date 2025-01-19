@@ -1,6 +1,7 @@
 package org.example;
 
 import api.rest.app.bsky.actor.preferences.defs.PreferencesDef;
+import api.rest.app.bsky.actor.profile.ProfileDef;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
@@ -26,7 +27,7 @@ public class Main {
     private static final String PREFERENCES = "xrpc/app.bsky.actor.getPreferences";
     private static final String PROFILE = "xrpc/app.bsky.actor.getProfile";
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws JsonProcessingException {
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
         // to see how IntelliJ IDEA suggests fixing it.
         System.out.printf("Hello and welcome!%n");
@@ -73,12 +74,12 @@ public class Main {
                 .get(PreferencesDef.class);
         System.out.println("\n\nPreferences1: "+prefs.asJsonString());
 
-        String jsonProfile = client.target(BSKY_URL+PROFILE)
+        ProfileDef profileDef = client.target(BSKY_URL+PROFILE)
                 .queryParam("actor", HANDLE)
                 .request(MediaType.APPLICATION_JSON)
                 .header("Authorization","Bearer "+jwtToken)
-                .get(String.class);
-        System.out.println("\n\nProfile: "+jsonProfile);
+                .get(ProfileDef.class);
+        System.out.println("\n\nProfile: "+profileDef.asJsonString());
 
         String date = "2019-07-14T18:30:00.000Z";
         SimpleDateFormat inputFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");

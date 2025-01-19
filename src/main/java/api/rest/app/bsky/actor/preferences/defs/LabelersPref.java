@@ -1,5 +1,6 @@
 package api.rest.app.bsky.actor.preferences.defs;
 
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -15,11 +16,13 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@JsonInclude(JsonInclude.Include.NON_NULL)
 public class LabelersPref extends AbstractPreferenceDef {
 
     @Data
     @NoArgsConstructor
     @AllArgsConstructor
+    @JsonInclude(JsonInclude.Include.NON_NULL)
     public class Labelers {
         @Nonnull
         @JsonProperty("did")
@@ -28,7 +31,7 @@ public class LabelersPref extends AbstractPreferenceDef {
 
     @Nonnull
     @JsonProperty("labelers")
-    private List<Object> labelers;
+    private List<Labelers> labelers;
 
     @Override
     public ObjectNode asJsonObject() throws JsonProcessingException {
