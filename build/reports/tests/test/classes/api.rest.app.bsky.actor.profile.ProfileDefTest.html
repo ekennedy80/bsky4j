@@ -23,7 +23,7 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
-<div class="counter">1</div>
+<div class="counter">2</div>
 <p>tests</p>
 </div>
 </td>
@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.244s</div>
+<div class="counter">0.086s</div>
 <p>duration</p>
 </div>
 </td>
@@ -63,9 +63,6 @@
 <li>
 <a href="#tab0">Tests</a>
 </li>
-<li>
-<a href="#tab1">Standard output</a>
-</li>
 </ul>
 <div id="tab0" class="tab">
 <h2>Tests</h2>
@@ -79,244 +76,15 @@
 </thead>
 <tr>
 <td class="success">testAutoExampleProfileUnmarshalling()</td>
-<td class="success">0.244s</td>
+<td class="success">0.063s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testMyProfileUnmarshalling()</td>
+<td class="success">0.023s</td>
 <td class="success">passed</td>
 </tr>
 </table>
-</div>
-<div id="tab1" class="tab">
-<h2>Standard output</h2>
-<span class="code">
-<pre>PROFILE: {
-  &quot;did&quot; : &quot;string&quot;,
-  &quot;handle&quot; : &quot;string&quot;,
-  &quot;displayName&quot; : &quot;string&quot;,
-  &quot;description&quot; : &quot;string&quot;,
-  &quot;avatar&quot; : &quot;string&quot;,
-  &quot;banner&quot; : &quot;string&quot;,
-  &quot;followersCount&quot; : 0,
-  &quot;followsCount&quot; : 0,
-  &quot;postsCount&quot; : 0,
-  &quot;associated&quot; : {
-    &quot;lists&quot; : 0,
-    &quot;feedgens&quot; : 0,
-    &quot;starterPacks&quot; : 0,
-    &quot;labeler&quot; : true,
-    &quot;chat&quot; : {
-      &quot;allowIncoming&quot; : &quot;all&quot;
-    }
-  },
-  &quot;joinedViaStarterPack&quot; : {
-    &quot;uri&quot; : &quot;string&quot;,
-    &quot;cid&quot; : &quot;string&quot;,
-    &quot;record&quot; : { },
-    &quot;creator&quot; : {
-      &quot;did&quot; : &quot;string&quot;,
-      &quot;handle&quot; : &quot;string&quot;,
-      &quot;displayName&quot; : &quot;string&quot;,
-      &quot;avatar&quot; : &quot;string&quot;,
-      &quot;associated&quot; : {
-        &quot;lists&quot; : 0,
-        &quot;feedgens&quot; : 0,
-        &quot;starterPacks&quot; : 0,
-        &quot;labeler&quot; : true,
-        &quot;chat&quot; : {
-          &quot;allowIncoming&quot; : &quot;all&quot;
-        }
-      },
-      &quot;viewer&quot; : {
-        &quot;muted&quot; : true,
-        &quot;mutedByList&quot; : {
-          &quot;uri&quot; : &quot;string&quot;,
-          &quot;cid&quot; : &quot;string&quot;,
-          &quot;name&quot; : &quot;string&quot;,
-          &quot;purpose&quot; : &quot;string&quot;,
-          &quot;avatar&quot; : &quot;string&quot;,
-          &quot;listItemCount&quot; : 0,
-          &quot;labels&quot; : [ {
-            &quot;ver&quot; : 0,
-            &quot;src&quot; : &quot;string&quot;,
-            &quot;uri&quot; : &quot;string&quot;,
-            &quot;cid&quot; : &quot;string&quot;,
-            &quot;val&quot; : &quot;string&quot;,
-            &quot;neg&quot; : true,
-            &quot;cts&quot; : 1722282688071,
-            &quot;exp&quot; : 1722282688071,
-            &quot;sig&quot; : 2
-          } ],
-          &quot;viewer&quot; : {
-            &quot;muted&quot; : true,
-            &quot;blocked&quot; : &quot;string&quot;
-          },
-          &quot;indexedAt&quot; : 1722282688071
-        },
-        &quot;blockedBy&quot; : true,
-        &quot;blocking&quot; : &quot;string&quot;,
-        &quot;blockingByList&quot; : {
-          &quot;uri&quot; : &quot;string&quot;,
-          &quot;cid&quot; : &quot;string&quot;,
-          &quot;name&quot; : &quot;string&quot;,
-          &quot;purpose&quot; : &quot;string&quot;,
-          &quot;avatar&quot; : &quot;string&quot;,
-          &quot;listItemCount&quot; : 0,
-          &quot;labels&quot; : [ {
-            &quot;ver&quot; : 0,
-            &quot;src&quot; : &quot;string&quot;,
-            &quot;uri&quot; : &quot;string&quot;,
-            &quot;cid&quot; : &quot;string&quot;,
-            &quot;val&quot; : &quot;string&quot;,
-            &quot;neg&quot; : true,
-            &quot;cts&quot; : 1722282688071,
-            &quot;exp&quot; : 1722282688071,
-            &quot;sig&quot; : 2
-          } ],
-          &quot;viewer&quot; : {
-            &quot;muted&quot; : true,
-            &quot;blocked&quot; : &quot;string&quot;
-          },
-          &quot;indexedAt&quot; : 1722282688071
-        },
-        &quot;following&quot; : &quot;string&quot;,
-        &quot;followedBy&quot; : &quot;string&quot;,
-        &quot;knownFollowers&quot; : {
-          &quot;count&quot; : 0,
-          &quot;followers&quot; : [ null ]
-        }
-      },
-      &quot;labels&quot; : [ {
-        &quot;ver&quot; : 0,
-        &quot;src&quot; : &quot;string&quot;,
-        &quot;uri&quot; : &quot;string&quot;,
-        &quot;cid&quot; : &quot;string&quot;,
-        &quot;val&quot; : &quot;string&quot;,
-        &quot;neg&quot; : true,
-        &quot;cts&quot; : 1722282688071,
-        &quot;exp&quot; : 1722282688071,
-        &quot;sig&quot; : 2
-      } ],
-      &quot;createdAt&quot; : 1722282688071
-    },
-    &quot;listItemCount&quot; : 0,
-    &quot;joinedWeekCount&quot; : 0,
-    &quot;joinedAllTimeCount&quot; : 0,
-    &quot;labels&quot; : [ {
-      &quot;ver&quot; : 0,
-      &quot;src&quot; : &quot;string&quot;,
-      &quot;uri&quot; : &quot;string&quot;,
-      &quot;cid&quot; : &quot;string&quot;,
-      &quot;val&quot; : &quot;string&quot;,
-      &quot;neg&quot; : true,
-      &quot;cts&quot; : 1722282688071,
-      &quot;exp&quot; : 1722282688071,
-      &quot;sig&quot; : 2
-    } ],
-    &quot;indexedAt&quot; : 1722282688071
-  },
-  &quot;indexedAt&quot; : 1722282688071,
-  &quot;createdAt&quot; : 1722282688071,
-  &quot;viewer&quot; : {
-    &quot;muted&quot; : true,
-    &quot;mutedByList&quot; : {
-      &quot;uri&quot; : &quot;string&quot;,
-      &quot;cid&quot; : &quot;string&quot;,
-      &quot;name&quot; : &quot;string&quot;,
-      &quot;purpose&quot; : &quot;string&quot;,
-      &quot;avatar&quot; : &quot;string&quot;,
-      &quot;listItemCount&quot; : 0,
-      &quot;labels&quot; : [ {
-        &quot;ver&quot; : 0,
-        &quot;src&quot; : &quot;string&quot;,
-        &quot;uri&quot; : &quot;string&quot;,
-        &quot;cid&quot; : &quot;string&quot;,
-        &quot;val&quot; : &quot;string&quot;,
-        &quot;neg&quot; : true,
-        &quot;cts&quot; : 1722282688071,
-        &quot;exp&quot; : 1722282688071,
-        &quot;sig&quot; : 2
-      } ],
-      &quot;viewer&quot; : {
-        &quot;muted&quot; : true,
-        &quot;blocked&quot; : &quot;string&quot;
-      },
-      &quot;indexedAt&quot; : 1722282688071
-    },
-    &quot;blockedBy&quot; : true,
-    &quot;blocking&quot; : &quot;string&quot;,
-    &quot;blockingByList&quot; : {
-      &quot;uri&quot; : &quot;string&quot;,
-      &quot;cid&quot; : &quot;string&quot;,
-      &quot;name&quot; : &quot;string&quot;,
-      &quot;purpose&quot; : &quot;string&quot;,
-      &quot;avatar&quot; : &quot;string&quot;,
-      &quot;listItemCount&quot; : 0,
-      &quot;labels&quot; : [ {
-        &quot;ver&quot; : 0,
-        &quot;src&quot; : &quot;string&quot;,
-        &quot;uri&quot; : &quot;string&quot;,
-        &quot;cid&quot; : &quot;string&quot;,
-        &quot;val&quot; : &quot;string&quot;,
-        &quot;neg&quot; : true,
-        &quot;cts&quot; : 1722282688071,
-        &quot;exp&quot; : 1722282688071,
-        &quot;sig&quot; : 2
-      } ],
-      &quot;viewer&quot; : {
-        &quot;muted&quot; : true,
-        &quot;blocked&quot; : &quot;string&quot;
-      },
-      &quot;indexedAt&quot; : 1722282688071
-    },
-    &quot;following&quot; : &quot;string&quot;,
-    &quot;followedBy&quot; : &quot;string&quot;,
-    &quot;knownFollowers&quot; : {
-      &quot;count&quot; : 0,
-      &quot;followers&quot; : [ {
-        &quot;did&quot; : &quot;string&quot;,
-        &quot;handle&quot; : &quot;string&quot;,
-        &quot;displayName&quot; : &quot;string&quot;,
-        &quot;avatar&quot; : &quot;string&quot;,
-        &quot;associated&quot; : {
-          &quot;lists&quot; : 0,
-          &quot;feedgens&quot; : 0,
-          &quot;starterPacks&quot; : 0,
-          &quot;labeler&quot; : true,
-          &quot;chat&quot; : {
-            &quot;allowIncoming&quot; : &quot;all&quot;
-          }
-        },
-        &quot;labels&quot; : [ {
-          &quot;ver&quot; : 0,
-          &quot;src&quot; : &quot;string&quot;,
-          &quot;uri&quot; : &quot;string&quot;,
-          &quot;cid&quot; : &quot;string&quot;,
-          &quot;val&quot; : &quot;string&quot;,
-          &quot;neg&quot; : true,
-          &quot;cts&quot; : &quot;2024-07-29T15:51:28.071Z&quot;,
-          &quot;exp&quot; : &quot;2024-07-29T15:51:28.071Z&quot;,
-          &quot;sig&quot; : 2
-        } ],
-        &quot;createdAt&quot; : &quot;2024-07-29T15:51:28.071Z&quot;
-      } ]
-    }
-  },
-  &quot;labels&quot; : [ {
-    &quot;ver&quot; : 0,
-    &quot;src&quot; : &quot;string&quot;,
-    &quot;uri&quot; : &quot;string&quot;,
-    &quot;cid&quot; : &quot;string&quot;,
-    &quot;val&quot; : &quot;string&quot;,
-    &quot;neg&quot; : true,
-    &quot;cts&quot; : 1722282688071,
-    &quot;exp&quot; : 1722282688071,
-    &quot;sig&quot; : 2
-  } ],
-  &quot;pinnedPost&quot; : {
-    &quot;uri&quot; : &quot;string&quot;,
-    &quot;cid&quot; : &quot;string&quot;
-  }
-}
-</pre>
-</span>
 </div>
 </div>
 <div id="footer">
@@ -326,7 +94,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.10</a> at Jan 19, 2025, 3:42:57 PM</p>
+<a href="http://www.gradle.org">Gradle 8.10</a> at Jan 20, 2025, 10:31:35 AM</p>
 </div>
 </div>
 </body>

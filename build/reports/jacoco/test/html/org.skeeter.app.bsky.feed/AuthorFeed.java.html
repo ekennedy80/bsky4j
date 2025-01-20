@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AuthorFeed.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Bluesky-REST-Client</a> &gt; <a href="index.source.html" class="el_package">org.skeeter.app.bsky.feed</a> &gt; <span class="el_source">AuthorFeed.java</span></div><h1>AuthorFeed.java</h1><pre class="source lang-java linenums">package org.skeeter.app.bsky.feed;
+
+import jakarta.ws.rs.QueryParam;
+import jakarta.ws.rs.client.WebTarget;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+
+import java.lang.annotation.Annotation;
+
+@Data
+@AllArgsConstructor
+@Builder
+public class AuthorFeed {
+
+<span class="nc" id="L16">    public enum FilterType {</span>
+<span class="nc" id="L17">        POSTS_WITH_REPLIES(&quot;posts_with_replies&quot;),</span>
+<span class="nc" id="L18">        POSTS_NO_REPLIES(&quot;posts_no_replies&quot;),</span>
+<span class="nc" id="L19">        POSTS_WITH_MEDIA(&quot;posts_with_media&quot;),</span>
+<span class="nc" id="L20">        POSTS_AND_AUTHOR_THREADS(&quot;posts_and_author_threads&quot;);</span>
+
+        private final String value;
+
+<span class="nc" id="L24">        FilterType(String value) {</span>
+<span class="nc" id="L25">            this.value = value;</span>
+<span class="nc" id="L26">        }</span>
+
+        @Override
+        public String toString() {
+<span class="nc" id="L30">            return this.value;</span>
+        }
+    }
+
+    private final String actor;
+    private Integer limit;
+    private String cursor;
+    private FilterType filter;
+    private Boolean includePins;
+
+<span class="nc" id="L40">    public AuthorFeed(String actor) {</span>
+<span class="nc" id="L41">        this.actor = actor;</span>
+        //if null, bsky api defaults to 50
+<span class="nc" id="L43">        this.filter = FilterType.POSTS_WITH_REPLIES;</span>
+<span class="nc" id="L44">    }</span>
+
+//    public void addQueryParams(WebTarget webTarget) {
+//        if(this.limit != null) {
+//            webTarget.queryParam(&quot;limit&quot;, this.limit);
+//        }
+//        if()
+//
+//    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

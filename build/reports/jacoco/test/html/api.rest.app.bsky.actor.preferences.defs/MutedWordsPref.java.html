@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>MutedWordsPref.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Bluesky-REST-Client</a> &gt; <a href="index.source.html" class="el_package">api.rest.app.bsky.actor.preferences.defs</a> &gt; <span class="el_source">MutedWordsPref.java</span></div><h1>MutedWordsPref.java</h1><pre class="source lang-java linenums">package api.rest.app.bsky.actor.preferences.defs;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonSetter;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ObjectNode;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@JsonInclude(JsonInclude.Include.NON_NULL)
+public class MutedWordsPref extends AbstractPreferenceDef {
+
+    @Data
+    @NoArgsConstructor
+    @AllArgsConstructor
+    public class Items {
+
+<span class="nc" id="L32">        public enum ActorTarget {</span>
+<span class="nc" id="L33">            ALL(&quot;all&quot;),</span>
+<span class="nc" id="L34">            EXCLUDE_FOLLOWING(&quot;exclude-following&quot;);</span>
+
+            private final String value;
+
+<span class="nc" id="L38">            ActorTarget(String value) {</span>
+<span class="nc" id="L39">                this.value = value;</span>
+<span class="nc" id="L40">            }</span>
+
+            @Override
+            public String toString() {
+<span class="nc" id="L44">                return this.value;</span>
+            }
+        }
+
+        @Nonnull
+        @JsonProperty(&quot;id&quot;)
+        private String id;
+
+        @Nonnull
+        @JsonProperty(&quot;value&quot;)
+        private String value;
+
+        @Nullable
+        @JsonProperty(&quot;targets&quot;)
+        private List&lt;String&gt; targets;
+
+        @Nullable
+        @JsonProperty(&quot;actorTarget&quot;)
+        private ActorTarget actorTarget;
+
+        @Nullable
+        @JsonProperty(&quot;expiresAt&quot;)
+        private Date expiresAt;
+
+        @JsonSetter(&quot;expiresAt&quot;)
+        public void setExpiresAt(String date) throws ParseException {
+<span class="nc" id="L70">            SimpleDateFormat inputFormat = new SimpleDateFormat(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;);</span>
+<span class="nc" id="L71">            this.expiresAt = inputFormat.parse(date);</span>
+<span class="nc" id="L72">        }</span>
+
+        public Date getExpiresAt() {
+<span class="nc" id="L75">            return expiresAt;</span>
+        }
+    }
+
+    @Nonnull
+    @JsonProperty(&quot;items&quot;)
+    private List&lt;Items&gt; items;
+
+    @Override
+    public ObjectNode asJsonObject() throws JsonProcessingException {
+<span class="nc" id="L85">        ObjectMapper objectMapper = new ObjectMapper();</span>
+<span class="nc" id="L86">        return json.put(&quot;items&quot;, objectMapper.writeValueAsString(this.items));</span>
+    }
+
+    @Override
+    public String asJsonString() throws JsonProcessingException {
+<span class="nc" id="L91">        ObjectMapper objectMapper = new ObjectMapper();</span>
+<span class="nc" id="L92">        return json.put(&quot;items&quot;, objectMapper.writeValueAsString(this.items)).toString();</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

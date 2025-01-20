@@ -1,12 +1,9 @@
 package api.rest.app.bsky.actor.preferences;
 
-import api.rest.app.bsky.actor.preferences.defs.PreferencesDef;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import java.io.File;
 import java.io.IOException;
 import java.net.URL;
 

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ProfileDef.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Bluesky-REST-Client</a> &gt; <a href="index.source.html" class="el_package">api.rest.app.bsky.actor.profile</a> &gt; <span class="el_source">ProfileDef.java</span></div><h1>ProfileDef.java</h1><pre class="source lang-java linenums">package api.rest.app.bsky.actor.profile;
+
+
+import api.rest.app.bsky.actor.profile.defs.AssociatedDef;
+import api.rest.app.bsky.actor.profile.defs.JoinedViaStarterPackDef;
+import api.rest.app.bsky.actor.profile.defs.LabelsDef;
+import api.rest.app.bsky.actor.profile.defs.ViewerDef;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonSetter;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ObjectNode;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import java.net.URI;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
+
+/**
+ * Get detailed profile view of an actor. Does not require auth, but contains relevant metadata with auth.
+ */
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@JsonInclude(JsonInclude.Include.NON_NULL)
+public class ProfileDef {
+
+    @Data
+    @NoArgsConstructor
+    @AllArgsConstructor
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    public class PinnedPost {
+
+        @Nonnull
+        @JsonProperty(&quot;uri&quot;)
+        private URI uri;
+
+        @Nonnull
+        @JsonProperty(&quot;cid&quot;)
+        private String cid;
+    }
+
+    @Nonnull
+    @JsonProperty(&quot;did&quot;)
+    private String did;
+
+    @Nonnull
+    @JsonProperty(&quot;handle&quot;)
+    private String handle;
+
+    @Nullable
+    @JsonProperty(&quot;displayName&quot;)
+    private String displayName;
+
+    @Nullable
+    @JsonProperty(&quot;description&quot;)
+    private String description;
+
+    @Nullable
+    @JsonProperty(&quot;avatar&quot;)
+    private URI avatar;
+
+    @Nullable
+    @JsonProperty(&quot;banner&quot;)
+    private URI banner;
+
+    @Nullable
+    @JsonProperty(&quot;followersCount&quot;)
+    private Integer followersCount;
+
+    @Nullable
+    @JsonProperty(&quot;followsCount&quot;)
+    private Integer followsCount;
+
+    @Nullable
+    @JsonProperty(&quot;postsCount&quot;)
+    private Integer postsCount;
+
+    @Nullable
+    @JsonProperty(&quot;associated&quot;)
+    private AssociatedDef associated;
+
+    @Nullable
+    @JsonProperty(&quot;joinedViaStarterPack&quot;)
+    private JoinedViaStarterPackDef joinedViaStarterPack;
+
+    @Nullable
+    @JsonProperty(&quot;indexedAt&quot;)
+    private Date indexedAt;
+
+    @Nullable
+    @JsonProperty(&quot;createdAt&quot;)
+    private Date createdAt;
+
+    @Nullable
+    @JsonProperty(&quot;viewer&quot;)
+    private ViewerDef viewer;
+
+    @Nullable
+    @JsonProperty(&quot;labels&quot;)
+    private List&lt;LabelsDef&gt; labels;
+
+    @Nullable
+    @JsonProperty(&quot;pinnedPost&quot;)
+    private PinnedPost pinnedPost;
+
+    @JsonSetter(&quot;indexedAt&quot;)
+    public void setIndexedAt(String date) throws ParseException {
+<span class="fc" id="L118">        SimpleDateFormat inputFormat = new SimpleDateFormat(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;);</span>
+<span class="fc" id="L119">        this.indexedAt = inputFormat.parse(date);</span>
+<span class="fc" id="L120">    }</span>
+
+    @JsonSetter(&quot;createdAt&quot;)
+    public void setCreatedAt(String date) throws ParseException {
+<span class="fc" id="L124">        SimpleDateFormat inputFormat = new SimpleDateFormat(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;);</span>
+<span class="fc" id="L125">        this.createdAt = inputFormat.parse(date);</span>
+<span class="fc" id="L126">    }</span>
+
+    public ObjectNode asJsonObject() throws JsonProcessingException {
+<span class="nc" id="L129">        ObjectMapper objectMapper = new ObjectMapper();</span>
+<span class="nc" id="L130">        ObjectNode json = new ObjectMapper().createObjectNode();;</span>
+<span class="nc" id="L131">        return json.put(&quot;profile&quot;, objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(this));</span>
+    }
+
+    public String asJsonString() throws JsonProcessingException {
+<span class="nc" id="L135">        ObjectMapper objectMapper = new ObjectMapper();</span>
+<span class="nc" id="L136">        return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(this);</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

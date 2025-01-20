@@ -1,10 +1,10 @@
 package api.rest.app.bsky.actor.profile;
 
 
-import api.rest.app.bsky.actor.profile.defs.AssociatedDef;
+import api.rest.app.bsky.actor.defs.AssociatedDef;
 import api.rest.app.bsky.actor.profile.defs.JoinedViaStarterPackDef;
-import api.rest.app.bsky.actor.profile.defs.LabelsDef;
-import api.rest.app.bsky.actor.profile.defs.ViewerDef;
+import api.rest.app.bsky.actor.defs.LabelsDef;
+import api.rest.app.bsky.actor.defs.ViewerDef;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;

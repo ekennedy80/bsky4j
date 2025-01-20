@@ -1,231 +1,0 @@
-PROFILE: {
-  "did" : "string",
-  "handle" : "string",
-  "displayName" : "string",
-  "description" : "string",
-  "avatar" : "string",
-  "banner" : "string",
-  "followersCount" : 0,
-  "followsCount" : 0,
-  "postsCount" : 0,
-  "associated" : {
-    "lists" : 0,
-    "feedgens" : 0,
-    "starterPacks" : 0,
-    "labeler" : true,
-    "chat" : {
-      "allowIncoming" : "all"
-    }
-  },
-  "joinedViaStarterPack" : {
-    "uri" : "string",
-    "cid" : "string",
-    "record" : { },
-    "creator" : {
-      "did" : "string",
-      "handle" : "string",
-       "displayName" : "string",
-      "avatar" : "string",
-      "associated" : {
-        "lists" : 0,
-        "feedgens" : 0,
-        "starterPacks" : 0,
-        "labeler" : true,
-        "chat" : {
-"          "allowIncoming" : "all"
-
-        }
-	      },
-      "viewer" : {
-        "muted" : true,
-        "mutedByList" : {
-          "uri" : "string",
-          "cid" : "string",
-          "name" : "string",
-           "purpose" : "string",
-          "avatar" : "string",
-          "listItemCount" : 0,
-          "labels" : [ {
-            "ver" : 0,
-            "src" : "string",
-            "uri" : "string",
-            "cid" : "string",
-            "val" : "string",
-            "neg" : true,
-#            "cts" : 1722282688071,
-#            "exp" : 1722282688071,
-            "sig" : 2
-          } ],
-          "viewer" : {
-            "muted" : true,
-!            "blocked" : "string"
-          },
-&          "indexedAt" : 1722282688071
-        },
-        "blockedBy" : true,
-        "blocking" : "string",
-        "blockingByList" : {
-          "uri" : "string",
-          "cid" : "string",
-          "name" : "string",
-           "purpose" : "string",
-          "avatar" : "string",
-          "listItemCount" : 0,
-          "labels" : [ {
-            "ver" : 0,
-            "src" : "string",
-            "uri" : "string",
-            "cid" : "string",
-            "val" : "string",
-            "neg" : true,
-#            "cts" : 1722282688071,
-#            "exp" : 1722282688071,
-            "sig" : 2
-          } ],
-          "viewer" : {
-            "muted" : true,
-!            "blocked" : "string"
-          },
-&          "indexedAt" : 1722282688071
-        },
-         "following" : "string",
-!        "followedBy" : "string",
-        "knownFollowers" : {
-          "count" : 0,
-!          "followers" : [ null ]
-
-        }
-	      },
-      "labels" : [ {
-        "ver" : 0,
-        "src" : "string",
-        "uri" : "string",
-        "cid" : "string",
-        "val" : "string",
-        "neg" : true,
-        "cts" : 1722282688071,
-        "exp" : 1722282688071,
-        "sig" : 2
-      } ],
-"      "createdAt" : 1722282688071
-    },
-    "listItemCount" : 0,
-    "joinedWeekCount" : 0,
-    "joinedAllTimeCount" : 0,
-    "labels" : [ {
-      "ver" : 0,
-      "src" : "string",
-      "uri" : "string",
-      "cid" : "string",
-      "val" : "string",
-      "neg" : true,
-      "cts" : 1722282688071,
-      "exp" : 1722282688071,
-      "sig" : 2
-	    } ],
-     "indexedAt" : 1722282688071
-  },
-  "indexedAt" : 1722282688071,
-  "createdAt" : 1722282688071,
-  "viewer" : {
-    "muted" : true,
-    "mutedByList" : {
-      "uri" : "string",
-      "cid" : "string",
-      "name" : "string",
-      "purpose" : "string",
-      "avatar" : "string",
-      "listItemCount" : 0,
-      "labels" : [ {
-        "ver" : 0,
-        "src" : "string",
-        "uri" : "string",
-        "cid" : "string",
-        "val" : "string",
-        "neg" : true,
-        "cts" : 1722282688071,
-        "exp" : 1722282688071,
-        "sig" : 2
-      } ],
-      "viewer" : {
-        "muted" : true,
-        "blocked" : "string"
-	      },
-"      "indexedAt" : 1722282688071
-    },
-    "blockedBy" : true,
-    "blocking" : "string",
-    "blockingByList" : {
-      "uri" : "string",
-      "cid" : "string",
-      "name" : "string",
-      "purpose" : "string",
-      "avatar" : "string",
-      "listItemCount" : 0,
-      "labels" : [ {
-        "ver" : 0,
-        "src" : "string",
-        "uri" : "string",
-        "cid" : "string",
-        "val" : "string",
-        "neg" : true,
-        "cts" : 1722282688071,
-        "exp" : 1722282688071,
-        "sig" : 2
-      } ],
-      "viewer" : {
-        "muted" : true,
-        "blocked" : "string"
-	      },
-"      "indexedAt" : 1722282688071
-    },
-    "following" : "string",
-    "followedBy" : "string",
-    "knownFollowers" : {
-      "count" : 0,
-      "followers" : [ {
-        "did" : "string",
-        "handle" : "string",
-"        "displayName" : "string",
-        "avatar" : "string",
-        "associated" : {
-          "lists" : 0,
-          "feedgens" : 0,
-          "starterPacks" : 0,
-          "labeler" : true,
-          "chat" : {
-$            "allowIncoming" : "all"
-          }
-        },
-        "labels" : [ {
-          "ver" : 0,
-          "src" : "string",
-          "uri" : "string",
-          "cid" : "string",
-          "val" : "string",
-          "neg" : true,
-.          "cts" : "2024-07-29T15:51:28.071Z",
-.          "exp" : "2024-07-29T15:51:28.071Z",
-          "sig" : 2
-        } ],
-1        "createdAt" : "2024-07-29T15:51:28.071Z"
-
-      } ]
-    }
-  },
-  "labels" : [ {
-    "ver" : 0,
-    "src" : "string",
-    "uri" : "string",
-    "cid" : "string",
-    "val" : "string",
-    "neg" : true,
-    "cts" : 1722282688071,
-    "exp" : 1722282688071,
-    "sig" : 2
-  } ],
-  "pinnedPost" : {
-    "uri" : "string",
-    "cid" : "string"
-  }
-}

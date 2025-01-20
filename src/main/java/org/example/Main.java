@@ -1,6 +1,6 @@
 package org.example;
 
-import api.rest.app.bsky.actor.preferences.defs.PreferencesDef;
+import api.rest.app.bsky.actor.preferences.PreferencesDef;
 import api.rest.app.bsky.actor.profile.ProfileDef;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
