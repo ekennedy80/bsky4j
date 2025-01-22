@@ -1,5 +1,6 @@
 package org.example;
 
+import api.rest.GlobalVars;
 import api.rest.app.bsky.actor.preferences.PreferencesDef;
 import api.rest.app.bsky.actor.profile.ProfileDef;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -13,19 +14,14 @@ import jakarta.ws.rs.core.Response;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.Instant;
 import java.util.Date;
+
+import static api.rest.GlobalVars.*;
 
 //TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
-    private static final String APP_TOKEN = "hjlh-u644-7jk3-bjs7";
-    private static final String HANDLE = "ekennedy80.bsky.social";
-    private static final String BSKY_URL = "https://bsky.social/";
-    private static final String API_KEY_URL = "xrpc/com.atproto.server.createSession";
-    private static final String FEED_URL = "xrpc/app.bsky.feed.getAuthorFeed";
-    private static final String DID_URL = "xrpc/com.atproto.identity.resolveHandle";
-    private static final String PREFERENCES = "xrpc/app.bsky.actor.getPreferences";
-    private static final String PROFILE = "xrpc/app.bsky.actor.getProfile";
 
     public static void main(String[] args) throws JsonProcessingException {
         //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
@@ -62,6 +58,9 @@ public class Main {
         String jwtToken = session.getAccessJwt();
         System.out.println("\n\nSession: "+session);
 
+        response = createRecord(jwtToken);
+        System.out.println("RECORD WAS CREATED AND SENT:\n"+response.toString());
+
         String jsonResponse = client.target(BSKY_URL+FEED_URL)
                 .queryParam("actor", HANDLE)
                 .queryParam("limit", 2)
@@ -92,5 +91,28 @@ public class Main {
         }
         String formattedDate = outputFormat.format(parsedDate);
         System.out.println("Date: "+parsedDate.getTime()+"\nParsed Date: "+formattedDate);
+    }
+
+    private static Response createRecord(String sessionToken) {
+        SimpleDateFormat outputFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
+        Date timestamp = Date.from(Instant.now());
+
+        ObjectMapper mapper = new ObjectMapper();
+        ObjectNode request = mapper.createObjectNode();
+        ObjectNode record = mapper.createObjectNode();
+        record.put("$type","app.bsky.feed.post")
+                .put("text", "This is a test and occurred on "+Date.from(Instant.now()))
+                .put("createdAt", outputFormat.format(timestamp));
+        request.put("repo", DID)
+                .put("collection","app.bsky.feed.post")
+                .put("validate", false)
+                .set("record", record);         ;
+
+        System.out.println("Record: "+request.toString());
+
+        Client client = ClientBuilder.newClient();
+        return client.target(BSKY_URL + CREATE_RECORD)
+                .request(MediaType.APPLICATION_JSON).header("Authorization", "Bearer " + sessionToken)
+                .post(Entity.json(request));
     }
 }
