@@ -67,13 +67,15 @@ public class MutedWordsPref extends AbstractPreferenceDef {
 
         @JsonSetter(&quot;expiresAt&quot;)
         public void setExpiresAt(String date) throws ParseException {
-<span class="nc" id="L70">            SimpleDateFormat inputFormat = new SimpleDateFormat(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;);</span>
-<span class="nc" id="L71">            this.expiresAt = inputFormat.parse(date);</span>
-<span class="nc" id="L72">        }</span>
-
-        public Date getExpiresAt() {
-<span class="nc" id="L75">            return expiresAt;</span>
-        }
+<span class="nc bnc" id="L70" title="All 4 branches missed.">            if (date != null &amp;&amp; Long.parseLong(date) &gt; 0) {</span>
+<span class="nc bnc" id="L71" title="All 10 branches missed.">                if (date.contains(&quot;-&quot;) || date.contains(&quot;:&quot;) || date.contains(&quot;T&quot;) || date.contains(&quot;.&quot;) || date.contains(&quot;Z&quot;)) {</span>
+<span class="nc" id="L72">                    SimpleDateFormat inputFormat = new SimpleDateFormat(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;);</span>
+<span class="nc" id="L73">                    this.expiresAt = inputFormat.parse(date);</span>
+<span class="nc" id="L74">                } else {</span>
+<span class="nc" id="L75">                    this.expiresAt = new Date(Long.parseLong(date));</span>
+                }
+            }
+<span class="nc" id="L78">        }</span>
     }
 
     @Nonnull
@@ -82,14 +84,14 @@ public class MutedWordsPref extends AbstractPreferenceDef {
 
     @Override
     public ObjectNode asJsonObject() throws JsonProcessingException {
-<span class="nc" id="L85">        ObjectMapper objectMapper = new ObjectMapper();</span>
-<span class="nc" id="L86">        return json.put(&quot;items&quot;, objectMapper.writeValueAsString(this.items));</span>
+<span class="nc" id="L87">        ObjectMapper objectMapper = new ObjectMapper();</span>
+<span class="nc" id="L88">        return json.put(&quot;items&quot;, objectMapper.writeValueAsString(this.items));</span>
     }
 
     @Override
     public String asJsonString() throws JsonProcessingException {
-<span class="nc" id="L91">        ObjectMapper objectMapper = new ObjectMapper();</span>
-<span class="nc" id="L92">        return json.put(&quot;items&quot;, objectMapper.writeValueAsString(this.items)).toString();</span>
+<span class="nc" id="L93">        ObjectMapper objectMapper = new ObjectMapper();</span>
+<span class="nc" id="L94">        return json.put(&quot;items&quot;, objectMapper.writeValueAsString(this.items)).toString();</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

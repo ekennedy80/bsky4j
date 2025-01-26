@@ -33,12 +33,13 @@ public abstract class AbstractPreferenceDef {
     @JsonProperty(&quot;$type&quot;)
     private String type;
 
+    @Nonnull
     @JsonIgnore
     protected final ObjectNode json;
 
-<span class="fc" id="L39">    public AbstractPreferenceDef() {</span>
-<span class="fc" id="L40">        this.json = new ObjectMapper().createObjectNode();</span>
-<span class="fc" id="L41">    }</span>
+<span class="nc" id="L40">    protected AbstractPreferenceDef() {</span>
+<span class="nc" id="L41">        this.json = new ObjectMapper().createObjectNode();</span>
+<span class="nc" id="L42">    }</span>
 
     public abstract ObjectNode asJsonObject() throws JsonProcessingException;
 

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="api.rest.app.bsky.actor.preferences.PreferencesDefTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2025-01-20T15:31:35" hostname="mf-doom" time="0.691">
-  <properties/>
-  <testcase name="testExample2Unmarshalling()" classname="api.rest.app.bsky.actor.preferences.PreferencesDefTest" time="0.665"/>
-  <testcase name="testExample1Unmarshalling()" classname="api.rest.app.bsky.actor.preferences.PreferencesDefTest" time="0.024"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ProfileDef.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Bluesky-REST-Client</a> &gt; <a href="index.source.html" class="el_package">api.rest.app.bsky.actor.profile</a> &gt; <span class="el_source">ProfileDef.java</span></div><h1>ProfileDef.java</h1><pre class="source lang-java linenums">package api.rest.app.bsky.actor.profile;
 
 
-import api.rest.app.bsky.actor.profile.defs.AssociatedDef;
+import api.rest.app.bsky.actor.defs.AssociatedDef;
 import api.rest.app.bsky.actor.profile.defs.JoinedViaStarterPackDef;
-import api.rest.app.bsky.actor.profile.defs.LabelsDef;
-import api.rest.app.bsky.actor.profile.defs.ViewerDef;
+import api.rest.app.bsky.actor.defs.LabelsDef;
+import api.rest.app.bsky.actor.defs.ViewerDef;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
@@ -115,25 +115,37 @@ public class ProfileDef {
 
     @JsonSetter(&quot;indexedAt&quot;)
     public void setIndexedAt(String date) throws ParseException {
-<span class="fc" id="L118">        SimpleDateFormat inputFormat = new SimpleDateFormat(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;);</span>
-<span class="fc" id="L119">        this.indexedAt = inputFormat.parse(date);</span>
-<span class="fc" id="L120">    }</span>
+<span class="nc bnc" id="L118" title="All 4 branches missed.">        if (date != null &amp;&amp; Long.parseLong(date) &gt; 0) {</span>
+<span class="nc bnc" id="L119" title="All 10 branches missed.">            if (date.contains(&quot;-&quot;) || date.contains(&quot;:&quot;) || date.contains(&quot;T&quot;) || date.contains(&quot;.&quot;) || date.contains(&quot;Z&quot;)) {</span>
+<span class="nc" id="L120">                SimpleDateFormat inputFormat = new SimpleDateFormat(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;);</span>
+<span class="nc" id="L121">                this.indexedAt = inputFormat.parse(date);</span>
+<span class="nc" id="L122">            } else {</span>
+<span class="nc" id="L123">                this.indexedAt = new Date(Long.parseLong(date));</span>
+            }
+        }
+<span class="nc" id="L126">    }</span>
 
     @JsonSetter(&quot;createdAt&quot;)
     public void setCreatedAt(String date) throws ParseException {
-<span class="fc" id="L124">        SimpleDateFormat inputFormat = new SimpleDateFormat(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;);</span>
-<span class="fc" id="L125">        this.createdAt = inputFormat.parse(date);</span>
-<span class="fc" id="L126">    }</span>
+<span class="nc bnc" id="L130" title="All 4 branches missed.">        if (date != null &amp;&amp; Long.parseLong(date) &gt; 0) {</span>
+<span class="nc bnc" id="L131" title="All 10 branches missed.">            if (date.contains(&quot;-&quot;) || date.contains(&quot;:&quot;) || date.contains(&quot;T&quot;) || date.contains(&quot;.&quot;) || date.contains(&quot;Z&quot;)) {</span>
+<span class="nc" id="L132">                SimpleDateFormat inputFormat = new SimpleDateFormat(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;);</span>
+<span class="nc" id="L133">                this.createdAt = inputFormat.parse(date);</span>
+<span class="nc" id="L134">            } else {</span>
+<span class="nc" id="L135">                this.createdAt = new Date(Long.parseLong(date));</span>
+            }
+        }
+<span class="nc" id="L138">    }</span>
 
     public ObjectNode asJsonObject() throws JsonProcessingException {
-<span class="nc" id="L129">        ObjectMapper objectMapper = new ObjectMapper();</span>
-<span class="nc" id="L130">        ObjectNode json = new ObjectMapper().createObjectNode();;</span>
-<span class="nc" id="L131">        return json.put(&quot;profile&quot;, objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(this));</span>
+<span class="nc" id="L141">        ObjectMapper objectMapper = new ObjectMapper();</span>
+<span class="nc" id="L142">        ObjectNode json = new ObjectMapper().createObjectNode();;</span>
+<span class="nc" id="L143">        return json.put(&quot;profile&quot;, objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(this));</span>
     }
 
     public String asJsonString() throws JsonProcessingException {
-<span class="nc" id="L135">        ObjectMapper objectMapper = new ObjectMapper();</span>
-<span class="nc" id="L136">        return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(this);</span>
+<span class="nc" id="L147">        ObjectMapper objectMapper = new ObjectMapper();</span>
+<span class="nc" id="L148">        return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(this);</span>
     }
 
 }

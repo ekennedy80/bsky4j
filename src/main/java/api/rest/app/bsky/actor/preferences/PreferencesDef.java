@@ -5,7 +5,6 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.ObjectWriter;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import jakarta.annotation.Nonnull;
 import lombok.AllArgsConstructor;
@@ -32,7 +31,7 @@ public class PreferencesDef {
 
     public ObjectNode asJsonObject() throws JsonProcessingException {
         ObjectMapper objectMapper = new ObjectMapper();
-        ObjectNode json = new ObjectMapper().createObjectNode();;
+        ObjectNode json = new ObjectMapper().createObjectNode();
         return json.put("profile", objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(this));
     }
 

@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="api.rest.app.bsky.actor.profile.ProfileDefTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2025-01-20T15:31:35" hostname="mf-doom" time="0.088">
-  <properties/>
-  <testcase name="testAutoExampleProfileUnmarshalling()" classname="api.rest.app.bsky.actor.profile.ProfileDefTest" time="0.063"/>
-  <testcase name="testMyProfileUnmarshalling()" classname="api.rest.app.bsky.actor.profile.ProfileDefTest" time="0.023"/>
-  <system-out><![CDATA[]]></system-out>
-  <system-err><![CDATA[]]></system-err>
-</testsuite>

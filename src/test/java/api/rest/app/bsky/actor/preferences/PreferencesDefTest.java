@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import java.io.IOException;
 import java.net.URL;
 
-public class PreferencesDefTest {
+class PreferencesDefTest {
 
     @Test
     void testExample1Unmarshalling() {

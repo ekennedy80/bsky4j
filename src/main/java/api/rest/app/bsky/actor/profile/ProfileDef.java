@@ -115,19 +115,31 @@ public class ProfileDef {
 
     @JsonSetter("indexedAt")
     public void setIndexedAt(String date) throws ParseException {
-        SimpleDateFormat inputFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
-        this.indexedAt = inputFormat.parse(date);
+        if (date != null && Long.parseLong(date) > 0) {
+            if (date.contains("-") || date.contains(":") || date.contains("T") || date.contains(".") || date.contains("Z")) {
+                SimpleDateFormat inputFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
+                this.indexedAt = inputFormat.parse(date);
+            } else {
+                this.indexedAt = new Date(Long.parseLong(date));
+            }
+        }
     }
 
     @JsonSetter("createdAt")
     public void setCreatedAt(String date) throws ParseException {
-        SimpleDateFormat inputFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
-        this.createdAt = inputFormat.parse(date);
+        if (date != null && Long.parseLong(date) > 0) {
+            if (date.contains("-") || date.contains(":") || date.contains("T") || date.contains(".") || date.contains("Z")) {
+                SimpleDateFormat inputFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
+                this.createdAt = inputFormat.parse(date);
+            } else {
+                this.createdAt = new Date(Long.parseLong(date));
+            }
+        }
     }
 
     public ObjectNode asJsonObject() throws JsonProcessingException {
         ObjectMapper objectMapper = new ObjectMapper();
-        ObjectNode json = new ObjectMapper().createObjectNode();;
+        ObjectNode json = new ObjectMapper().createObjectNode();
         return json.put("profile", objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(this));
     }
 

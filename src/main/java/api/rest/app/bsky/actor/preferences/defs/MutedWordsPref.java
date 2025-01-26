@@ -8,10 +8,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -22,6 +19,7 @@ import java.util.List;
 @AllArgsConstructor
 @Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
+@EqualsAndHashCode(callSuper = false)
 public class MutedWordsPref extends AbstractPreferenceDef {
 
     @Data
@@ -67,12 +65,14 @@ public class MutedWordsPref extends AbstractPreferenceDef {
 
         @JsonSetter("expiresAt")
         public void setExpiresAt(String date) throws ParseException {
-            SimpleDateFormat inputFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
-            this.expiresAt = inputFormat.parse(date);
-        }
-
-        public Date getExpiresAt() {
-            return expiresAt;
+            if (date != null && Long.parseLong(date) > 0) {
+                if (date.contains("-") || date.contains(":") || date.contains("T") || date.contains(".") || date.contains("Z")) {
+                    SimpleDateFormat inputFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
+                    this.expiresAt = inputFormat.parse(date);
+                } else {
+                    this.expiresAt = new Date(Long.parseLong(date));
+                }
+            }
         }
     }
 

@@ -16,6 +16,7 @@ import java.util.List;
 @AllArgsConstructor
 @Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
+@EqualsAndHashCode(callSuper=true)
 public class SavedFeedsPref extends AbstractPreferenceDef {
 
     @Nonnull

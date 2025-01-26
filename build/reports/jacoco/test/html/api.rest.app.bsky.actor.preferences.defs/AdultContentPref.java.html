@@ -8,6 +8,7 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
+@EqualsAndHashCode(callSuper=true)
 public class AdultContentPref extends AbstractPreferenceDef {
 
     @Nonnull
@@ -15,22 +16,22 @@ public class AdultContentPref extends AbstractPreferenceDef {
     private Boolean enabled;
 
     public void setEnabled(@Nonnull Boolean enabled) {
-<span class="fc" id="L18">        this.enabled = enabled;</span>
-<span class="fc" id="L19">    }</span>
+<span class="nc" id="L19">        this.enabled = enabled;</span>
+<span class="nc" id="L20">    }</span>
 
     @Nonnull
     public Boolean getEnabled() {
-<span class="nc" id="L23">        return this.enabled;</span>
+<span class="nc" id="L24">        return this.enabled;</span>
     }
 
     @Override
     public ObjectNode asJsonObject() {
-<span class="nc" id="L28">        return json.put(&quot;enabled&quot;, this.enabled);</span>
+<span class="nc" id="L29">        return json.put(&quot;enabled&quot;, this.enabled);</span>
     }
 
     @Override
     public String asJsonString() {
-<span class="nc" id="L33">        return json.put(&quot;enabled&quot;, this.enabled).toString();</span>
+<span class="nc" id="L34">        return json.put(&quot;enabled&quot;, this.enabled).toString();</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

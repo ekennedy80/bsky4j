@@ -11,6 +11,7 @@ import lombok.*;
 @AllArgsConstructor
 @Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
+@EqualsAndHashCode(callSuper = false)
 public class ContentLabelPref extends AbstractPreferenceDef {
 
     @Nullable
@@ -29,13 +30,13 @@ public class ContentLabelPref extends AbstractPreferenceDef {
     public ObjectNode asJsonObject() {
         return json.put("labelerDid", this.labelerDid)
                 .put("label", this.label)
-                .put("visibility", visibility.toString());
+                .put("visibility", visibility);
     }
 
     @Override
     public String asJsonString() {
         return json.put("labelerDid", this.labelerDid)
                 .put("label", this.label)
-                .put("visibility", visibility.toString()).toString();
+                .put("visibility", visibility).toString();
     }
 }

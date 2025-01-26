@@ -33,7 +33,7 @@ public class JoinedViaStarterPackDef {
 
     @Nonnull
     @JsonProperty("record")
-    private RecordDef record;
+    private RecordDef recordDef;
 
     @Nonnull
     @JsonProperty("creator")
@@ -61,7 +61,13 @@ public class JoinedViaStarterPackDef {
 
     @JsonSetter("indexedAt")
     public void setIndexedAt(String date) throws ParseException {
-        SimpleDateFormat inputFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
-        this.indexedAt = inputFormat.parse(date);
+        if (date != null && Long.parseLong(date) > 0) {
+            if (date.contains("-") || date.contains(":") || date.contains("T") || date.contains(".") || date.contains("Z")) {
+                SimpleDateFormat inputFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
+                this.indexedAt = inputFormat.parse(date);
+            } else {
+                this.indexedAt = new Date(Long.parseLong(date));
+            }
+        }
     }
 }

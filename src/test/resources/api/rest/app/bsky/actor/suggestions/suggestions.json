@@ -1,0 +1,1313 @@
+{
+  "cursor" : "20",
+  "actors" : [ {
+    "did" : "did:plc:waptq4llrdk4t2ropf5kdfwo",
+    "handle" : "conductress.bsky.social",
+    "displayName" : "JC",
+    "description" : "Bi/pan, cis, white, ND\nShe/her\nI'm really only interested in spreading love as far and wide as I can. \n\"It's better to be weird than boring.\"\n\npfp by @atlastalos.bsky.social",
+    "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:waptq4llrdk4t2ropf5kdfwo/bafkreifwk43u2d44rivilluvff6rgz6xlyu5yapsktd2ghlwvv2mtxuetu@jpeg",
+    "associated" : {
+      "chat" : {
+        "allowIncoming" : "following"
+      }
+    },
+    "indexedAt" : 1730927836025,
+    "createdAt" : 1687384660451,
+    "viewer" : {
+      "muted" : false,
+      "blockedBy" : false,
+      "knownFollowers" : {
+        "count" : 1,
+        "followers" : [ {
+          "did" : "did:plc:kdud3kfgmfjd2e25tmveuxe4",
+          "handle" : "monitorlizard.bsky.social",
+          "displayName" : "A Monitor Lizard",
+          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:kdud3kfgmfjd2e25tmveuxe4/bafkreibu2uaszi34hc6tx2youaejqhy24q4dfojn3psmrelwzt7ubjvjwy@jpeg",
+          "associated" : {
+            "chat" : {
+              "allowIncoming" : "none"
+            }
+          },
+          "viewer" : {
+            "muted" : false,
+            "blockedBy" : false,
+            "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3kefeejqzh22u",
+            "followedBy" : "at://did:plc:kdud3kfgmfjd2e25tmveuxe4/app.bsky.graph.follow/3keey377t6s26"
+          },
+          "labels" : [ ],
+          "createdAt" : "2023-09-22T09:52:13.983Z"
+        } ]
+      }
+    },
+    "labels" : [ {
+      "src" : "did:plc:waptq4llrdk4t2ropf5kdfwo",
+      "uri" : "at://did:plc:waptq4llrdk4t2ropf5kdfwo/app.bsky.actor.profile/self",
+      "cid" : "bafyreib2vxg2uik44fg3t5v3batkzesltx5c45hqzjfm7qdqbfgeawi5ni",
+      "val" : "!no-unauthenticated",
+      "cts" : -3600000
+    } ]
+  }, {
+    "did" : "did:plc:ojmbkta5v4dxvsxcn5uhssar",
+    "handle" : "ayan604.bsky.social",
+    "displayName" : "Andy Yan",
+    "description" : "An Urban Planner taking the World on one bite at a time.\n\nDirector, SFU City Program + Assoc Prof of Professional Practice, Urban Studies \n\nMy thoughts are my own.\nIG: publicyan | Twitter: ayan604  \n\nhttps://www.sfu.ca/continuing-studies/about/city-program",
+    "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:ojmbkta5v4dxvsxcn5uhssar/bafkreih4iprpwg4jjus4mu4cauk5urfx2nrdpcl5y3f4judvujh55db6ji@jpeg",
+    "indexedAt" : 1736817008613,
+    "createdAt" : 1687112717911,
+    "viewer" : {
+      "muted" : false,
+      "blockedBy" : false,
+      "knownFollowers" : {
+        "count" : 1,
+        "followers" : [ {
+          "did" : "did:plc:qiuvyv32ft5oflr55nzkzp27",
+          "handle" : "christaylornyc.bsky.social",
+          "displayName" : "Chris Taylor",
+          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:qiuvyv32ft5oflr55nzkzp27/bafkreibbthcdcz72bw3tesfzvzxh2ruqbaeqclfky2bsnzgz2wsh7sg66m@jpeg",
+          "associated" : {
+            "chat" : {
+              "allowIncoming" : "following"
+            }
+          },
+          "viewer" : {
+            "muted" : false,
+            "blockedBy" : false,
+            "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3kefwg7235m2s"
+          },
+          "labels" : [ ],
+          "createdAt" : "2023-04-27T14:58:54.326Z"
+        } ]
+      }
+    },
+    "labels" : [ {
+      "src" : "did:plc:ojmbkta5v4dxvsxcn5uhssar",
+      "uri" : "at://did:plc:ojmbkta5v4dxvsxcn5uhssar/app.bsky.actor.profile/self",
+      "cid" : "bafyreifmgaelidumsteq2wrrobsmzmvyhku6uuqiva655ndrunh7qufqqq",
+      "val" : "!no-unauthenticated",
+      "cts" : -3600000
+    } ]
+  }, {
+    "did" : "did:plc:4h5i777qrlks2ew6nqtw4qy7",
+    "handle" : "jkarsh.bsky.social",
+    "displayName" : "Jason Karsh",
+    "description" : "Writer. Photographer. Liberal. Obama alum. Petter of dogs. Partaker of libations. Medium: @jkarsh | Instagram: _jkarsh",
+    "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:4h5i777qrlks2ew6nqtw4qy7/bafkreigmdqixn3ds52k2njo35cccgtatoe7prhpn654lpffdikya2ifblu@jpeg",
+    "indexedAt" : 1737147096313,
+    "createdAt" : 1684811974307,
+    "viewer" : {
+      "muted" : false,
+      "blockedBy" : false,
+      "knownFollowers" : {
+        "count" : 4,
+        "followers" : [ {
+          "did" : "did:plc:x4qyokjtdzgl7gmqhsw4ajqj",
+          "handle" : "bencollins.bsky.social",
+          "displayName" : "Tim Onion",
+          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:x4qyokjtdzgl7gmqhsw4ajqj/bafkreihfnahgxywmhcl4fffsa65tk4edrio5bjyy3s3yabr6caymiyl73a@jpeg",
+          "associated" : {
+            "chat" : {
+              "allowIncoming" : "all"
+            }
+          },
+          "viewer" : {
+            "muted" : false,
+            "blockedBy" : false,
+            "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3kefvkmxaee2n"
+          },
+          "labels" : [ ],
+          "createdAt" : "2023-04-27T14:23:34.544Z"
+        }, {
+          "did" : "did:plc:eo7xzlcsv6f64z6lyx3l6ux7",
+          "handle" : "rexchapman.bsky.social",
+          "displayName" : "Rex Chapman",
+          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:eo7xzlcsv6f64z6lyx3l6ux7/bafkreiddqdi5vkqw2d6gp7eics3ovvhc3c72hafg3b2waa7awyuojurkpm@jpeg",
+          "associated" : {
+            "chat" : {
+              "allowIncoming" : "all"
+            }
+          },
+          "viewer" : {
+            "muted" : false,
+            "blockedBy" : false,
+            "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3lb2ka4auj32n"
+          },
+          "labels" : [ ],
+          "createdAt" : "2023-05-09T23:33:16.481Z"
+        }, {
+          "did" : "did:plc:7vyyy23h3scgc3vrtzm5kbrx",
+          "handle" : "dceiver.bsky.social",
+          "displayName" : "Jason Linkins",
+          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:7vyyy23h3scgc3vrtzm5kbrx/bafkreiau2iomlduqrld4ngqxzryfx7stdms4gwwr6uk4ri2da7zmmzqtiq@jpeg",
+          "associated" : {
+            "chat" : {
+              "allowIncoming" : "following"
+            }
+          },
+          "viewer" : {
+            "muted" : false,
+            "blockedBy" : false,
+            "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3kefvvwin2u2n"
+          },
+          "labels" : [ ],
+          "createdAt" : "2023-05-10T13:51:51.928Z"
+        }, {
+          "did" : "did:plc:ot3p5g4zl67yuqcv6ijonj7z",
+          "handle" : "janhappy.bsky.social",
+          "displayName" : "Jan Happy Ankerstjerne",
+          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:ot3p5g4zl67yuqcv6ijonj7z/bafkreidz2f46byb3rqppclzcsdt4p5dlxgsiltcffbto7ngoifp3wxr6sy@jpeg",
+          "associated" : {
+            "chat" : {
+              "allowIncoming" : "all"
+            }
+          },
+          "viewer" : {
+            "muted" : false,
+            "blockedBy" : false,
+            "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3le5mjvy7il2s",
+            "followedBy" : "at://did:plc:ot3p5g4zl67yuqcv6ijonj7z/app.bsky.graph.follow/3le4vbqdbqu2e"
+          },
+          "labels" : [ ],
+          "createdAt" : "2024-11-12T22:48:24.442Z"
+        } ]
+      }
+    },
+    "labels" : [ ]
+  }, {
+    "did" : "did:plc:e7efselcsfzkpdelbq5dt7b7",
+    "handle" : "nukestrat.bsky.social",
+    "displayName" : "Hans Kristensen",
+    "description" : "Director, Nuclear Information Project, Federation of American Scientists. Tracking nuclear arsenals, co-author of Nuclear Notebook, SIPRI Yearbook. Opinions my own.\nWebsite: https://fas.org/initiative/nuclear-information-project/",
+    "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:e7efselcsfzkpdelbq5dt7b7/bafkreid3mhtpwbyys3uxbc2sabkvt5tbr5lw7cqslzyddukwuo4jxzwc3e@jpeg",
+    "associated" : {
+      "chat" : {
+        "allowIncoming" : "following"
+      }
+    },
+    "indexedAt" : 1736795330414,
+    "createdAt" : 1687754451247,
+    "viewer" : {
+      "muted" : false,
+      "blockedBy" : false,
+      "knownFollowers" : {
+        "count" : 3,
+        "followers" : [ {
+          "did" : "did:plc:q45c64qgtdn4lbxbxndatuxg",
+          "handle" : "andrewfeinberg.com",
+          "displayName" : "Andrew Feinberg",
+          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:q45c64qgtdn4lbxbxndatuxg/bafkreihc4ynf5xzar2fdvy22xlpljlomxpcofg34rebd4tuvvei2nrhbv4@jpeg",
+          "viewer" : {
+            "muted" : false,
+            "blockedBy" : false,
+            "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3kefvpyaetc26"
+          },
+          "labels" : [ ],
+          "createdAt" : "2023-05-01T22:27:46.980Z"
+        }, {
+          "did" : "did:plc:lfgjxeg7f7w6ryjfbomhcbsi",
+          "handle" : "mikenellis.bsky.social",
+          "displayName" : "Mike Nellis",
+          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:lfgjxeg7f7w6ryjfbomhcbsi/bafkreiecf5wsoxo3gos7qy5b2pmy7qx3meyxvkoxo2ltninvsizsfl2m5e@jpeg",
+          "viewer" : {
+            "muted" : false,
+            "blockedBy" : false,
+            "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3ldkjvrgufl2f",
+            "followedBy" : "at://did:plc:lfgjxeg7f7w6ryjfbomhcbsi/app.bsky.graph.follow/3lcwjzehmmt26"
+          },
+          "labels" : [ ],
+          "createdAt" : "2024-11-09T16:31:07.521Z"
+        }, {
+          "did" : "did:plc:c3jhhbauc3v6e5bxqmrztjt7",
+          "handle" : "josh2345.bsky.social",
+          "displayName" : "",
+          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:c3jhhbauc3v6e5bxqmrztjt7/bafkreie3oekl2ckmbrdqk3fxdbdlsscn6qv7bxv6v6np5w2irpmix55vmu@jpeg",
+          "associated" : {
+            "chat" : {
+              "allowIncoming" : "all"
+            }
+          },
+          "viewer" : {
+            "muted" : false,
+            "blockedBy" : false,
+            "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3ldo5yudpc22e",
+            "followedBy" : "at://did:plc:c3jhhbauc3v6e5bxqmrztjt7/app.bsky.graph.follow/3ldo4ahvpoy2b"
+          },
+          "labels" : [ ],
+          "createdAt" : "2024-11-22T14:21:30.016Z"
+        } ]
+      }
+    },
+    "labels" : [ ]
+  }, {
+    "did" : "did:plc:bpauwkrhqbgsvu22rcjlnmzf",
+    "handle" : "web.kim",
+    "displayName" : "Kim",
+    "description" : "Producer and founder interested in art, music, fashion, comedy, TV & films. #TeamDemocracy\n\ntwitter.com/kim\nyoutube.com/kim\nhttp://web.kim",
+    "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:bpauwkrhqbgsvu22rcjlnmzf/bafkreiedqjvm22woecl767iwdhkodcyw5l5icdlf2nqlhe5exobqz7s53q@jpeg",
+    "indexedAt" : 1737602345814,
+    "createdAt" : 1681232512057,
+    "viewer" : {
+      "muted" : false,
+      "blockedBy" : false,
+      "knownFollowers" : {
+        "count" : 22,
+        "followers" : [ {
+          "did" : "did:plc:kdud3kfgmfjd2e25tmveuxe4",
+          "handle" : "monitorlizard.bsky.social",
+          "displayName" : "A Monitor Lizard",
+          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:kdud3kfgmfjd2e25tmveuxe4/bafkreibu2uaszi34hc6tx2youaejqhy24q4dfojn3psmrelwzt7ubjvjwy@jpeg",
+          "associated" : {
+            "chat" : {
+              "allowIncoming" : "none"
+            }
+          },
+          "viewer" : {
+            "muted" : false,
+            "blockedBy" : false,
+            "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3kefeejqzh22u",
+            "followedBy" : "at://did:plc:kdud3kfgmfjd2e25tmveuxe4/app.bsky.graph.follow/3keey377t6s26"
+          },
+          "labels" : [ ],
+          "createdAt" : "2023-09-22T09:52:13.983Z"
+        }, {
+          "did" : "did:plc:bwvd55e4hsxpuxa5ikrfgqgo",
+          "handle" : "pattonoswalt.bsky.social",
+          "displayName" : "Patton Oswalt",
+          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:bwvd55e4hsxpuxa5ikrfgqgo/bafkreidhzuo56htooa5iyzviumo424woedbu6a47gnuoqdlmaspax5qvie@jpeg",
+          "viewer" : {
+            "muted" : false,
+            "blockedBy" : false,
+            "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3kebi43ovrf2n"
+          },
+          "labels" : [ ],
+          "createdAt" : "2023-05-17T01:30:08.915Z"
+        }, {
+          "did" : "did:plc:p2dcugajbtsn44h5n2kgt7ox",
+          "handle" : "mauraquint.bsky.social",
+          "displayName" : "maura quint",
+          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:p2dcugajbtsn44h5n2kgt7ox/bafkreih4p5syzhnas772cpemeeyvrfagromug4woes2vbwsnvjo7nao7xe@jpeg",
+          "associated" : {
+            "chat" : {
+              "allowIncoming" : "all"
+            }
+          },
+          "viewer" : {
+            "muted" : false,
+            "blockedBy" : false,
+            "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3kesgdqz5jv2n"
+          },
+          "labels" : [ ],
+          "createdAt" : "2023-05-01T20:58:13.832Z"
+        }, {
+          "did" : "did:plc:4j7ut6aphnjqqihiugmyvy5i",
+          "handle" : "therickwilson.bsky.social",
+          "displayName" : "Rick Wilson",
+          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:4j7ut6aphnjqqihiugmyvy5i/bafkreif5rycvs7u2btqcvpvkmqbhjokvpkadby55bgnsu2okbjqfvn3xvu@jpeg",
+          "viewer" : {
+            "muted" : false,
+            "blockedBy" : false,
+            "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3kebsmopsxx2t"
+          },
+          "labels" : [ ],
+          "createdAt" : "2023-05-01T12:47:35.200Z"
+        }, {
+          "did" : "did:plc:iu4j537hox5huj4bwnwgub4z",
+          "handle" : "acyn.bsky.social",
+          "displayName" : "Acyn",
+          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:iu4j537hox5huj4bwnwgub4z/bafkreiejey5fptauulotqljyt3zneppll5o24f4xu3t7khx2dqqpmhmwxi@jpeg",
+          "associated" : {
+            "chat" : {
+              "allowIncoming" : "following"
+            }
+          },
+          "viewer" : {
+            "muted" : false,
+            "blockedBy" : false,
+            "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3lavzqesau22r"
+          },
+          "labels" : [ ],
+          "createdAt" : "2023-04-28T01:59:25.569Z"
+        } ]
+      }
+    },
+    "labels" : [ ]
+  }, {
+    "did" : "did:plc:myazd4xjh2sfdaq5wttlblgp",
+    "handle" : "puckarks.bsky.social",
+    "displayName" : "Puck Arks",
+    "description" : "Be aware of this truth that the people on this earth could be joyous, if only they would live rationally, and if they would contribute mutually to each others’ welfare.",
+    "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:myazd4xjh2sfdaq5wttlblgp/bafkreid3yoqbns4wqr5ngfiy23ebn7v6binuym5nwroj7kk7t755in4mk4@jpeg",
+    "associated" : {
+      "chat" : {
+        "allowIncoming" : "all"
+      }
+    },
+    "indexedAt" : 1734755546713,
+    "createdAt" : 1682876550169,
+    "viewer" : {
+      "muted" : false,
+      "blockedBy" : false,
+      "knownFollowers" : {
+        "count" : 4,
+        "followers" : [ {
+          "did" : "did:plc:tcyv5gk43e5gekr5wo3vglhl",
+          "handle" : "infosec.skyfleet.blue",
+          "displayName" : "InfoSec",
+          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:tcyv5gk43e5gekr5wo3vglhl/bafkreibpnoilqgb25bht7b2pineff2gldhhkn6qc2xhqbsb5m7pzhf7bju@jpeg",
+          "viewer" : {
+            "muted" : false,
+            "blockedBy" : false,
+            "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3kks3uxn4i42p"
+          },
+          "labels" : [ ],
+          "createdAt" : "2023-06-01T16:11:19.839Z"
+        }, {
+          "did" : "did:plc:ot3p5g4zl67yuqcv6ijonj7z",
+          "handle" : "janhappy.bsky.social",
+          "displayName" : "Jan Happy Ankerstjerne",
+          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:ot3p5g4zl67yuqcv6ijonj7z/bafkreidz2f46byb3rqppclzcsdt4p5dlxgsiltcffbto7ngoifp3wxr6sy@jpeg",
+          "associated" : {
+            "chat" : {
+              "allowIncoming" : "all"
+            }
+          },
+          "viewer" : {
+            "muted" : false,
+            "blockedBy" : false,
+            "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3le5mjvy7il2s",
+            "followedBy" : "at://did:plc:ot3p5g4zl67yuqcv6ijonj7z/app.bsky.graph.follow/3le4vbqdbqu2e"
+          },
+          "labels" : [ ],
+          "createdAt" : "2024-11-12T22:48:24.442Z"
+        }, {
+          "did" : "did:plc:m2p7xw3wjgjgfjyinud2njza",
+          "handle" : "timjvalentine.bsky.social",
+          "displayName" : "Tim",
+          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:m2p7xw3wjgjgfjyinud2njza/bafkreidx5uuicf5c5aofc6hn7xtg5rvmjxrcq2vexkqd4wtqxlemorj33i@jpeg",
+          "viewer" : {
+            "muted" : false,
+            "blockedBy" : false,
+            "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3lbrtxhu7ce2d",
+            "followedBy" : "at://did:plc:m2p7xw3wjgjgfjyinud2njza/app.bsky.graph.follow/3lbrkowfhny2x"
+          },
+          "labels" : [ {
+            "src" : "did:plc:m2p7xw3wjgjgfjyinud2njza",
+            "uri" : "at://did:plc:m2p7xw3wjgjgfjyinud2njza/app.bsky.actor.profile/self",
+            "cid" : "bafyreiftnmg7wb5luq2n5ddjamzj4v2hxf6eda6aoko3omhd7iajjan32e",
+            "val" : "!no-unauthenticated",
+            "cts" : "2024-11-14T12:27:51.280Z"
+          } ],
+          "createdAt" : "2024-11-14T12:27:52.014Z"
+        } ]
+      }
+    },
+    "labels" : [ ]
+  }, {
+    "did" : "did:plc:3ijusmsw4eizbtvn3k263rhv",
+    "handle" : "philinvestigates.com",
+    "displayName" : "Phil Williams",
+    "description" : "Defending democracy. Confronting hate. Speaking truth to power - and the angry mob. NewsChannel 5 (Nashville) chief investigative reporter. John Chancellor, duPont, Peabody, Toner awards. RTDNA Lifetime Achievement. Pulitzer finalist.\nphilinvestigates.com.",
+    "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:3ijusmsw4eizbtvn3k263rhv/bafkreiffhb6jz2pv3mktlkfryjuvvys4fyt3n47f6rqurbt65pwdlqlqqy@jpeg",
+    "associated" : {
+      "chat" : {
+        "allowIncoming" : "following"
+      }
+    },
+    "indexedAt" : 1734868751412,
+    "createdAt" : 1688402149262,
+    "viewer" : {
+      "muted" : false,
+      "blockedBy" : false,
+      "knownFollowers" : {
+        "count" : 18,
+        "followers" : [ {
+          "did" : "did:plc:x4qyokjtdzgl7gmqhsw4ajqj",
+          "handle" : "bencollins.bsky.social",
+          "displayName" : "Tim Onion",
+          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:x4qyokjtdzgl7gmqhsw4ajqj/bafkreihfnahgxywmhcl4fffsa65tk4edrio5bjyy3s3yabr6caymiyl73a@jpeg",
+          "associated" : {
+            "chat" : {
+              "allowIncoming" : "all"
+            }
+          },
+          "viewer" : {
+            "muted" : false,
+            "blockedBy" : false,
+            "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3kefvkmxaee2n"
+          },
+          "labels" : [ ],
+          "createdAt" : "2023-04-27T14:23:34.544Z"
+        }, {
+          "did" : "did:plc:j5fbnzh57rn7xz65yjc36gxb",
+          "handle" : "drewharwell.com",
+          "displayName" : "Drew Harwell",
+          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:j5fbnzh57rn7xz65yjc36gxb/bafkreibtwyjrzksk3gd4z6a7wqsbgd5huofmvefvqhjrjre63prxak4zci@jpeg",
+          "associated" : {
+            "chat" : {
+              "allowIncoming" : "following"
+            }
+          },
+          "viewer" : {
+            "muted" : false,
+            "blockedBy" : false,
+            "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3kdztqc3i222w"
+          },
+          "labels" : [ ],
+          "createdAt" : "2023-04-19T16:56:18.439Z"
+        }, {
+          "did" : "did:plc:oqr5mp25r7z3vfr3igeerxbw",
+          "handle" : "mollyjongfast.bsky.social",
+          "displayName" : "Molly Jong-Fast",
+          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:oqr5mp25r7z3vfr3igeerxbw/bafkreicx4hks5lducpmoi2b7fn4nw64j4m5lanzetkfdzxkl63klddoxgi@jpeg",
+          "associated" : {
+            "chat" : {
+              "allowIncoming" : "following"
+            }
+          },
+          "viewer" : {
+            "muted" : false,
+            "blockedBy" : false,
+            "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3kebirfpiif2n"
+          },
+          "labels" : [ ],
+          "createdAt" : "2023-04-27T15:21:03.647Z"
+        }, {
+          "did" : "did:plc:zha4tsu7otgnojc7uoxhjmkr",
+          "handle" : "brandyzadrozny.bsky.social",
+          "displayName" : "Brandy Zadrozny",
+          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:zha4tsu7otgnojc7uoxhjmkr/bafkreifq4lywuwlieg4cijmwdx6w5obd5dnj7tp4rh3vsakvbgy7yuhb54@jpeg",
+          "associated" : {
+            "chat" : {
+              "allowIncoming" : "following"
+            }
+          },
+          "viewer" : {
+            "muted" : false,
+            "blockedBy" : false,
+            "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3kefwklhpz22j"
+          },
+          "labels" : [ ],
+          "createdAt" : "2023-04-27T18:28:34.400Z"
+        }, {
+          "did" : "did:plc:qgz7jtmlddfn3dikhimzlqu5",
+          "handle" : "kattenbarge.bsky.social",
+          "displayName" : "Kat Tenbarge",
+          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:qgz7jtmlddfn3dikhimzlqu5/bafkreicxnorvkf4r4eo2q6xurlwqly7mejtmywispbnnfc6y4tobzmo2nq@jpeg",
+          "associated" : {
+            "chat" : {
+              "allowIncoming" : "all"
+            }
+          },
+          "viewer" : {
+            "muted" : false,
+            "blockedBy" : false,
+            "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3lcnxfbtinu2o"
+          },
+          "labels" : [ ],
+          "createdAt" : "2023-04-26T19:37:32.274Z"
+        } ]
+      }
+    },
+    "labels" : [ ]
+  }, {
+    "did" : "did:plc:v2e75i3k55nzt546uf34fgzg",
+    "handle" : "awesomebiota.bsky.social",
+    "displayName" : "Dr. Jen M",
+    "description" : "FT Partnership Queen ✍️, PT Bio Prof 🧪, mycologist 🍄, knitter 🧶, urban wanderer 🥾, captain of the Thoop Troop 🍲, ice cream conoisseur 🍦. Follower of Floaty Boaties 🛳️⛴️🚢. \nLiving in Halifax, NS\n☕️ https://ko-fi.com/awesomebiota ",
+    "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:v2e75i3k55nzt546uf34fgzg/bafkreic6kzhy6so3jtmbqhhwcdmpniivv2jqhfnakdzmpao4wapws4c2na@jpeg",
+    "associated" : {
+      "chat" : {
+        "allowIncoming" : "all"
+      }
+    },
+    "indexedAt" : 1726574628643,
+    "createdAt" : 1687383792980,
+    "viewer" : {
+      "muted" : false,
+      "blockedBy" : false,
+      "knownFollowers" : {
+        "count" : 1,
+        "followers" : [ ]
+      }
+    },
+    "labels" : [ ]
+  }, {
+    "did" : "did:plc:p7vxon5faq6jhwcyndtfkcik",
+    "handle" : "magdi.bsky.social",
+    "displayName" : "Magdi Jacobs",
+    "description" : "I write about politics, culture, & science.",
+    "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:p7vxon5faq6jhwcyndtfkcik/bafkreiebfcofjuk3mwcjqmz34ejc4j7i4uwdmx4maxfjzqaj2524f4q7w4@jpeg",
+    "indexedAt" : 1706224137225,
+    "createdAt" : 1688474890863,
+    "viewer" : {
+      "muted" : false,
+      "blockedBy" : false,
+      "knownFollowers" : {
+        "count" : 3,
+        "followers" : [ {
+          "did" : "did:plc:nvfposmpmhegtyvhbs75s3pw",
+          "handle" : "jamellebouie.net",
+          "displayName" : "jamelle",
+          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:nvfposmpmhegtyvhbs75s3pw/bafkreiefjdjiahsa4upn3zabt4bxjfculjcxsdrxzc75nqlylfx7xo2izy@jpeg",
+          "associated" : {
+            "chat" : {
+              "allowIncoming" : "following"
+            }
+          },
+          "viewer" : {
+            "muted" : false,
+            "blockedBy" : false,
+            "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3lcooonjqtg2f"
+          },
+          "labels" : [ ],
+          "createdAt" : "2023-04-27T16:31:46.732Z"
+        }, {
+          "did" : "did:plc:jipommeyosswbzw2k32vcjhp",
+          "handle" : "natashaloder.bsky.social",
+          "displayName" : "Natasha Loder",
+          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:jipommeyosswbzw2k32vcjhp/bafkreia6upasdtdt2yym7dlvnqxslmcmwqp77u6xsts2wxhfmxhpyjhidm@jpeg",
+          "viewer" : {
+            "muted" : false,
+            "blockedBy" : false,
+            "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3lavzqamwim2x"
+          },
+          "labels" : [ ],
+          "createdAt" : "2024-10-24T14:26:23.046Z"
+        }, {
+          "did" : "did:plc:6uimut56ihor2p6ubnepkudz",
+          "handle" : "jenrubin.bsky.social",
+          "displayName" : "Jen Rubin",
+          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:6uimut56ihor2p6ubnepkudz/bafkreihrlgiapi62tymlzlv6ybczklgtiohkdmgiqgmnsozggtn3keajkm@jpeg",
+          "viewer" : {
+            "muted" : false,
+            "blockedBy" : false,
+            "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3lfqkyhis7z2e"
+          },
+          "labels" : [ ],
+          "createdAt" : "2024-11-10T02:32:03.322Z"
+        } ]
+      }
+    },
+    "labels" : [ ]
+  }, {
+    "did" : "did:plc:ajsckbgwkgopbayqrbsckkum",
+    "handle" : "solexposure.bsky.social",
+    "displayName" : "Sol",
+    "description" : "Photographer & drawer. Usually covered in dirt road dust, Polaroid goo & Suttree & Dooley & Finley’s hair.\n\nhttps://www.sol-exposure.com",
+    "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:ajsckbgwkgopbayqrbsckkum/bafkreifweqlylmdd6lhxhmxed2if66t4pkc4gtrrg7lllqhw7huuoag6wy@jpeg",
+    "associated" : {
+      "chat" : {
+        "allowIncoming" : "all"
+      }
+    },
+    "indexedAt" : 1708889243282,
+    "createdAt" : 1686165183514,
+    "viewer" : {
+      "muted" : false,
+      "blockedBy" : false,
+      "knownFollowers" : {
+        "count" : 1,
+        "followers" : [ {
+          "did" : "did:plc:oky5czdrnfjpqslsw2a5iclo",
+          "handle" : "jay.bsky.team",
+          "displayName" : "Jay 🦋",
+          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:oky5czdrnfjpqslsw2a5iclo/bafkreihidru2xruxdxlvvcixc7lbgoudzicjbrdgacdhdhxyfw4yut4nfq@jpeg",
+          "associated" : {
+            "chat" : {
+              "allowIncoming" : "following"
+            }
+          },
+          "viewer" : {
+            "muted" : false,
+            "blockedBy" : false,
+            "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3kefvnnzplg2i"
+          },
+          "labels" : [ ],
+          "createdAt" : "2022-11-17T06:31:40.296Z"
+        } ]
+      }
+    },
+    "labels" : [ {
+      "src" : "did:plc:ajsckbgwkgopbayqrbsckkum",
+      "uri" : "at://did:plc:ajsckbgwkgopbayqrbsckkum/app.bsky.actor.profile/self",
+      "cid" : "bafyreicicvwakqiaqx3fibergjk24v6rrbi5b7aw447et5hcz7ed4gjdsm",
+      "val" : "!no-unauthenticated",
+      "cts" : -3600000
+    } ]
+  }, {
+    "did" : "did:plc:i53blsep5u3be74cppe375pg",
+    "handle" : "joshmanning.bsky.social",
+    "displayName" : "Josh Manning",
+    "description" : "Iraq War vet. Former intelligence community Russia and counterterrorism analyst. Now comms @ WA State AG. \n\nMI —> MT —> WA. Warren Dem. Social justice warrior. \n\nAll opinions, quirks mine.\n\nWords: LA Times, Foreign Policy, Newsweek. Face: MSNBC, Al Jazeera",
+    "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:i53blsep5u3be74cppe375pg/bafkreieedfytixjdxejpy4t3yjxnwb6yvlg4o3yd7sooqcknz3q6njr4ue@jpeg",
+    "associated" : {
+      "chat" : {
+        "allowIncoming" : "all"
+      }
+    },
+    "indexedAt" : 1737518122012,
+    "createdAt" : 1687012654576,
+    "viewer" : {
+      "muted" : false,
+      "blockedBy" : false,
+      "knownFollowers" : {
+        "count" : 4,
+        "followers" : [ {
+          "did" : "did:plc:kdud3kfgmfjd2e25tmveuxe4",
+          "handle" : "monitorlizard.bsky.social",
+          "displayName" : "A Monitor Lizard",
+          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:kdud3kfgmfjd2e25tmveuxe4/bafkreibu2uaszi34hc6tx2youaejqhy24q4dfojn3psmrelwzt7ubjvjwy@jpeg",
+          "associated" : {
+            "chat" : {
+              "allowIncoming" : "none"
+            }
+          },
+          "viewer" : {
+            "muted" : false,
+            "blockedBy" : false,
+            "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3kefeejqzh22u",
+            "followedBy" : "at://did:plc:kdud3kfgmfjd2e25tmveuxe4/app.bsky.graph.follow/3keey377t6s26"
+          },
+          "labels" : [ ],
+          "createdAt" : "2023-09-22T09:52:13.983Z"
+        }, {
+          "did" : "did:plc:x4qyokjtdzgl7gmqhsw4ajqj",
+          "handle" : "bencollins.bsky.social",
+          "displayName" : "Tim Onion",
+          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:x4qyokjtdzgl7gmqhsw4ajqj/bafkreihfnahgxywmhcl4fffsa65tk4edrio5bjyy3s3yabr6caymiyl73a@jpeg",
+          "associated" : {
+            "chat" : {
+              "allowIncoming" : "all"
+            }
+          },
+          "viewer" : {
+            "muted" : false,
+            "blockedBy" : false,
+            "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3kefvkmxaee2n"
+          },
+          "labels" : [ ],
+          "createdAt" : "2023-04-27T14:23:34.544Z"
+        }, {
+          "did" : "did:plc:4j7ut6aphnjqqihiugmyvy5i",
+          "handle" : "therickwilson.bsky.social",
+          "displayName" : "Rick Wilson",
+          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:4j7ut6aphnjqqihiugmyvy5i/bafkreif5rycvs7u2btqcvpvkmqbhjokvpkadby55bgnsu2okbjqfvn3xvu@jpeg",
+          "viewer" : {
+            "muted" : false,
+            "blockedBy" : false,
+            "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3kebsmopsxx2t"
+          },
+          "labels" : [ ],
+          "createdAt" : "2023-05-01T12:47:35.200Z"
+        }, {
+          "did" : "did:plc:5vjox4pdp6bosh4zbxpymzz7",
+          "handle" : "thegreatrecalibration.org",
+          "displayName" : "The Great Recalibration",
+          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:5vjox4pdp6bosh4zbxpymzz7/bafkreihrvqwch7m6euvgnbfhdswzlhruhtgv5ixt6c436o4fdu47viet7y@jpeg",
+          "associated" : {
+            "chat" : {
+              "allowIncoming" : "none"
+            }
+          },
+          "viewer" : {
+            "muted" : false,
+            "blockedBy" : false,
+            "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3lbhpscnmpr2i",
+            "followedBy" : "at://did:plc:5vjox4pdp6bosh4zbxpymzz7/app.bsky.graph.follow/3lbhnl6wrs62k"
+          },
+          "labels" : [ ],
+          "createdAt" : "2024-11-20T13:46:48.603Z"
+        } ]
+      }
+    },
+    "labels" : [ {
+      "src" : "did:plc:i53blsep5u3be74cppe375pg",
+      "uri" : "at://did:plc:i53blsep5u3be74cppe375pg/app.bsky.actor.profile/self",
+      "cid" : "bafyreigo6soiofr2i7smubphgwa6prcqbguceuugq433qff6m2wfujbgmy",
+      "val" : "!no-unauthenticated",
+      "cts" : -3600000
+    } ]
+  }, {
+    "did" : "did:plc:wli3qpfcun2bcidet7uzjb44",
+    "handle" : "goodkid-saadcity.bsky.social",
+    "displayName" : "doug",
+    "description" : "musician, knicks fan, pro wrestling enthusiast, cat parent, software developer, the face that runs the place\n\nhe/him",
+    "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:wli3qpfcun2bcidet7uzjb44/bafkreia6yy6i2zcfhfvkqbsrsh7c6obxxenlop7skd6lpphtovfek7zjie@jpeg",
+    "associated" : {
+      "chat" : {
+        "allowIncoming" : "following"
+      }
+    },
+    "indexedAt" : 1737036190513,
+    "createdAt" : 1683777627501,
+    "viewer" : {
+      "muted" : false,
+      "blockedBy" : false,
+      "knownFollowers" : {
+        "count" : 3,
+        "followers" : [ {
+          "did" : "did:plc:kdud3kfgmfjd2e25tmveuxe4",
+          "handle" : "monitorlizard.bsky.social",
+          "displayName" : "A Monitor Lizard",
+          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:kdud3kfgmfjd2e25tmveuxe4/bafkreibu2uaszi34hc6tx2youaejqhy24q4dfojn3psmrelwzt7ubjvjwy@jpeg",
+          "associated" : {
+            "chat" : {
+              "allowIncoming" : "none"
+            }
+          },
+          "viewer" : {
+            "muted" : false,
+            "blockedBy" : false,
+            "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3kefeejqzh22u",
+            "followedBy" : "at://did:plc:kdud3kfgmfjd2e25tmveuxe4/app.bsky.graph.follow/3keey377t6s26"
+          },
+          "labels" : [ ],
+          "createdAt" : "2023-09-22T09:52:13.983Z"
+        }, {
+          "did" : "did:plc:qjeavhlw222ppsre4rscd3n2",
+          "handle" : "rose.bsky.team",
+          "displayName" : "Rose 🌹",
+          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:qjeavhlw222ppsre4rscd3n2/bafkreiegdbepxyjj5mvqqtyqsocyafpiwol7eabcvxqfuiu7ai4bsgmzeu@jpeg",
+          "associated" : {
+            "chat" : {
+              "allowIncoming" : "all"
+            }
+          },
+          "viewer" : {
+            "muted" : false,
+            "blockedBy" : false,
+            "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3kefwhczzhm2w"
+          },
+          "labels" : [ ],
+          "createdAt" : "2022-11-22T05:02:21.193Z"
+        }, {
+          "did" : "did:plc:vc7f4oafdgxsihk4cry2xpze",
+          "handle" : "jcsalterego.bsky.social",
+          "displayName" : "Jerry Chen",
+          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:vc7f4oafdgxsihk4cry2xpze/bafkreicwxwecqiko2rwwln5y3fqqb2zx6wfg5rxf5r7lukakkq2slqy5hy@jpeg",
+          "associated" : {
+            "chat" : {
+              "allowIncoming" : "following"
+            }
+          },
+          "viewer" : {
+            "muted" : false,
+            "blockedBy" : false,
+            "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3kdztpolhap2n"
+          },
+          "labels" : [ {
+            "src" : "did:plc:vc7f4oafdgxsihk4cry2xpze",
+            "uri" : "at://did:plc:vc7f4oafdgxsihk4cry2xpze/app.bsky.actor.profile/self",
+            "cid" : "bafyreidfiuv3c22vliyu2onazf23zrp35rr7i3upsqa2dsn5cqimmlgugm",
+            "val" : "!no-unauthenticated",
+            "cts" : "1970-01-01T00:00:00.000Z"
+          } ],
+          "createdAt" : "2023-04-23T20:11:04.375Z"
+        } ]
+      }
+    },
+    "labels" : [ ]
+  }, {
+    "did" : "did:plc:anyesr57bwobytddoohv6ehe",
+    "handle" : "vermontgmg.bsky.social",
+    "displayName" : "Garrett M. Graff",
+    "description" : "Journalist & Historian. Director, @aspencyber. Leadership Columnist, Wash Post. Fmr ed, @PoliticoMag & @washingtonian. garrett.graff AT gmail OR ProtonMail.",
+    "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:anyesr57bwobytddoohv6ehe/bafkreih2puuyddvap6t7xsgldckvyisgdgj3ugjyqjznjsmteujit7oaqa@jpeg",
+    "indexedAt" : 1737683077313,
+    "createdAt" : 1688410048225,
+    "viewer" : {
+      "muted" : false,
+      "blockedBy" : false,
+      "knownFollowers" : {
+        "count" : 27,
+        "followers" : [ {
+          "did" : "did:plc:nvfposmpmhegtyvhbs75s3pw",
+          "handle" : "jamellebouie.net",
+          "displayName" : "jamelle",
+          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:nvfposmpmhegtyvhbs75s3pw/bafkreiefjdjiahsa4upn3zabt4bxjfculjcxsdrxzc75nqlylfx7xo2izy@jpeg",
+          "associated" : {
+            "chat" : {
+              "allowIncoming" : "following"
+            }
+          },
+          "viewer" : {
+            "muted" : false,
+            "blockedBy" : false,
+            "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3lcooonjqtg2f"
+          },
+          "labels" : [ ],
+          "createdAt" : "2023-04-27T16:31:46.732Z"
+        }, {
+          "did" : "did:plc:rogqxhzq6vy54nbuy4n6rwyd",
+          "handle" : "pbump.com",
+          "displayName" : "Philip Bump",
+          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:rogqxhzq6vy54nbuy4n6rwyd/bafkreiekqngt2uqtsatqd4g6ckxhufyqgqwc45dlpxmimaioqz3nywkjvq@jpeg",
+          "associated" : {
+            "chat" : {
+              "allowIncoming" : "all"
+            }
+          },
+          "viewer" : {
+            "muted" : false,
+            "blockedBy" : false,
+            "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3kefvwcfgml22"
+          },
+          "labels" : [ ],
+          "createdAt" : "2023-04-27T23:57:17.905Z"
+        }, {
+          "did" : "did:plc:cak4klqoj3bqgk5rj6b4f5do",
+          "handle" : "mmasnick.bsky.social",
+          "displayName" : "Mike Masnick",
+          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:cak4klqoj3bqgk5rj6b4f5do/bafkreifrr5n5p2ixfbupo3eocykh5jzd67dy2tohi7pzllacainjgkkq5e@jpeg",
+          "associated" : {
+            "chat" : {
+              "allowIncoming" : "following"
+            }
+          },
+          "viewer" : {
+            "muted" : false,
+            "blockedBy" : false,
+            "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3lavzrwpmx62c"
+          },
+          "labels" : [ ],
+          "createdAt" : "2023-03-27T23:27:35.019Z"
+        }, {
+          "did" : "did:plc:upkgvxvhn4ebia3arqy4ru65",
+          "handle" : "jaketapper.bsky.social",
+          "displayName" : "Jake Tapper, long-suffering Philly sports fan",
+          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:upkgvxvhn4ebia3arqy4ru65/bafkreibssrgtckesv4wjpr3f4pc2nyzh6v3mn723x4ec3gc3wstnule3vi@jpeg",
+          "viewer" : {
+            "muted" : false,
+            "blockedBy" : false,
+            "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3kebsngdyac2x"
+          },
+          "labels" : [ ],
+          "createdAt" : "2023-04-27T21:28:43.190Z"
+        }, {
+          "did" : "did:plc:j5fbnzh57rn7xz65yjc36gxb",
+          "handle" : "drewharwell.com",
+          "displayName" : "Drew Harwell",
+          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:j5fbnzh57rn7xz65yjc36gxb/bafkreibtwyjrzksk3gd4z6a7wqsbgd5huofmvefvqhjrjre63prxak4zci@jpeg",
+          "associated" : {
+            "chat" : {
+              "allowIncoming" : "following"
+            }
+          },
+          "viewer" : {
+            "muted" : false,
+            "blockedBy" : false,
+            "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3kdztqc3i222w"
+          },
+          "labels" : [ ],
+          "createdAt" : "2023-04-19T16:56:18.439Z"
+        } ]
+      }
+    },
+    "labels" : [ ]
+  }, {
+    "did" : "did:plc:qryxspm27xpatpyiprlyk3xd",
+    "handle" : "navalnews.bsky.social",
+    "displayName" : "Naval News",
+    "description" : "navalnews.com is updated daily with in-depth features, industry and naval forces news round-ups, event coverage, video reports and more.",
+    "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:qryxspm27xpatpyiprlyk3xd/bafkreibt3fqydbyyf2dfcf5ocyffxpgp7ra4ng72av6bs7hkrlh75apd5e@jpeg",
+    "indexedAt" : 1706223980971,
+    "createdAt" : 1688847144961,
+    "viewer" : {
+      "muted" : false,
+      "blockedBy" : false
+    },
+    "labels" : [ ]
+  }, {
+    "did" : "did:plc:dc7hahfvdre6baxdjs65icls",
+    "handle" : "mrjoncryer.bsky.social",
+    "displayName" : "Jon Cryer",
+    "description" : "Red crosses on wooden doors\nIf you float, you’ll burn\n\nActor/Producer he/him",
+    "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:dc7hahfvdre6baxdjs65icls/bafkreicwz2mscaey4rduk2xxmwiuejijhalucbhq7gaiqrwsut7xlmmbse@jpeg",
+    "associated" : {
+      "chat" : {
+        "allowIncoming" : "following"
+      }
+    },
+    "indexedAt" : 1732988264507,
+    "createdAt" : 1683760628431,
+    "viewer" : {
+      "muted" : false,
+      "blockedBy" : false,
+      "knownFollowers" : {
+        "count" : 51,
+        "followers" : [ {
+          "did" : "did:plc:y4zs4cabaezzwx3bz2e5nnj2",
+          "handle" : "georgetakei.bsky.social",
+          "displayName" : "George Takei",
+          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:y4zs4cabaezzwx3bz2e5nnj2/bafkreihyuljtklac6pgvt4kbndezofm23wswyhdqmh77bgedrxhuigwbh4@jpeg",
+          "associated" : {
+            "chat" : {
+              "allowIncoming" : "following"
+            }
+          },
+          "viewer" : {
+            "muted" : false,
+            "blockedBy" : false,
+            "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3kebindmjnd2a"
+          },
+          "labels" : [ ],
+          "createdAt" : "2023-04-30T19:45:03.507Z"
+        }, {
+          "did" : "did:plc:m7w6mfn35d53chutrzjzgkng",
+          "handle" : "bestofdyingtwit.bsky.social",
+          "displayName" : "Best of Dying Twitter",
+          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:m7w6mfn35d53chutrzjzgkng/bafkreicqlciyacg5syrdyjl6d7paapryoovusaw3iabdrifhphpoqpueo4@jpeg",
+          "associated" : {
+            "chat" : {
+              "allowIncoming" : "following"
+            }
+          },
+          "viewer" : {
+            "muted" : false,
+            "blockedBy" : false,
+            "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3kefwni4zoj2e"
+          },
+          "labels" : [ ],
+          "createdAt" : "2023-04-26T22:13:31.300Z"
+        }, {
+          "did" : "did:plc:uvnsaojku6unlw3zuhyt4lzp",
+          "handle" : "andyrichter.co",
+          "displayName" : "Andy Richter",
+          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:uvnsaojku6unlw3zuhyt4lzp/bafkreielve7ged36agcqgile7v57pjnbc5ybspochrhxdeblljusvdpcdq@jpeg",
+          "associated" : {
+            "chat" : {
+              "allowIncoming" : "following"
+            }
+          },
+          "viewer" : {
+            "muted" : false,
+            "blockedBy" : false,
+            "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3kebhxklhwm2q"
+          },
+          "labels" : [ ],
+          "createdAt" : "2023-05-17T02:04:40.766Z"
+        }, {
+          "did" : "did:plc:jutmjylg2h4tpev7wrvy2ay3",
+          "handle" : "alyankovic.bsky.social",
+          "displayName" : "Al Yankovic",
+          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:jutmjylg2h4tpev7wrvy2ay3/bafkreibrr7aidte4qfvmgvozn54c44eb4gfxj7ywy3wjmrpjsxzdyjnwpe@jpeg",
+          "associated" : {
+            "chat" : {
+              "allowIncoming" : "following"
+            }
+          },
+          "viewer" : {
+            "muted" : false,
+            "blockedBy" : false,
+            "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3kebhrhk3ct2r"
+          },
+          "labels" : [ ],
+          "createdAt" : "2023-05-24T22:03:10.185Z"
+        }, {
+          "did" : "did:plc:cak4klqoj3bqgk5rj6b4f5do",
+          "handle" : "mmasnick.bsky.social",
+          "displayName" : "Mike Masnick",
+          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:cak4klqoj3bqgk5rj6b4f5do/bafkreifrr5n5p2ixfbupo3eocykh5jzd67dy2tohi7pzllacainjgkkq5e@jpeg",
+          "associated" : {
+            "chat" : {
+              "allowIncoming" : "following"
+            }
+          },
+          "viewer" : {
+            "muted" : false,
+            "blockedBy" : false,
+            "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3lavzrwpmx62c"
+          },
+          "labels" : [ ],
+          "createdAt" : "2023-03-27T23:27:35.019Z"
+        } ]
+      }
+    },
+    "labels" : [ ]
+  }, {
+    "did" : "did:plc:tdque7aiu4isr7w2ykaxmidz",
+    "handle" : "jayhulmepoet.bsky.social",
+    "displayName" : "Jay Hulme",
+    "description" : "Poet. Speaker. Educator. Performer. Adult, YA, and Children's poetry. Occasionally picture books. Lots of tweets about churches. Unapologetically trans (he/him) jayhulme.com",
+    "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:tdque7aiu4isr7w2ykaxmidz/bafkreiaag4elvbfzky4nfo5ebhdnbdhzedhgmplvq6lvrssvux4azxx3oy@jpeg",
+    "associated" : {
+      "chat" : {
+        "allowIncoming" : "following"
+      }
+    },
+    "indexedAt" : 1735985786097,
+    "createdAt" : 1688463564158,
+    "viewer" : {
+      "muted" : false,
+      "blockedBy" : false,
+      "knownFollowers" : {
+        "count" : 1,
+        "followers" : [ {
+          "did" : "did:plc:ot3p5g4zl67yuqcv6ijonj7z",
+          "handle" : "janhappy.bsky.social",
+          "displayName" : "Jan Happy Ankerstjerne",
+          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:ot3p5g4zl67yuqcv6ijonj7z/bafkreidz2f46byb3rqppclzcsdt4p5dlxgsiltcffbto7ngoifp3wxr6sy@jpeg",
+          "associated" : {
+            "chat" : {
+              "allowIncoming" : "all"
+            }
+          },
+          "viewer" : {
+            "muted" : false,
+            "blockedBy" : false,
+            "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3le5mjvy7il2s",
+            "followedBy" : "at://did:plc:ot3p5g4zl67yuqcv6ijonj7z/app.bsky.graph.follow/3le4vbqdbqu2e"
+          },
+          "labels" : [ ],
+          "createdAt" : "2024-11-12T22:48:24.442Z"
+        } ]
+      }
+    },
+    "labels" : [ ]
+  }, {
+    "did" : "did:plc:hzji5a2avdgvl2wpq5rg2m5t",
+    "handle" : "kaitlinruiz.bsky.social",
+    "displayName" : "Kaitlin Ruiz",
+    "description" : "I have a zest for despair\nkaitlinruizplease (at) gmail",
+    "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:hzji5a2avdgvl2wpq5rg2m5t/bafkreigbu6dafgno27cuf3ky2lxf4al6qtsmerj6cskmvoqmyjobzbq5yi@jpeg",
+    "associated" : {
+      "chat" : {
+        "allowIncoming" : "all"
+      }
+    },
+    "indexedAt" : 1731699969473,
+    "createdAt" : 1684124717168,
+    "viewer" : {
+      "muted" : false,
+      "blockedBy" : false,
+      "knownFollowers" : {
+        "count" : 6,
+        "followers" : [ {
+          "did" : "did:plc:kdud3kfgmfjd2e25tmveuxe4",
+          "handle" : "monitorlizard.bsky.social",
+          "displayName" : "A Monitor Lizard",
+          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:kdud3kfgmfjd2e25tmveuxe4/bafkreibu2uaszi34hc6tx2youaejqhy24q4dfojn3psmrelwzt7ubjvjwy@jpeg",
+          "associated" : {
+            "chat" : {
+              "allowIncoming" : "none"
+            }
+          },
+          "viewer" : {
+            "muted" : false,
+            "blockedBy" : false,
+            "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3kefeejqzh22u",
+            "followedBy" : "at://did:plc:kdud3kfgmfjd2e25tmveuxe4/app.bsky.graph.follow/3keey377t6s26"
+          },
+          "labels" : [ ],
+          "createdAt" : "2023-09-22T09:52:13.983Z"
+        }, {
+          "did" : "did:plc:uvnsaojku6unlw3zuhyt4lzp",
+          "handle" : "andyrichter.co",
+          "displayName" : "Andy Richter",
+          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:uvnsaojku6unlw3zuhyt4lzp/bafkreielve7ged36agcqgile7v57pjnbc5ybspochrhxdeblljusvdpcdq@jpeg",
+          "associated" : {
+            "chat" : {
+              "allowIncoming" : "following"
+            }
+          },
+          "viewer" : {
+            "muted" : false,
+            "blockedBy" : false,
+            "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3kebhxklhwm2q"
+          },
+          "labels" : [ ],
+          "createdAt" : "2023-05-17T02:04:40.766Z"
+        }, {
+          "did" : "did:plc:ragtjsm2j2vknwkz3zp4oxrd",
+          "handle" : "pfrazee.com",
+          "displayName" : "Paul Frazee",
+          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:ragtjsm2j2vknwkz3zp4oxrd/bafkreihhpqdyntku66himwor5wlhtdo44hllmngj2ofmbqnm25bdm454wq@jpeg",
+          "associated" : {
+            "chat" : {
+              "allowIncoming" : "following"
+            }
+          },
+          "viewer" : {
+            "muted" : false,
+            "blockedBy" : false,
+            "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3kdztpa5lyr2c"
+          },
+          "labels" : [ ],
+          "createdAt" : "2022-11-17T00:35:16.391Z"
+        } ]
+      }
+    },
+    "labels" : [ ]
+  }, {
+    "did" : "did:plc:pa3hpjk7ksgrn7mjqaizqfzq",
+    "handle" : "pauldechene.bsky.social",
+    "displayName" : "Paul Dechene",
+    "description" : "Writing about city council in Regina, Saskatchewan. Co-host of the Queen City Improvement Bureau on 91.3FM CJTR - www.queencityib.com. Columns in Prairie Dog Magazine. #WarOnCars",
+    "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:pa3hpjk7ksgrn7mjqaizqfzq/bafkreiflqgwlgzpphzaebc4lixlnybo7zcz6ppiee7vu2nvckzuazrbyba@jpeg",
+    "associated" : {
+      "chat" : {
+        "allowIncoming" : "following"
+      }
+    },
+    "indexedAt" : 1736435107914,
+    "createdAt" : 1682972725715,
+    "viewer" : {
+      "muted" : false,
+      "blockedBy" : false
+    },
+    "labels" : [ ]
+  }, {
+    "did" : "did:plc:7w2eirvpmorwnkmt4gexc4zp",
+    "handle" : "collincornell.bsky.social",
+    "displayName" : "collin cornell",
+    "description" : "theological educator posting about god, bible, climate, transit | he/him | houston\n\nwww.fuller.edu/faculty/collin-cornell/",
+    "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:7w2eirvpmorwnkmt4gexc4zp/bafkreidhnvgv5wneavvjboagh33zysujpspjos7ka2fc5gajuuixorsoeu@jpeg",
+    "associated" : {
+      "chat" : {
+        "allowIncoming" : "following"
+      }
+    },
+    "indexedAt" : 1731174395819,
+    "createdAt" : 1686341908084,
+    "viewer" : {
+      "muted" : false,
+      "blockedBy" : false,
+      "knownFollowers" : {
+        "count" : 1,
+        "followers" : [ {
+          "did" : "did:plc:nmrmi7kmfgvoza544vgmcwd7",
+          "handle" : "computing.bsky.social",
+          "displayName" : "dinislam 🔵🌁",
+          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:nmrmi7kmfgvoza544vgmcwd7/bafkreiaaeilheo3xutpymtuof5plqq7eju35sq4p3y5mn7kjak5russs5i@jpeg",
+          "associated" : {
+            "chat" : {
+              "allowIncoming" : "none"
+            }
+          },
+          "viewer" : {
+            "muted" : false,
+            "blockedBy" : false,
+            "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3ldbwtelya52f",
+            "followedBy" : "at://did:plc:nmrmi7kmfgvoza544vgmcwd7/app.bsky.graph.follow/3ldbvtkrlem2w"
+          },
+          "labels" : [ {
+            "src" : "did:plc:nmrmi7kmfgvoza544vgmcwd7",
+            "uri" : "at://did:plc:nmrmi7kmfgvoza544vgmcwd7/app.bsky.actor.profile/self",
+            "cid" : "bafyreifgnk56mhejykhboh4kqocnziyg2vfqhgpcgfmsqs7louq6iq5tty",
+            "val" : "!no-unauthenticated",
+            "cts" : "1970-01-01T00:00:00.000Z"
+          } ],
+          "createdAt" : "2023-05-16T19:19:03.606Z"
+        } ]
+      }
+    },
+    "labels" : [ ]
+  }, {
+    "did" : "did:plc:ixm3sb7fcy7u6tnxhkrvo32u",
+    "handle" : "keribla.bsky.social",
+    "displayName" : "Keri Blakinger",
+    "description" : "Reporter: LA Times. Author: Corrections in Ink. New America fellow. Journalist, felon. (I promise I don't bite)",
+    "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:ixm3sb7fcy7u6tnxhkrvo32u/bafkreie3r5yejpgidhp3qaculgwnpurbpygz6seopcwwybvuhtyzeydoqu@jpeg",
+    "associated" : {
+      "chat" : {
+        "allowIncoming" : "all"
+      }
+    },
+    "indexedAt" : 1731111067417,
+    "createdAt" : 1684885347677,
+    "viewer" : {
+      "muted" : false,
+      "blockedBy" : false,
+      "knownFollowers" : {
+        "count" : 20,
+        "followers" : [ {
+          "did" : "did:plc:y4zs4cabaezzwx3bz2e5nnj2",
+          "handle" : "georgetakei.bsky.social",
+          "displayName" : "George Takei",
+          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:y4zs4cabaezzwx3bz2e5nnj2/bafkreihyuljtklac6pgvt4kbndezofm23wswyhdqmh77bgedrxhuigwbh4@jpeg",
+          "associated" : {
+            "chat" : {
+              "allowIncoming" : "following"
+            }
+          },
+          "viewer" : {
+            "muted" : false,
+            "blockedBy" : false,
+            "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3kebindmjnd2a"
+          },
+          "labels" : [ ],
+          "createdAt" : "2023-04-30T19:45:03.507Z"
+        }, {
+          "did" : "did:plc:m7w6mfn35d53chutrzjzgkng",
+          "handle" : "bestofdyingtwit.bsky.social",
+          "displayName" : "Best of Dying Twitter",
+          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:m7w6mfn35d53chutrzjzgkng/bafkreicqlciyacg5syrdyjl6d7paapryoovusaw3iabdrifhphpoqpueo4@jpeg",
+          "associated" : {
+            "chat" : {
+              "allowIncoming" : "following"
+            }
+          },
+          "viewer" : {
+            "muted" : false,
+            "blockedBy" : false,
+            "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3kefwni4zoj2e"
+          },
+          "labels" : [ ],
+          "createdAt" : "2023-04-26T22:13:31.300Z"
+        }, {
+          "did" : "did:plc:x4qyokjtdzgl7gmqhsw4ajqj",
+          "handle" : "bencollins.bsky.social",
+          "displayName" : "Tim Onion",
+          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:x4qyokjtdzgl7gmqhsw4ajqj/bafkreihfnahgxywmhcl4fffsa65tk4edrio5bjyy3s3yabr6caymiyl73a@jpeg",
+          "associated" : {
+            "chat" : {
+              "allowIncoming" : "all"
+            }
+          },
+          "viewer" : {
+            "muted" : false,
+            "blockedBy" : false,
+            "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3kefvkmxaee2n"
+          },
+          "labels" : [ ],
+          "createdAt" : "2023-04-27T14:23:34.544Z"
+        }, {
+          "did" : "did:plc:j5fbnzh57rn7xz65yjc36gxb",
+          "handle" : "drewharwell.com",
+          "displayName" : "Drew Harwell",
+          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:j5fbnzh57rn7xz65yjc36gxb/bafkreibtwyjrzksk3gd4z6a7wqsbgd5huofmvefvqhjrjre63prxak4zci@jpeg",
+          "associated" : {
+            "chat" : {
+              "allowIncoming" : "following"
+            }
+          },
+          "viewer" : {
+            "muted" : false,
+            "blockedBy" : false,
+            "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3kdztqc3i222w"
+          },
+          "labels" : [ ],
+          "createdAt" : "2023-04-19T16:56:18.439Z"
+        }, {
+          "did" : "did:plc:oqr5mp25r7z3vfr3igeerxbw",
+          "handle" : "mollyjongfast.bsky.social",
+          "displayName" : "Molly Jong-Fast",
+          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:oqr5mp25r7z3vfr3igeerxbw/bafkreicx4hks5lducpmoi2b7fn4nw64j4m5lanzetkfdzxkl63klddoxgi@jpeg",
+          "associated" : {
+            "chat" : {
+              "allowIncoming" : "following"
+            }
+          },
+          "viewer" : {
+            "muted" : false,
+            "blockedBy" : false,
+            "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3kebirfpiif2n"
+          },
+          "labels" : [ ],
+          "createdAt" : "2023-04-27T15:21:03.647Z"
+        } ]
+      }
+    },
+    "labels" : [ ]
+  } ],
+  "recId" : 9064584518303744
+  }

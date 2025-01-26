@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 import java.io.IOException;
 import java.net.URL;
 
-public class ProfileDefTest {
+class ProfileDefTest {
 
     @Test
     void testMyProfileUnmarshalling() throws JsonProcessingException {

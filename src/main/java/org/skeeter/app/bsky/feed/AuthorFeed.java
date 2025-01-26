@@ -1,7 +1,5 @@
 package org.skeeter.app.bsky.feed;
 
-import jakarta.ws.rs.QueryParam;
-import jakarta.ws.rs.client.WebTarget;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -42,12 +40,4 @@ public class AuthorFeed {
         //if null, bsky api defaults to 50
         this.filter = FilterType.POSTS_WITH_REPLIES;
     }
-
-//    public void addQueryParams(WebTarget webTarget) {
-//        if(this.limit != null) {
-//            webTarget.queryParam("limit", this.limit);
-//        }
-//        if()
-//
-//    }
 }

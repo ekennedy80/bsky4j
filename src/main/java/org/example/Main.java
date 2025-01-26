@@ -1,8 +1,9 @@
 package org.example;
 
-import api.rest.GlobalVars;
 import api.rest.app.bsky.actor.preferences.PreferencesDef;
 import api.rest.app.bsky.actor.profile.ProfileDef;
+import api.rest.app.bsky.actor.suggestions.Request;
+import api.rest.app.bsky.actor.suggestions.SuggestionsDef;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
@@ -35,20 +36,22 @@ public class Main {
         }
 
         Client client = ClientBuilder.newClient();
-        String did = client.target(BSKY_URL+DID_URL)
-                .queryParam("handle",HANDLE)
+        String did = client.target(BSKY_URL + DID_URL)
+                .queryParam("handle", HANDLE)
                 .request(MediaType.TEXT_PLAIN).get(String.class);
-        System.out.println("Bsky DID: "+did);
+        System.out.println("Bsky DID: " + did);
 
         ObjectMapper mapper = new ObjectMapper();
         ObjectNode user = mapper.createObjectNode();
-        user.put("identifier",HANDLE);
-        user.put("password",APP_TOKEN);
-        Response response = client.target(BSKY_URL+API_KEY_URL)
+
+        /* Creating a Bluesky session *********************************************************************************/
+        user.put("identifier", HANDLE);
+        user.put("password", APP_TOKEN);
+        Response response = client.target(BSKY_URL + API_KEY_URL)
                 .request(MediaType.APPLICATION_JSON)
                 .post(Entity.json(user.toString()));
         String bskySession = response.readEntity(String.class);
-        System.out.println("\n\nSession: "+bskySession);
+        System.out.println("\n\nSession: " + bskySession);
         BlueskySession session = null;
         try {
             session = mapper.readValue(bskySession, BlueskySession.class);
@@ -56,29 +59,41 @@ public class Main {
             throw new RuntimeException(e);
         }
         String jwtToken = session.getAccessJwt();
-        System.out.println("\n\nSession: "+session);
+        System.out.println("\n\nSession: " + session);
 
-        response = createRecord(jwtToken);
-        System.out.println("RECORD WAS CREATED AND SENT:\n"+response.toString());
+        /* Creating a record/post to BlueSky **************************************************************************/
+//        response = createRecord(jwtToken);
+//        System.out.println("RECORD WAS CREATED AND SENT:\n" + response.toString());
 
-        String jsonResponse = client.target(BSKY_URL+FEED_URL)
+        /* Searching posts in BlueSky *********************************************************************************/
+        System.out.println("SEARCHING BSKY RESULTS:\n" + searchPosts("Can anyone PLEASE", jwtToken));
+
+        /* Getting friend suggestions from BlueSky ********************************************************************/
+        Request request = new Request(20, null);
+        SuggestionsDef suggestions = getSuggestions(request, jwtToken);
+        System.out.println("**************** SUGGESTIONS:\n" + suggestions.asJsonString());
+
+        /* Getting posts from my feed *********************************************************************************/
+        String jsonResponse = client.target(BSKY_URL + FEED_URL)
                 .queryParam("actor", HANDLE)
-                .queryParam("limit", 2)
-                .request(MediaType.APPLICATION_JSON).header("Authorization","Bearer "+jwtToken)
+                .queryParam("limit", 20)
+                .request(MediaType.APPLICATION_JSON).header("Authorization", "Bearer " + jwtToken)
                 .get(String.class);
-        System.out.println("\n\nFeed: "+jsonResponse);
+        System.out.println("\n\nFeed: " + jsonResponse);
 
-        PreferencesDef prefs = client.target(BSKY_URL+PREFERENCES)
-                .request(MediaType.APPLICATION_JSON).header("Authorization","Bearer "+jwtToken)
+        /* Getting my account preferences *****************************************************************************/
+        PreferencesDef prefs = client.target(BSKY_URL + PREFERENCES)
+                .request(MediaType.APPLICATION_JSON).header("Authorization", "Bearer " + jwtToken)
                 .get(PreferencesDef.class);
-        System.out.println("\n\nPreferences1: "+prefs.asJsonString());
+        System.out.println("\n\nPreferences1: " + prefs.asJsonString());
 
-        ProfileDef profileDef = client.target(BSKY_URL+PROFILE)
+        /* Getting my profile information *****************************************************************************/
+        ProfileDef profileDef = client.target(BSKY_URL + PROFILE)
                 .queryParam("actor", HANDLE)
                 .request(MediaType.APPLICATION_JSON)
-                .header("Authorization","Bearer "+jwtToken)
+                .header("Authorization", "Bearer " + jwtToken)
                 .get(ProfileDef.class);
-        System.out.println("\n\nProfile: "+profileDef.asJsonString());
+        System.out.println("\n\nProfile: " + profileDef.asJsonString());
 
         String date = "2019-07-14T18:30:00.000Z";
         SimpleDateFormat inputFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
@@ -90,7 +105,7 @@ public class Main {
             throw new RuntimeException(e);
         }
         String formattedDate = outputFormat.format(parsedDate);
-        System.out.println("Date: "+parsedDate.getTime()+"\nParsed Date: "+formattedDate);
+        System.out.println("Date: " + parsedDate.getTime() + "\nParsed Date: " + formattedDate);
     }
 
     private static Response createRecord(String sessionToken) {
@@ -100,19 +115,44 @@ public class Main {
         ObjectMapper mapper = new ObjectMapper();
         ObjectNode request = mapper.createObjectNode();
         ObjectNode record = mapper.createObjectNode();
-        record.put("$type","app.bsky.feed.post")
-                .put("text", "This is a test and occurred on "+Date.from(Instant.now()))
+        record.put("$type", "app.bsky.feed.post")
+                .put("text", "This is a test and occurred on " + Date.from(Instant.now()))
                 .put("createdAt", outputFormat.format(timestamp));
         request.put("repo", DID)
-                .put("collection","app.bsky.feed.post")
-                .put("validate", false)
-                .set("record", record);         ;
+                .put("collection", "app.bsky.feed.post")
+                .put("validate", true)
+                .set("record", record);
+        ;
 
-        System.out.println("Record: "+request.toString());
+        System.out.println("Record: " + request.toString());
 
-        Client client = ClientBuilder.newClient();
-        return client.target(BSKY_URL + CREATE_RECORD)
-                .request(MediaType.APPLICATION_JSON).header("Authorization", "Bearer " + sessionToken)
-                .post(Entity.json(request));
+        try (Client client = ClientBuilder.newClient()) {
+            return client.target(BSKY_URL + CREATE_RECORD)
+                    .request(MediaType.APPLICATION_JSON).header("Authorization", "Bearer " + sessionToken)
+                    .post(Entity.json(request));
+        }
+    }
+
+    private static String searchPosts(String query, String sessionToken) {
+        try (Client client = ClientBuilder.newClient()) {
+            return client.target(BSKY_URL + "app.bsky.feed.searchPosts")
+                    .queryParam("q", query)
+                    .queryParam("sort", "top")
+                    .queryParam("author", DID)
+                    .request(MediaType.APPLICATION_JSON)
+                    .header("Authorization", "Bearer " + sessionToken)
+                    .get(String.class);
+        }
+    }
+
+    private static SuggestionsDef getSuggestions(Request request, String sessionToken) {
+        try (Client client = ClientBuilder.newClient()) {
+            return client.target(BSKY_URL+GET_SUGGESTIONS)
+                    .queryParam("limit",request.getLimit())
+                    .queryParam("cursor", request.getCursor())
+                    .request(MediaType.APPLICATION_JSON)
+                    .header("Authorization", "Bearer " + sessionToken)
+                    .get(SuggestionsDef.class);
+        }
     }
 }
