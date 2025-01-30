@@ -12,6 +12,7 @@ public class GlobalVars {
     public static final String DID_URL = "com.atproto.identity.resolveHandle";
     public static final String PREFERENCES = "app.bsky.actor.getPreferences";
     public static final String PROFILE = "app.bsky.actor.getProfile";
+    public static final String PROFILES = "app.bsky.actor.getProfiles";
     public static final String CREATE_RECORD = "com.atproto.repo.createRecord";
     public static final String GET_SUGGESTIONS = "app.bsky.actor.getSuggestions";
 }

@@ -16,6 +16,7 @@ import java.util.List;
 @AllArgsConstructor
 @Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
+@EqualsAndHashCode(callSuper=true)
 public class SavedFeedsPref extends AbstractPreferenceDef {
 
     @Nonnull
@@ -32,18 +33,18 @@ public class SavedFeedsPref extends AbstractPreferenceDef {
 
     @Override
     public ObjectNode asJsonObject() throws JsonProcessingException {
-<span class="nc" id="L35">        ObjectMapper objectMapper = new ObjectMapper();</span>
-<span class="nc" id="L36">        return json.put(&quot;pinned&quot;, objectMapper.writeValueAsString(this.pinned))</span>
-<span class="nc" id="L37">                .put(&quot;saved&quot;, objectMapper.writeValueAsString(this.saved))</span>
-<span class="nc" id="L38">                .put(&quot;timelineIndex&quot;, this.timelineIndex);</span>
+<span class="nc" id="L36">        ObjectMapper objectMapper = new ObjectMapper();</span>
+<span class="nc" id="L37">        return json.put(&quot;pinned&quot;, objectMapper.writeValueAsString(this.pinned))</span>
+<span class="nc" id="L38">                .put(&quot;saved&quot;, objectMapper.writeValueAsString(this.saved))</span>
+<span class="nc" id="L39">                .put(&quot;timelineIndex&quot;, this.timelineIndex);</span>
     }
 
     @Override
     public String asJsonString() throws JsonProcessingException {
-<span class="nc" id="L43">        ObjectMapper objectMapper = new ObjectMapper();</span>
-<span class="nc" id="L44">        return json.put(&quot;pinned&quot;, objectMapper.writeValueAsString(this.pinned))</span>
-<span class="nc" id="L45">                .put(&quot;saved&quot;, objectMapper.writeValueAsString(this.saved))</span>
-<span class="nc" id="L46">                .put(&quot;timelineIndex&quot;, this.timelineIndex).toString();</span>
+<span class="nc" id="L44">        ObjectMapper objectMapper = new ObjectMapper();</span>
+<span class="nc" id="L45">        return json.put(&quot;pinned&quot;, objectMapper.writeValueAsString(this.pinned))</span>
+<span class="nc" id="L46">                .put(&quot;saved&quot;, objectMapper.writeValueAsString(this.saved))</span>
+<span class="nc" id="L47">                .put(&quot;timelineIndex&quot;, this.timelineIndex).toString();</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

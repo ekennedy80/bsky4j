@@ -58,20 +58,20 @@ public class LabelsDef {
 
     @JsonSetter(&quot;cts&quot;)
     public void setCts(String date) throws ParseException {
-<span class="pc bpc" id="L61" title="2 of 4 branches missed.">        if (date != null &amp;&amp; Long.parseLong(date) &gt; 0) {</span>
-<span class="nc bnc" id="L62" title="All 10 branches missed.">            if (date.contains(&quot;-&quot;) || date.contains(&quot;:&quot;) || date.contains(&quot;T&quot;) || date.contains(&quot;.&quot;) || date.contains(&quot;Z&quot;)) {</span>
+<span class="pc bpc" id="L61" title="1 of 2 branches missed.">        if (date != null) {</span>
+<span class="pc bpc" id="L62" title="3 of 6 branches missed.">            if (date.contains(&quot;:&quot;) || date.contains(&quot;T&quot;) || date.contains(&quot;Z&quot;)) {</span>
 <span class="nc" id="L63">                SimpleDateFormat inputFormat = new SimpleDateFormat(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;);</span>
 <span class="nc" id="L64">                this.cts = inputFormat.parse(date);</span>
 <span class="nc" id="L65">            } else {</span>
-<span class="nc" id="L66">                this.cts = new Date(Long.parseLong(date));</span>
+<span class="fc" id="L66">                this.cts = new Date(Long.parseLong(date));</span>
             }
         }
 <span class="fc" id="L69">    }</span>
 
     @JsonSetter(&quot;exp&quot;)
     public void setExp(String date) throws ParseException {
-<span class="nc bnc" id="L73" title="All 4 branches missed.">        if (date != null &amp;&amp; Long.parseLong(date) &gt; 0) {</span>
-<span class="nc bnc" id="L74" title="All 10 branches missed.">            if (date.contains(&quot;-&quot;) || date.contains(&quot;:&quot;) || date.contains(&quot;T&quot;) || date.contains(&quot;.&quot;) || date.contains(&quot;Z&quot;)) {</span>
+<span class="nc bnc" id="L73" title="All 2 branches missed.">        if (date != null) {</span>
+<span class="nc bnc" id="L74" title="All 6 branches missed.">            if (date.contains(&quot;:&quot;) || date.contains(&quot;T&quot;) || date.contains(&quot;Z&quot;)) {</span>
 <span class="nc" id="L75">                SimpleDateFormat inputFormat = new SimpleDateFormat(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;);</span>
 <span class="nc" id="L76">                this.exp = inputFormat.parse(date);</span>
 <span class="nc" id="L77">            } else {</span>

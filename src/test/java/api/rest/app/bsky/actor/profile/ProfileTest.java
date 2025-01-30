@@ -8,16 +8,16 @@ import org.junit.jupiter.api.Test;
 import java.io.IOException;
 import java.net.URL;
 
-class ProfileDefTest {
+class ProfileTest {
 
     @Test
     void testMyProfileUnmarshalling() throws JsonProcessingException {
         ObjectMapper objectMapper = new ObjectMapper();
-        ProfileDef profileData = null;
+        Profile profileData = null;
         try {
             URL resourceAbsolutePath = getClass().getClassLoader().getResource("api/rest/app/bsky/actor/profile/myprofile.json");
             Assertions.assertNotNull(resourceAbsolutePath);
-            profileData = objectMapper.readValue(resourceAbsolutePath, ProfileDef.class);
+            profileData = objectMapper.readValue(resourceAbsolutePath, Profile.class);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -28,11 +28,11 @@ class ProfileDefTest {
     @Test
     void testAutoExampleProfileUnmarshalling() throws JsonProcessingException {
         ObjectMapper objectMapper = new ObjectMapper();
-        ProfileDef profileData = null;
+        Profile profileData;
         try {
             URL resourceAbsolutePath = getClass().getClassLoader().getResource("api/rest/app/bsky/actor/profile/auto-example.json");
             Assertions.assertNotNull(resourceAbsolutePath);
-            profileData = objectMapper.readValue(resourceAbsolutePath, ProfileDef.class);
+            profileData = objectMapper.readValue(resourceAbsolutePath, Profile.class);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

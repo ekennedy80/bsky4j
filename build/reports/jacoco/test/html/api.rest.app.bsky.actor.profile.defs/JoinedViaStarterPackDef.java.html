@@ -33,7 +33,7 @@ public class JoinedViaStarterPackDef {
 
     @Nonnull
     @JsonProperty(&quot;record&quot;)
-    private RecordDef record;
+    private RecordDef recordDef;
 
     @Nonnull
     @JsonProperty(&quot;creator&quot;)
@@ -61,8 +61,14 @@ public class JoinedViaStarterPackDef {
 
     @JsonSetter(&quot;indexedAt&quot;)
     public void setIndexedAt(String date) throws ParseException {
-<span class="nc" id="L64">        SimpleDateFormat inputFormat = new SimpleDateFormat(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;);</span>
-<span class="nc" id="L65">        this.indexedAt = inputFormat.parse(date);</span>
-<span class="nc" id="L66">    }</span>
+<span class="nc bnc" id="L64" title="All 2 branches missed.">        if (date != null) {</span>
+<span class="nc bnc" id="L65" title="All 10 branches missed.">            if (date.contains(&quot;-&quot;) || date.contains(&quot;:&quot;) || date.contains(&quot;T&quot;) || date.contains(&quot;.&quot;) || date.contains(&quot;Z&quot;)) {</span>
+<span class="nc" id="L66">                SimpleDateFormat inputFormat = new SimpleDateFormat(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;);</span>
+<span class="nc" id="L67">                this.indexedAt = inputFormat.parse(date);</span>
+<span class="nc" id="L68">            } else {</span>
+<span class="nc" id="L69">                this.indexedAt = new Date(Long.parseLong(date));</span>
+            }
+        }
+<span class="nc" id="L72">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

@@ -115,7 +115,7 @@ public class ProfileDef {
 
     @JsonSetter(&quot;indexedAt&quot;)
     public void setIndexedAt(String date) throws ParseException {
-<span class="nc bnc" id="L118" title="All 4 branches missed.">        if (date != null &amp;&amp; Long.parseLong(date) &gt; 0) {</span>
+<span class="nc bnc" id="L118" title="All 2 branches missed.">        if (date != null) {</span>
 <span class="nc bnc" id="L119" title="All 10 branches missed.">            if (date.contains(&quot;-&quot;) || date.contains(&quot;:&quot;) || date.contains(&quot;T&quot;) || date.contains(&quot;.&quot;) || date.contains(&quot;Z&quot;)) {</span>
 <span class="nc" id="L120">                SimpleDateFormat inputFormat = new SimpleDateFormat(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;);</span>
 <span class="nc" id="L121">                this.indexedAt = inputFormat.parse(date);</span>
@@ -127,7 +127,7 @@ public class ProfileDef {
 
     @JsonSetter(&quot;createdAt&quot;)
     public void setCreatedAt(String date) throws ParseException {
-<span class="nc bnc" id="L130" title="All 4 branches missed.">        if (date != null &amp;&amp; Long.parseLong(date) &gt; 0) {</span>
+<span class="nc bnc" id="L130" title="All 2 branches missed.">        if (date != null) {</span>
 <span class="nc bnc" id="L131" title="All 10 branches missed.">            if (date.contains(&quot;-&quot;) || date.contains(&quot;:&quot;) || date.contains(&quot;T&quot;) || date.contains(&quot;.&quot;) || date.contains(&quot;Z&quot;)) {</span>
 <span class="nc" id="L132">                SimpleDateFormat inputFormat = new SimpleDateFormat(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;);</span>
 <span class="nc" id="L133">                this.createdAt = inputFormat.parse(date);</span>
@@ -139,7 +139,7 @@ public class ProfileDef {
 
     public ObjectNode asJsonObject() throws JsonProcessingException {
 <span class="nc" id="L141">        ObjectMapper objectMapper = new ObjectMapper();</span>
-<span class="nc" id="L142">        ObjectNode json = new ObjectMapper().createObjectNode();;</span>
+<span class="nc" id="L142">        ObjectNode json = new ObjectMapper().createObjectNode();</span>
 <span class="nc" id="L143">        return json.put(&quot;profile&quot;, objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(this));</span>
     }
 

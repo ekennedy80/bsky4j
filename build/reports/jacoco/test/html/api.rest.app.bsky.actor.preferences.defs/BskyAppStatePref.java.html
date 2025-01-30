@@ -10,6 +10,7 @@ import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import java.text.ParseException;
@@ -20,6 +21,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @JsonInclude(JsonInclude.Include.NON_NULL)
+@EqualsAndHashCode(callSuper = false)
 public class BskyAppStatePref extends AbstractPreferenceDef {
 
     @Data
@@ -55,15 +57,15 @@ public class BskyAppStatePref extends AbstractPreferenceDef {
 
         @JsonSetter(&quot;expiresAt&quot;)
         public void setExpiresAt(String date) throws ParseException {
-<span class="nc bnc" id="L58" title="All 4 branches missed.">            if (date != null &amp;&amp; Long.parseLong(date) &gt; 0) {</span>
-<span class="nc bnc" id="L59" title="All 10 branches missed.">                if (date.contains(&quot;-&quot;) || date.contains(&quot;:&quot;) || date.contains(&quot;T&quot;) || date.contains(&quot;.&quot;) || date.contains(&quot;Z&quot;)) {</span>
-<span class="nc" id="L60">                    SimpleDateFormat inputFormat = new SimpleDateFormat(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;);</span>
-<span class="nc" id="L61">                    this.expiresAt = inputFormat.parse(date);</span>
-<span class="nc" id="L62">                } else {</span>
-<span class="nc" id="L63">                    this.expiresAt = new Date(Long.parseLong(date));</span>
+<span class="nc bnc" id="L60" title="All 4 branches missed.">            if (date != null &amp;&amp; Long.parseLong(date) &gt; 0) {</span>
+<span class="nc bnc" id="L61" title="All 10 branches missed.">                if (date.contains(&quot;-&quot;) || date.contains(&quot;:&quot;) || date.contains(&quot;T&quot;) || date.contains(&quot;.&quot;) || date.contains(&quot;Z&quot;)) {</span>
+<span class="nc" id="L62">                    SimpleDateFormat inputFormat = new SimpleDateFormat(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;);</span>
+<span class="nc" id="L63">                    this.expiresAt = inputFormat.parse(date);</span>
+<span class="nc" id="L64">                } else {</span>
+<span class="nc" id="L65">                    this.expiresAt = new Date(Long.parseLong(date));</span>
                 }
             }
-<span class="nc" id="L66">        }</span>
+<span class="nc" id="L68">        }</span>
     }
 
     @Nullable
@@ -80,15 +82,15 @@ public class BskyAppStatePref extends AbstractPreferenceDef {
 
     @Override
     public ObjectNode asJsonObject() throws JsonProcessingException {
-<span class="nc" id="L83">        ObjectMapper objectMapper = new ObjectMapper();</span>
-<span class="nc" id="L84">        ObjectNode json = new ObjectMapper().createObjectNode();;</span>
-<span class="nc" id="L85">        return json.put(&quot;profile&quot;, objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(this));</span>
+<span class="nc" id="L85">        ObjectMapper objectMapper = new ObjectMapper();</span>
+<span class="nc" id="L86">        ObjectNode json = new ObjectMapper().createObjectNode();</span>
+<span class="nc" id="L87">        return json.put(&quot;profile&quot;, objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(this));</span>
     }
 
     @Override
     public String asJsonString() throws JsonProcessingException {
-<span class="nc" id="L90">        ObjectMapper objectMapper = new ObjectMapper();</span>
-<span class="nc" id="L91">        return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(this);</span>
+<span class="nc" id="L92">        ObjectMapper objectMapper = new ObjectMapper();</span>
+<span class="nc" id="L93">        return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(this);</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

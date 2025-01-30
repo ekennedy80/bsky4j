@@ -58,7 +58,13 @@ public class CreatorDef {
 
     @JsonSetter("createdAt")
     public void setCreatedAt(String date) throws ParseException {
-        SimpleDateFormat inputFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
-        this.createdAt = inputFormat.parse(date);
+        if (date != null) {
+            if (date.contains(":") || date.contains("T") || date.contains("Z")) {
+                SimpleDateFormat inputFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
+                this.createdAt = inputFormat.parse(date);
+            } else {
+                this.createdAt = new Date(Long.parseLong(date));
+            }
+        }
     }
 }

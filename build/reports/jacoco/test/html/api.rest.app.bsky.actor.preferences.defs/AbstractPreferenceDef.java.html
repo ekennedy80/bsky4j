@@ -8,6 +8,7 @@ import jakarta.annotation.Nonnull;
 import lombok.*;
 
 @Data
+@NoArgsConstructor(force = true)
 @AllArgsConstructor
 @ToString(exclude = {&quot;json&quot;})
 @EqualsAndHashCode(exclude = {&quot;json&quot;})
@@ -37,9 +38,10 @@ public abstract class AbstractPreferenceDef {
     @JsonIgnore
     protected final ObjectNode json;
 
-<span class="nc" id="L40">    protected AbstractPreferenceDef() {</span>
-<span class="nc" id="L41">        this.json = new ObjectMapper().createObjectNode();</span>
-<span class="nc" id="L42">    }</span>
+<span class="nc" id="L41">    protected AbstractPreferenceDef(String type) {</span>
+<span class="nc" id="L42">        this.json = new ObjectMapper().createObjectNode();</span>
+<span class="nc" id="L43">        this.type = type;</span>
+<span class="nc" id="L44">    }</span>
 
     public abstract ObjectNode asJsonObject() throws JsonProcessingException;
 

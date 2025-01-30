@@ -76,7 +76,13 @@ public class MutedOrBlockingByListDef {
 
     @JsonSetter("indexedAt")
     public void setIndexedAt(String date) throws ParseException {
-        SimpleDateFormat inputFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
-        this.indexedAt = inputFormat.parse(date);
+        if (date != null) {
+            if (date.contains(":") || date.contains("T") || date.contains("Z")) {
+                SimpleDateFormat inputFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
+                this.indexedAt = inputFormat.parse(date);
+            } else {
+                this.indexedAt = new Date(Long.parseLong(date));
+            }
+        }
     }
 }

@@ -1,9 +1,11 @@
 package org.example;
 
+import api.rest.HttpClientUtils;
 import api.rest.app.bsky.actor.preferences.PreferencesDef;
-import api.rest.app.bsky.actor.profile.ProfileDef;
+import api.rest.app.bsky.actor.profile.Profile;
 import api.rest.app.bsky.actor.suggestions.Request;
 import api.rest.app.bsky.actor.suggestions.SuggestionsDef;
+import api.rest.defs.BskySession;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
@@ -45,25 +47,16 @@ public class Main {
         ObjectNode user = mapper.createObjectNode();
 
         /* Creating a Bluesky session *********************************************************************************/
-        user.put("identifier", HANDLE);
-        user.put("password", APP_TOKEN);
-        Response response = client.target(BSKY_URL + API_KEY_URL)
-                .request(MediaType.APPLICATION_JSON)
-                .post(Entity.json(user.toString()));
-        String bskySession = response.readEntity(String.class);
-        System.out.println("\n\nSession: " + bskySession);
-        BlueskySession session = null;
-        try {
-            session = mapper.readValue(bskySession, BlueskySession.class);
-        } catch (JsonProcessingException e) {
-            throw new RuntimeException(e);
-        }
-        String jwtToken = session.getAccessJwt();
-        System.out.println("\n\nSession: " + session);
-
-        /* Creating a record/post to BlueSky **************************************************************************/
-//        response = createRecord(jwtToken);
-//        System.out.println("RECORD WAS CREATED AND SENT:\n" + response.toString());
+//        user.put("identifier", HANDLE);
+//        user.put("password", APP_TOKEN);
+//        Response response = client.target(BSKY_URL + API_KEY_URL)
+//                .request(MediaType.APPLICATION_JSON)
+//                .post(Entity.json(user.toString()));
+//        String bskySession = response.readEntity(String.class);
+//        System.out.println("\n\nSession: " + bskySession);
+        BskySession session = HttpClientUtils.getSession(HANDLE, APP_TOKEN, null);
+        System.out.println("\n\n******************** Session ********************\n" + session.asJsonString());
+        
 
         /* Searching posts in BlueSky *********************************************************************************/
         System.out.println("SEARCHING BSKY RESULTS:\n" + searchPosts("Can anyone PLEASE", jwtToken));
@@ -88,12 +81,12 @@ public class Main {
         System.out.println("\n\nPreferences1: " + prefs.asJsonString());
 
         /* Getting my profile information *****************************************************************************/
-        ProfileDef profileDef = client.target(BSKY_URL + PROFILE)
+        Profile profile = client.target(BSKY_URL + PROFILE)
                 .queryParam("actor", HANDLE)
                 .request(MediaType.APPLICATION_JSON)
                 .header("Authorization", "Bearer " + jwtToken)
-                .get(ProfileDef.class);
-        System.out.println("\n\nProfile: " + profileDef.asJsonString());
+                .get(Profile.class);
+        System.out.println("\n\nProfile: " + profile.asJsonString());
 
         String date = "2019-07-14T18:30:00.000Z";
         SimpleDateFormat inputFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");

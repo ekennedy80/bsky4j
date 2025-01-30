@@ -11,6 +11,7 @@ import lombok.*;
 @AllArgsConstructor
 @Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
+@EqualsAndHashCode(callSuper = false)
 public class ContentLabelPref extends AbstractPreferenceDef {
 
     @Nullable
@@ -27,16 +28,16 @@ public class ContentLabelPref extends AbstractPreferenceDef {
 
     @Override
     public ObjectNode asJsonObject() {
-<span class="nc" id="L30">        return json.put(&quot;labelerDid&quot;, this.labelerDid)</span>
-<span class="nc" id="L31">                .put(&quot;label&quot;, this.label)</span>
-<span class="nc" id="L32">                .put(&quot;visibility&quot;, visibility.toString());</span>
+<span class="nc" id="L31">        return json.put(&quot;labelerDid&quot;, this.labelerDid)</span>
+<span class="nc" id="L32">                .put(&quot;label&quot;, this.label)</span>
+<span class="nc" id="L33">                .put(&quot;visibility&quot;, visibility);</span>
     }
 
     @Override
     public String asJsonString() {
-<span class="nc" id="L37">        return json.put(&quot;labelerDid&quot;, this.labelerDid)</span>
-<span class="nc" id="L38">                .put(&quot;label&quot;, this.label)</span>
-<span class="nc" id="L39">                .put(&quot;visibility&quot;, visibility.toString()).toString();</span>
+<span class="nc" id="L38">        return json.put(&quot;labelerDid&quot;, this.labelerDid)</span>
+<span class="nc" id="L39">                .put(&quot;label&quot;, this.label)</span>
+<span class="nc" id="L40">                .put(&quot;visibility&quot;, visibility).toString();</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

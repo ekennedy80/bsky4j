@@ -35,7 +35,7 @@ public class SuggestionsDef {
 
     public ObjectNode asJsonObject() throws JsonProcessingException {
 <span class="nc" id="L37">        ObjectMapper objectMapper = new ObjectMapper();</span>
-<span class="nc" id="L38">        ObjectNode json = new ObjectMapper().createObjectNode();;</span>
+<span class="nc" id="L38">        ObjectNode json = new ObjectMapper().createObjectNode();</span>
 <span class="nc" id="L39">        return json.put(&quot;suggestions&quot;, objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(this));</span>
     }
 

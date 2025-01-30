@@ -8,12 +8,14 @@ import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
+@EqualsAndHashCode(callSuper = false)
 public class FeedViewPref extends AbstractPreferenceDef {
 
     @Nonnull
@@ -42,12 +44,12 @@ public class FeedViewPref extends AbstractPreferenceDef {
 
     @Override
     public ObjectNode asJsonObject() throws JsonProcessingException {
-<span class="nc" id="L45">        return null;</span>
+<span class="nc" id="L47">        return null;</span>
     }
 
     @Override
     public String asJsonString() throws JsonProcessingException {
-<span class="nc" id="L50">        return &quot;&quot;;</span>
+<span class="nc" id="L52">        return &quot;&quot;;</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

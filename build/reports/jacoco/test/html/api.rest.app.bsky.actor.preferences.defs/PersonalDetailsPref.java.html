@@ -7,6 +7,7 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 import jakarta.annotation.Nullable;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import java.text.ParseException;
@@ -17,6 +18,7 @@ import java.util.Date;
 @AllArgsConstructor
 @Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
+@EqualsAndHashCode(callSuper = false)
 public class PersonalDetailsPref extends AbstractPreferenceDef {
 
     @Nullable
@@ -25,28 +27,28 @@ public class PersonalDetailsPref extends AbstractPreferenceDef {
 
     @JsonSetter(&quot;birthDate&quot;)
     public void setBirthDate(String date) throws ParseException {
-<span class="nc" id="L28">        SimpleDateFormat inputFormat = new SimpleDateFormat(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;);</span>
-<span class="nc" id="L29">        this.birthDate = inputFormat.parse(date);</span>
-<span class="nc" id="L30">    }</span>
+<span class="nc" id="L30">        SimpleDateFormat inputFormat = new SimpleDateFormat(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;);</span>
+<span class="nc" id="L31">        this.birthDate = inputFormat.parse(date);</span>
+<span class="nc" id="L32">    }</span>
 
     public Date getBirthDate() {
-<span class="nc" id="L33">        return this.birthDate;</span>
+<span class="nc" id="L35">        return this.birthDate;</span>
     }
 
     @Override
     public ObjectNode asJsonObject() {
-<span class="nc bnc" id="L38" title="All 2 branches missed.">        if(this.birthDate != null)</span>
-<span class="nc" id="L39">            return json.put(&quot;birthDate&quot;, this.birthDate.getTime());</span>
+<span class="nc bnc" id="L40" title="All 2 branches missed.">        if(this.birthDate != null)</span>
+<span class="nc" id="L41">            return json.put(&quot;birthDate&quot;, this.birthDate.getTime());</span>
         else
-<span class="nc" id="L41">            return json;</span>
+<span class="nc" id="L43">            return json;</span>
     }
 
     @Override
     public String asJsonString() {
-<span class="nc bnc" id="L46" title="All 2 branches missed.">        if(this.birthDate != null)</span>
-<span class="nc" id="L47">            return json.put(&quot;birthDate&quot;, this.birthDate.getTime()).toString();</span>
+<span class="nc bnc" id="L48" title="All 2 branches missed.">        if(this.birthDate != null)</span>
+<span class="nc" id="L49">            return json.put(&quot;birthDate&quot;, this.birthDate.getTime()).toString();</span>
         else
-<span class="nc" id="L49">            return json.toString();</span>
+<span class="nc" id="L51">            return json.toString();</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

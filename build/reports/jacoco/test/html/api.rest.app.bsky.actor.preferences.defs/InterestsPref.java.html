@@ -8,6 +8,7 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 import jakarta.annotation.Nonnull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import java.util.List;
@@ -16,6 +17,7 @@ import java.util.List;
 @AllArgsConstructor
 @Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
+@EqualsAndHashCode(callSuper = false)
 public class InterestsPref extends AbstractPreferenceDef {
 
     @Nonnull
@@ -24,14 +26,14 @@ public class InterestsPref extends AbstractPreferenceDef {
 
     @Override
     public ObjectNode asJsonObject() throws JsonProcessingException {
-<span class="nc" id="L27">        ObjectMapper objectMapper = new ObjectMapper();</span>
-<span class="nc" id="L28">        return json.put(&quot;tags&quot;, objectMapper.writeValueAsString(this.tags));</span>
+<span class="nc" id="L29">        ObjectMapper objectMapper = new ObjectMapper();</span>
+<span class="nc" id="L30">        return json.put(&quot;tags&quot;, objectMapper.writeValueAsString(this.tags));</span>
     }
 
     @Override
     public String asJsonString() throws JsonProcessingException {
-<span class="nc" id="L33">        ObjectMapper objectMapper = new ObjectMapper();</span>
-<span class="nc" id="L34">        return json.put(&quot;tags&quot;, objectMapper.writeValueAsString(this.tags)).toString();</span>
+<span class="nc" id="L35">        ObjectMapper objectMapper = new ObjectMapper();</span>
+<span class="nc" id="L36">        return json.put(&quot;tags&quot;, objectMapper.writeValueAsString(this.tags)).toString();</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

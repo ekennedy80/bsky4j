@@ -58,8 +58,8 @@ public class LabelsDef {
 
     @JsonSetter("cts")
     public void setCts(String date) throws ParseException {
-        if (date != null && Long.parseLong(date) > 0) {
-            if (date.contains("-") || date.contains(":") || date.contains("T") || date.contains(".") || date.contains("Z")) {
+        if (date != null) {
+            if (date.contains(":") || date.contains("T") || date.contains("Z")) {
                 SimpleDateFormat inputFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
                 this.cts = inputFormat.parse(date);
             } else {
@@ -70,8 +70,8 @@ public class LabelsDef {
 
     @JsonSetter("exp")
     public void setExp(String date) throws ParseException {
-        if (date != null && Long.parseLong(date) > 0) {
-            if (date.contains("-") || date.contains(":") || date.contains("T") || date.contains(".") || date.contains("Z")) {
+        if (date != null) {
+            if (date.contains(":") || date.contains("T") || date.contains("Z")) {
                 SimpleDateFormat inputFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
                 this.exp = inputFormat.parse(date);
             } else {

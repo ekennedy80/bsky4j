@@ -32,7 +32,7 @@ import java.util.List;
 @AllArgsConstructor
 @Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class ProfileDef {
+public class Profile {
 
     @Data
     @NoArgsConstructor
@@ -115,8 +115,8 @@ public class ProfileDef {
 
     @JsonSetter("indexedAt")
     public void setIndexedAt(String date) throws ParseException {
-        if (date != null && Long.parseLong(date) > 0) {
-            if (date.contains("-") || date.contains(":") || date.contains("T") || date.contains(".") || date.contains("Z")) {
+        if (date != null) {
+            if (date.contains(":") || date.contains("T") || date.contains("Z")) {
                 SimpleDateFormat inputFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
                 this.indexedAt = inputFormat.parse(date);
             } else {
@@ -127,8 +127,8 @@ public class ProfileDef {
 
     @JsonSetter("createdAt")
     public void setCreatedAt(String date) throws ParseException {
-        if (date != null && Long.parseLong(date) > 0) {
-            if (date.contains("-") || date.contains(":") || date.contains("T") || date.contains(".") || date.contains("Z")) {
+        if (date != null) {
+            if (date.contains(":") || date.contains("T") || date.contains("Z")) {
                 SimpleDateFormat inputFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
                 this.createdAt = inputFormat.parse(date);
             } else {
