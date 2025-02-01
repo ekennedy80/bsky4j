@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="api.rest.DataUtilsTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-02-01T02:38:11" hostname="viktor-vaughn" time="0.02">
+  <properties/>
+  <testcase name="testParseRecordUri()" classname="api.rest.DataUtilsTest" time="0.02"/>
+  <system-out><![CDATA[did:plc:c2nnxxpuckisatkcyk2ffbwu
+app.bsky.feed.post
+3kzgko3cguy2w
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

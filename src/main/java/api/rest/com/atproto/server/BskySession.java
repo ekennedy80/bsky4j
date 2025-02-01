@@ -1,4 +1,4 @@
-package api.rest.defs;
+package api.rest.com.atproto.server;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;

@@ -66,26 +66,26 @@ public class ActorsDef {
 
     @JsonSetter(&quot;indexedAt&quot;)
     public void setIndexedAt(String date) throws ParseException {
-<span class="pc bpc" id="L69" title="1 of 2 branches missed.">        if(date != null) {</span>
-<span class="pc bpc" id="L70" title="5 of 10 branches missed.">            if (date.contains(&quot;-&quot;) || date.contains(&quot;:&quot;) || date.contains(&quot;T&quot;) || date.contains(&quot;.&quot;) || date.contains(&quot;Z&quot;)) {</span>
+<span class="nc bnc" id="L69" title="All 2 branches missed.">        if(date != null) {</span>
+<span class="nc bnc" id="L70" title="All 10 branches missed.">            if (date.contains(&quot;-&quot;) || date.contains(&quot;:&quot;) || date.contains(&quot;T&quot;) || date.contains(&quot;.&quot;) || date.contains(&quot;Z&quot;)) {</span>
 <span class="nc" id="L71">                SimpleDateFormat inputFormat = new SimpleDateFormat(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;);</span>
 <span class="nc" id="L72">                this.indexedAt = inputFormat.parse(date);</span>
 <span class="nc" id="L73">            } else {</span>
-<span class="fc" id="L74">                this.indexedAt = new Date(Long.parseLong(date));</span>
+<span class="nc" id="L74">                this.indexedAt = new Date(Long.parseLong(date));</span>
             }
         }
-<span class="fc" id="L77">    }</span>
+<span class="nc" id="L77">    }</span>
 
     @JsonSetter(&quot;createdAt&quot;)
     public void setCreatedAt(String date) throws ParseException {
-<span class="pc bpc" id="L81" title="1 of 2 branches missed.">        if(date != null) {</span>
-<span class="pc bpc" id="L82" title="5 of 10 branches missed.">            if (date.contains(&quot;-&quot;) || date.contains(&quot;:&quot;) || date.contains(&quot;T&quot;) || date.contains(&quot;.&quot;) || date.contains(&quot;Z&quot;)) {</span>
+<span class="nc bnc" id="L81" title="All 2 branches missed.">        if(date != null) {</span>
+<span class="nc bnc" id="L82" title="All 10 branches missed.">            if (date.contains(&quot;-&quot;) || date.contains(&quot;:&quot;) || date.contains(&quot;T&quot;) || date.contains(&quot;.&quot;) || date.contains(&quot;Z&quot;)) {</span>
 <span class="nc" id="L83">                SimpleDateFormat inputFormat = new SimpleDateFormat(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;);</span>
 <span class="nc" id="L84">                this.createdAt = inputFormat.parse(date);</span>
 <span class="nc" id="L85">            } else {</span>
-<span class="fc" id="L86">                this.createdAt = new Date(Long.parseLong(date));</span>
+<span class="nc" id="L86">                this.createdAt = new Date(Long.parseLong(date));</span>
             }
         }
-<span class="fc" id="L89">    }</span>
+<span class="nc" id="L89">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

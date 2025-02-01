@@ -61,7 +61,7 @@ public class KnownFollowersDef {
         @JsonSetter(&quot;createdAt&quot;)
         public void setCreatedAt(String date) throws ParseException {
 <span class="nc bnc" id="L63" title="All 2 branches missed.">            if (date != null) {</span>
-<span class="nc bnc" id="L64" title="All 10 branches missed.">                if (date.contains(&quot;-&quot;) || date.contains(&quot;:&quot;) || date.contains(&quot;T&quot;) || date.contains(&quot;.&quot;) || date.contains(&quot;Z&quot;)) {</span>
+<span class="nc bnc" id="L64" title="All 6 branches missed.">                if (date.contains(&quot;:&quot;) || date.contains(&quot;T&quot;) || date.contains(&quot;Z&quot;)) {</span>
 <span class="nc" id="L65">                    SimpleDateFormat inputFormat = new SimpleDateFormat(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;);</span>
 <span class="nc" id="L66">                    this.createdAt = inputFormat.parse(date);</span>
 <span class="nc" id="L67">                } else {</span>

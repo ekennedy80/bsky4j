@@ -1,10 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Main.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Bluesky-REST-Client</a> &gt; <a href="index.source.html" class="el_package">org.example</a> &gt; <span class="el_source">Main.java</span></div><h1>Main.java</h1><pre class="source lang-java linenums">package org.example;
 
+import api.rest.HttpClientUtils;
 import api.rest.app.bsky.actor.preferences.PreferencesDef;
-import api.rest.app.bsky.actor.profile.ProfileDef;
+import api.rest.app.bsky.actor.profile.Profile;
 import api.rest.app.bsky.actor.suggestions.Request;
 import api.rest.app.bsky.actor.suggestions.SuggestionsDef;
+import api.rest.defs.BskySession;
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import jakarta.ws.rs.client.Client;
@@ -17,142 +20,160 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.Instant;
 import java.util.Date;
+import java.util.Iterator;
 
 import static api.rest.GlobalVars.*;
 
 //TIP To &lt;b&gt;Run&lt;/b&gt; code, press &lt;shortcut actionId=&quot;Run&quot;/&gt; or
 // click the &lt;icon src=&quot;AllIcons.Actions.Execute&quot;/&gt; icon in the gutter.
-<span class="nc" id="L25">public class Main {</span>
+<span class="nc" id="L29">public class Main {</span>
 
     public static void main(String[] args) throws JsonProcessingException {
         //TIP Press &lt;shortcut actionId=&quot;ShowIntentionActions&quot;/&gt; with your caret at the highlighted text
         // to see how IntelliJ IDEA suggests fixing it.
-<span class="nc" id="L30">        System.out.printf(&quot;Hello and welcome!%n&quot;);</span>
+<span class="nc" id="L34">        System.out.printf(&quot;Hello and welcome!%n&quot;);</span>
 
-<span class="nc bnc" id="L32" title="All 2 branches missed.">        for (int i = 1; i &lt;= 5; i++) {</span>
+<span class="nc bnc" id="L36" title="All 2 branches missed.">        for (int i = 1; i &lt;= 5; i++) {</span>
             //TIP Press &lt;shortcut actionId=&quot;Debug&quot;/&gt; to start debugging your code. We have set one &lt;icon src=&quot;AllIcons.Debugger.Db_set_breakpoint&quot;/&gt; breakpoint
             // for you, but you can always add more by pressing &lt;shortcut actionId=&quot;ToggleLineBreakpoint&quot;/&gt;.
-<span class="nc" id="L35">            System.out.println(&quot;i = &quot; + i);</span>
+<span class="nc" id="L39">            System.out.println(&quot;i = &quot; + i);</span>
         }
 
-<span class="nc" id="L38">        Client client = ClientBuilder.newClient();</span>
-<span class="nc" id="L39">        String did = client.target(BSKY_URL + DID_URL)</span>
-<span class="nc" id="L40">                .queryParam(&quot;handle&quot;, HANDLE)</span>
-<span class="nc" id="L41">                .request(MediaType.TEXT_PLAIN).get(String.class);</span>
-<span class="nc" id="L42">        System.out.println(&quot;Bsky DID: &quot; + did);</span>
+<span class="nc" id="L42">        Client client = ClientBuilder.newClient();</span>
+<span class="nc" id="L43">        String did = client.target(BSKY_URL + DID_URL)</span>
+<span class="nc" id="L44">                .queryParam(&quot;handle&quot;, HANDLE)</span>
+<span class="nc" id="L45">                .request(MediaType.TEXT_PLAIN).get(String.class);</span>
+<span class="nc" id="L46">        System.out.println(&quot;Bsky DID: &quot; + did);</span>
 
-<span class="nc" id="L44">        ObjectMapper mapper = new ObjectMapper();</span>
-<span class="nc" id="L45">        ObjectNode user = mapper.createObjectNode();</span>
+<span class="nc" id="L48">        ObjectMapper mapper = new ObjectMapper();</span>
+<span class="nc" id="L49">        ObjectNode user = mapper.createObjectNode();</span>
 
         /* Creating a Bluesky session *********************************************************************************/
-<span class="nc" id="L48">        user.put(&quot;identifier&quot;, HANDLE);</span>
-<span class="nc" id="L49">        user.put(&quot;password&quot;, APP_TOKEN);</span>
-<span class="nc" id="L50">        Response response = client.target(BSKY_URL + API_KEY_URL)</span>
-<span class="nc" id="L51">                .request(MediaType.APPLICATION_JSON)</span>
-<span class="nc" id="L52">                .post(Entity.json(user.toString()));</span>
-<span class="nc" id="L53">        String bskySession = response.readEntity(String.class);</span>
-<span class="nc" id="L54">        System.out.println(&quot;\n\nSession: &quot; + bskySession);</span>
-<span class="nc" id="L55">        BlueskySession session = null;</span>
-        try {
-<span class="nc" id="L57">            session = mapper.readValue(bskySession, BlueskySession.class);</span>
-<span class="nc" id="L58">        } catch (JsonProcessingException e) {</span>
-<span class="nc" id="L59">            throw new RuntimeException(e);</span>
-<span class="nc" id="L60">        }</span>
-<span class="nc" id="L61">        String jwtToken = session.getAccessJwt();</span>
-<span class="nc" id="L62">        System.out.println(&quot;\n\nSession: &quot; + session);</span>
-
-        /* Creating a record/post to BlueSky **************************************************************************/
-//        response = createRecord(jwtToken);
-//        System.out.println(&quot;RECORD WAS CREATED AND SENT:\n&quot; + response.toString());
+//        user.put(&quot;identifier&quot;, HANDLE);
+//        user.put(&quot;password&quot;, APP_TOKEN);
+//        Response response = client.target(BSKY_URL + API_KEY_URL)
+//                .request(MediaType.APPLICATION_JSON)
+//                .post(Entity.json(user.toString()));
+//        String bskySession = response.readEntity(String.class);
+//        System.out.println(&quot;\n\nSession: &quot; + bskySession);
+<span class="nc" id="L59">        BskySession session = HttpClientUtils.getSession(HANDLE, APP_TOKEN, null);</span>
+<span class="nc" id="L60">        String jwtToken = session.getAccessJwt();</span>
+<span class="nc" id="L61">        System.out.println(&quot;\n\n******************** Session ********************\n&quot; + session.asJsonString());</span>
+        
 
         /* Searching posts in BlueSky *********************************************************************************/
-<span class="nc" id="L69">        System.out.println(&quot;SEARCHING BSKY RESULTS:\n&quot; + searchPosts(&quot;Can anyone PLEASE&quot;, jwtToken));</span>
+<span class="nc" id="L65">        System.out.println(&quot;SEARCHING BSKY RESULTS:\n&quot; + searchPosts(&quot;Can anyone PLEASE&quot;, jwtToken));</span>
 
         /* Getting friend suggestions from BlueSky ********************************************************************/
-<span class="nc" id="L72">        Request request = new Request(20, null);</span>
-<span class="nc" id="L73">        SuggestionsDef suggestions = getSuggestions(request, jwtToken);</span>
-<span class="nc" id="L74">        System.out.println(&quot;**************** SUGGESTIONS:\n&quot; + suggestions.asJsonString());</span>
+<span class="nc" id="L68">        Request request = new Request(20, null);</span>
+<span class="nc" id="L69">        SuggestionsDef suggestions = getSuggestions(request, jwtToken);</span>
+<span class="nc" id="L70">        System.out.println(&quot;**************** SUGGESTIONS:\n&quot; + suggestions.asJsonString());</span>
 
         /* Getting posts from my feed *********************************************************************************/
-<span class="nc" id="L77">        String jsonResponse = client.target(BSKY_URL + FEED_URL)</span>
-<span class="nc" id="L78">                .queryParam(&quot;actor&quot;, HANDLE)</span>
-<span class="nc" id="L79">                .queryParam(&quot;limit&quot;, 20)</span>
-<span class="nc" id="L80">                .request(MediaType.APPLICATION_JSON).header(&quot;Authorization&quot;, &quot;Bearer &quot; + jwtToken)</span>
-<span class="nc" id="L81">                .get(String.class);</span>
-<span class="nc" id="L82">        System.out.println(&quot;\n\nFeed: &quot; + jsonResponse);</span>
+<span class="nc" id="L73">        String jsonResponse = client.target(BSKY_URL + FEED_URL)</span>
+<span class="nc" id="L74">                .queryParam(&quot;actor&quot;, HANDLE)</span>
+<span class="nc" id="L75">                .queryParam(&quot;limit&quot;, 20)</span>
+<span class="nc" id="L76">                .request(MediaType.APPLICATION_JSON).header(&quot;Authorization&quot;, &quot;Bearer &quot; + jwtToken)</span>
+<span class="nc" id="L77">                .get(String.class);</span>
+<span class="nc" id="L78">        System.out.println(&quot;\n\nFeed: &quot; + jsonResponse);</span>
 
         /* Getting my account preferences *****************************************************************************/
-<span class="nc" id="L85">        PreferencesDef prefs = client.target(BSKY_URL + PREFERENCES)</span>
-<span class="nc" id="L86">                .request(MediaType.APPLICATION_JSON).header(&quot;Authorization&quot;, &quot;Bearer &quot; + jwtToken)</span>
-<span class="nc" id="L87">                .get(PreferencesDef.class);</span>
-<span class="nc" id="L88">        System.out.println(&quot;\n\nPreferences1: &quot; + prefs.asJsonString());</span>
+<span class="nc" id="L81">        PreferencesDef prefs = client.target(BSKY_URL + PREFERENCES)</span>
+<span class="nc" id="L82">                .request(MediaType.APPLICATION_JSON).header(&quot;Authorization&quot;, &quot;Bearer &quot; + jwtToken)</span>
+<span class="nc" id="L83">                .get(PreferencesDef.class);</span>
+<span class="nc" id="L84">        System.out.println(&quot;\n\nPreferences1: &quot; + prefs.asJsonString());</span>
 
         /* Getting my profile information *****************************************************************************/
-<span class="nc" id="L91">        ProfileDef profileDef = client.target(BSKY_URL + PROFILE)</span>
-<span class="nc" id="L92">                .queryParam(&quot;actor&quot;, HANDLE)</span>
-<span class="nc" id="L93">                .request(MediaType.APPLICATION_JSON)</span>
-<span class="nc" id="L94">                .header(&quot;Authorization&quot;, &quot;Bearer &quot; + jwtToken)</span>
-<span class="nc" id="L95">                .get(ProfileDef.class);</span>
-<span class="nc" id="L96">        System.out.println(&quot;\n\nProfile: &quot; + profileDef.asJsonString());</span>
+<span class="nc" id="L87">        Profile profile = client.target(BSKY_URL + PROFILE)</span>
+<span class="nc" id="L88">                .queryParam(&quot;actor&quot;, HANDLE)</span>
+<span class="nc" id="L89">                .request(MediaType.APPLICATION_JSON)</span>
+<span class="nc" id="L90">                .header(&quot;Authorization&quot;, &quot;Bearer &quot; + jwtToken)</span>
+<span class="nc" id="L91">                .get(Profile.class);</span>
+<span class="nc" id="L92">        System.out.println(&quot;\n\nProfile: &quot; + profile.asJsonString());</span>
 
-<span class="nc" id="L98">        String date = &quot;2019-07-14T18:30:00.000Z&quot;;</span>
-<span class="nc" id="L99">        SimpleDateFormat inputFormat = new SimpleDateFormat(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;);</span>
-<span class="nc" id="L100">        SimpleDateFormat outputFormat = new SimpleDateFormat(&quot;yyyy-MM-dd hh:mm:ss a&quot;);</span>
-<span class="nc" id="L101">        Date parsedDate = null;</span>
+        /* List records ************************************************************************************************/
+<span class="nc" id="L95">        JsonNode records = client.target(BSKY_URL+LIST_RECORDS)</span>
+<span class="nc" id="L96">                .queryParam(&quot;repo&quot;, DID)</span>
+<span class="nc" id="L97">                .queryParam(&quot;collection&quot;, &quot;app.bsky.feed.post&quot;)</span>
+<span class="nc" id="L98">                .queryParam(&quot;limit&quot;, 1000)</span>
+<span class="nc" id="L99">                .request(MediaType.APPLICATION_JSON)</span>
+<span class="nc" id="L100">                .header(&quot;Authorization&quot;, &quot;Bearer &quot; + jwtToken)</span>
+<span class="nc" id="L101">                .get(JsonNode.class);</span>
+<span class="nc" id="L102">        System.out.println(&quot;\n\nRecords: &quot; +records);</span>
+<span class="nc" id="L103">        JsonNode array = records.get(&quot;records&quot;);</span>
+<span class="nc" id="L104">        System.out.println(&quot;\n\nArray: &quot; +array);</span>
+<span class="nc" id="L105">        Iterator&lt;JsonNode&gt; itr = array.elements();</span>
+<span class="nc bnc" id="L106" title="All 2 branches missed.">        while(itr.hasNext()) {</span>
+<span class="nc" id="L107">            JsonNode node = itr.next();</span>
+<span class="nc" id="L108">            String post = node.get(&quot;value&quot;).get(&quot;text&quot;).toString();</span>
+<span class="nc" id="L109">            System.out.println(post);</span>
+//            if(post.equals(&quot;\&quot;\&quot;&quot;)){
+////                System.out.println(&quot;POST IS EMPTY&quot;);
+//                System.out.println(node);
+//            }
+//            if(post.toLowerCase().contains(&quot;musk&quot;)){
+//                System.out.println(post);
+//            }
+<span class="nc" id="L117">        }</span>
+
+<span class="nc" id="L119">        String date = &quot;2019-07-14T18:30:00.000Z&quot;;</span>
+<span class="nc" id="L120">        SimpleDateFormat inputFormat = new SimpleDateFormat(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;);</span>
+<span class="nc" id="L121">        SimpleDateFormat outputFormat = new SimpleDateFormat(&quot;yyyy-MM-dd hh:mm:ss a&quot;);</span>
+<span class="nc" id="L122">        Date parsedDate = null;</span>
         try {
-<span class="nc" id="L103">            parsedDate = inputFormat.parse(date);</span>
-<span class="nc" id="L104">        } catch (ParseException e) {</span>
-<span class="nc" id="L105">            throw new RuntimeException(e);</span>
-<span class="nc" id="L106">        }</span>
-<span class="nc" id="L107">        String formattedDate = outputFormat.format(parsedDate);</span>
-<span class="nc" id="L108">        System.out.println(&quot;Date: &quot; + parsedDate.getTime() + &quot;\nParsed Date: &quot; + formattedDate);</span>
-<span class="nc" id="L109">    }</span>
+<span class="nc" id="L124">            parsedDate = inputFormat.parse(date);</span>
+<span class="nc" id="L125">        } catch (ParseException e) {</span>
+<span class="nc" id="L126">            throw new RuntimeException(e);</span>
+<span class="nc" id="L127">        }</span>
+<span class="nc" id="L128">        String formattedDate = outputFormat.format(parsedDate);</span>
+<span class="nc" id="L129">        System.out.println(&quot;Date: &quot; + parsedDate.getTime() + &quot;\nParsed Date: &quot; + formattedDate);</span>
+<span class="nc" id="L130">    }</span>
 
     private static Response createRecord(String sessionToken) {
-<span class="nc" id="L112">        SimpleDateFormat outputFormat = new SimpleDateFormat(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;);</span>
-<span class="nc" id="L113">        Date timestamp = Date.from(Instant.now());</span>
+<span class="nc" id="L133">        SimpleDateFormat outputFormat = new SimpleDateFormat(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;);</span>
+<span class="nc" id="L134">        Date timestamp = Date.from(Instant.now());</span>
 
-<span class="nc" id="L115">        ObjectMapper mapper = new ObjectMapper();</span>
-<span class="nc" id="L116">        ObjectNode request = mapper.createObjectNode();</span>
-<span class="nc" id="L117">        ObjectNode record = mapper.createObjectNode();</span>
-<span class="nc" id="L118">        record.put(&quot;$type&quot;, &quot;app.bsky.feed.post&quot;)</span>
-<span class="nc" id="L119">                .put(&quot;text&quot;, &quot;This is a test and occurred on &quot; + Date.from(Instant.now()))</span>
-<span class="nc" id="L120">                .put(&quot;createdAt&quot;, outputFormat.format(timestamp));</span>
-<span class="nc" id="L121">        request.put(&quot;repo&quot;, DID)</span>
-<span class="nc" id="L122">                .put(&quot;collection&quot;, &quot;app.bsky.feed.post&quot;)</span>
-<span class="nc" id="L123">                .put(&quot;validate&quot;, true)</span>
-<span class="nc" id="L124">                .set(&quot;record&quot;, record);</span>
+<span class="nc" id="L136">        ObjectMapper mapper = new ObjectMapper();</span>
+<span class="nc" id="L137">        ObjectNode request = mapper.createObjectNode();</span>
+<span class="nc" id="L138">        ObjectNode record = mapper.createObjectNode();</span>
+<span class="nc" id="L139">        record.put(&quot;$type&quot;, &quot;app.bsky.feed.post&quot;)</span>
+<span class="nc" id="L140">                .put(&quot;text&quot;, &quot;This is a test and occurred on &quot; + Date.from(Instant.now()))</span>
+<span class="nc" id="L141">                .put(&quot;createdAt&quot;, outputFormat.format(timestamp));</span>
+<span class="nc" id="L142">        request.put(&quot;repo&quot;, DID)</span>
+<span class="nc" id="L143">                .put(&quot;collection&quot;, &quot;app.bsky.feed.post&quot;)</span>
+<span class="nc" id="L144">                .put(&quot;validate&quot;, true)</span>
+<span class="nc" id="L145">                .set(&quot;record&quot;, record);</span>
         ;
 
-<span class="nc" id="L127">        System.out.println(&quot;Record: &quot; + request.toString());</span>
+<span class="nc" id="L148">        System.out.println(&quot;Record: &quot; + request.toString());</span>
 
-<span class="nc" id="L129">        try (Client client = ClientBuilder.newClient()) {</span>
-<span class="nc" id="L130">            return client.target(BSKY_URL + CREATE_RECORD)</span>
-<span class="nc" id="L131">                    .request(MediaType.APPLICATION_JSON).header(&quot;Authorization&quot;, &quot;Bearer &quot; + sessionToken)</span>
-<span class="nc" id="L132">                    .post(Entity.json(request));</span>
+<span class="nc" id="L150">        try (Client client = ClientBuilder.newClient()) {</span>
+<span class="nc" id="L151">            return client.target(BSKY_URL + CREATE_RECORD)</span>
+<span class="nc" id="L152">                    .request(MediaType.APPLICATION_JSON).header(&quot;Authorization&quot;, &quot;Bearer &quot; + sessionToken)</span>
+<span class="nc" id="L153">                    .post(Entity.json(request));</span>
         }
     }
 
     private static String searchPosts(String query, String sessionToken) {
-<span class="nc" id="L137">        try (Client client = ClientBuilder.newClient()) {</span>
-<span class="nc" id="L138">            return client.target(BSKY_URL + &quot;app.bsky.feed.searchPosts&quot;)</span>
-<span class="nc" id="L139">                    .queryParam(&quot;q&quot;, query)</span>
-<span class="nc" id="L140">                    .queryParam(&quot;sort&quot;, &quot;top&quot;)</span>
-<span class="nc" id="L141">                    .queryParam(&quot;author&quot;, DID)</span>
-<span class="nc" id="L142">                    .request(MediaType.APPLICATION_JSON)</span>
-<span class="nc" id="L143">                    .header(&quot;Authorization&quot;, &quot;Bearer &quot; + sessionToken)</span>
-<span class="nc" id="L144">                    .get(String.class);</span>
+<span class="nc" id="L158">        try (Client client = ClientBuilder.newClient()) {</span>
+<span class="nc" id="L159">            return client.target(BSKY_URL + &quot;app.bsky.feed.searchPosts&quot;)</span>
+<span class="nc" id="L160">                    .queryParam(&quot;q&quot;, query)</span>
+<span class="nc" id="L161">                    .queryParam(&quot;sort&quot;, &quot;top&quot;)</span>
+<span class="nc" id="L162">                    .queryParam(&quot;author&quot;, DID)</span>
+<span class="nc" id="L163">                    .request(MediaType.APPLICATION_JSON)</span>
+<span class="nc" id="L164">                    .header(&quot;Authorization&quot;, &quot;Bearer &quot; + sessionToken)</span>
+<span class="nc" id="L165">                    .get(String.class);</span>
         }
     }
 
     private static SuggestionsDef getSuggestions(Request request, String sessionToken) {
-<span class="nc" id="L149">        try (Client client = ClientBuilder.newClient()) {</span>
-<span class="nc" id="L150">            return client.target(BSKY_URL+GET_SUGGESTIONS)</span>
-<span class="nc" id="L151">                    .queryParam(&quot;limit&quot;,request.getLimit())</span>
-<span class="nc" id="L152">                    .queryParam(&quot;cursor&quot;, request.getCursor())</span>
-<span class="nc" id="L153">                    .request(MediaType.APPLICATION_JSON)</span>
-<span class="nc" id="L154">                    .header(&quot;Authorization&quot;, &quot;Bearer &quot; + sessionToken)</span>
-<span class="nc" id="L155">                    .get(SuggestionsDef.class);</span>
+<span class="nc" id="L170">        try (Client client = ClientBuilder.newClient()) {</span>
+<span class="nc" id="L171">            return client.target(BSKY_URL+GET_SUGGESTIONS)</span>
+<span class="nc" id="L172">                    .queryParam(&quot;limit&quot;,request.getLimit())</span>
+<span class="nc" id="L173">                    .queryParam(&quot;cursor&quot;, request.getCursor())</span>
+<span class="nc" id="L174">                    .request(MediaType.APPLICATION_JSON)</span>
+<span class="nc" id="L175">                    .header(&quot;Authorization&quot;, &quot;Bearer &quot; + sessionToken)</span>
+<span class="nc" id="L176">                    .get(SuggestionsDef.class);</span>
         }
     }
 }

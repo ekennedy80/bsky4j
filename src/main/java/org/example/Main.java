@@ -5,8 +5,10 @@ import api.rest.app.bsky.actor.preferences.PreferencesDef;
 import api.rest.app.bsky.actor.profile.Profile;
 import api.rest.app.bsky.actor.suggestions.Request;
 import api.rest.app.bsky.actor.suggestions.SuggestionsDef;
-import api.rest.defs.BskySession;
+import api.rest.com.atproto.server.BskySession;
+import api.rest.com.atproto.server.SessionRestHandler;
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import jakarta.ws.rs.client.Client;
@@ -17,8 +19,12 @@ import jakarta.ws.rs.core.Response;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.Duration;
 import java.time.Instant;
 import java.util.Date;
+import java.util.Iterator;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 import static api.rest.GlobalVars.*;
 
@@ -27,15 +33,6 @@ import static api.rest.GlobalVars.*;
 public class Main {
 
     public static void main(String[] args) throws JsonProcessingException {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!%n");
-
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
 
         Client client = ClientBuilder.newClient();
         String did = client.target(BSKY_URL + DID_URL)
@@ -47,14 +44,20 @@ public class Main {
         ObjectNode user = mapper.createObjectNode();
 
         /* Creating a Bluesky session *********************************************************************************/
-//        user.put("identifier", HANDLE);
-//        user.put("password", APP_TOKEN);
-//        Response response = client.target(BSKY_URL + API_KEY_URL)
-//                .request(MediaType.APPLICATION_JSON)
-//                .post(Entity.json(user.toString()));
-//        String bskySession = response.readEntity(String.class);
-//        System.out.println("\n\nSession: " + bskySession);
-        BskySession session = HttpClientUtils.getSession(HANDLE, APP_TOKEN, null);
+        try (ExecutorService executor = Executors.newSingleThreadExecutor()) {
+            // Submit a task to the executor
+            executor.submit(() -> {
+                // Code to run in the background thread
+                System.out.println("Starting Bluesky session thread!");
+                Thread virtualThread = startSessionThread("Bluesky Session Thread");
+                Thread virtualThread2 = startSessionThread("Bluesky Refresh Session Thread");
+                while(virtualThread.isAlive() || virtualThread2.isAlive()){}
+            });
+        }
+
+        SessionRestHandler handler = new SessionRestHandler();
+        BskySession session = handler.getSession(HANDLE, APP_TOKEN, null);
+        String jwtToken = session.getAccessJwt();
         System.out.println("\n\n******************** Session ********************\n" + session.asJsonString());
         
 
@@ -87,6 +90,31 @@ public class Main {
                 .header("Authorization", "Bearer " + jwtToken)
                 .get(Profile.class);
         System.out.println("\n\nProfile: " + profile.asJsonString());
+
+        /* List records ************************************************************************************************/
+        JsonNode records = client.target(BSKY_URL+LIST_RECORDS)
+                .queryParam("repo", DID)
+                .queryParam("collection", "app.bsky.feed.post")
+                .queryParam("limit", 100)
+                .request(MediaType.APPLICATION_JSON)
+                .header("Authorization", "Bearer " + jwtToken)
+                .get(JsonNode.class);
+        System.out.println("\n\nRecords: " +records);
+        JsonNode array = records.get("records");
+        System.out.println("\n\nArray: " +array);
+        Iterator<JsonNode> itr = array.elements();
+        while(itr.hasNext()) {
+            JsonNode node = itr.next();
+            String post = node.get("value").get("text").toString();
+            System.out.println(post);
+//            if(post.equals("\"\"")){
+////                System.out.println("POST IS EMPTY");
+//                System.out.println(node);
+//            }
+//            if(post.toLowerCase().contains("musk")){
+//                System.out.println(post);
+//            }
+        }
 
         String date = "2019-07-14T18:30:00.000Z";
         SimpleDateFormat inputFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
@@ -147,5 +175,19 @@ public class Main {
                     .header("Authorization", "Bearer " + sessionToken)
                     .get(SuggestionsDef.class);
         }
+    }
+
+    private static Thread startSessionThread(String name) {
+        return Thread.startVirtualThread(() -> {
+            for(int i=0; i<10; i++) {
+                System.out.println("==================> Running in " + name);
+                try {
+                    Thread.sleep(Duration.ofSeconds(1));
+                } catch (InterruptedException e) {
+                    Thread.currentThread().interrupt();
+                }
+            }
+            System.out.println(name + " finished");
+        });
     }
 }
