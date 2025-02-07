@@ -1,20 +1,21 @@
 package api.rest.com.atproto.repo;
 
+import api.rest.app.bsky.AbstractClient;
 import com.fasterxml.jackson.databind.JsonNode;
-import jakarta.ws.rs.client.Client;
 import jakarta.ws.rs.client.ClientBuilder;
 import jakarta.ws.rs.client.WebTarget;
 import jakarta.ws.rs.core.MediaType;
 
-import java.io.Closeable;
-import java.io.IOException;
-
 import static api.rest.GlobalVars.BSKY_URL;
 import static api.rest.GlobalVars.LIST_RECORDS;
 
-public class RepoRestHandler implements Closeable {
+public class Client extends AbstractClient {
 
-    private final Client client = ClientBuilder.newClient();
+    private final jakarta.ws.rs.client.Client client;
+
+    public Client() {
+        client = ClientBuilder.newClient();
+    }
 
     public String listRecords(String repo, String collection, Integer limit, String cursor, Boolean reverse) {
         WebTarget webTarget = client.target(BSKY_URL+LIST_RECORDS);
@@ -31,8 +32,5 @@ public class RepoRestHandler implements Closeable {
         return "";
     }
 
-    @Override
-    public void close() throws IOException {
-        client.close();
-    }
+
 }
