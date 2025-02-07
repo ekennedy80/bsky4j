@@ -12,7 +12,7 @@ import lombok.*;
 @Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @EqualsAndHashCode(callSuper = false)
-public class ContentLabelPref extends AbstractPreferenceDef {
+public class ContentLabelPref extends AbstractPreference {
 
     @Nullable
     @JsonProperty("labelerDid")

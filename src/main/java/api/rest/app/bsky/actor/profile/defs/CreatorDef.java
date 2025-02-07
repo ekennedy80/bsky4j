@@ -1,8 +1,8 @@
 package api.rest.app.bsky.actor.profile.defs;
 
-import api.rest.app.bsky.actor.defs.AssociatedDef;
-import api.rest.app.bsky.actor.defs.LabelsDef;
-import api.rest.app.bsky.actor.defs.ViewerDef;
+import api.rest.app.bsky.actor.object.Associated;
+import api.rest.app.bsky.actor.object.Labels;
+import api.rest.app.bsky.actor.object.Viewer;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
@@ -42,15 +42,15 @@ public class CreatorDef {
 
     @Nullable
     @JsonProperty("associated")
-    private AssociatedDef associated;
+    private Associated associated;
 
     @Nullable
     @JsonProperty("viewer")
-    private ViewerDef viewer;
+    private Viewer viewer;
 
     @Nullable
     @JsonProperty("labels")
-    private List<LabelsDef> labels;
+    private List<Labels> labels;
 
     @Nonnull
     @JsonProperty("createdAt")

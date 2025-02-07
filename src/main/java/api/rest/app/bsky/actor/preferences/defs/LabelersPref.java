@@ -15,7 +15,7 @@ import java.util.List;
 @Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @EqualsAndHashCode(callSuper = false)
-public class LabelersPref extends AbstractPreferenceDef {
+public class LabelersPref extends AbstractPreference {
 
     @Data
     @NoArgsConstructor

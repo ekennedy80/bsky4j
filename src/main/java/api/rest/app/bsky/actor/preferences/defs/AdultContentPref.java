@@ -9,7 +9,7 @@ import lombok.*;
 @AllArgsConstructor
 @Builder
 @EqualsAndHashCode(callSuper=true)
-public class AdultContentPref extends AbstractPreferenceDef {
+public class AdultContentPref extends AbstractPreference {
 
     @Nonnull
     @JsonProperty("enabled")

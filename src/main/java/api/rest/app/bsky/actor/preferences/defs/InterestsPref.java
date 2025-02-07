@@ -18,7 +18,7 @@ import java.util.List;
 @Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @EqualsAndHashCode(callSuper = false)
-public class InterestsPref extends AbstractPreferenceDef {
+public class InterestsPref extends AbstractPreference {
 
     @Nonnull
     @JsonProperty("tags")

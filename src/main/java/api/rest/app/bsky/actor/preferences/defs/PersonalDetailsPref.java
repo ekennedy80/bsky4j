@@ -19,7 +19,7 @@ import java.util.Date;
 @Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @EqualsAndHashCode(callSuper = false)
-public class PersonalDetailsPref extends AbstractPreferenceDef {
+public class PersonalDetailsPref extends AbstractPreference {
 
     @Nullable
     @JsonProperty("birthDate")

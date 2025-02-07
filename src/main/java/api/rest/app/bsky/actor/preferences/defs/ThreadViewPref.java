@@ -9,7 +9,7 @@ import lombok.EqualsAndHashCode;
 
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @EqualsAndHashCode(callSuper = true)
-public class ThreadViewPref extends AbstractPreferenceDef {
+public class ThreadViewPref extends AbstractPreference {
 
     @JsonInclude(JsonInclude.Include.NON_NULL)
     public enum Sort {

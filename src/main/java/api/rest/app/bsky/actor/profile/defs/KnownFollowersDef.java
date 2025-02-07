@@ -1,6 +1,6 @@
 package api.rest.app.bsky.actor.profile.defs;
 
-import api.rest.app.bsky.actor.defs.AssociatedDef;
+import api.rest.app.bsky.actor.object.Associated;
 import api.rest.app.bsky.actor.preferences.defs.LabelersPref;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -48,7 +48,7 @@ public class KnownFollowersDef {
 
         @Nullable
         @JsonProperty("associated")
-        private AssociatedDef associated;
+        private Associated associated;
 
         @Nullable
         @JsonProperty("labels")

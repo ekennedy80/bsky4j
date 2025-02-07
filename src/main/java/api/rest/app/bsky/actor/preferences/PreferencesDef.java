@@ -1,6 +1,6 @@
 package api.rest.app.bsky.actor.preferences;
 
-import api.rest.app.bsky.actor.preferences.defs.AbstractPreferenceDef;
+import api.rest.app.bsky.actor.preferences.defs.AbstractPreference;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -27,7 +27,7 @@ public class PreferencesDef {
 
     @Nonnull
     @JsonProperty("preferences")
-    private List<AbstractPreferenceDef> preferences;
+    private List<AbstractPreference> preferences;
 
     public ObjectNode asJsonObject() throws JsonProcessingException {
         ObjectMapper objectMapper = new ObjectMapper();

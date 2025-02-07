@@ -1,6 +1,6 @@
 package api.rest.app.bsky.actor.profile.defs;
 
-import api.rest.app.bsky.actor.defs.LabelsDef;
+import api.rest.app.bsky.actor.object.Labels;
 import api.rest.com.atproto.sync.RecordDef;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -53,7 +53,7 @@ public class JoinedViaStarterPackDef {
 
     @Nullable
     @JsonProperty("labels")
-    private List<LabelsDef> labels;
+    private List<Labels> labels;
 
     @Nullable
     @JsonProperty("indexedAt")

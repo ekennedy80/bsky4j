@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @EqualsAndHashCode(callSuper = false)
-public class FeedViewPref extends AbstractPreferenceDef {
+public class FeedViewPref extends AbstractPreference {
 
     @Nonnull
     @JsonProperty("feed")

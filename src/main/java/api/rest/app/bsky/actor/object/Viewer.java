@@ -1,4 +1,4 @@
-package api.rest.app.bsky.actor.defs;
+package api.rest.app.bsky.actor.object;
 
 import api.rest.app.bsky.actor.profile.defs.MutedOrBlockingByListDef;
 import com.fasterxml.jackson.annotation.JsonInclude;
@@ -18,7 +18,7 @@ import java.net.URI;
  * Metadata about the requesting account's relationship with the subject account. Only has meaningful
  * content for authed requests.
  */
-public class ViewerDef {
+public class Viewer {
 
     @Nonnull
     @JsonProperty("muted")

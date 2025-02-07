@@ -22,7 +22,7 @@ import java.util.List;
 @AllArgsConstructor
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @EqualsAndHashCode(callSuper = false)
-public class BskyAppStatePref extends AbstractPreferenceDef {
+public class BskyAppStatePref extends AbstractPreference {
 
     @Data
     @NoArgsConstructor

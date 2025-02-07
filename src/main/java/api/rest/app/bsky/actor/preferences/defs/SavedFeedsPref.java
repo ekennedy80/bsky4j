@@ -17,7 +17,7 @@ import java.util.List;
 @Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @EqualsAndHashCode(callSuper=true)
-public class SavedFeedsPref extends AbstractPreferenceDef {
+public class SavedFeedsPref extends AbstractPreference {
 
     @Nonnull
     @JsonProperty("pinned")

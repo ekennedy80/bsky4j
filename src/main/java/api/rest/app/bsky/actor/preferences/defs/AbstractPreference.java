@@ -28,7 +28,7 @@ import lombok.*;
         @JsonSubTypes.Type(value = SavedFeedsPrefV2.class, name = "app.bsky.actor.defs#savedFeedsPrefV2"),
         @JsonSubTypes.Type(value = ThreadViewPref.class, name = "app.bsky.actor.defs#threadViewPref")}
 )
-public abstract class AbstractPreferenceDef {
+public abstract class AbstractPreference {
 
     @Nonnull
     @JsonProperty("$type")
@@ -38,7 +38,7 @@ public abstract class AbstractPreferenceDef {
     @JsonIgnore
     protected final ObjectNode json;
 
-    protected AbstractPreferenceDef(String type) {
+    protected AbstractPreference(String type) {
         this.json = new ObjectMapper().createObjectNode();
         this.type = type;
     }

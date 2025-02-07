@@ -18,7 +18,7 @@ import java.util.List;
 @Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @EqualsAndHashCode(callSuper = false)
-public class HiddenPostsPref extends AbstractPreferenceDef {
+public class HiddenPostsPref extends AbstractPreference {
 
     @Nonnull
     @JsonProperty("items")

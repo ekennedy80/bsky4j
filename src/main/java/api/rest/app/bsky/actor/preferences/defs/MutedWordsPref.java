@@ -20,7 +20,7 @@ import java.util.List;
 @Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @EqualsAndHashCode(callSuper = false)
-public class MutedWordsPref extends AbstractPreferenceDef {
+public class MutedWordsPref extends AbstractPreference {
 
     @Data
     @NoArgsConstructor

@@ -1,6 +1,6 @@
 package api.rest.app.bsky.actor.profile.defs;
 
-import api.rest.app.bsky.actor.defs.LabelsDef;
+import api.rest.app.bsky.actor.object.Labels;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
@@ -64,7 +64,7 @@ public class MutedOrBlockingByListDef {
 
     @Nullable
     @JsonProperty("labels")
-    private List<LabelsDef> labels;
+    private List<Labels> labels;
 
     @Nullable
     @JsonProperty("viewer")

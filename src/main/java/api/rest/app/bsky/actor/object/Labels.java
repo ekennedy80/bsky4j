@@ -1,4 +1,4 @@
-package api.rest.app.bsky.actor.defs;
+package api.rest.app.bsky.actor.object;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -18,7 +18,7 @@ import java.util.Date;
 @AllArgsConstructor
 @Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class LabelsDef {
+public class Labels {
 
     @Nullable
     @JsonProperty("ver")
