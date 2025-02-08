@@ -1,4 +1,4 @@
-package api.rest.app.bsky.actor.preferences.defs;
+package api.rest.app.bsky.actor.preferences.object;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -8,7 +8,10 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -17,47 +20,36 @@ import java.util.List;
 
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @EqualsAndHashCode(callSuper = false)
-public class MutedWordsPref extends AbstractPreference {
+public class BskyAppStatePref extends AbstractPreference {
 
     @Data
     @NoArgsConstructor
     @AllArgsConstructor
-    public class Items {
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    public class ActiveProgressGuide {
+        @Nonnull
+        @JsonProperty("guide")
+        private String guide;
+    }
 
-        public enum ActorTarget {
-            ALL("all"),
-            EXCLUDE_FOLLOWING("exclude-following");
-
-            private final String value;
-
-            ActorTarget(String value) {
-                this.value = value;
-            }
-
-            @Override
-            public String toString() {
-                return this.value;
-            }
-        }
-
+    @Data
+    @NoArgsConstructor
+    @AllArgsConstructor
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    static class Nuxs {
         @Nonnull
         @JsonProperty("id")
         private String id;
 
         @Nonnull
-        @JsonProperty("value")
-        private String value;
+        @JsonProperty("completed")
+        private String completed;
 
         @Nullable
-        @JsonProperty("targets")
-        private List<String> targets;
-
-        @Nullable
-        @JsonProperty("actorTarget")
-        private ActorTarget actorTarget;
+        @JsonProperty("data")
+        private String data;
 
         @Nullable
         @JsonProperty("expiresAt")
@@ -76,19 +68,28 @@ public class MutedWordsPref extends AbstractPreference {
         }
     }
 
-    @Nonnull
-    @JsonProperty("items")
-    private List<Items> items;
+    @Nullable
+    @JsonProperty("activeProgressGuide")
+    private ActiveProgressGuide activeProgressGuide;
+
+    @Nullable
+    @JsonProperty("queuedNudges")
+    private List<String> queuedNudges;
+
+    @Nullable
+    @JsonProperty("nuxs")
+    private List<Nuxs> nuxs;
 
     @Override
     public ObjectNode asJsonObject() throws JsonProcessingException {
         ObjectMapper objectMapper = new ObjectMapper();
-        return json.put("items", objectMapper.writeValueAsString(this.items));
+        ObjectNode json = new ObjectMapper().createObjectNode();
+        return json.put("profile", objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(this));
     }
 
     @Override
     public String asJsonString() throws JsonProcessingException {
         ObjectMapper objectMapper = new ObjectMapper();
-        return json.put("items", objectMapper.writeValueAsString(this.items)).toString();
+        return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(this);
     }
 }

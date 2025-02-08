@@ -1,7 +1,7 @@
 package api.rest.app.bsky.actor.profile.defs;
 
 import api.rest.app.bsky.actor.object.Associated;
-import api.rest.app.bsky.actor.preferences.defs.LabelersPref;
+import api.rest.app.bsky.actor.preferences.object.LabelersPref;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;

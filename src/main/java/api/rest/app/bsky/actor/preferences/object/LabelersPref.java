@@ -1,4 +1,4 @@
-package api.rest.app.bsky.actor.preferences.defs;
+package api.rest.app.bsky.actor.preferences.object;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -14,45 +14,32 @@ import java.util.List;
 @AllArgsConstructor
 @Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
-@EqualsAndHashCode(callSuper = true)
-public class SavedFeedsPrefV2 extends AbstractPreference {
+@EqualsAndHashCode(callSuper = false)
+public class LabelersPref extends AbstractPreference {
 
     @Data
     @NoArgsConstructor
     @AllArgsConstructor
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    static class Items {
-
+    public class Labelers {
         @Nonnull
-        @JsonProperty("id")
-        private String id;
-
-        @Nonnull
-        @JsonProperty("type")
-        private String type;
-
-        @Nonnull
-        @JsonProperty("value")
-        private String value;
-
-        @Nonnull
-        @JsonProperty("pinned")
-        private Boolean pinned;
+        @JsonProperty("did")
+        private List<String> did;
     }
 
     @Nonnull
-    @JsonProperty("items")
-    private List<Items> items;
+    @JsonProperty("labelers")
+    private List<Labelers> labelers;
 
     @Override
     public ObjectNode asJsonObject() throws JsonProcessingException {
         ObjectMapper objectMapper = new ObjectMapper();
-        return json.put("items", objectMapper.writeValueAsString(this.items));
+        return json.put("labelers", objectMapper.writeValueAsString(this.labelers));
     }
 
     @Override
     public String asJsonString() throws JsonProcessingException {
         ObjectMapper objectMapper = new ObjectMapper();
-        return json.put("items", objectMapper.writeValueAsString(this.items)).toString();
+        return json.put("labelers", objectMapper.writeValueAsString(this.labelers)).toString();
     }
 }

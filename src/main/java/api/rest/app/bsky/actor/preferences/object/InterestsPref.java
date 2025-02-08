@@ -1,4 +1,4 @@
-package api.rest.app.bsky.actor.preferences.defs;
+package api.rest.app.bsky.actor.preferences.object;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
@@ -6,7 +6,10 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import jakarta.annotation.Nonnull;
-import lombok.*;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
@@ -15,31 +18,21 @@ import java.util.List;
 @Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @EqualsAndHashCode(callSuper = false)
-public class LabelersPref extends AbstractPreference {
-
-    @Data
-    @NoArgsConstructor
-    @AllArgsConstructor
-    @JsonInclude(JsonInclude.Include.NON_NULL)
-    public class Labelers {
-        @Nonnull
-        @JsonProperty("did")
-        private List<String> did;
-    }
+public class InterestsPref extends AbstractPreference {
 
     @Nonnull
-    @JsonProperty("labelers")
-    private List<Labelers> labelers;
+    @JsonProperty("tags")
+    private List<String> tags;
 
     @Override
     public ObjectNode asJsonObject() throws JsonProcessingException {
         ObjectMapper objectMapper = new ObjectMapper();
-        return json.put("labelers", objectMapper.writeValueAsString(this.labelers));
+        return json.put("tags", objectMapper.writeValueAsString(this.tags));
     }
 
     @Override
     public String asJsonString() throws JsonProcessingException {
         ObjectMapper objectMapper = new ObjectMapper();
-        return json.put("labelers", objectMapper.writeValueAsString(this.labelers)).toString();
+        return json.put("tags", objectMapper.writeValueAsString(this.tags)).toString();
     }
 }

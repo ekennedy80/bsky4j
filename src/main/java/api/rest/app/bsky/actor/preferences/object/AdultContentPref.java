@@ -1,4 +1,4 @@
-package api.rest.app.bsky.actor.preferences.defs;
+package api.rest.app.bsky.actor.preferences.object;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.node.ObjectNode;
