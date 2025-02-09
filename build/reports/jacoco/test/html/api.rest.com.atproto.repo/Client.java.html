@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Client.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Bluesky-REST-Client</a> &gt; <a href="index.source.html" class="el_package">api.rest.com.atproto.repo</a> &gt; <span class="el_source">Client.java</span></div><h1>Client.java</h1><pre class="source lang-java linenums">package api.rest.com.atproto.repo;
+
+import api.rest.app.bsky.AbstractClient;
+import com.fasterxml.jackson.databind.JsonNode;
+import jakarta.ws.rs.client.ClientBuilder;
+import jakarta.ws.rs.client.WebTarget;
+import jakarta.ws.rs.core.MediaType;
+
+import static api.rest.GlobalVars.BSKY_URL;
+import static api.rest.GlobalVars.LIST_RECORDS;
+
+public class Client extends AbstractClient {
+
+    private final jakarta.ws.rs.client.Client client;
+
+<span class="nc" id="L16">    public Client() {</span>
+<span class="nc" id="L17">        client = ClientBuilder.newClient();</span>
+<span class="nc" id="L18">    }</span>
+
+    public String listRecords(String repo, String collection, Integer limit, String cursor, Boolean reverse) {
+<span class="nc" id="L21">        WebTarget webTarget = client.target(BSKY_URL+LIST_RECORDS);</span>
+<span class="nc" id="L22">        webTarget.queryParam(&quot;repo&quot;, repo).queryParam(&quot;collection&quot;, collection);</span>
+<span class="nc bnc" id="L23" title="All 2 branches missed.">        if(limit != null)</span>
+<span class="nc" id="L24">            webTarget.queryParam(&quot;limit&quot;, limit);</span>
+<span class="nc bnc" id="L25" title="All 2 branches missed.">        if(cursor != null)</span>
+<span class="nc" id="L26">            webTarget.queryParam(&quot;cursor&quot;, cursor);</span>
+<span class="nc bnc" id="L27" title="All 2 branches missed.">        if(reverse != null)</span>
+<span class="nc" id="L28">            webTarget.queryParam(&quot;reverse&quot;, reverse);</span>
+<span class="nc" id="L29">        webTarget.request(MediaType.APPLICATION_JSON)</span>
+//                .header(&quot;Authorization&quot;, &quot;Bearer &quot; + jwtToken)
+<span class="nc" id="L31">                .get(JsonNode.class);</span>
+<span class="nc" id="L32">        return &quot;&quot;;</span>
+    }
+
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

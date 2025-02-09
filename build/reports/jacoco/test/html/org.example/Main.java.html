@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Main.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Bluesky-REST-Client</a> &gt; <a href="index.source.html" class="el_package">org.example</a> &gt; <span class="el_source">Main.java</span></div><h1>Main.java</h1><pre class="source lang-java linenums">package org.example;
 
 import api.rest.HttpClientUtils;
-import api.rest.app.bsky.actor.preferences.PreferencesDef;
+import api.rest.app.bsky.actor.preferences.Preferences;
 import api.rest.app.bsky.actor.profile.Profile;
 import api.rest.app.bsky.actor.suggestions.Request;
 import api.rest.app.bsky.actor.suggestions.SuggestionsDef;
-import api.rest.defs.BskySession;
+import api.rest.com.atproto.server.BskySession;
+import api.rest.com.atproto.server.SessionRestHandler;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -18,45 +19,44 @@ import jakarta.ws.rs.core.Response;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.time.Duration;
 import java.time.Instant;
 import java.util.Date;
 import java.util.Iterator;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 import static api.rest.GlobalVars.*;
 
 //TIP To &lt;b&gt;Run&lt;/b&gt; code, press &lt;shortcut actionId=&quot;Run&quot;/&gt; or
 // click the &lt;icon src=&quot;AllIcons.Actions.Execute&quot;/&gt; icon in the gutter.
-<span class="nc" id="L29">public class Main {</span>
+<span class="nc" id="L33">public class Main {</span>
 
     public static void main(String[] args) throws JsonProcessingException {
-        //TIP Press &lt;shortcut actionId=&quot;ShowIntentionActions&quot;/&gt; with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-<span class="nc" id="L34">        System.out.printf(&quot;Hello and welcome!%n&quot;);</span>
 
-<span class="nc bnc" id="L36" title="All 2 branches missed.">        for (int i = 1; i &lt;= 5; i++) {</span>
-            //TIP Press &lt;shortcut actionId=&quot;Debug&quot;/&gt; to start debugging your code. We have set one &lt;icon src=&quot;AllIcons.Debugger.Db_set_breakpoint&quot;/&gt; breakpoint
-            // for you, but you can always add more by pressing &lt;shortcut actionId=&quot;ToggleLineBreakpoint&quot;/&gt;.
-<span class="nc" id="L39">            System.out.println(&quot;i = &quot; + i);</span>
-        }
+<span class="nc" id="L37">        Client client = ClientBuilder.newClient();</span>
+<span class="nc" id="L38">        String did = client.target(BSKY_URL + DID_URL)</span>
+<span class="nc" id="L39">                .queryParam(&quot;handle&quot;, HANDLE)</span>
+<span class="nc" id="L40">                .request(MediaType.TEXT_PLAIN).get(String.class);</span>
+<span class="nc" id="L41">        System.out.println(&quot;Bsky DID: &quot; + did);</span>
 
-<span class="nc" id="L42">        Client client = ClientBuilder.newClient();</span>
-<span class="nc" id="L43">        String did = client.target(BSKY_URL + DID_URL)</span>
-<span class="nc" id="L44">                .queryParam(&quot;handle&quot;, HANDLE)</span>
-<span class="nc" id="L45">                .request(MediaType.TEXT_PLAIN).get(String.class);</span>
-<span class="nc" id="L46">        System.out.println(&quot;Bsky DID: &quot; + did);</span>
-
-<span class="nc" id="L48">        ObjectMapper mapper = new ObjectMapper();</span>
-<span class="nc" id="L49">        ObjectNode user = mapper.createObjectNode();</span>
+<span class="nc" id="L43">        ObjectMapper mapper = new ObjectMapper();</span>
+<span class="nc" id="L44">        ObjectNode user = mapper.createObjectNode();</span>
 
         /* Creating a Bluesky session *********************************************************************************/
-//        user.put(&quot;identifier&quot;, HANDLE);
-//        user.put(&quot;password&quot;, APP_TOKEN);
-//        Response response = client.target(BSKY_URL + API_KEY_URL)
-//                .request(MediaType.APPLICATION_JSON)
-//                .post(Entity.json(user.toString()));
-//        String bskySession = response.readEntity(String.class);
-//        System.out.println(&quot;\n\nSession: &quot; + bskySession);
-<span class="nc" id="L59">        BskySession session = HttpClientUtils.getSession(HANDLE, APP_TOKEN, null);</span>
+<span class="nc" id="L47">        try (ExecutorService executor = Executors.newSingleThreadExecutor()) {</span>
+            // Submit a task to the executor
+<span class="nc" id="L49">            executor.submit(() -&gt; {</span>
+                // Code to run in the background thread
+<span class="nc" id="L51">                System.out.println(&quot;Starting Bluesky session thread!&quot;);</span>
+<span class="nc" id="L52">                Thread virtualThread = startSessionThread(&quot;Bluesky Session Thread&quot;);</span>
+<span class="nc" id="L53">                Thread virtualThread2 = startSessionThread(&quot;Bluesky Refresh Session Thread&quot;);</span>
+<span class="nc bnc" id="L54" title="All 4 branches missed.">                while(virtualThread.isAlive() || virtualThread2.isAlive()){}</span>
+<span class="nc" id="L55">            });</span>
+        }
+
+<span class="nc" id="L58">        SessionRestHandler handler = new SessionRestHandler();</span>
+<span class="nc" id="L59">        BskySession session = handler.getSession(HANDLE, APP_TOKEN, null);</span>
 <span class="nc" id="L60">        String jwtToken = session.getAccessJwt();</span>
 <span class="nc" id="L61">        System.out.println(&quot;\n\n******************** Session ********************\n&quot; + session.asJsonString());</span>
         
@@ -78,9 +78,9 @@ import static api.rest.GlobalVars.*;
 <span class="nc" id="L78">        System.out.println(&quot;\n\nFeed: &quot; + jsonResponse);</span>
 
         /* Getting my account preferences *****************************************************************************/
-<span class="nc" id="L81">        PreferencesDef prefs = client.target(BSKY_URL + PREFERENCES)</span>
+<span class="nc" id="L81">        Preferences prefs = client.target(BSKY_URL + PREFERENCES)</span>
 <span class="nc" id="L82">                .request(MediaType.APPLICATION_JSON).header(&quot;Authorization&quot;, &quot;Bearer &quot; + jwtToken)</span>
-<span class="nc" id="L83">                .get(PreferencesDef.class);</span>
+<span class="nc" id="L83">                .get(Preferences.class);</span>
 <span class="nc" id="L84">        System.out.println(&quot;\n\nPreferences1: &quot; + prefs.asJsonString());</span>
 
         /* Getting my profile information *****************************************************************************/
@@ -95,7 +95,7 @@ import static api.rest.GlobalVars.*;
 <span class="nc" id="L95">        JsonNode records = client.target(BSKY_URL+LIST_RECORDS)</span>
 <span class="nc" id="L96">                .queryParam(&quot;repo&quot;, DID)</span>
 <span class="nc" id="L97">                .queryParam(&quot;collection&quot;, &quot;app.bsky.feed.post&quot;)</span>
-<span class="nc" id="L98">                .queryParam(&quot;limit&quot;, 1000)</span>
+<span class="nc" id="L98">                .queryParam(&quot;limit&quot;, 100)</span>
 <span class="nc" id="L99">                .request(MediaType.APPLICATION_JSON)</span>
 <span class="nc" id="L100">                .header(&quot;Authorization&quot;, &quot;Bearer &quot; + jwtToken)</span>
 <span class="nc" id="L101">                .get(JsonNode.class);</span>
@@ -175,6 +175,20 @@ import static api.rest.GlobalVars.*;
 <span class="nc" id="L175">                    .header(&quot;Authorization&quot;, &quot;Bearer &quot; + sessionToken)</span>
 <span class="nc" id="L176">                    .get(SuggestionsDef.class);</span>
         }
+    }
+
+    private static Thread startSessionThread(String name) {
+<span class="nc" id="L181">        return Thread.startVirtualThread(() -&gt; {</span>
+<span class="nc bnc" id="L182" title="All 2 branches missed.">            for(int i=0; i&lt;10; i++) {</span>
+<span class="nc" id="L183">                System.out.println(&quot;==================&gt; Running in &quot; + name);</span>
+                try {
+<span class="nc" id="L185">                    Thread.sleep(Duration.ofSeconds(1));</span>
+<span class="nc" id="L186">                } catch (InterruptedException e) {</span>
+<span class="nc" id="L187">                    Thread.currentThread().interrupt();</span>
+<span class="nc" id="L188">                }</span>
+            }
+<span class="nc" id="L190">            System.out.println(name + &quot; finished&quot;);</span>
+<span class="nc" id="L191">        });</span>
     }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

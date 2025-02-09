@@ -7,16 +7,16 @@ import org.junit.jupiter.api.Test;
 import java.io.IOException;
 import java.net.URL;
 
-class PreferencesDefTest {
+class PreferencesTest {
 
     @Test
     void testExample1Unmarshalling() {
         ObjectMapper objectMapper = new ObjectMapper();
-        PreferencesDef prefData = null;
+        Preferences prefData = null;
         try {
             URL resourceAbsolutePath = getClass().getClassLoader().getResource("api/rest/app/bsky/actor/preferences/example1.json");
             Assertions.assertNotNull(resourceAbsolutePath);
-            prefData = objectMapper.readValue(resourceAbsolutePath, PreferencesDef.class);
+            prefData = objectMapper.readValue(resourceAbsolutePath, Preferences.class);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -27,11 +27,11 @@ class PreferencesDefTest {
     @Test
     void testExample2Unmarshalling() {
         ObjectMapper objectMapper = new ObjectMapper();
-        PreferencesDef prefData = null;
+        Preferences prefData = null;
         try {
             URL resourceAbsolutePath = getClass().getClassLoader().getResource("api/rest/app/bsky/actor/preferences/example2.json");
             Assertions.assertNotNull(resourceAbsolutePath);
-            prefData = objectMapper.readValue(resourceAbsolutePath, PreferencesDef.class);
+            prefData = objectMapper.readValue(resourceAbsolutePath, Preferences.class);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

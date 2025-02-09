@@ -1,12 +1,12 @@
 package org.example;
 
 import api.rest.HttpClientUtils;
-import api.rest.app.bsky.actor.preferences.PreferencesDef;
+import api.rest.app.bsky.actor.preferences.Preferences;
 import api.rest.app.bsky.actor.profile.Profile;
 import api.rest.app.bsky.actor.suggestions.Request;
 import api.rest.app.bsky.actor.suggestions.SuggestionsDef;
 import api.rest.com.atproto.server.BskySession;
-import api.rest.com.atproto.server.SessionRestHandler;
+import api.rest.com.atproto.server.ServerHandler;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -34,99 +34,82 @@ public class Main {
 
     public static void main(String[] args) throws JsonProcessingException {
 
-        Client client = ClientBuilder.newClient();
-        String did = client.target(BSKY_URL + DID_URL)
-                .queryParam("handle", HANDLE)
-                .request(MediaType.TEXT_PLAIN).get(String.class);
-        System.out.println("Bsky DID: " + did);
+//        Client client = ClientBuilder.newClient();
+//        String did = client.target(BSKY_URL + DID_URL)
+//                .queryParam("handle", HANDLE)
+//                .request(MediaType.TEXT_PLAIN).get(String.class);
+//        System.out.println("Bsky DID: " + did);
 
-        ObjectMapper mapper = new ObjectMapper();
-        ObjectNode user = mapper.createObjectNode();
+//        ObjectMapper mapper = new ObjectMapper();
+//        ObjectNode user = mapper.createObjectNode();
 
-        /* Creating a Bluesky session *********************************************************************************/
-        try (ExecutorService executor = Executors.newSingleThreadExecutor()) {
-            // Submit a task to the executor
-            executor.submit(() -> {
-                // Code to run in the background thread
-                System.out.println("Starting Bluesky session thread!");
-                Thread virtualThread = startSessionThread("Bluesky Session Thread");
-                Thread virtualThread2 = startSessionThread("Bluesky Refresh Session Thread");
-                while(virtualThread.isAlive() || virtualThread2.isAlive()){}
-            });
-        }
+        //Create a thread that creates and Bluesky session and refreshes the session every N minutes
+        ServerHandler handler = new ServerHandler();
+        BskySession session = handler.createSession(HANDLE, APP_TOKEN, null);
 
-        SessionRestHandler handler = new SessionRestHandler();
-        BskySession session = handler.getSession(HANDLE, APP_TOKEN, null);
-        String jwtToken = session.getAccessJwt();
-        System.out.println("\n\n******************** Session ********************\n" + session.asJsonString());
         
 
-        /* Searching posts in BlueSky *********************************************************************************/
-        System.out.println("SEARCHING BSKY RESULTS:\n" + searchPosts("Can anyone PLEASE", jwtToken));
-
-        /* Getting friend suggestions from BlueSky ********************************************************************/
-        Request request = new Request(20, null);
-        SuggestionsDef suggestions = getSuggestions(request, jwtToken);
-        System.out.println("**************** SUGGESTIONS:\n" + suggestions.asJsonString());
-
-        /* Getting posts from my feed *********************************************************************************/
-        String jsonResponse = client.target(BSKY_URL + FEED_URL)
-                .queryParam("actor", HANDLE)
-                .queryParam("limit", 20)
-                .request(MediaType.APPLICATION_JSON).header("Authorization", "Bearer " + jwtToken)
-                .get(String.class);
-        System.out.println("\n\nFeed: " + jsonResponse);
-
-        /* Getting my account preferences *****************************************************************************/
-        PreferencesDef prefs = client.target(BSKY_URL + PREFERENCES)
-                .request(MediaType.APPLICATION_JSON).header("Authorization", "Bearer " + jwtToken)
-                .get(PreferencesDef.class);
-        System.out.println("\n\nPreferences1: " + prefs.asJsonString());
-
-        /* Getting my profile information *****************************************************************************/
-        Profile profile = client.target(BSKY_URL + PROFILE)
-                .queryParam("actor", HANDLE)
-                .request(MediaType.APPLICATION_JSON)
-                .header("Authorization", "Bearer " + jwtToken)
-                .get(Profile.class);
-        System.out.println("\n\nProfile: " + profile.asJsonString());
-
-        /* List records ************************************************************************************************/
-        JsonNode records = client.target(BSKY_URL+LIST_RECORDS)
-                .queryParam("repo", DID)
-                .queryParam("collection", "app.bsky.feed.post")
-                .queryParam("limit", 100)
-                .request(MediaType.APPLICATION_JSON)
-                .header("Authorization", "Bearer " + jwtToken)
-                .get(JsonNode.class);
-        System.out.println("\n\nRecords: " +records);
-        JsonNode array = records.get("records");
-        System.out.println("\n\nArray: " +array);
-        Iterator<JsonNode> itr = array.elements();
-        while(itr.hasNext()) {
-            JsonNode node = itr.next();
-            String post = node.get("value").get("text").toString();
-            System.out.println(post);
-//            if(post.equals("\"\"")){
-////                System.out.println("POST IS EMPTY");
-//                System.out.println(node);
-//            }
-//            if(post.toLowerCase().contains("musk")){
-//                System.out.println(post);
-//            }
-        }
-
-        String date = "2019-07-14T18:30:00.000Z";
-        SimpleDateFormat inputFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
-        SimpleDateFormat outputFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss a");
-        Date parsedDate = null;
-        try {
-            parsedDate = inputFormat.parse(date);
-        } catch (ParseException e) {
-            throw new RuntimeException(e);
-        }
-        String formattedDate = outputFormat.format(parsedDate);
-        System.out.println("Date: " + parsedDate.getTime() + "\nParsed Date: " + formattedDate);
+//        /* Searching posts in BlueSky *********************************************************************************/
+//        System.out.println("SEARCHING BSKY RESULTS:\n" + searchPosts("Can anyone PLEASE", jwtToken));
+//
+//        /* Getting posts from my feed *********************************************************************************/
+//        String jsonResponse = client.target(BSKY_URL + FEED_URL)
+//                .queryParam("actor", HANDLE)
+//                .queryParam("limit", 20)
+//                .request(MediaType.APPLICATION_JSON).header("Authorization", "Bearer " + jwtToken)
+//                .get(String.class);
+//        System.out.println("\n\nFeed: " + jsonResponse);
+//
+//        /* Getting my account preferences *****************************************************************************/
+//        Preferences prefs = client.target(BSKY_URL + PREFERENCES)
+//                .request(MediaType.APPLICATION_JSON).header("Authorization", "Bearer " + jwtToken)
+//                .get(Preferences.class);
+//        System.out.println("\n\nPreferences1: " + prefs.asJsonString());
+//
+//        /* Getting my profile information *****************************************************************************/
+//        Profile profile = client.target(BSKY_URL + PROFILE)
+//                .queryParam("actor", HANDLE)
+//                .request(MediaType.APPLICATION_JSON)
+//                .header("Authorization", "Bearer " + jwtToken)
+//                .get(Profile.class);
+//        System.out.println("\n\nProfile: " + profile.asJsonString());
+//
+//        /* List records ************************************************************************************************/
+//        JsonNode records = client.target(BSKY_URL+LIST_RECORDS)
+//                .queryParam("repo", DID)
+//                .queryParam("collection", "app.bsky.feed.post")
+//                .queryParam("limit", 100)
+//                .request(MediaType.APPLICATION_JSON)
+//                .header("Authorization", "Bearer " + jwtToken)
+//                .get(JsonNode.class);
+//        System.out.println("\n\nRecords: " +records);
+//        JsonNode array = records.get("records");
+//        System.out.println("\n\nArray: " +array);
+//        Iterator<JsonNode> itr = array.elements();
+//        while(itr.hasNext()) {
+//            JsonNode node = itr.next();
+//            String post = node.get("value").get("text").toString();
+//            System.out.println(post);
+////            if(post.equals("\"\"")){
+//////                System.out.println("POST IS EMPTY");
+////                System.out.println(node);
+////            }
+////            if(post.toLowerCase().contains("musk")){
+////                System.out.println(post);
+////            }
+//        }
+//
+//        String date = "2019-07-14T18:30:00.000Z";
+//        SimpleDateFormat inputFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS'Z'");
+//        SimpleDateFormat outputFormat = new SimpleDateFormat("yyyy-MM-dd hh:mm:ss a");
+//        Date parsedDate = null;
+//        try {
+//            parsedDate = inputFormat.parse(date);
+//        } catch (ParseException e) {
+//            throw new RuntimeException(e);
+//        }
+//        String formattedDate = outputFormat.format(parsedDate);
+//        System.out.println("Date: " + parsedDate.getTime() + "\nParsed Date: " + formattedDate);
     }
 
     private static Response createRecord(String sessionToken) {
@@ -156,7 +139,7 @@ public class Main {
 
     private static String searchPosts(String query, String sessionToken) {
         try (Client client = ClientBuilder.newClient()) {
-            return client.target(BSKY_URL + "app.bsky.feed.searchPosts")
+            return client.target(BSKY_URL + SEARCH_POSTS)
                     .queryParam("q", query)
                     .queryParam("sort", "top")
                     .queryParam("author", DID)
@@ -166,16 +149,16 @@ public class Main {
         }
     }
 
-    private static SuggestionsDef getSuggestions(Request request, String sessionToken) {
-        try (Client client = ClientBuilder.newClient()) {
-            return client.target(BSKY_URL+GET_SUGGESTIONS)
-                    .queryParam("limit",request.getLimit())
-                    .queryParam("cursor", request.getCursor())
-                    .request(MediaType.APPLICATION_JSON)
-                    .header("Authorization", "Bearer " + sessionToken)
-                    .get(SuggestionsDef.class);
-        }
-    }
+//    private static SuggestionsDef getSuggestions(Request request, String sessionToken) {
+//        try (Client client = ClientBuilder.newClient()) {
+//            return client.target(BSKY_URL+GET_SUGGESTIONS)
+//                    .queryParam("limit",request.getLimit())
+//                    .queryParam("cursor", request.getCursor())
+//                    .request(MediaType.APPLICATION_JSON)
+//                    .header("Authorization", "Bearer " + sessionToken)
+//                    .get(SuggestionsDef.class);
+//        }
+//    }
 
     private static Thread startSessionThread(String name) {
         return Thread.startVirtualThread(() -> {

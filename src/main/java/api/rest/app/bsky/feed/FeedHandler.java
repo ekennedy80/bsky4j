@@ -1,10 +1,13 @@
 package api.rest.app.bsky.feed;
 
 import api.rest.app.bsky.AbstractClient;
+import jakarta.ws.rs.core.MediaType;
 
-public class Client extends AbstractClient {
+import static api.rest.GlobalVars.*;
 
-    public Client() {
+public class FeedHandler extends AbstractClient {
+
+    public FeedHandler() {
         super();
     }
 
@@ -53,7 +56,13 @@ public class Client extends AbstractClient {
     }
 
     public void getPosts() {
-
+        return client.target(BSKY_URL + SEARCH_POSTS)
+                .queryParam("q", query)
+                .queryParam("sort", "top")
+                .queryParam("author", DID)
+                .request(MediaType.APPLICATION_JSON)
+                .header(AUTHORIZATION, BEARER + sessionToken)
+                .get(String.class);
     }
 
     public void getQuotes() {

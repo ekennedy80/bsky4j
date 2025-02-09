@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Labels.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Bluesky-REST-Client</a> &gt; <a href="index.source.html" class="el_package">api.rest.app.bsky.actor.object</a> &gt; <span class="el_source">Labels.java</span></div><h1>Labels.java</h1><pre class="source lang-java linenums">package api.rest.app.bsky.actor.object;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonSetter;
+import jakarta.annotation.Nonnull;
+import jakarta.annotation.Nullable;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
+
+import java.net.URI;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@JsonInclude(JsonInclude.Include.NON_NULL)
+public class Labels {
+
+    @Nullable
+    @JsonProperty(&quot;ver&quot;)
+    private Integer ver;
+
+    @Nonnull
+    @JsonProperty(&quot;src&quot;)
+    private String src;
+
+    @Nonnull
+    @JsonProperty(&quot;uri&quot;)
+    private URI uri;
+
+    @Nonnull
+    @JsonProperty(&quot;cid&quot;)
+    private String cid;
+
+    @Nonnull
+    @JsonProperty(&quot;val&quot;)
+    private String val;
+
+    @Nullable
+    @JsonProperty(&quot;neg&quot;)
+    private Boolean neg;
+
+    @Nonnull
+    @JsonProperty(&quot;cts&quot;)
+    private Date cts;
+
+    @Nullable
+    @JsonProperty(&quot;exp&quot;)
+    private Date exp;
+
+    @Nullable
+    @JsonProperty(&quot;sig&quot;)
+    private Byte sig;
+
+    @JsonSetter(&quot;cts&quot;)
+    public void setCts(String date) throws ParseException {
+<span class="pc bpc" id="L61" title="1 of 2 branches missed.">        if (date != null) {</span>
+<span class="pc bpc" id="L62" title="2 of 6 branches missed.">            if (date.contains(&quot;:&quot;) || date.contains(&quot;T&quot;) || date.contains(&quot;Z&quot;)) {</span>
+<span class="fc" id="L63">                SimpleDateFormat inputFormat = new SimpleDateFormat(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;);</span>
+<span class="fc" id="L64">                this.cts = inputFormat.parse(date);</span>
+<span class="fc" id="L65">            } else {</span>
+<span class="fc" id="L66">                this.cts = new Date(Long.parseLong(date));</span>
+            }
+        }
+<span class="fc" id="L69">    }</span>
+
+    @JsonSetter(&quot;exp&quot;)
+    public void setExp(String date) throws ParseException {
+<span class="pc bpc" id="L73" title="1 of 2 branches missed.">        if (date != null) {</span>
+<span class="pc bpc" id="L74" title="5 of 6 branches missed.">            if (date.contains(&quot;:&quot;) || date.contains(&quot;T&quot;) || date.contains(&quot;Z&quot;)) {</span>
+<span class="fc" id="L75">                SimpleDateFormat inputFormat = new SimpleDateFormat(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;);</span>
+<span class="fc" id="L76">                this.exp = inputFormat.parse(date);</span>
+<span class="fc" id="L77">            } else {</span>
+<span class="nc" id="L78">                this.exp = new Date(Long.parseLong(date));</span>
+            }
+        }
+<span class="fc" id="L81">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

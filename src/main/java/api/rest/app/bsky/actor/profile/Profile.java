@@ -25,7 +25,7 @@ import java.util.Date;
 import java.util.List;
 
 /**
- * Get detailed profile view of an actor. Does not require auth, but contains relevant metadata with auth.
+ * Profile view of an actor.
  */
 @Data
 @NoArgsConstructor
