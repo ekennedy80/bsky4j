@@ -1,8 +1,9 @@
-package api.rest.app.bsky.actor.suggestions.defs;
+package api.rest.app.bsky.actor;
 
 import api.rest.app.bsky.actor.object.Associated;
 import api.rest.app.bsky.actor.object.Labels;
 import api.rest.app.bsky.actor.object.Viewer;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
@@ -22,7 +23,8 @@ import java.util.List;
 @AllArgsConstructor
 @Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class ActorsDef {
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class Actor {
 
     @Nonnull
     @JsonProperty("did")

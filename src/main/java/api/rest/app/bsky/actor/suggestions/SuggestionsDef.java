@@ -1,6 +1,7 @@
 package api.rest.app.bsky.actor.suggestions;
 
-import api.rest.app.bsky.actor.suggestions.defs.ActorsDef;
+import api.rest.app.bsky.actor.Actor;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -19,6 +20,7 @@ import java.util.List;
 @Builder
 @Data
 @JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class SuggestionsDef {
 
     @Nullable
@@ -27,7 +29,7 @@ public class SuggestionsDef {
 
     @Nullable
     @JsonProperty("actors")
-    private List<ActorsDef> actors;
+    private List<Actor> actors;
 
     @Nullable
     @JsonProperty("recId")

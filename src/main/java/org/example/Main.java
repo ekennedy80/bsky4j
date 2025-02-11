@@ -1,14 +1,9 @@
 package org.example;
 
-import api.rest.HttpClientUtils;
-import api.rest.app.bsky.actor.preferences.Preferences;
-import api.rest.app.bsky.actor.profile.Profile;
-import api.rest.app.bsky.actor.suggestions.Request;
-import api.rest.app.bsky.actor.suggestions.SuggestionsDef;
+
 import api.rest.com.atproto.server.BskySession;
 import api.rest.com.atproto.server.ServerHandler;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 import jakarta.ws.rs.client.Client;
@@ -17,31 +12,16 @@ import jakarta.ws.rs.client.Entity;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
-import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.time.Instant;
 import java.util.Date;
-import java.util.Iterator;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 import static api.rest.GlobalVars.*;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
 
     public static void main(String[] args) throws JsonProcessingException {
-
-//        Client client = ClientBuilder.newClient();
-//        String did = client.target(BSKY_URL + DID_URL)
-//                .queryParam("handle", HANDLE)
-//                .request(MediaType.TEXT_PLAIN).get(String.class);
-//        System.out.println("Bsky DID: " + did);
-
-//        ObjectMapper mapper = new ObjectMapper();
-//        ObjectNode user = mapper.createObjectNode();
 
         //Create a thread that creates and Bluesky session and refreshes the session every N minutes
         ServerHandler handler = new ServerHandler();
