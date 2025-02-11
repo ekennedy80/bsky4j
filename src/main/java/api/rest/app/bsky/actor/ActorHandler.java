@@ -7,7 +7,6 @@ import api.rest.app.bsky.actor.profile.Profiles;
 import api.rest.app.bsky.actor.suggestions.SuggestionsDef;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
-import com.fasterxml.jackson.databind.node.ObjectNode;
 import jakarta.annotation.Nonnull;
 import jakarta.ws.rs.client.Entity;
 import jakarta.ws.rs.core.MediaType;
@@ -121,15 +120,31 @@ public class ActorHandler extends AbstractClient {
     /**
      * Find actor suggestions for a prefix search term. Expected use is for auto-completion during text field entry.
      * Does not require auth.
+     * @param queryString Search query prefix; not a full query string.
+     * @param limit Number of actors returned by the service. Possible values: >= 1 and <= 100. Default value: 10
+     * @return
      */
-    public void searchActorsTypeahead() {
-
+    public Actors searchActorsTypeahead(@Nonnull final String jwtToken, @Nonnull final String queryString, Integer limit) {
+        return client.target(BSKY_URL+SEARCH_ACTORS_TYPE_AHEAD)
+                .queryParam("q", queryString)
+                .queryParam("limit", limit)
+                .request(MediaType.APPLICATION_JSON)
+                .header(AUTHORIZATION, BEARER + jwtToken)
+                .get(Actors.class);
     }
 
     /**
      * Find actors (profiles) matching search criteria. Does not require auth.
+     * @param queryString Search query prefix; not a full query string.
+     * @param limit Number of actors returned by the service. Possible values: >= 1 and <= 100. Default value: 10
+     * @return
      */
-    public void searchActors() {
-
+    public Actors searchActors(@Nonnull final String jwtToken, @Nonnull final String queryString, Integer limit) {
+        return client.target(BSKY_URL+SEARCH_ACTORS)
+                .queryParam("q", queryString)
+                .queryParam("limit", limit)
+                .request(MediaType.APPLICATION_JSON)
+                .header(AUTHORIZATION, BEARER + jwtToken)
+                .get(Actors.class);
     }
 }

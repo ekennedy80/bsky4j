@@ -1,6 +1,8 @@
 package org.example;
 
 
+import api.rest.app.bsky.actor.ActorHandler;
+import api.rest.app.bsky.actor.Actors;
 import api.rest.com.atproto.server.BskySession;
 import api.rest.com.atproto.server.ServerHandler;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -27,6 +29,9 @@ public class Main {
         ServerHandler handler = new ServerHandler();
         BskySession session = handler.createSession(HANDLE, APP_TOKEN, null);
 
+        ActorHandler actorHandler = new ActorHandler();
+        Actors actors = actorHandler.searchActorsTypeahead(session.getAccessJwt(), "ekennedy", 99);
+        System.out.println(actors.asJsonString());
         
 
 //        /* Searching posts in BlueSky *********************************************************************************/

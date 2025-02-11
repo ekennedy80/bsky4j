@@ -19,6 +19,8 @@ public class GlobalVars {
     public static final String PREFERENCES = "app.bsky.actor.getPreferences";
     public static final String GET_PROFILE = "app.bsky.actor.getProfile";
     public static final String GET_PROFILES = "app.bsky.actor.getProfiles";
+    public static final String SEARCH_ACTORS_TYPE_AHEAD = "app.bsky.actor.searchActorsTypeahead";
+    public static final String SEARCH_ACTORS = "app.bsky.actor.searchActors";
     public static final String CREATE_RECORD = "com.atproto.repo.createRecord";
     public static final String GET_SUGGESTIONS = "app.bsky.actor.getSuggestions";
     public static final String LIST_RECORDS = "com.atproto.repo.listRecords";

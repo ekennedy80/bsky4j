@@ -1,5 +1,6 @@
 package api.rest.app.bsky.actor.preferences.object;
 
+import api.rest.JsonFluentObject;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -28,7 +29,7 @@ import lombok.*;
         @JsonSubTypes.Type(value = SavedFeedsPrefV2.class, name = "app.bsky.actor.defs#savedFeedsPrefV2"),
         @JsonSubTypes.Type(value = ThreadViewPref.class, name = "app.bsky.actor.defs#threadViewPref")}
 )
-public abstract class AbstractPreference {
+public abstract class AbstractPreference implements JsonFluentObject {
 
     @Nonnull
     @JsonProperty("$type")
@@ -42,8 +43,4 @@ public abstract class AbstractPreference {
         this.json = new ObjectMapper().createObjectNode();
         this.type = type;
     }
-
-    public abstract ObjectNode asJsonObject() throws JsonProcessingException;
-
-    public abstract String asJsonString()  throws JsonProcessingException;
 }
