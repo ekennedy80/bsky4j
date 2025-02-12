@@ -13,6 +13,8 @@ import jakarta.ws.rs.client.ClientBuilder;
 import jakarta.ws.rs.client.Entity;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.text.SimpleDateFormat;
 import java.time.Duration;
@@ -23,15 +25,25 @@ import static api.rest.GlobalVars.*;
 
 public class Main {
 
-    public static void main(String[] args) throws JsonProcessingException {
+    private static final Logger LOGGER = LogManager.getLogger(Main.class);
+
+    public static void main(String[] args) throws JsonProcessingException, InterruptedException {
 
         //Create a thread that creates and Bluesky session and refreshes the session every N minutes
-        ServerHandler handler = new ServerHandler();
-        BskySession session = handler.createSession(HANDLE, APP_TOKEN, null);
-
-        ActorHandler actorHandler = new ActorHandler();
-        Actors actors = actorHandler.searchActorsTypeahead(session.getAccessJwt(), "ekennedy", 99);
-        System.out.println(actors.asJsonString());
+        ServerHandler serverHandler = ServerHandler.getInstance();
+        BskySession session = serverHandler.createSession(true, HANDLE, APP_TOKEN, null);
+        if(LOGGER.isInfoEnabled())
+            LOGGER.info("********** SESSION **********\n{}",session.asJsonString());
+        for(int i=0; i<40; i++){
+            try(ActorHandler actorHandler = new ActorHandler()) {
+                Actors actors = actorHandler.searchActorsTypeahead(serverHandler.getSession().getAccessJwt(), "ekennedy", 99);
+                if(LOGGER.isInfoEnabled())
+                    LOGGER.info(actors.asJsonString());
+            } catch (jakarta.ws.rs.BadRequestException e) {
+                LOGGER.info(e.toString());
+            }
+            Thread.sleep(15000);
+        }
         
 
 //        /* Searching posts in BlueSky *********************************************************************************/

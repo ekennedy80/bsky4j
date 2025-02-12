@@ -8,33 +8,68 @@ import jakarta.ws.rs.client.Entity;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 import lombok.Getter;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.Date;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
+
 
 import static api.rest.GlobalVars.*;
 
 public class ServerHandler extends AbstractClient {
 
-
+    private static final Logger LOGGER = LogManager.getLogger(ServerHandler.class);
+    private static ServerHandler instance;
 
     @Getter
     private BskySession session;
 
-    @Getter
-    private Date sessionModifiedAt;
+    private ScheduledExecutorService scheduler;
 
-    public ServerHandler() {
+    @Getter
+    private Date sessionModifiedAt = null;
+
+    @Getter
+    private Date sessionCreatedAt = null;
+
+    @Getter
+    private Date sessionDeletedAt = null;
+
+    private ServerHandler() {
         super();
+        LOGGER.debug("Instantiating ServerHandler.");
+    }
+
+    public static ServerHandler getInstance() {
+        if (instance == null) {
+            instance = new ServerHandler();
+        }
+        return instance;
+    }
+
+    public void sessionRefresher(int intervalMinutes) {
+        LOGGER.debug("Starting session refresher thread.");
+        scheduler = Executors.newScheduledThreadPool(1);
+        scheduler.scheduleAtFixedRate(this::refreshSession, 2, intervalMinutes, TimeUnit.MINUTES);
+    }
+
+    public void stopSessionRefreasher() {
+        LOGGER.debug("Stopping session refresher thread.");
+        scheduler.close();
     }
 
     /**
      * Create a Bluesky authentication session.
-     * @param identifier Handle or other identifier supported by the server for the authenticating user.
+     * @param identifier Handle or DID supported by the server for the authenticating user.
      * @param password
      * @param authFactorToken Used for 2FA
      * @return Bluesky auth session
      */
-    public BskySession createSession(@Nonnull String identifier, @Nonnull String password, String authFactorToken) {
+    public BskySession createSession(boolean autoRefresh, @Nonnull String identifier, @Nonnull String password, String authFactorToken) {
+        LOGGER.info("Creating a Bluesky session for authentication for {}.", identifier);
         ObjectMapper mapper = new ObjectMapper();
         ObjectNode user = mapper.createObjectNode();
         user.put("identifier", identifier);
@@ -45,16 +80,20 @@ public class ServerHandler extends AbstractClient {
         try (Response response = client.target(BSKY_URL + CREATE_SESSION)
                 .request(MediaType.APPLICATION_JSON)
                 .post(Entity.json(user.toString()))) {
-            session = response.readEntity(BskySession.class);
-            sessionModifiedAt = new Date();
-            return session;
+            this.session = response.readEntity(BskySession.class);
+            sessionCreatedAt = sessionModifiedAt = new Date();
+            if(autoRefresh) {
+                sessionRefresher(2);
+            }
+            return this.session;
         }
     }
 
     /**
      * Create a Bluesky authentication session. Kicks off a thread that refreshes the session every two minutes.
      */
-    public void createSession() {
+    public void createSession(boolean autoRefresh) {
+        LOGGER.info("Creating a Bluesky session for authentication.");
         ObjectMapper mapper = new ObjectMapper();
         ObjectNode user = mapper.createObjectNode();
         user.put("identifier", HANDLE);
@@ -62,8 +101,11 @@ public class ServerHandler extends AbstractClient {
         try (Response response = client.target(BSKY_URL + CREATE_SESSION)
                 .request(MediaType.APPLICATION_JSON)
                 .post(Entity.json(user.toString()))) {
-            session = response.readEntity(BskySession.class);
-            sessionModifiedAt = new Date();
+            this.session = response.readEntity(BskySession.class);
+            sessionCreatedAt = sessionModifiedAt = new Date();
+            if(autoRefresh) {
+                sessionRefresher(2);
+            }
         }
     }
 
@@ -72,9 +114,10 @@ public class ServerHandler extends AbstractClient {
      * @return HTTP status code
      */
     public int deleteSession() {
+        LOGGER.info("Deleting session.");
         try (Response response = client.target(BSKY_URL + DELETE_SESSION)
                 .request(MediaType.APPLICATION_JSON)
-                .header(AUTHORIZATION, BEARER + session.getRefreshJwt())
+                .header(AUTHORIZATION, BEARER + this.session.getRefreshJwt())
                 .post(Entity.json(""))) {
             return response.getStatus();
         }
@@ -85,9 +128,10 @@ public class ServerHandler extends AbstractClient {
      * @return A Bluesky auth session
      */
     public BskySession getCurrentSession() {
+        LOGGER.info("Getting current session.");
         try (Response response = client.target(BSKY_URL + GET_SESSION)
                 .request(MediaType.APPLICATION_JSON)
-                .header(AUTHORIZATION, BEARER + session.getAccessJwt())
+                .header(AUTHORIZATION, BEARER + this.session.getAccessJwt())
                 .get()) {
             return response.readEntity(BskySession.class);
         }
@@ -97,11 +141,12 @@ public class ServerHandler extends AbstractClient {
      * Refresh an authentication session. Requires auth using the 'refreshJwt' (not the 'accessJwt').
      */
     public void refreshSession() {
+        LOGGER.info("Refreshing Bluesky session.");
         try (Response response = client.target(BSKY_URL + REFRESH_SESSION)
                 .request(MediaType.APPLICATION_JSON)
-                .header(AUTHORIZATION, BEARER + session.getRefreshJwt())
+                .header(AUTHORIZATION, BEARER + this.session.getRefreshJwt())
                 .post(Entity.json(""))) {
-            session = response.readEntity(BskySession.class);
+            this.session = response.readEntity(BskySession.class);
             sessionModifiedAt = new Date();
         }
     }
@@ -112,13 +157,14 @@ public class ServerHandler extends AbstractClient {
      * @return Bluesky auth session.
      */
     public BskySession refreshSession(String refreshJWT) {
+        LOGGER.info("Refreshing Bluesky session using {}.",refreshJWT);
         try (Response response = client.target(BSKY_URL + REFRESH_SESSION)
                 .request(MediaType.APPLICATION_JSON)
                 .header(AUTHORIZATION, BEARER + refreshJWT)
                 .post(Entity.json(""))) {
-            session = response.readEntity(BskySession.class);
+            this.session = response.readEntity(BskySession.class);
             sessionModifiedAt = new Date();
-            return session;
+            return this.session;
         }
     }
 }

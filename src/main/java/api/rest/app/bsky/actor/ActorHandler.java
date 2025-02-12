@@ -11,12 +11,16 @@ import jakarta.annotation.Nonnull;
 import jakarta.ws.rs.client.Entity;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.Collection;
 
 import static api.rest.GlobalVars.*;
 
 public class ActorHandler extends AbstractClient {
+
+    private static final Logger LOGGER = LogManager.getLogger(ActorHandler.class);
 
     public ActorHandler() {
         super();
@@ -29,7 +33,7 @@ public class ActorHandler extends AbstractClient {
      * @return
      */
     public Preferences getPreferences(String jwtToken) {
-        return client.target(BSKY_URL + PREFERENCES)
+        return client.target(BSKY_URL + GET_PREFERENCES)
                 .request(MediaType.APPLICATION_JSON).header("Authorization", "Bearer " + jwtToken)
                 .get(Preferences.class);
     }
@@ -106,10 +110,10 @@ public class ActorHandler extends AbstractClient {
      * Set the private preferences attached to the account.
      * @param jwtToken
      * @param preferences
-     * @return
+     * @return HTTP status code
      */
     public int putPreferences(@Nonnull final String jwtToken, @Nonnull final Preferences preferences) {
-        try (Response response = client.target(BSKY_URL + DELETE_SESSION)
+        try (Response response = client.target(BSKY_URL + PUT_PREFERENCES)
                 .request(MediaType.APPLICATION_JSON)
                 .header(AUTHORIZATION, BEARER + jwtToken)
                 .post(Entity.json(preferences))) {
@@ -125,6 +129,7 @@ public class ActorHandler extends AbstractClient {
      * @return
      */
     public Actors searchActorsTypeahead(@Nonnull final String jwtToken, @Nonnull final String queryString, Integer limit) {
+        LOGGER.info("Searching for Actors for typeahead.");
         return client.target(BSKY_URL+SEARCH_ACTORS_TYPE_AHEAD)
                 .queryParam("q", queryString)
                 .queryParam("limit", limit)
@@ -140,6 +145,7 @@ public class ActorHandler extends AbstractClient {
      * @return
      */
     public Actors searchActors(@Nonnull final String jwtToken, @Nonnull final String queryString, Integer limit) {
+        LOGGER.info("Searching for Actors.");
         return client.target(BSKY_URL+SEARCH_ACTORS)
                 .queryParam("q", queryString)
                 .queryParam("limit", limit)

@@ -23,38 +23,47 @@ public class BskySession {
 
     @Nonnull
     @JsonProperty("accessJwt")
+    @Getter
     private String accessJwt;
 
     @Nonnull
     @JsonProperty("refreshJwt")
+    @Getter
     private String refreshJwt;
 
     @Nonnull
     @JsonProperty("handle")
+    @Getter
     private String handle;
 
     @Nonnull
     @JsonProperty("did")
+    @Getter
     private String did;
 
     @Nullable
     @JsonProperty("didDoc")
+    @Getter
     private DidDoc didDoc;
 
     @Nullable
     @JsonProperty("email")
+    @Getter
     private String email;
 
     @Nullable
     @JsonProperty("emailConfirmed")
+    @Getter
     private Boolean emailConfirmed;
 
     @Nullable
     @JsonProperty("emailAuthFactor")
+    @Getter
     private Boolean emailAuthFactor;
 
     @Nullable
     @JsonProperty("active")
+    @Getter
     private Boolean active;
 
     /**
@@ -65,6 +74,7 @@ public class BskySession {
      */
     @Nullable
     @JsonProperty("status")
+    @Getter
     private String status;
 
     public ObjectNode asJsonObject() throws JsonProcessingException {

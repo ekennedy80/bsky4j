@@ -7,7 +7,7 @@ public abstract class AbstractClient implements AutoCloseable {
 
     protected final Client client;
 
-    public AbstractClient() {
+    protected AbstractClient() {
         client = ClientBuilder.newClient();
     }
 

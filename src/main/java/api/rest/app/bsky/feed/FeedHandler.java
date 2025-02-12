@@ -12,7 +12,7 @@ public class FeedHandler extends AbstractClient {
     }
 
     public void describeFeedGenerator() {
-
+        
     }
 
     public void getActorFeeds() {
