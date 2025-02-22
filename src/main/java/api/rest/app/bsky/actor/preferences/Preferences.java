@@ -1,11 +1,12 @@
 package api.rest.app.bsky.actor.preferences;
 
-import api.rest.app.bsky.actor.preferences.object.AbstractPreference;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
+
+import api.rest.app.bsky.actor.preferences.model.AbstractPreference;
 import jakarta.annotation.Nonnull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

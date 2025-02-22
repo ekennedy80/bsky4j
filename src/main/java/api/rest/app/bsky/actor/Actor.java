@@ -1,12 +1,13 @@
 package api.rest.app.bsky.actor;
 
-import api.rest.app.bsky.actor.object.Associated;
-import api.rest.app.bsky.actor.object.Labels;
-import api.rest.app.bsky.actor.object.Viewer;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
+
+import api.rest.app.bsky.actor.model.Associated;
+import api.rest.app.bsky.actor.model.Labels;
+import api.rest.app.bsky.actor.model.Viewer;
 import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
 import lombok.AllArgsConstructor;

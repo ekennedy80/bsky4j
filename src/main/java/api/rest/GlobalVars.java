@@ -3,11 +3,14 @@ package api.rest;
 public class GlobalVars {
 
     private GlobalVars() {}
+    // Globally used string to make HTTP API calls
     public static final String AUTHORIZATION = "Authorization";
     public static final String BEARER = "Bearer ";
+    // My personal account information
     public static final String APP_TOKEN = "hjlh-u644-7jk3-bjs7"; //Access token for this specific application instance
     public static final String HANDLE = "ekennedy80.bsky.social"; //My BlueSky handle
     public static final String DID = "did:plc:pgdrqxzv4kxt7tr3sa6pd77y";
+    // Base URL
     public static final String BSKY_URL = "https://bsky.social/xrpc/"; //Base URL for BlueSky
     // app.bsky.actor xrpc methods
     public static final String GET_PREFERENCES = "app.bsky.actor.getPreferences";
@@ -99,7 +102,7 @@ public class GlobalVars {
     public static final String GET_ACCOUNT_INFOS = "";
     public static final String GET_INVITE_CODES = "";
     public static final String GET_SUBJECT_STATUS = "";
-    public static final String SEARCH_ACCOUNTS = "";
+    public static final String SEARCH_ACCOUNTS_ADMIN = "";
     public static final String SEND_EMAIL = "";
     public static final String UPDATE_ACCOUNT_EMAIL = "";
     public static final String UPDATE_ACCOUNT_HANDLE = "";
@@ -159,10 +162,46 @@ public class GlobalVars {
     public static final String GET_LATEST_COMMIT = "";
     public static final String GET_RECORD_SYNC = "";
     public static final String GET_REPO_STATUS = "";
-    public static final String GET_REPO = "";
+    public static final String GET_REPO_SYNC = "";
     public static final String LIST_BLOBS = "";
     public static final String LIST_REPOS = "";
     public static final String NOTIFY_OF_UPDATE = "";
     public static final String REQUEST_CRAWL = "";
     // tools.ozone.communication xrpc methods
+    public static final String CREATE_TEMPLATE = "";
+    public static final String DELETE_TEMPLATE = "";
+    public static final String LIST_TEMPLATES = "";
+    public static final String UPDATE_TEMPLATE = "";
+    // tools.ozone.moderation xrpc methods
+    public static final String EMIT_EVENT = "";
+    public static final String GET_EVENT = "";
+    public static final String GET_RECORD = "";
+    public static final String GET_RECORDS = "";
+    public static final String GET_REPO_TOOLS = "";
+    public static final String GET_REPOS = "";
+    public static final String QUERY_EVENTS = "";
+    public static final String QUERY_STATUSES = "";
+    public static final String SEARCH_REPOS = "";
+    // tools.ozone.server xrpc methods
+    public static final String GET_CONFIG = "";
+    // tools.ozone.set xrpc methods
+    public static final String ADD_VALUES = "";
+    public static final String DELETE_SET = "";
+    public static final String DELETE_VALUES = "";
+    public static final String GET_VALUES = "";
+    public static final String QUERY_SETS = "";
+    public static final String UPSERT_SET = "";
+    // tools.ozone.setting xrpc methods
+    public static final String LIST_OPTIONS = "";
+    public static final String REMOVE_OPTIONS = "";
+    public static final String UPSERT_OPTION = "";
+    // tools.ozone.signature xrpc methods
+    public static final String FIND_CORRELATION = "";
+    public static final String FIND_RELATED_ACCOUNT = "";
+    public static final String SEARCH_ACCOUNTS_SIG = "";
+    // tools.ozone.team xrpc methods
+    public static final String ADD_MEMBER = "";
+    public static final String DELETE_MEMBER = "";
+    public static final String LIST_MEMBERS = "";
+    public static final String UPDATE_MEMBER = "";
 }

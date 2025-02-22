@@ -3,6 +3,8 @@ package org.example;
 
 import api.rest.app.bsky.actor.ActorHandler;
 import api.rest.app.bsky.actor.Actors;
+import api.rest.app.bsky.feed.FeedHandler;
+import api.rest.app.bsky.feed.model.DescribeFeedGenerator;
 import api.rest.com.atproto.server.BskySession;
 import api.rest.com.atproto.server.ServerHandler;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -28,22 +30,27 @@ public class Main {
     private static final Logger LOGGER = LogManager.getLogger(Main.class);
 
     public static void main(String[] args) throws JsonProcessingException, InterruptedException {
-
-        //Create a thread that creates and Bluesky session and refreshes the session every N minutes
+        ObjectMapper objectMapper = new ObjectMapper();
         ServerHandler serverHandler = ServerHandler.getInstance();
         BskySession session = serverHandler.createSession(true, HANDLE, APP_TOKEN, null);
+
         if(LOGGER.isInfoEnabled())
             LOGGER.info("********** SESSION **********\n{}",session.asJsonString());
+
         for(int i=0; i<40; i++){
-            try(ActorHandler actorHandler = new ActorHandler()) {
-                Actors actors = actorHandler.searchActorsTypeahead(serverHandler.getSession().getAccessJwt(), "ekennedy", 99);
+
+            Thread.sleep(5000);
+            try(FeedHandler feedHandler = new FeedHandler()){
+                ObjectNode actorLikes = feedHandler.getActorLikes(serverHandler.getSession().getAccessJwt(), HANDLE, 10, null);
                 if(LOGGER.isInfoEnabled())
-                    LOGGER.info(actors.asJsonString());
+                    LOGGER.info(objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(actorLikes));
             } catch (jakarta.ws.rs.BadRequestException e) {
                 LOGGER.info(e.toString());
             }
             Thread.sleep(15000);
         }
+
+
         
 
 //        /* Searching posts in BlueSky *********************************************************************************/
@@ -125,7 +132,7 @@ public class Main {
                 .set("record", record);
         ;
 
-        System.out.println("Record: " + request.toString());
+        LOGGER.info("Record: {}", request);
 
         try (Client client = ClientBuilder.newClient()) {
             return client.target(BSKY_URL + CREATE_RECORD)

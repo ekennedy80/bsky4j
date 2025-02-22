@@ -1,10 +1,12 @@
 package api.rest.app.bsky.actor.profile;
 
 
-import api.rest.app.bsky.actor.object.Associated;
-import api.rest.app.bsky.actor.profile.defs.JoinedViaStarterPackDef;
-import api.rest.app.bsky.actor.object.Labels;
-import api.rest.app.bsky.actor.object.Viewer;
+import api.rest.JsonFluentObject;
+import api.rest.app.bsky.actor.model.Associated;
+import api.rest.app.bsky.actor.model.Labels;
+import api.rest.app.bsky.actor.model.Viewer;
+import api.rest.app.bsky.actor.profile.defs.JoinedViaStarterPack;
+
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
@@ -32,7 +34,7 @@ import java.util.List;
 @AllArgsConstructor
 @Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class Profile {
+public class Profile implements JsonFluentObject {
 
     @Data
     @NoArgsConstructor
@@ -91,7 +93,7 @@ public class Profile {
 
     @Nullable
     @JsonProperty("joinedViaStarterPack")
-    private JoinedViaStarterPackDef joinedViaStarterPack;
+    private JoinedViaStarterPack joinedViaStarterPack;
 
     @Nullable
     @JsonProperty("indexedAt")
