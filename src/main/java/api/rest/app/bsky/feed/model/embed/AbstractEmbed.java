@@ -26,7 +26,9 @@ import lombok.ToString;
 @JsonSubTypes({
     @JsonSubTypes.Type(value = External.class, name = "app.bsky.embed.external"),
     @JsonSubTypes.Type(value = Image.class, name = "app.bsky.embed.images"),
-    @JsonSubTypes.Type(value = Record.class, name = "app.bsky.embed.record")}
+    @JsonSubTypes.Type(value = Record.class, name = "app.bsky.embed.record"),
+    @JsonSubTypes.Type(value = Video.class, name = "app.bsky.embed.video"),
+    @JsonSubTypes.Type(value = RecordWithMedia.class, name = "app.bsky.embed.recordWithMedia")}
 )
 public abstract class AbstractEmbed implements JsonFluentObject {
     

@@ -1,488 +1,13 @@
- {
+{
   "feed" : [ {
     "post" : {
-      "uri" : "at://did:plc:elsk4pvoxygbgz5qb3j2h2sx/app.bsky.feed.post/3lifjp5dos22c",
-      "cid" : "bafyreiancohaksir75nrmnlvma3insi6hceaqgkh3myiqk5o5vebrvh4lm",
+      "uri" : "at://did:plc:y4zs4cabaezzwx3bz2e5nnj2/app.bsky.feed.post/3lik4qthxbs2v",
+      "cid" : "bafyreigcui42xak7qlwy3e6wudgylclzlfml2spz7edhpu7xb4dwldi4cy",
       "author" : {
-        "did" : "did:plc:elsk4pvoxygbgz5qb3j2h2sx",
-        "handle" : "idahoreports.org",
-        "displayName" : "Idaho Reports",
-        "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:elsk4pvoxygbgz5qb3j2h2sx/bafkreibr3ifqxumy5v6dkqjajveeuejkrvnnwyzsgrj5qywmm7nmcpgatm@jpeg",
-        "viewer" : {
-          "muted" : false,
-          "blockedBy" : false
-        },
-        "labels" : [ ],
-        "createdAt" : "2024-11-15T23:11:46.935Z"
-      },
-      "record" : {
-        "$type" : "app.bsky.feed.post",
-        "createdAt" : "2025-02-17T19:56:06.479Z",
-        "embed" : {
-          "$type" : "app.bsky.embed.images",
-          "images" : [ {
-            "alt" : "Presidents' Day protest on the steps of the Idaho State Capitol. ",
-            "aspectRatio" : {
-              "height" : 1500,
-              "width" : 2000
-            },
-            "image" : {
-              "$type" : "blob",
-              "ref" : {
-                "$link" : "bafkreiaegsf2u4xdtr7nc4vsfe6s6ddkls3xgkyvkyphtmwssqmm5wnrky"
-              },
-              "mimeType" : "image/jpeg",
-              "size" : 998050
-            }
-          } ]
-        },
-        "facets" : [ {
-          "$type" : "app.bsky.richtext.facet",
-          "features" : [ {
-            "$type" : "app.bsky.richtext.facet#mention",
-            "did" : "did:plc:6uj3ze76ar6natlkeezftjwd"
-          } ],
-          "index" : {
-            "byteEnd" : 111,
-            "byteStart" : 88
-          }
-        }, {
-          "features" : [ {
-            "$type" : "app.bsky.richtext.facet#tag",
-            "tag" : "Idaho"
-          } ],
-          "index" : {
-            "byteEnd" : 201,
-            "byteStart" : 195
-          }
-        }, {
-          "features" : [ {
-            "$type" : "app.bsky.richtext.facet#tag",
-            "tag" : "idleg"
-          } ],
-          "index" : {
-            "byteEnd" : 208,
-            "byteStart" : 202
-          }
-        }, {
-          "features" : [ {
-            "$type" : "app.bsky.richtext.facet#tag",
-            "tag" : "idpol"
-          } ],
-          "index" : {
-            "byteEnd" : 215,
-            "byteStart" : 209
-          }
-        } ],
-        "langs" : [ "en" ],
-        "text" : "From our director Morgan McCollum: Several hundred people showed up in the rain for the @idaho50501.bsky.social Presidents Day protest against Trump, Musk and DOGE at the Idaho Capitol in Boise. #Idaho #idleg #idpol"
-      },
-      "embed" : {
-        "$type" : "app.bsky.embed.images#view",
-        "images" : [ {
-          "thumb" : "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:elsk4pvoxygbgz5qb3j2h2sx/bafkreiaegsf2u4xdtr7nc4vsfe6s6ddkls3xgkyvkyphtmwssqmm5wnrky@jpeg",
-          "fullsize" : "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:elsk4pvoxygbgz5qb3j2h2sx/bafkreiaegsf2u4xdtr7nc4vsfe6s6ddkls3xgkyvkyphtmwssqmm5wnrky@jpeg",
-          "alt" : "Presidents' Day protest on the steps of the Idaho State Capitol. ",
-          "aspectRatio" : {
-            "height" : 1500,
-            "width" : 2000
-          }
-        } ]
-      },
-      "replyCount" : 14,
-      "repostCount" : 103,
-      "likeCount" : 353,
-      "quoteCount" : 12,
-      "indexedAt" : "2025-02-17T19:56:12.327Z",
-      "viewer" : {
-        "like" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.feed.like/3liflsuqfjo2o",
-        "threadMuted" : false,
-        "embeddingDisabled" : false
-      },
-      "labels" : [ ]
-    }
-  }, {
-    "post" : {
-      "uri" : "at://did:plc:nxhz7gqz3d4zfwvtq3uh4uxx/app.bsky.feed.post/3lifgvlhrhs2u",
-      "cid" : "bafyreie24bv7ribr5k3nyna6tbi5xd7coavvli6dcllvpl6kx5sod5qsui",
-      "author" : {
-        "did" : "did:plc:nxhz7gqz3d4zfwvtq3uh4uxx",
-        "handle" : "fearlessfreedom.bsky.social",
-        "displayName" : "Freedom",
-        "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:nxhz7gqz3d4zfwvtq3uh4uxx/bafkreifiqzua6nzzfdd75jo4dhd4f4ltnm4awqh3izbtu6fk6k2ouzqani@jpeg",
-        "associated" : {
-          "chat" : {
-            "allowIncoming" : "none"
-          }
-        },
-        "viewer" : {
-          "muted" : false,
-          "blockedBy" : false
-        },
-        "labels" : [ ],
-        "createdAt" : "2025-02-06T18:13:14.413Z"
-      },
-      "record" : {
-        "$type" : "app.bsky.feed.post",
-        "createdAt" : "2025-02-17T19:06:01.411Z",
-        "embed" : {
-          "$type" : "app.bsky.embed.images",
-          "images" : [ {
-            "alt" : "",
-            "aspectRatio" : {
-              "height" : 1500,
-              "width" : 2000
-            },
-            "image" : {
-              "$type" : "blob",
-              "ref" : {
-                "$link" : "bafkreib4o676c3shohcuv73rjusctkelew2rmv5hmynl2pzvyymisbzham"
-              },
-              "mimeType" : "image/jpeg",
-              "size" : 919301
-            }
-          } ]
-        },
-        "facets" : [ {
-          "features" : [ {
-            "$type" : "app.bsky.richtext.facet#tag",
-            "tag" : "50501Movement"
-          } ],
-          "index" : {
-            "byteEnd" : 14,
-            "byteStart" : 0
-          }
-        }, {
-          "features" : [ {
-            "$type" : "app.bsky.richtext.facet#tag",
-            "tag" : "TrumpMuskGo"
-          } ],
-          "index" : {
-            "byteEnd" : 27,
-            "byteStart" : 15
-          }
-        } ],
-        "langs" : [ "en" ],
-        "reply" : {
-          "parent" : {
-            "cid" : "bafyreibqagfe6foczpffeeu5awy23btqfmn6xj34t2tm7swgj7bh57f5ty",
-            "uri" : "at://did:plc:nxhz7gqz3d4zfwvtq3uh4uxx/app.bsky.feed.post/3lifgkk7h6s2u"
-          },
-          "root" : {
-            "cid" : "bafyreibqagfe6foczpffeeu5awy23btqfmn6xj34t2tm7swgj7bh57f5ty",
-            "uri" : "at://did:plc:nxhz7gqz3d4zfwvtq3uh4uxx/app.bsky.feed.post/3lifgkk7h6s2u"
-          }
-        },
-        "text" : "#50501Movement #TrumpMuskGo"
-      },
-      "embed" : {
-        "$type" : "app.bsky.embed.images#view",
-        "images" : [ {
-          "thumb" : "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:nxhz7gqz3d4zfwvtq3uh4uxx/bafkreib4o676c3shohcuv73rjusctkelew2rmv5hmynl2pzvyymisbzham@jpeg",
-          "fullsize" : "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:nxhz7gqz3d4zfwvtq3uh4uxx/bafkreib4o676c3shohcuv73rjusctkelew2rmv5hmynl2pzvyymisbzham@jpeg",
-          "alt" : "",
-          "aspectRatio" : {
-            "height" : 1500,
-            "width" : 2000
-          }
-        } ]
-      },
-      "replyCount" : 0,
-      "repostCount" : 6,
-      "likeCount" : 15,
-      "quoteCount" : 0,
-      "indexedAt" : "2025-02-17T19:06:16.330Z",
-      "viewer" : {
-        "like" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.feed.like/3liflsrhnaz2p",
-        "threadMuted" : false,
-        "embeddingDisabled" : false
-      },
-      "labels" : [ ]
-    },
-    "reply" : {
-      "root" : {
-        "uri" : "at://did:plc:nxhz7gqz3d4zfwvtq3uh4uxx/app.bsky.feed.post/3lifgkk7h6s2u",
-        "cid" : "bafyreibqagfe6foczpffeeu5awy23btqfmn6xj34t2tm7swgj7bh57f5ty",
-        "author" : {
-          "did" : "did:plc:nxhz7gqz3d4zfwvtq3uh4uxx",
-          "handle" : "fearlessfreedom.bsky.social",
-          "displayName" : "Freedom",
-          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:nxhz7gqz3d4zfwvtq3uh4uxx/bafkreifiqzua6nzzfdd75jo4dhd4f4ltnm4awqh3izbtu6fk6k2ouzqani@jpeg",
-          "associated" : {
-            "chat" : {
-              "allowIncoming" : "none"
-            }
-          },
-          "viewer" : {
-            "muted" : false,
-            "blockedBy" : false
-          },
-          "labels" : [ ],
-          "createdAt" : "2025-02-06T18:13:14.413Z"
-        },
-        "record" : {
-          "$type" : "app.bsky.feed.post",
-          "createdAt" : "2025-02-17T18:59:50.992Z",
-          "facets" : [ {
-            "features" : [ {
-              "$type" : "app.bsky.richtext.facet#tag",
-              "tag" : "trumpmuskgo"
-            } ],
-            "index" : {
-              "byteEnd" : 12,
-              "byteStart" : 0
-            }
-          } ],
-          "langs" : [ "en" ],
-          "text" : "#trumpmuskgo"
-        },
-        "replyCount" : 51,
-        "repostCount" : 1,
-        "likeCount" : 7,
-        "quoteCount" : 0,
-        "indexedAt" : "2025-02-17T18:59:51.719Z",
-        "viewer" : {
-          "threadMuted" : false,
-          "embeddingDisabled" : false
-        },
-        "labels" : [ ],
-        "$type" : "app.bsky.feed.defs#postView"
-      },
-      "parent" : {
-        "uri" : "at://did:plc:nxhz7gqz3d4zfwvtq3uh4uxx/app.bsky.feed.post/3lifgkk7h6s2u",
-        "cid" : "bafyreibqagfe6foczpffeeu5awy23btqfmn6xj34t2tm7swgj7bh57f5ty",
-        "author" : {
-          "did" : "did:plc:nxhz7gqz3d4zfwvtq3uh4uxx",
-          "handle" : "fearlessfreedom.bsky.social",
-          "displayName" : "Freedom",
-          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:nxhz7gqz3d4zfwvtq3uh4uxx/bafkreifiqzua6nzzfdd75jo4dhd4f4ltnm4awqh3izbtu6fk6k2ouzqani@jpeg",
-          "associated" : {
-            "chat" : {
-              "allowIncoming" : "none"
-            }
-          },
-          "viewer" : {
-            "muted" : false,
-            "blockedBy" : false
-          },
-          "labels" : [ ],
-          "createdAt" : "2025-02-06T18:13:14.413Z"
-        },
-        "record" : {
-          "$type" : "app.bsky.feed.post",
-          "createdAt" : "2025-02-17T18:59:50.992Z",
-          "facets" : [ {
-            "features" : [ {
-              "$type" : "app.bsky.richtext.facet#tag",
-              "tag" : "trumpmuskgo"
-            } ],
-            "index" : {
-              "byteEnd" : 12,
-              "byteStart" : 0
-            }
-          } ],
-          "langs" : [ "en" ],
-          "text" : "#trumpmuskgo"
-        },
-        "replyCount" : 51,
-        "repostCount" : 1,
-        "likeCount" : 7,
-        "quoteCount" : 0,
-        "indexedAt" : "2025-02-17T18:59:51.719Z",
-        "viewer" : {
-          "threadMuted" : false,
-          "embeddingDisabled" : false
-        },
-        "labels" : [ ],
-        "$type" : "app.bsky.feed.defs#postView"
-      }
-    }
-  }, {
-    "post" : {
-      "uri" : "at://did:plc:ydpccpcaekhpxhkgebcjydgl/app.bsky.feed.post/3lidqdzdf2c2w",
-      "cid" : "bafyreibla4lqmtkwmv46fowu7ubwkc3jvqogovlgw3js7zs6wtos4llnkm",
-      "author" : {
-        "did" : "did:plc:ydpccpcaekhpxhkgebcjydgl",
-        "handle" : "greenwaters.bsky.social",
-        "displayName" : "S",
-        "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:ydpccpcaekhpxhkgebcjydgl/bafkreiayz3d6djmzxuvr3zal376e5d3uqv3kgompzmhm2c24x4aifpzuca@jpeg",
-        "associated" : {
-          "chat" : {
-            "allowIncoming" : "none"
-          }
-        },
-        "viewer" : {
-          "muted" : false,
-          "blockedBy" : false
-        },
-        "labels" : [ ],
-        "createdAt" : "2024-06-20T06:37:44.357Z"
-      },
-      "record" : {
-        "$type" : "app.bsky.feed.post",
-        "createdAt" : "2025-02-17T02:49:49.909Z",
-        "langs" : [ "en" ],
-        "reply" : {
-          "parent" : {
-            "cid" : "bafyreifkpa4lp5o44uuvuocuv23nd5bkdnadafwwzjkjoqjl226yue56he",
-            "uri" : "at://did:plc:qxwx3yb4m3dmjbu5luyyi7zm/app.bsky.feed.post/3licovwn3ks2s"
-          },
-          "root" : {
-            "cid" : "bafyreifkpa4lp5o44uuvuocuv23nd5bkdnadafwwzjkjoqjl226yue56he",
-            "uri" : "at://did:plc:qxwx3yb4m3dmjbu5luyyi7zm/app.bsky.feed.post/3licovwn3ks2s"
-          }
-        },
-        "text" : "From an American who did NOT vote for this evil nightmare.  I am so heartbroken, humiliated and terrified.  So very sorry 😞"
-      },
-      "replyCount" : 0,
-      "repostCount" : 1,
-      "likeCount" : 67,
-      "quoteCount" : 0,
-      "indexedAt" : "2025-02-17T02:49:50.916Z",
-      "viewer" : {
-        "like" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.feed.like/3lidwsog5kn2m",
-        "threadMuted" : false,
-        "embeddingDisabled" : false
-      },
-      "labels" : [ ]
-    },
-    "reply" : {
-      "root" : {
-        "uri" : "at://did:plc:qxwx3yb4m3dmjbu5luyyi7zm/app.bsky.feed.post/3licovwn3ks2s",
-        "cid" : "bafyreifkpa4lp5o44uuvuocuv23nd5bkdnadafwwzjkjoqjl226yue56he",
-        "author" : {
-          "did" : "did:plc:qxwx3yb4m3dmjbu5luyyi7zm",
-          "handle" : "krassenstein.bsky.social",
-          "displayName" : "Krassensteins",
-          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:qxwx3yb4m3dmjbu5luyyi7zm/bafkreifb3kzfzpt4b2yq4mqs7aywvjteo7uzomcmmbdit24ivyjcw3qp4y@jpeg",
-          "viewer" : {
-            "muted" : false,
-            "blockedBy" : false
-          },
-          "labels" : [ ],
-          "createdAt" : "2023-04-11T18:33:26.391Z"
-        },
-        "record" : {
-          "$type" : "app.bsky.feed.post",
-          "createdAt" : "2025-02-16T16:51:23.831Z",
-          "embed" : {
-            "$type" : "app.bsky.embed.images",
-            "images" : [ {
-              "alt" : "",
-              "aspectRatio" : {
-                "height" : 873,
-                "width" : 1179
-              },
-              "image" : {
-                "$type" : "blob",
-                "ref" : {
-                  "$link" : "bafkreif2tohvrmf4pybn4fumu3vn7slu3tzrqpiz34kvievhvqkcsj57pi"
-                },
-                "mimeType" : "image/jpeg",
-                "size" : 583408
-              }
-            } ]
-          },
-          "langs" : [ "en" ],
-          "text" : ""
-        },
-        "embed" : {
-          "$type" : "app.bsky.embed.images#view",
-          "images" : [ {
-            "thumb" : "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:qxwx3yb4m3dmjbu5luyyi7zm/bafkreif2tohvrmf4pybn4fumu3vn7slu3tzrqpiz34kvievhvqkcsj57pi@jpeg",
-            "fullsize" : "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:qxwx3yb4m3dmjbu5luyyi7zm/bafkreif2tohvrmf4pybn4fumu3vn7slu3tzrqpiz34kvievhvqkcsj57pi@jpeg",
-            "alt" : "",
-            "aspectRatio" : {
-              "height" : 873,
-              "width" : 1179
-            }
-          } ]
-        },
-        "replyCount" : 946,
-        "repostCount" : 6571,
-        "likeCount" : 29968,
-        "quoteCount" : 415,
-        "indexedAt" : "2025-02-16T16:51:26.015Z",
-        "viewer" : {
-          "threadMuted" : false,
-          "embeddingDisabled" : false
-        },
-        "labels" : [ ],
-        "$type" : "app.bsky.feed.defs#postView"
-      },
-      "parent" : {
-        "uri" : "at://did:plc:qxwx3yb4m3dmjbu5luyyi7zm/app.bsky.feed.post/3licovwn3ks2s",
-        "cid" : "bafyreifkpa4lp5o44uuvuocuv23nd5bkdnadafwwzjkjoqjl226yue56he",
-        "author" : {
-          "did" : "did:plc:qxwx3yb4m3dmjbu5luyyi7zm",
-          "handle" : "krassenstein.bsky.social",
-          "displayName" : "Krassensteins",
-          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:qxwx3yb4m3dmjbu5luyyi7zm/bafkreifb3kzfzpt4b2yq4mqs7aywvjteo7uzomcmmbdit24ivyjcw3qp4y@jpeg",
-          "viewer" : {
-            "muted" : false,
-            "blockedBy" : false
-          },
-          "labels" : [ ],
-          "createdAt" : "2023-04-11T18:33:26.391Z"
-        },
-        "record" : {
-          "$type" : "app.bsky.feed.post",
-          "createdAt" : "2025-02-16T16:51:23.831Z",
-          "embed" : {
-            "$type" : "app.bsky.embed.images",
-            "images" : [ {
-              "alt" : "",
-              "aspectRatio" : {
-                "height" : 873,
-                "width" : 1179
-              },
-              "image" : {
-                "$type" : "blob",
-                "ref" : {
-                  "$link" : "bafkreif2tohvrmf4pybn4fumu3vn7slu3tzrqpiz34kvievhvqkcsj57pi"
-                },
-                "mimeType" : "image/jpeg",
-                "size" : 583408
-              }
-            } ]
-          },
-          "langs" : [ "en" ],
-          "text" : ""
-        },
-        "embed" : {
-          "$type" : "app.bsky.embed.images#view",
-          "images" : [ {
-            "thumb" : "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:qxwx3yb4m3dmjbu5luyyi7zm/bafkreif2tohvrmf4pybn4fumu3vn7slu3tzrqpiz34kvievhvqkcsj57pi@jpeg",
-            "fullsize" : "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:qxwx3yb4m3dmjbu5luyyi7zm/bafkreif2tohvrmf4pybn4fumu3vn7slu3tzrqpiz34kvievhvqkcsj57pi@jpeg",
-            "alt" : "",
-            "aspectRatio" : {
-              "height" : 873,
-              "width" : 1179
-            }
-          } ]
-        },
-        "replyCount" : 946,
-        "repostCount" : 6571,
-        "likeCount" : 29968,
-        "quoteCount" : 415,
-        "indexedAt" : "2025-02-16T16:51:26.015Z",
-        "viewer" : {
-          "threadMuted" : false,
-          "embeddingDisabled" : false
-        },
-        "labels" : [ ],
-        "$type" : "app.bsky.feed.defs#postView"
-      }
-    }
-  }, {
-    "post" : {
-      "uri" : "at://did:plc:nvfposmpmhegtyvhbs75s3pw/app.bsky.feed.post/3lib6flsyt22d",
-      "cid" : "bafyreigxf2mxsxptlgfrxxlt4gjebb5lnafq2j4eqdmlasmxrqzxwfbiwm",
-      "author" : {
-        "did" : "did:plc:nvfposmpmhegtyvhbs75s3pw",
-        "handle" : "jamellebouie.net",
-        "displayName" : "jamelle",
-        "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:nvfposmpmhegtyvhbs75s3pw/bafkreiefjdjiahsa4upn3zabt4bxjfculjcxsdrxzc75nqlylfx7xo2izy@jpeg",
+        "did" : "did:plc:y4zs4cabaezzwx3bz2e5nnj2",
+        "handle" : "georgetakei.bsky.social",
+        "displayName" : "George Takei",
+        "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:y4zs4cabaezzwx3bz2e5nnj2/bafkreihyuljtklac6pgvt4kbndezofm23wswyhdqmh77bgedrxhuigwbh4@jpeg",
         "associated" : {
           "chat" : {
             "allowIncoming" : "following"
@@ -491,133 +16,54 @@
         "viewer" : {
           "muted" : false,
           "blockedBy" : false,
-          "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3lcooonjqtg2f"
+          "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3kebindmjnd2a"
         },
         "labels" : [ ],
-        "createdAt" : "2023-04-27T16:31:46.732Z"
+        "createdAt" : "2023-04-30T19:45:03.507Z"
       },
       "record" : {
         "$type" : "app.bsky.feed.post",
-        "createdAt" : "2025-02-16T02:23:16.020Z",
-        "embed" : {
-          "$type" : "app.bsky.embed.record",
-          "record" : {
-            "cid" : "bafyreiasfjlyuyw7pjleofaaskrwvt4szg6qhulz72ifjfyno4txv7kawu",
-            "uri" : "at://did:plc:7umvpuxe2vbrc3zrzuquzniu/app.bsky.feed.post/3lib5hfvdh22v"
-          }
-        },
-        "langs" : [ "en" ],
-        "text" : "worth saying again these these unilateral cuts are illegal. neither trump nor musk has the authority to unilaterally slash appropriated funds."
-      },
-      "embed" : {
-        "$type" : "app.bsky.embed.record#view",
-        "record" : {
-          "$type" : "app.bsky.embed.record#viewRecord",
-          "uri" : "at://did:plc:7umvpuxe2vbrc3zrzuquzniu/app.bsky.feed.post/3lib5hfvdh22v",
-          "cid" : "bafyreiasfjlyuyw7pjleofaaskrwvt4szg6qhulz72ifjfyno4txv7kawu",
-          "author" : {
-            "did" : "did:plc:7umvpuxe2vbrc3zrzuquzniu",
-            "handle" : "whstancil.bsky.social",
-            "displayName" : "Will Stancil",
-            "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:7umvpuxe2vbrc3zrzuquzniu/bafkreieal3miz2gxhipsroj74knssc7bd323rfv6e3xkajaigtdwq3jkte@jpeg",
-            "associated" : {
-              "chat" : {
-                "allowIncoming" : "all"
-              }
-            },
-            "viewer" : {
-              "muted" : false,
-              "blockedBy" : false
-            },
-            "labels" : [ ],
-            "createdAt" : "2023-05-10T01:44:42.445Z"
-          },
-          "value" : {
-            "$type" : "app.bsky.feed.post",
-            "createdAt" : "2025-02-16T02:06:23.172Z",
-            "langs" : [ "en" ],
-            "text" : "Hearing that the DOGE chaos hurricane is hitting HUD soon, and the plan is to devastate federal housing funding. Let's be clear: this would cause a cascade of catastrophic impacts nationwide, shutting down housing and dumping families into the street."
-          },
-          "labels" : [ ],
-          "likeCount" : 2504,
-          "replyCount" : 153,
-          "repostCount" : 695,
-          "quoteCount" : 113,
-          "indexedAt" : "2025-02-16T02:06:20.319Z",
-          "embeds" : [ ]
-        }
-      },
-      "replyCount" : 480,
-      "repostCount" : 4409,
-      "likeCount" : 19062,
-      "quoteCount" : 140,
-      "indexedAt" : "2025-02-16T02:23:16.223Z",
-      "viewer" : {
-        "like" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.feed.like/3licoi6gbdw2o",
-        "threadMuted" : false,
-        "embeddingDisabled" : false
-      },
-      "labels" : [ ]
-    }
-  }, {
-    "post" : {
-      "uri" : "at://did:plc:utoncswurgktfdhpfqnaraoj/app.bsky.feed.post/3licfvcvc722f",
-      "cid" : "bafyreigdpcuvyhp6ojm5hj2a77pftecmyrfq4yy7l6mx5d2huymqwj7v6e",
-      "author" : {
-        "did" : "did:plc:utoncswurgktfdhpfqnaraoj",
-        "handle" : "reclaimamerica.bsky.social",
-        "displayName" : "Republicans Against Maga",
-        "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:utoncswurgktfdhpfqnaraoj/bafkreihhozbzdrqecwn6iqy5jdcn2o6wmuwapjy6w2oiermxsgcncukimi@jpeg",
-        "viewer" : {
-          "muted" : false,
-          "blockedBy" : false
-        },
-        "labels" : [ ],
-        "createdAt" : "2024-11-14T14:20:11.960Z"
-      },
-      "record" : {
-        "$type" : "app.bsky.feed.post",
-        "createdAt" : "2025-02-16T14:09:59.459Z",
+        "createdAt" : "2025-02-19T15:47:43.304Z",
         "embed" : {
           "$type" : "app.bsky.embed.images",
           "images" : [ {
             "alt" : "",
             "aspectRatio" : {
-              "height" : 1142,
-              "width" : 1061
+              "height" : 1280,
+              "width" : 1280
             },
             "image" : {
               "$type" : "blob",
               "ref" : {
-                "$link" : "bafkreibzc4a2qtphfqxlm2voyzbktw74cxzvqgx7uyiqoa46oenvsbrrc4"
+                "$link" : "bafkreidedm723jzoxgkcjjifrb3poyh6iqtguu3phqpeszbb7zl4qrz46q"
               },
               "mimeType" : "image/jpeg",
-              "size" : 271083
+              "size" : 798575
             }
           } ]
         },
         "langs" : [ "en" ],
-        "text" : "How’s that?"
+        "text" : "I’m George Takei and I approve of this message."
       },
       "embed" : {
         "$type" : "app.bsky.embed.images#view",
         "images" : [ {
-          "thumb" : "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:utoncswurgktfdhpfqnaraoj/bafkreibzc4a2qtphfqxlm2voyzbktw74cxzvqgx7uyiqoa46oenvsbrrc4@jpeg",
-          "fullsize" : "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:utoncswurgktfdhpfqnaraoj/bafkreibzc4a2qtphfqxlm2voyzbktw74cxzvqgx7uyiqoa46oenvsbrrc4@jpeg",
+          "thumb" : "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:y4zs4cabaezzwx3bz2e5nnj2/bafkreidedm723jzoxgkcjjifrb3poyh6iqtguu3phqpeszbb7zl4qrz46q@jpeg",
+          "fullsize" : "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:y4zs4cabaezzwx3bz2e5nnj2/bafkreidedm723jzoxgkcjjifrb3poyh6iqtguu3phqpeszbb7zl4qrz46q@jpeg",
           "alt" : "",
           "aspectRatio" : {
-            "height" : 1142,
-            "width" : 1061
+            "height" : 1280,
+            "width" : 1280
           }
         } ]
       },
-      "replyCount" : 10,
-      "repostCount" : 58,
-      "likeCount" : 353,
-      "quoteCount" : 5,
-      "indexedAt" : "2025-02-16T14:10:00.919Z",
+      "replyCount" : 2134,
+      "repostCount" : 28657,
+      "likeCount" : 138913,
+      "quoteCount" : 1378,
+      "indexedAt" : "2025-02-19T15:47:45.416Z",
       "viewer" : {
-        "like" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.feed.like/3licnpmql632m",
+        "like" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.feed.like/3like2o4zyp2i",
         "threadMuted" : false,
         "embeddingDisabled" : false
       },
@@ -625,128 +71,322 @@
     }
   }, {
     "post" : {
-      "uri" : "at://did:plc:ir2b7mnp3f7qouemawhhew72/app.bsky.feed.post/3licmeqalzh2e",
-      "cid" : "bafyreiet6aevsfyuweuolkacjbyzdlpelujdhl4rgdqw4doyzl7kfduyce",
+      "uri" : "at://did:plc:654masw3zcz3dpiqmhpt43c7/app.bsky.feed.post/3lii6iikpzs2d",
+      "cid" : "bafyreieftrrdyeynf3jlhwd6t4dyo7lqpwwrd6xhijsk5cb7b4plnob4gq",
       "author" : {
-        "did" : "did:plc:ir2b7mnp3f7qouemawhhew72",
-        "handle" : "biztoc.com",
-        "displayName" : "BizToc",
-        "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:ir2b7mnp3f7qouemawhhew72/bafkreiavqbkwhmj4desmciwlquwib3yfgzmabgsvq3rvdobtwkraev62de@jpeg",
+        "did" : "did:plc:654masw3zcz3dpiqmhpt43c7",
+        "handle" : "kaosvscontrol.bsky.social",
+        "displayName" : " 🇺🇦 Devin Nunes' Cattle Dog 🇺🇦",
+        "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:654masw3zcz3dpiqmhpt43c7/bafkreid7hr6fywbgfkx7e2gbys422uc6nv5zh6x7lwyiao7viqmgdpkwmu@jpeg",
+        "associated" : {
+          "chat" : {
+            "allowIncoming" : "none"
+          }
+        },
         "viewer" : {
           "muted" : false,
-          "blockedBy" : false,
-          "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3kebsnzifvm2l"
+          "blockedBy" : false
         },
-        "labels" : [ ],
-        "createdAt" : "2023-05-20T14:52:48.303Z"
+        "labels" : [ {
+          "src" : "did:plc:654masw3zcz3dpiqmhpt43c7",
+          "uri" : "at://did:plc:654masw3zcz3dpiqmhpt43c7/app.bsky.actor.profile/self",
+          "cid" : "bafyreih736q3ysgah3xyfiybpzh7xtny2ijwditalyaylqp77sjoyfhqpq",
+          "val" : "!no-unauthenticated",
+          "cts" : "1970-01-01T00:00:00.000Z"
+        } ],
+        "createdAt" : "2023-08-11T23:14:00.345Z"
       },
       "record" : {
         "$type" : "app.bsky.feed.post",
-        "createdAt" : "2025-02-16T16:05:59.189Z",
+        "createdAt" : "2025-02-18T21:13:31.436Z",
         "embed" : {
-          "$type" : "app.bsky.embed.external",
-          "external" : {
-            "description" : "",
-            "thumb" : {
-              "$type" : "blob",
-              "ref" : {
-                "$link" : "bafkreibfof2cos6nbqravlsioy3n6pkej2uefxy4mqf3hbdsi3j7wecuv4"
-              },
-              "mimeType" : "image/jpeg",
-              "size" : 171633
+          "$type" : "app.bsky.embed.video",
+          "aspectRatio" : {
+            "height" : 778,
+            "width" : 480
+          },
+          "video" : {
+            "$type" : "blob",
+            "ref" : {
+              "$link" : "bafkreifreepdtf5ucx27pfxggapzzswjimq4qth5y4najquxjmtcevm3yq"
             },
-            "title" : "OpenAI Changes AI Model Training For Intellectual Freedom",
-            "uri" : "https://techcrunch.com/2025/02/16/openai-tries-to-uncensor-chatgpt/"
+            "mimeType" : "video/mp4",
+            "size" : 3246672
           }
         },
-        "facets" : [ {
-          "features" : [ {
-            "$type" : "app.bsky.richtext.facet#link",
-            "uri" : "https://techcrunch.com/2025/02/16/openai-tries-to-uncensor-chatgpt/"
-          } ],
-          "index" : {
-            "byteEnd" : 219,
-            "byteStart" : 152
-          }
-        } ],
-        "text" : "OpenAI Changes AI Model Training For Intellectual Freedom — OpenAI alters AI training to promote intellectual freedom, embracing challenging topics.\n\nhttps://techcrunch.com/2025/02/16/openai-tries-to-uncensor-chatgpt/"
+        "langs" : [ "en" ],
+        "text" : "Massive anti-Trump/Musk protest at Union Square in New York City...\nMay America do whatever it can to hold onto this beautiful thing. May  there be no knocks on the door in the night or concentration camps for  those who do no more than exercise their free speech."
       },
       "embed" : {
-        "$type" : "app.bsky.embed.external#view",
-        "external" : {
-          "uri" : "https://techcrunch.com/2025/02/16/openai-tries-to-uncensor-chatgpt/",
-          "title" : "OpenAI Changes AI Model Training For Intellectual Freedom",
-          "description" : "",
-          "thumb" : "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:ir2b7mnp3f7qouemawhhew72/bafkreibfof2cos6nbqravlsioy3n6pkej2uefxy4mqf3hbdsi3j7wecuv4@jpeg"
+        "$type" : "app.bsky.embed.video#view",
+        "cid" : "bafkreifreepdtf5ucx27pfxggapzzswjimq4qth5y4najquxjmtcevm3yq",
+        "playlist" : "https://video.bsky.app/watch/did%3Aplc%3A654masw3zcz3dpiqmhpt43c7/bafkreifreepdtf5ucx27pfxggapzzswjimq4qth5y4najquxjmtcevm3yq/playlist.m3u8",
+        "thumbnail" : "https://video.bsky.app/watch/did%3Aplc%3A654masw3zcz3dpiqmhpt43c7/bafkreifreepdtf5ucx27pfxggapzzswjimq4qth5y4najquxjmtcevm3yq/thumbnail.jpg",
+        "aspectRatio" : {
+          "height" : 778,
+          "width" : 480
+        }
+      },
+      "replyCount" : 8,
+      "repostCount" : 100,
+      "likeCount" : 305,
+      "quoteCount" : 6,
+      "indexedAt" : "2025-02-18T21:13:32.521Z",
+      "viewer" : {
+        "like" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.feed.like/3lijukmpmjy2i",
+        "threadMuted" : false,
+        "embeddingDisabled" : false
+      },
+      "labels" : [ ]
+    }
+  }, {
+    "post" : {
+      "uri" : "at://did:plc:yvsdaz5wowzwc5fp57p7qo52/app.bsky.feed.post/3liibh4tqxs2k",
+      "cid" : "bafyreiblsj7f63vtonikjgpmz7kuo4l7pvxtutqz5gvvbzj4h7a5h2dvpe",
+      "author" : {
+        "did" : "did:plc:yvsdaz5wowzwc5fp57p7qo52",
+        "handle" : "corgwynmom.bsky.social",
+        "displayName" : "Iraq War Vet",
+        "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:yvsdaz5wowzwc5fp57p7qo52/bafkreiffed43antjiwr62uybu7nmprc7lfs4byh7ma6nrhk7tvsoxlq7iu@jpeg",
+        "viewer" : {
+          "muted" : false,
+          "blockedBy" : false
+        },
+        "labels" : [ ],
+        "createdAt" : "2024-11-08T14:10:39.516Z"
+      },
+      "record" : {
+        "$type" : "app.bsky.feed.post",
+        "createdAt" : "2025-02-18T22:06:26.820Z",
+        "embed" : {
+          "$type" : "app.bsky.embed.video",
+          "aspectRatio" : {
+            "height" : 1246,
+            "width" : 1080
+          },
+          "video" : {
+            "$type" : "blob",
+            "ref" : {
+              "$link" : "bafkreifxnfp7wkkpbjxdllldcnmskhxrerjbr6kgj6ry3tpuszhd4yj4zy"
+            },
+            "mimeType" : "video/mp4",
+            "size" : 2214219
+          }
+        },
+        "langs" : [ "en" ],
+        "text" : ""
+      },
+      "embed" : {
+        "$type" : "app.bsky.embed.video#view",
+        "cid" : "bafkreifxnfp7wkkpbjxdllldcnmskhxrerjbr6kgj6ry3tpuszhd4yj4zy",
+        "playlist" : "https://video.bsky.app/watch/did%3Aplc%3Ayvsdaz5wowzwc5fp57p7qo52/bafkreifxnfp7wkkpbjxdllldcnmskhxrerjbr6kgj6ry3tpuszhd4yj4zy/playlist.m3u8",
+        "thumbnail" : "https://video.bsky.app/watch/did%3Aplc%3Ayvsdaz5wowzwc5fp57p7qo52/bafkreifxnfp7wkkpbjxdllldcnmskhxrerjbr6kgj6ry3tpuszhd4yj4zy/thumbnail.jpg",
+        "aspectRatio" : {
+          "height" : 1246,
+          "width" : 1080
         }
       },
       "replyCount" : 0,
-      "repostCount" : 1,
-      "likeCount" : 4,
+      "repostCount" : 13,
+      "likeCount" : 36,
       "quoteCount" : 0,
-      "indexedAt" : "2025-02-16T16:06:00.425Z",
+      "indexedAt" : "2025-02-18T22:06:27.829Z",
       "viewer" : {
-        "like" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.feed.like/3licnmszm3c2v",
+        "like" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.feed.like/3lijufxbmwi2a",
         "threadMuted" : false,
+        "replyDisabled" : true,
         "embeddingDisabled" : false
       },
-      "labels" : [ ]
+      "labels" : [ ],
+      "threadgate" : {
+        "uri" : "at://did:plc:yvsdaz5wowzwc5fp57p7qo52/app.bsky.feed.threadgate/3liibh4tqxs2k",
+        "cid" : "bafyreicogbe4pbne5muucxiusoz663q7fvfvszq37gocgrgegzslpyiwbq",
+        "record" : {
+          "$type" : "app.bsky.feed.threadgate",
+          "allow" : [ {
+            "$type" : "app.bsky.feed.threadgate#mentionRule"
+          }, {
+            "$type" : "app.bsky.feed.threadgate#followingRule"
+          } ],
+          "createdAt" : "2025-02-18T22:06:26.823Z",
+          "hiddenReplies" : [ ],
+          "post" : "at://did:plc:yvsdaz5wowzwc5fp57p7qo52/app.bsky.feed.post/3liibh4tqxs2k"
+        },
+        "lists" : [ ]
+      }
     }
   }, {
     "post" : {
-      "uri" : "at://did:plc:vovinwhtulbsx4mwfw26r5ni/app.bsky.feed.post/3licmv7lfcd22",
-      "cid" : "bafyreiasbjebj7u67tybmrejecebnj2tunbin6b35pgmg7n3qlfjjs4rhe",
+      "uri" : "at://did:plc:3fpgkbjy6nhqhg5bpyd6wudm/app.bsky.feed.post/3lie3yq5dqc2v",
+      "cid" : "bafyreid26u2ibvx3irxbsnewdfllwpo5rspmft4w4nebjdzdgotfi5t7nq",
       "author" : {
-        "did" : "did:plc:vovinwhtulbsx4mwfw26r5ni",
-        "handle" : "theguardian.com",
-        "displayName" : "The Guardian",
-        "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:vovinwhtulbsx4mwfw26r5ni/bafkreigxxngb5ecgrleg6cqdzvxh4viycmns5cp6zalfl4o7ivmxiavsma@jpeg",
+        "did" : "did:plc:3fpgkbjy6nhqhg5bpyd6wudm",
+        "handle" : "freethinkersunited.bsky.social",
+        "displayName" : "Freethinkers United",
+        "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:3fpgkbjy6nhqhg5bpyd6wudm/bafkreib7fm25j3j73dqffzoa5tbglrbhwcipkt3gbgbbxqeohm7wyjamrm@jpeg",
         "viewer" : {
           "muted" : false,
-          "blockedBy" : false,
-          "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3lb5rfqrbgn2g"
+          "blockedBy" : false
         },
         "labels" : [ ],
-        "createdAt" : "2024-11-15T10:51:08.071Z"
+        "createdAt" : "2025-01-09T06:33:33.313Z"
       },
       "record" : {
         "$type" : "app.bsky.feed.post",
-        "createdAt" : "2025-02-16T16:15:11Z",
+        "createdAt" : "2025-02-17T06:18:16.078Z",
         "embed" : {
-          "$type" : "app.bsky.embed.external",
-          "external" : {
-            "description" : "Former UK prime minister says US may regret ceding world stage to China and condemns ‘hypocritical’ JD Vance speech\n\nDemocracy around the globe is under threat from the retreat of Donald Trump’s US into isolationism and its likely replacement by China on…",
-            "thumb" : {
-              "$type" : "blob",
-              "ref" : {
-                "$link" : "bafkreie4lnnbtcdxskhlcno7bnb7ielssysafz2trrljf5ng36vzyo6h4y"
-              },
-              "mimeType" : "image/jpeg",
-              "size" : 61653
+          "$type" : "app.bsky.embed.video",
+          "aspectRatio" : {
+            "height" : 590,
+            "width" : 711
+          },
+          "video" : {
+            "$type" : "blob",
+            "ref" : {
+              "$link" : "bafkreigrawduweb5z4tajspadihhjn7xrefnbb5723fnaiewfhedu5e7xq"
             },
-            "title" : "John Major: Trump’s US isolationism threatens global democracy",
-            "uri" : "https://www.theguardian.com/politics/2025/feb/16/john-major-trump-us-isolationism-threatens-global-democracy?utm_source=dlvr.it&utm_medium=bluesky&CMP=bsky_gu"
+            "mimeType" : "video/mp4",
+            "size" : 17622
           }
         },
-        "text" : "John Major: Trump’s US isolationism threatens global democracy"
+        "langs" : [ "en" ],
+        "text" : ""
       },
       "embed" : {
-        "$type" : "app.bsky.embed.external#view",
-        "external" : {
-          "uri" : "https://www.theguardian.com/politics/2025/feb/16/john-major-trump-us-isolationism-threatens-global-democracy?utm_source=dlvr.it&utm_medium=bluesky&CMP=bsky_gu",
-          "title" : "John Major: Trump’s US isolationism threatens global democracy",
-          "description" : "Former UK prime minister says US may regret ceding world stage to China and condemns ‘hypocritical’ JD Vance speech\n\nDemocracy around the globe is under threat from the retreat of Donald Trump’s US into isolationism and its likely replacement by China on…",
-          "thumb" : "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:vovinwhtulbsx4mwfw26r5ni/bafkreie4lnnbtcdxskhlcno7bnb7ielssysafz2trrljf5ng36vzyo6h4y@jpeg"
+        "$type" : "app.bsky.embed.video#view",
+        "cid" : "bafkreigrawduweb5z4tajspadihhjn7xrefnbb5723fnaiewfhedu5e7xq",
+        "playlist" : "https://video.bsky.app/watch/did%3Aplc%3A3fpgkbjy6nhqhg5bpyd6wudm/bafkreigrawduweb5z4tajspadihhjn7xrefnbb5723fnaiewfhedu5e7xq/playlist.m3u8",
+        "thumbnail" : "https://video.bsky.app/watch/did%3Aplc%3A3fpgkbjy6nhqhg5bpyd6wudm/bafkreigrawduweb5z4tajspadihhjn7xrefnbb5723fnaiewfhedu5e7xq/thumbnail.jpg",
+        "aspectRatio" : {
+          "height" : 590,
+          "width" : 711
         }
       },
-      "replyCount" : 33,
-      "repostCount" : 83,
-      "likeCount" : 348,
+      "replyCount" : 28,
+      "repostCount" : 104,
+      "likeCount" : 592,
+      "quoteCount" : 7,
+      "indexedAt" : "2025-02-17T06:18:17.418Z",
+      "viewer" : {
+        "like" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.feed.like/3liju3qs7nh2p",
+        "threadMuted" : false,
+        "embeddingDisabled" : false
+      },
+      "labels" : [ ]
+    }
+  }, {
+    "post" : {
+      "uri" : "at://did:plc:hy4kwkakey4eawsw6jjzoc3j/app.bsky.feed.post/3lijquq3etc2h",
+      "cid" : "bafyreibpofltsqzxkg4ancpxjrsyq25zdqifogjjfnvv2kz3krrto6oqv4",
+      "author" : {
+        "did" : "did:plc:hy4kwkakey4eawsw6jjzoc3j",
+        "handle" : "amyklobuchar.com",
+        "displayName" : "Amy Klobuchar",
+        "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:hy4kwkakey4eawsw6jjzoc3j/bafkreie5mijreewsie2liuffdwfl44i52fktfyjzeaippogwqalbqgrkra@jpeg",
+        "viewer" : {
+          "muted" : false,
+          "blockedBy" : false
+        },
+        "labels" : [ ],
+        "createdAt" : "2024-12-02T15:50:16.508Z"
+      },
+      "record" : {
+        "$type" : "app.bsky.feed.post",
+        "createdAt" : "2025-02-19T12:15:09.064Z",
+        "embed" : {
+          "$type" : "app.bsky.embed.video",
+          "aspectRatio" : {
+            "height" : 720,
+            "width" : 1280
+          },
+          "video" : {
+            "$type" : "blob",
+            "ref" : {
+              "$link" : "bafkreibzkelztvuwjb5tdyncx2vueqd24rulb5wswxi7zeerobcnf6f6vq"
+            },
+            "mimeType" : "video/mp4",
+            "size" : 6224196
+          }
+        },
+        "langs" : [ "en" ],
+        "text" : "Chaos is up. Corruption is up. You know what else is up? Egg prices.‬\n\n‪After promising to lower prices, the Administration is not doing enough to bring health care costs down, to bring housing costs down, and to bring child care costs down.‬"
+      },
+      "embed" : {
+        "$type" : "app.bsky.embed.video#view",
+        "cid" : "bafkreibzkelztvuwjb5tdyncx2vueqd24rulb5wswxi7zeerobcnf6f6vq",
+        "playlist" : "https://video.bsky.app/watch/did%3Aplc%3Ahy4kwkakey4eawsw6jjzoc3j/bafkreibzkelztvuwjb5tdyncx2vueqd24rulb5wswxi7zeerobcnf6f6vq/playlist.m3u8",
+        "thumbnail" : "https://video.bsky.app/watch/did%3Aplc%3Ahy4kwkakey4eawsw6jjzoc3j/bafkreibzkelztvuwjb5tdyncx2vueqd24rulb5wswxi7zeerobcnf6f6vq/thumbnail.jpg",
+        "aspectRatio" : {
+          "height" : 720,
+          "width" : 1280
+        }
+      },
+      "replyCount" : 165,
+      "repostCount" : 107,
+      "likeCount" : 696,
+      "quoteCount" : 18,
+      "indexedAt" : "2025-02-19T12:15:10.714Z",
+      "viewer" : {
+        "like" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.feed.like/3lijttzsays2m",
+        "threadMuted" : false,
+        "embeddingDisabled" : false
+      },
+      "labels" : [ ]
+    }
+  }, {
+    "post" : {
+      "uri" : "at://did:plc:vdkutau3xlw4p5jgj7cihr3i/app.bsky.feed.post/3lijasjq6wc2q",
+      "cid" : "bafyreih4yhdqdalq3sibmtp5oe37wrdbyudmrhc57sytzcinnyhtqlheoq",
+      "author" : {
+        "did" : "did:plc:vdkutau3xlw4p5jgj7cihr3i",
+        "handle" : "militarynewsua.bsky.social",
+        "displayName" : "🪖MilitaryNewsUA🇺🇦",
+        "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:vdkutau3xlw4p5jgj7cihr3i/bafkreie6nhwc5asjqh5aj2jrfnon53ymrci62on5knsovz3rtyagte6yty@jpeg",
+        "viewer" : {
+          "muted" : false,
+          "blockedBy" : false
+        },
+        "labels" : [ ],
+        "createdAt" : "2024-11-11T08:13:20.514Z"
+      },
+      "record" : {
+        "$type" : "app.bsky.feed.post",
+        "createdAt" : "2025-02-19T07:27:35.430Z",
+        "embed" : {
+          "$type" : "app.bsky.embed.video",
+          "aspectRatio" : {
+            "height" : 720,
+            "width" : 1280
+          },
+          "video" : {
+            "$type" : "blob",
+            "ref" : {
+              "$link" : "bafkreiejxnjaqpfogacde36rwfdyb6qosmgerrtfs2ozutsjgnm6d54hmq"
+            },
+            "mimeType" : "video/mp4",
+            "size" : 1508461
+          }
+        },
+        "langs" : [ "en" ],
+        "text" : "❗️Asked whether he thought 🇷🇺Russian President Putin could be trusted in negotiations, 🇺🇸Republican Senator Roger Wicker, chairman of the Senate Armed Services Committee, said: “No. Putin is a war criminal who should be in prison for the rest of his life, if not executed.”"
+      },
+      "embed" : {
+        "$type" : "app.bsky.embed.video#view",
+        "cid" : "bafkreiejxnjaqpfogacde36rwfdyb6qosmgerrtfs2ozutsjgnm6d54hmq",
+        "playlist" : "https://video.bsky.app/watch/did%3Aplc%3Avdkutau3xlw4p5jgj7cihr3i/bafkreiejxnjaqpfogacde36rwfdyb6qosmgerrtfs2ozutsjgnm6d54hmq/playlist.m3u8",
+        "thumbnail" : "https://video.bsky.app/watch/did%3Aplc%3Avdkutau3xlw4p5jgj7cihr3i/bafkreiejxnjaqpfogacde36rwfdyb6qosmgerrtfs2ozutsjgnm6d54hmq/thumbnail.jpg",
+        "aspectRatio" : {
+          "height" : 720,
+          "width" : 1280
+        }
+      },
+      "replyCount" : 19,
+      "repostCount" : 152,
+      "likeCount" : 549,
       "quoteCount" : 11,
-      "indexedAt" : "2025-02-16T16:15:12.821Z",
+      "indexedAt" : "2025-02-19T07:27:37.024Z",
       "viewer" : {
-        "repost" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.feed.repost/3licnfirssu2w",
-        "like" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.feed.like/3licnfezd4b2i",
+        "like" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.feed.like/3lijttqkx4v2g",
         "threadMuted" : false,
         "embeddingDisabled" : false
       },
@@ -754,85 +394,13 @@
     }
   }, {
     "post" : {
-      "uri" : "at://did:plc:lfgjxeg7f7w6ryjfbomhcbsi/app.bsky.feed.post/3licnckffg224",
-      "cid" : "bafyreiaq74ksgzzu7rufwjqm5aunguffqof423c5n7p3qvhylalnq74kl4",
+      "uri" : "at://did:plc:mfrcz3kv7bsth54bkyrridp5/app.bsky.feed.post/3lijpq247g22c",
+      "cid" : "bafyreih55h5kqkrk7442wmmzkafsp5oelwseujgfj7u52sskrs6ezjsy6i",
       "author" : {
-        "did" : "did:plc:lfgjxeg7f7w6ryjfbomhcbsi",
-        "handle" : "mikenellis.bsky.social",
-        "displayName" : "Mike Nellis",
-        "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:lfgjxeg7f7w6ryjfbomhcbsi/bafkreiecf5wsoxo3gos7qy5b2pmy7qx3meyxvkoxo2ltninvsizsfl2m5e@jpeg",
-        "viewer" : {
-          "muted" : false,
-          "blockedBy" : false,
-          "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3ldkjvrgufl2f",
-          "followedBy" : "at://did:plc:lfgjxeg7f7w6ryjfbomhcbsi/app.bsky.graph.follow/3lcwjzehmmt26"
-        },
-        "labels" : [ ],
-        "createdAt" : "2024-11-09T16:31:07.521Z"
-      },
-      "record" : {
-        "$type" : "app.bsky.feed.post",
-        "createdAt" : "2025-02-16T16:22:39.728Z",
-        "langs" : [ "en" ],
-        "text" : "If you’re a terminated federal worker and you’re thinking about running for office, send me a DM. I’d be happy to help connect you with the right people."
-      },
-      "replyCount" : 6,
-      "repostCount" : 76,
-      "likeCount" : 268,
-      "quoteCount" : 3,
-      "indexedAt" : "2025-02-16T16:22:40.422Z",
-      "viewer" : {
-        "like" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.feed.like/3licneae72t2i",
-        "threadMuted" : false,
-        "embeddingDisabled" : false
-      },
-      "labels" : [ ]
-    }
-  }, {
-    "post" : {
-      "uri" : "at://did:plc:lfgjxeg7f7w6ryjfbomhcbsi/app.bsky.feed.post/3lia32cpla225",
-      "cid" : "bafyreiak5foarllcqkbipfdz6q7cu72pbjy7nchicpcpgyiivya6d7x67a",
-      "author" : {
-        "did" : "did:plc:lfgjxeg7f7w6ryjfbomhcbsi",
-        "handle" : "mikenellis.bsky.social",
-        "displayName" : "Mike Nellis",
-        "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:lfgjxeg7f7w6ryjfbomhcbsi/bafkreiecf5wsoxo3gos7qy5b2pmy7qx3meyxvkoxo2ltninvsizsfl2m5e@jpeg",
-        "viewer" : {
-          "muted" : false,
-          "blockedBy" : false,
-          "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3ldkjvrgufl2f",
-          "followedBy" : "at://did:plc:lfgjxeg7f7w6ryjfbomhcbsi/app.bsky.graph.follow/3lcwjzehmmt26"
-        },
-        "labels" : [ ],
-        "createdAt" : "2024-11-09T16:31:07.521Z"
-      },
-      "record" : {
-        "$type" : "app.bsky.feed.post",
-        "createdAt" : "2025-02-15T15:50:36.409Z",
-        "langs" : [ "en" ],
-        "text" : "Maybe Elon Musk should spend more time with his 18 kids and less time cutting cancer research for other people’s kids."
-      },
-      "replyCount" : 31,
-      "repostCount" : 271,
-      "likeCount" : 1176,
-      "quoteCount" : 19,
-      "indexedAt" : "2025-02-15T15:50:36.717Z",
-      "viewer" : {
-        "like" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.feed.like/3licndwicwo2v",
-        "threadMuted" : false,
-        "embeddingDisabled" : false
-      },
-      "labels" : [ ]
-    }
-  }, {
-    "post" : {
-      "uri" : "at://did:plc:oe4qpchepoxur6nnvyrk5soj/app.bsky.feed.post/3li7gwdyjy22p",
-      "cid" : "bafyreidicw3qv73zekftzndhjwqsvb5nlmg6sw7ppsdcozbku5hxqvm77y",
-      "author" : {
-        "did" : "did:plc:oe4qpchepoxur6nnvyrk5soj",
-        "handle" : "richardbranson.bsky.social",
-        "displayName" : "Richard Branson",
-        "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:oe4qpchepoxur6nnvyrk5soj/bafkreicsa5gqufdsfuw4qcp3is4ii36uokjzwe6se6yn5vpqbvfpv2s3de@jpeg",
+        "did" : "did:plc:mfrcz3kv7bsth54bkyrridp5",
+        "handle" : "sundaedivine.bsky.social",
+        "displayName" : "𝕊𝕦𝕟𝕕𝕒𝕖 𝔾𝕦𝕣𝕝",
+        "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:mfrcz3kv7bsth54bkyrridp5/bafkreihglw2ph3hhskc546gzseinv7qcsolcd4pqvdre7qntvxzshb5cdi@jpeg",
         "associated" : {
           "chat" : {
             "allowIncoming" : "none"
@@ -843,51 +411,248 @@
           "blockedBy" : false
         },
         "labels" : [ ],
-        "createdAt" : "2024-11-19T11:17:50.238Z"
+        "createdAt" : "2023-07-04T19:08:00.872Z"
       },
       "record" : {
         "$type" : "app.bsky.feed.post",
-        "createdAt" : "2025-02-15T09:50:28.696Z",
+        "createdAt" : "2025-02-19T11:54:38.059Z",
         "embed" : {
-          "$type" : "app.bsky.embed.external",
-          "external" : {
-            "description" : "",
-            "thumb" : {
-              "$type" : "blob",
-              "ref" : {
-                "$link" : "bafkreihroshbgtbst4udn3oohia2ybzyeqgqx5pr77iv5caqoecbx4sgcm"
-              },
-              "mimeType" : "image/jpeg",
-              "size" : 349300
+          "$type" : "app.bsky.embed.video",
+          "aspectRatio" : {
+            "height" : 576,
+            "width" : 1114
+          },
+          "video" : {
+            "$type" : "blob",
+            "ref" : {
+              "$link" : "bafkreidtuyqvatr2svp4chje3sel3phttuqmnv7k434lat2vv4bu4hh23i"
             },
-            "title" : "On Ukraine, Europe must step into the void | Virgin",
-            "uri" : "https://www.virgin.com/branson-family/richard-branson-blog/on-ukraine-europe-must-step-into-the-void"
+            "mimeType" : "video/mp4",
+            "size" : 1165539
           }
         },
         "langs" : [ "en" ],
-        "text" : "Europe can’t rely on the strength of the transatlantic relationship to help contain Russia’s threat – it must lead from the front and be the true force of support that Ukraine needs. Not just for Ukraine’s sake, but for a free and sovereign Europe."
+        "text" : "If it’s brown, lay down\nIf it’s black, fight back\nIf it’s white, goodnight"
       },
       "embed" : {
-        "$type" : "app.bsky.embed.external#view",
-        "external" : {
-          "uri" : "https://www.virgin.com/branson-family/richard-branson-blog/on-ukraine-europe-must-step-into-the-void",
-          "title" : "On Ukraine, Europe must step into the void | Virgin",
-          "description" : "",
-          "thumb" : "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:oe4qpchepoxur6nnvyrk5soj/bafkreihroshbgtbst4udn3oohia2ybzyeqgqx5pr77iv5caqoecbx4sgcm@jpeg"
+        "$type" : "app.bsky.embed.video#view",
+        "cid" : "bafkreidtuyqvatr2svp4chje3sel3phttuqmnv7k434lat2vv4bu4hh23i",
+        "playlist" : "https://video.bsky.app/watch/did%3Aplc%3Amfrcz3kv7bsth54bkyrridp5/bafkreidtuyqvatr2svp4chje3sel3phttuqmnv7k434lat2vv4bu4hh23i/playlist.m3u8",
+        "thumbnail" : "https://video.bsky.app/watch/did%3Aplc%3Amfrcz3kv7bsth54bkyrridp5/bafkreidtuyqvatr2svp4chje3sel3phttuqmnv7k434lat2vv4bu4hh23i/thumbnail.jpg",
+        "aspectRatio" : {
+          "height" : 576,
+          "width" : 1114
         }
       },
-      "replyCount" : 2382,
-      "repostCount" : 10301,
-      "likeCount" : 55822,
-      "quoteCount" : 768,
-      "indexedAt" : "2025-02-15T09:50:36.216Z",
+      "replyCount" : 237,
+      "repostCount" : 380,
+      "likeCount" : 2062,
+      "quoteCount" : 55,
+      "indexedAt" : "2025-02-19T11:54:38.921Z",
       "viewer" : {
-        "like" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.feed.like/3lia43rimkl2g",
+        "like" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.feed.like/3lijtrkayue2o",
+        "threadMuted" : false,
+        "embeddingDisabled" : false
+      },
+      "labels" : [ ]
+    }
+  }, {
+    "post" : {
+      "uri" : "at://did:plc:7ihvojd435lxcyvx5c5r6dip/app.bsky.feed.post/3lihkbdfy2s2j",
+      "cid" : "bafyreieqt7o46clfalxxhepiylt4ai65po4h4skjvbtmrnu22iq5qj2dea",
+      "author" : {
+        "did" : "did:plc:7ihvojd435lxcyvx5c5r6dip",
+        "handle" : "strategywoman.bsky.social",
+        "displayName" : "Yaroslava Antipina",
+        "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:7ihvojd435lxcyvx5c5r6dip/bafkreicfgk2rn2z3bbjemojda7ql7v64a2oseo5vgwmbr6rpkmdmxy5gvy@jpeg",
+        "viewer" : {
+          "muted" : false,
+          "blockedBy" : false
+        },
+        "labels" : [ ],
+        "createdAt" : "2023-09-23T19:49:39.148Z"
+      },
+      "record" : {
+        "$type" : "app.bsky.feed.post",
+        "createdAt" : "2025-02-18T15:11:36.320Z",
+        "embed" : {
+          "$type" : "app.bsky.embed.video",
+          "aspectRatio" : {
+            "height" : 2160,
+            "width" : 3840
+          },
+          "video" : {
+            "$type" : "blob",
+            "ref" : {
+              "$link" : "bafkreig37l7n3tacwi2nzguegerm3n4zasihcawrg6aw5qb32youl57u6u"
+            },
+            "mimeType" : "video/mp4",
+            "size" : 23262767
+          }
+        },
+        "langs" : [ "en" ],
+        "text" : "A calm forest walk\namidst the world’s turmoil."
+      },
+      "embed" : {
+        "$type" : "app.bsky.embed.video#view",
+        "cid" : "bafkreig37l7n3tacwi2nzguegerm3n4zasihcawrg6aw5qb32youl57u6u",
+        "playlist" : "https://video.bsky.app/watch/did%3Aplc%3A7ihvojd435lxcyvx5c5r6dip/bafkreig37l7n3tacwi2nzguegerm3n4zasihcawrg6aw5qb32youl57u6u/playlist.m3u8",
+        "thumbnail" : "https://video.bsky.app/watch/did%3Aplc%3A7ihvojd435lxcyvx5c5r6dip/bafkreig37l7n3tacwi2nzguegerm3n4zasihcawrg6aw5qb32youl57u6u/thumbnail.jpg",
+        "aspectRatio" : {
+          "height" : 2160,
+          "width" : 3840
+        }
+      },
+      "replyCount" : 39,
+      "repostCount" : 76,
+      "likeCount" : 873,
+      "quoteCount" : 3,
+      "indexedAt" : "2025-02-18T15:11:38.520Z",
+      "viewer" : {
+        "like" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.feed.like/3lijtqs56pk2w",
+        "threadMuted" : false,
+        "embeddingDisabled" : false
+      },
+      "labels" : [ ]
+    }
+  }, {
+    "post" : {
+      "uri" : "at://did:plc:4llrhdclvdlmmynkwsmg5tdc/app.bsky.feed.post/3liiqyj6lmn2w",
+      "cid" : "bafyreia5sgcbmuqe26htinyuezsdnyuveljlmndbthei3wqmnovyeqgfui",
+      "author" : {
+        "did" : "did:plc:4llrhdclvdlmmynkwsmg5tdc",
+        "handle" : "atrupar.com",
+        "displayName" : "Aaron Rupar",
+        "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:4llrhdclvdlmmynkwsmg5tdc/bafkreibmhm3h6ar52pogvolisrzjdhwa2myras5vkxzj67twxn2l6pogwu@jpeg",
+        "associated" : {
+          "chat" : {
+            "allowIncoming" : "following"
+          }
+        },
+        "viewer" : {
+          "muted" : false,
+          "blockedBy" : false
+        },
+        "labels" : [ ],
+        "createdAt" : "2023-04-28T00:47:57.437Z"
+      },
+      "record" : {
+        "$type" : "app.bsky.feed.post",
+        "createdAt" : "2025-02-19T02:44:36.283Z",
+        "embed" : {
+          "$type" : "app.bsky.embed.video",
+          "alt" : "",
+          "aspectRatio" : {
+            "height" : 720,
+            "width" : 1280
+          },
+          "captions" : [ {
+            "$type" : "app.bsky.embed.video#caption",
+            "file" : {
+              "$type" : "blob",
+              "ref" : {
+                "$link" : "bafkreigfzf2adwc2nvilu563qkgyjuvrpjfxsurf5yuss6tfv5622hgzpy"
+              },
+              "mimeType" : "text/vtt",
+              "size" : 2367
+            },
+            "lang" : "en"
+          } ],
+          "video" : {
+            "$type" : "blob",
+            "ref" : {
+              "$link" : "bafkreidi352y5pi77dpqmkki5bo7blucwtqjzmzsglyg7yh7zz3q63es6e"
+            },
+            "mimeType" : "video/mp4",
+            "size" : 9988704
+          }
+        },
+        "facets" : [ ],
+        "langs" : [ "en" ],
+        "text" : "Bernie Sanders: \"We're not only dealing with a move toward authoritarianism, we're dealing with what is new to America -- politicians have always lied, nothing new about that. But the level that we're seeing right now. The big lie, over and over again ... \""
+      },
+      "embed" : {
+        "$type" : "app.bsky.embed.video#view",
+        "cid" : "bafkreidi352y5pi77dpqmkki5bo7blucwtqjzmzsglyg7yh7zz3q63es6e",
+        "playlist" : "https://video.bsky.app/watch/did%3Aplc%3A4llrhdclvdlmmynkwsmg5tdc/bafkreidi352y5pi77dpqmkki5bo7blucwtqjzmzsglyg7yh7zz3q63es6e/playlist.m3u8",
+        "thumbnail" : "https://video.bsky.app/watch/did%3Aplc%3A4llrhdclvdlmmynkwsmg5tdc/bafkreidi352y5pi77dpqmkki5bo7blucwtqjzmzsglyg7yh7zz3q63es6e/thumbnail.jpg",
+        "alt" : "",
+        "aspectRatio" : {
+          "height" : 720,
+          "width" : 1280
+        }
+      },
+      "replyCount" : 547,
+      "repostCount" : 6370,
+      "likeCount" : 27669,
+      "quoteCount" : 213,
+      "indexedAt" : "2025-02-19T02:44:37.719Z",
+      "viewer" : {
+        "like" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.feed.like/3lijtoxshgu2y",
+        "threadMuted" : false,
+        "embeddingDisabled" : false
+      },
+      "labels" : [ ]
+    }
+  }, {
+    "post" : {
+      "uri" : "at://did:plc:aabcopzc52gc5asf6hzvxfau/app.bsky.feed.post/3lihlovaw5c2v",
+      "cid" : "bafyreidp6krj336egcn52gamdmbk7dnx5ufr6luxm47qqcrrfjz2flrq4u",
+      "author" : {
+        "did" : "did:plc:aabcopzc52gc5asf6hzvxfau",
+        "handle" : "gnuman1979.bsky.social",
+        "displayName" : "Jamie",
+        "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:aabcopzc52gc5asf6hzvxfau/bafkreiduexashf2ko7wp3jn4i5o4bfxbktoo4eglzbp6dbt2ajvmme4d34@jpeg",
+        "viewer" : {
+          "muted" : false,
+          "blockedBy" : false
+        },
+        "labels" : [ ],
+        "createdAt" : "2023-09-17T22:16:27.512Z"
+      },
+      "record" : {
+        "$type" : "app.bsky.feed.post",
+        "createdAt" : "2025-02-18T15:37:04.977Z",
+        "embed" : {
+          "$type" : "app.bsky.embed.video",
+          "aspectRatio" : {
+            "height" : 168,
+            "width" : 350
+          },
+          "video" : {
+            "$type" : "blob",
+            "ref" : {
+              "$link" : "bafkreideh3ltpd3syol2lltnw6tjezid5sgcko6gpjel6rtx7rozwn6dyy"
+            },
+            "mimeType" : "video/mp4",
+            "size" : 275917
+          }
+        },
+        "langs" : [ "en" ],
+        "text" : "Don't let dad alone with the kids."
+      },
+      "embed" : {
+        "$type" : "app.bsky.embed.video#view",
+        "cid" : "bafkreideh3ltpd3syol2lltnw6tjezid5sgcko6gpjel6rtx7rozwn6dyy",
+        "playlist" : "https://video.bsky.app/watch/did%3Aplc%3Aaabcopzc52gc5asf6hzvxfau/bafkreideh3ltpd3syol2lltnw6tjezid5sgcko6gpjel6rtx7rozwn6dyy/playlist.m3u8",
+        "thumbnail" : "https://video.bsky.app/watch/did%3Aplc%3Aaabcopzc52gc5asf6hzvxfau/bafkreideh3ltpd3syol2lltnw6tjezid5sgcko6gpjel6rtx7rozwn6dyy/thumbnail.jpg",
+        "aspectRatio" : {
+          "height" : 168,
+          "width" : 350
+        }
+      },
+      "replyCount" : 6,
+      "repostCount" : 5,
+      "likeCount" : 35,
+      "quoteCount" : 0,
+      "indexedAt" : "2025-02-18T15:37:06.125Z",
+      "viewer" : {
+        "like" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.feed.like/3lijtmp452m2y",
         "threadMuted" : false,
         "embeddingDisabled" : false
       },
       "labels" : [ ]
     }
   } ],
-  "cursor" : "3lia43rimkl2g"
+  "cursor" : "3lijtmp452m2y"
 }

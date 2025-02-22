@@ -9,6 +9,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import api.rest.JsonFluentObject;
+import api.rest.app.bsky.actor.model.Associated;
 import api.rest.app.bsky.actor.model.Labels;
 import api.rest.app.bsky.actor.model.Viewer;
 import lombok.AllArgsConstructor;
@@ -32,6 +33,9 @@ public class Author implements JsonFluentObject {
 
     @JsonProperty("avatar")
     private URI avatar;
+
+    @JsonProperty("associsated")
+    private Associated associated;
 
     @JsonProperty("viewer")
     private Viewer viewer;

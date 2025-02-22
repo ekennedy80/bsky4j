@@ -48,20 +48,12 @@ public class Record implements JsonFluentObject {
 
     @Override
     public ObjectNode asJsonObject() throws JsonProcessingException {
-        return json.put("$type", type)
-        .put("createdAt", createdAt.toString())
-        .put("embed", embed.asJsonString())
-        .put("text", text)
-        .set("langs", new ObjectMapper().valueToTree(langs));
+        return json.set("record", new ObjectMapper().valueToTree(this));
     }
 
     @Override
     public String asJsonString() throws JsonProcessingException {
-        return json.put("$type", type)
-        .put("createdAt", createdAt.toString())
-        .put("embed", embed.asJsonString())
-        .put("text", text)
-        .set("langs", new ObjectMapper().valueToTree(langs)).toPrettyString();
+        return asJsonObject().toPrettyString();
     }
 
 }
