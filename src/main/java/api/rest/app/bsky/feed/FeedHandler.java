@@ -1,8 +1,8 @@
 package api.rest.app.bsky.feed;
 
 import api.rest.app.bsky.AbstractClient;
-import api.rest.app.bsky.actor.preferences.Preferences;
-import api.rest.app.bsky.feed.model.DescribeFeedGenerator;
+import api.rest.app.bsky.feed.defs.ActorFeeds;
+import api.rest.app.bsky.feed.defs.DescribeFeedGenerator;
 import jakarta.ws.rs.core.MediaType;
 
 import static api.rest.GlobalVars.*;
@@ -23,11 +23,15 @@ public class FeedHandler extends AbstractClient {
                 .get(DescribeFeedGenerator.class);
     }
 
-    public DescribeFeedGenerator getActorFeeds(String jwtToken, String actor, Integer limit, String cursor) {
-        return client.target(BSKY_URL + DESCRIBE_FEED_GENERATOR)
-                .request(MediaType.APPLICATION_JSON)
-                .header("Authorization", "Bearer " + jwtToken)
-                .get(DescribeFeedGenerator.class);
+    //TODO: Create actor feeds json objects
+    public ActorFeeds getActorFeeds(String jwtToken, String actor, Integer limit, String cursor) {
+        return client.target(BSKY_URL + GET_ACTOR_FEEDS)
+            .queryParam("actor", actor)
+            .queryParam("limit", limit)
+            .queryParam("cursor", cursor)
+            .request(MediaType.APPLICATION_JSON)
+            .header("Authorization", "Bearer " + jwtToken)
+            .get(ActorFeeds.class);
     }
 
 

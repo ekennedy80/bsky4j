@@ -1,6 +1,9 @@
 package api.rest.app.bsky.actor.suggestions;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
+
+import api.rest.app.bsky.actor.defs.Suggestions;
+
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
@@ -12,11 +15,11 @@ class SuggestionsDefTest {
     @Test
     void testSuggestionsUnmarshalling1() {
         ObjectMapper objectMapper = new ObjectMapper();
-        SuggestionsDef suggestionData;
+        Suggestions suggestionData;
         try {
             URL resourceAbsolutePath = getClass().getClassLoader().getResource("api/rest/app/bsky/actor/suggestions/mysuggestions.json");
             Assertions.assertNotNull(resourceAbsolutePath);
-            suggestionData = objectMapper.readValue(resourceAbsolutePath, SuggestionsDef.class);
+            suggestionData = objectMapper.readValue(resourceAbsolutePath, Suggestions.class);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -27,11 +30,11 @@ class SuggestionsDefTest {
     @Test
     void testSuggestionsUnmarshalling2() {
         ObjectMapper objectMapper = new ObjectMapper();
-        SuggestionsDef suggestionData;
+        Suggestions suggestionData;
         try {
             URL resourceAbsolutePath = getClass().getClassLoader().getResource("api/rest/app/bsky/actor/suggestions/suggestions.json");
             Assertions.assertNotNull(resourceAbsolutePath);
-            suggestionData = objectMapper.readValue(resourceAbsolutePath, SuggestionsDef.class);
+            suggestionData = objectMapper.readValue(resourceAbsolutePath, Suggestions.class);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }

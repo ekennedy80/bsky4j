@@ -1,29 +1,51 @@
 package api.rest.app.bsky.actor;
 
-import api.rest.app.bsky.AbstractClient;
-import api.rest.app.bsky.actor.preferences.Preferences;
-import api.rest.app.bsky.actor.profile.Profile;
-import api.rest.app.bsky.actor.profile.Profiles;
-import api.rest.app.bsky.actor.suggestions.SuggestionsDef;
+import static api.rest.GlobalVars.AUTHORIZATION;
+import static api.rest.GlobalVars.BEARER;
+import static api.rest.GlobalVars.BSKY_URL;
+import static api.rest.GlobalVars.GET_PREFERENCES;
+import static api.rest.GlobalVars.GET_PROFILE;
+import static api.rest.GlobalVars.GET_PROFILES;
+import static api.rest.GlobalVars.GET_SUGGESTIONS;
+import static api.rest.GlobalVars.HANDLE;
+import static api.rest.GlobalVars.PUT_PREFERENCES;
+import static api.rest.GlobalVars.SEARCH_ACTORS;
+import static api.rest.GlobalVars.SEARCH_ACTORS_TYPE_AHEAD;
+
+import java.util.Collection;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
+
+import api.rest.app.bsky.AbstractClient;
+import api.rest.app.bsky.actor.defs.Actors;
+import api.rest.app.bsky.actor.defs.Suggestions;
+import api.rest.app.bsky.actor.defs.preferences.Preferences;
+import api.rest.app.bsky.actor.defs.profile.ProfileViewDetailed;
+import api.rest.app.bsky.actor.defs.profile.Profiles;
 import jakarta.annotation.Nonnull;
 import jakarta.ws.rs.client.Entity;
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
-import java.util.Collection;
-
-import static api.rest.GlobalVars.*;
 
 public class ActorHandler extends AbstractClient {
 
     private static final Logger LOGGER = LogManager.getLogger(ActorHandler.class);
 
-    public ActorHandler() {
+    private ActorHandler() {
         super();
+        LOGGER.debug("Instantiating ActorHandler.");
+    }
+
+    private static class SingletonHelper {
+        private static final ActorHandler INSTANCE = new ActorHandler();
+    }
+
+    public static ActorHandler getInstance() {
+        return SingletonHelper.INSTANCE;
     }
 
     /**
@@ -44,12 +66,12 @@ public class ActorHandler extends AbstractClient {
      * @param handle The handle or DID
      * @return
      */
-    public Profile getProfile(@Nonnull final String jwtToken, @Nonnull final String handle) {
+    public ProfileViewDetailed getProfile(@Nonnull final String jwtToken, @Nonnull final String handle) {
         return client.target(BSKY_URL + GET_PROFILE)
                 .queryParam("actor", HANDLE)
                 .request(MediaType.APPLICATION_JSON)
                 .header("Authorization", "Bearer " + jwtToken)
-                .get(Profile.class);
+                .get(ProfileViewDetailed.class);
     }
 
     /**
@@ -97,13 +119,13 @@ public class ActorHandler extends AbstractClient {
      * @param cursor
      * @return Suggested accounts to follow
      */
-    public SuggestionsDef getSuggestions(@Nonnull final String jwtToken, Integer limit, String cursor) {
+    public Suggestions getSuggestions(@Nonnull final String jwtToken, Integer limit, String cursor) {
         return client.target(BSKY_URL+GET_SUGGESTIONS)
                 .queryParam("limit", limit)
                 .queryParam("cursor", cursor)
                 .request(MediaType.APPLICATION_JSON)
                 .header(AUTHORIZATION, BEARER + jwtToken)
-                .get(SuggestionsDef.class);
+                .get(Suggestions.class);
     }
 
     /**

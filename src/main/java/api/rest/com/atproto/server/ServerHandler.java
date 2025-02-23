@@ -22,7 +22,6 @@ import static api.rest.GlobalVars.*;
 public class ServerHandler extends AbstractClient {
 
     private static final Logger LOGGER = LogManager.getLogger(ServerHandler.class);
-    private static ServerHandler instance;
 
     @Getter
     private BskySession session;
@@ -40,14 +39,14 @@ public class ServerHandler extends AbstractClient {
 
     private ServerHandler() {
         super();
-        LOGGER.debug("Instantiating ServerHandler.");
+    }
+
+    private static class SingletonHelper {
+        private static final ServerHandler INSTANCE = new ServerHandler();
     }
 
     public static ServerHandler getInstance() {
-        if (instance == null) {
-            instance = new ServerHandler();
-        }
-        return instance;
+        return SingletonHelper.INSTANCE;
     }
 
     public void sessionRefresher(int intervalMinutes) {
@@ -56,9 +55,11 @@ public class ServerHandler extends AbstractClient {
         scheduler.scheduleAtFixedRate(this::refreshSession, 2, intervalMinutes, TimeUnit.MINUTES);
     }
 
-    public void stopSessionRefreasher() {
-        LOGGER.debug("Stopping session refresher thread.");
+    @Override
+    public void close() {
+        LOGGER.debug("Stopping session refresher thread and ");
         scheduler.close();
+        super.close();
     }
 
     /**

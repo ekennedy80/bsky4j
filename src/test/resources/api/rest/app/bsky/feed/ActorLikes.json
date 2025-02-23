@@ -1,6 +1,500 @@
 {
   "feed" : [ {
     "post" : {
+      "uri" : "at://did:plc:kvdudx2wzj63v62wgydziz2t/app.bsky.feed.post/3lirnqob2uk2w",
+      "cid" : "bafyreibqz2xjtho6qit4dmkeux5bkk3gluluu75ndgeottbxejbuazrwua",
+      "author" : {
+        "did" : "did:plc:kvdudx2wzj63v62wgydziz2t",
+        "handle" : "free2b.bsky.social",
+        "displayName" : "Donna C",
+        "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:kvdudx2wzj63v62wgydziz2t/bafkreihc6c2aaahc2w7jwno2eqht2hiafpgkjytopgmntds5lt6amvozle@jpeg",
+        "associated" : {
+          "chat" : {
+            "allowIncoming" : "following"
+          }
+        },
+        "viewer" : {
+          "muted" : false,
+          "blockedBy" : false
+        },
+        "labels" : [ ],
+        "createdAt" : "2024-11-08T04:58:44.621Z"
+      },
+      "record" : {
+        "$type" : "app.bsky.feed.post",
+        "createdAt" : "2025-02-22T15:40:29.617Z",
+        "langs" : [ "en" ],
+        "reply" : {
+          "parent" : {
+            "cid" : "bafyreigbjaya3vktk6m67zfbapu62oliatejp2vmgemik7pnnoad4wqnfa",
+            "uri" : "at://did:plc:yngtevhy5oex4xqhd2c7fsqs/app.bsky.feed.post/3liplbwh6gk2u"
+          },
+          "root" : {
+            "cid" : "bafyreigbjaya3vktk6m67zfbapu62oliatejp2vmgemik7pnnoad4wqnfa",
+            "uri" : "at://did:plc:yngtevhy5oex4xqhd2c7fsqs/app.bsky.feed.post/3liplbwh6gk2u"
+          }
+        },
+        "text" : "Oof! That hurts.\nThe world's democracies are lining up behind Zelenskyy and Ukraine, which they should, and against the US, which they should, so long as a Putin-loving fascist inhabits the White House and abandons an ally."
+      },
+      "replyCount" : 0,
+      "repostCount" : 1,
+      "likeCount" : 7,
+      "quoteCount" : 0,
+      "indexedAt" : "2025-02-22T15:40:29.320Z",
+      "viewer" : {
+        "like" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.feed.like/3lirynsbr7a2a",
+        "threadMuted" : false,
+        "embeddingDisabled" : false
+      },
+      "labels" : [ ]
+    },
+    "reply" : {
+      "root" : {
+        "uri" : "at://did:plc:yngtevhy5oex4xqhd2c7fsqs/app.bsky.feed.post/3liplbwh6gk2u",
+        "cid" : "bafyreigbjaya3vktk6m67zfbapu62oliatejp2vmgemik7pnnoad4wqnfa",
+        "author" : {
+          "did" : "did:plc:yngtevhy5oex4xqhd2c7fsqs",
+          "handle" : "germanusa.bsky.social",
+          "displayName" : "🦋German_USA - 🌈 ally 🌈 woke💙🦋🇬🇱 🇨🇦 🇲🇽 🇵🇦 🇪🇺",
+          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:yngtevhy5oex4xqhd2c7fsqs/bafkreifgyus5wx6dnccygbcztpohhukxduwunladtu7uehod3ruqvsxm7y@jpeg",
+          "associated" : {
+            "chat" : {
+              "allowIncoming" : "none"
+            }
+          },
+          "viewer" : {
+            "muted" : false,
+            "blockedBy" : false
+          },
+          "labels" : [ ],
+          "createdAt" : "2024-11-12T21:00:26.645Z"
+        },
+        "record" : {
+          "$type" : "app.bsky.feed.post",
+          "createdAt" : "2025-02-21T19:51:07.927Z",
+          "embed" : {
+            "$type" : "app.bsky.embed.images",
+            "images" : [ {
+              "alt" : "",
+              "aspectRatio" : {
+                "height" : 1280,
+                "width" : 1024
+              },
+              "image" : {
+                "$type" : "blob",
+                "ref" : {
+                  "$link" : "bafkreidnutzgfme2uurw3y2kyu7c5lazckscaol52mbzetjkzjc3gyf5y4"
+                },
+                "mimeType" : "image/jpeg",
+                "size" : 306948
+              }
+            } ]
+          },
+          "langs" : [ "en" ],
+          "text" : "German \"Der Spiegel \" cover:\nBETRAYED \nFirst Zelensky, soon us? the radical departure of the USA from its allies."
+        },
+        "embed" : {
+          "$type" : "app.bsky.embed.images#view",
+          "images" : [ {
+            "thumb" : "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:yngtevhy5oex4xqhd2c7fsqs/bafkreidnutzgfme2uurw3y2kyu7c5lazckscaol52mbzetjkzjc3gyf5y4@jpeg",
+            "fullsize" : "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:yngtevhy5oex4xqhd2c7fsqs/bafkreidnutzgfme2uurw3y2kyu7c5lazckscaol52mbzetjkzjc3gyf5y4@jpeg",
+            "alt" : "",
+            "aspectRatio" : {
+              "height" : 1280,
+              "width" : 1024
+            }
+          } ]
+        },
+        "replyCount" : 8,
+        "repostCount" : 106,
+        "likeCount" : 312,
+        "quoteCount" : 10,
+        "indexedAt" : "2025-02-21T19:51:10.418Z",
+        "viewer" : {
+          "threadMuted" : false,
+          "embeddingDisabled" : false
+        },
+        "labels" : [ ],
+        "$type" : "app.bsky.feed.defs#postView"
+      },
+      "parent" : {
+        "uri" : "at://did:plc:yngtevhy5oex4xqhd2c7fsqs/app.bsky.feed.post/3liplbwh6gk2u",
+        "cid" : "bafyreigbjaya3vktk6m67zfbapu62oliatejp2vmgemik7pnnoad4wqnfa",
+        "author" : {
+          "did" : "did:plc:yngtevhy5oex4xqhd2c7fsqs",
+          "handle" : "germanusa.bsky.social",
+          "displayName" : "🦋German_USA - 🌈 ally 🌈 woke💙🦋🇬🇱 🇨🇦 🇲🇽 🇵🇦 🇪🇺",
+          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:yngtevhy5oex4xqhd2c7fsqs/bafkreifgyus5wx6dnccygbcztpohhukxduwunladtu7uehod3ruqvsxm7y@jpeg",
+          "associated" : {
+            "chat" : {
+              "allowIncoming" : "none"
+            }
+          },
+          "viewer" : {
+            "muted" : false,
+            "blockedBy" : false
+          },
+          "labels" : [ ],
+          "createdAt" : "2024-11-12T21:00:26.645Z"
+        },
+        "record" : {
+          "$type" : "app.bsky.feed.post",
+          "createdAt" : "2025-02-21T19:51:07.927Z",
+          "embed" : {
+            "$type" : "app.bsky.embed.images",
+            "images" : [ {
+              "alt" : "",
+              "aspectRatio" : {
+                "height" : 1280,
+                "width" : 1024
+              },
+              "image" : {
+                "$type" : "blob",
+                "ref" : {
+                  "$link" : "bafkreidnutzgfme2uurw3y2kyu7c5lazckscaol52mbzetjkzjc3gyf5y4"
+                },
+                "mimeType" : "image/jpeg",
+                "size" : 306948
+              }
+            } ]
+          },
+          "langs" : [ "en" ],
+          "text" : "German \"Der Spiegel \" cover:\nBETRAYED \nFirst Zelensky, soon us? the radical departure of the USA from its allies."
+        },
+        "embed" : {
+          "$type" : "app.bsky.embed.images#view",
+          "images" : [ {
+            "thumb" : "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:yngtevhy5oex4xqhd2c7fsqs/bafkreidnutzgfme2uurw3y2kyu7c5lazckscaol52mbzetjkzjc3gyf5y4@jpeg",
+            "fullsize" : "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:yngtevhy5oex4xqhd2c7fsqs/bafkreidnutzgfme2uurw3y2kyu7c5lazckscaol52mbzetjkzjc3gyf5y4@jpeg",
+            "alt" : "",
+            "aspectRatio" : {
+              "height" : 1280,
+              "width" : 1024
+            }
+          } ]
+        },
+        "replyCount" : 8,
+        "repostCount" : 106,
+        "likeCount" : 312,
+        "quoteCount" : 10,
+        "indexedAt" : "2025-02-21T19:51:10.418Z",
+        "viewer" : {
+          "threadMuted" : false,
+          "embeddingDisabled" : false
+        },
+        "labels" : [ ],
+        "$type" : "app.bsky.feed.defs#postView"
+      }
+    }
+  }, {
+    "post" : {
+      "uri" : "at://did:plc:kcjtqq4blsjo7utiur54vw25/app.bsky.feed.post/3lipugkplcs22",
+      "cid" : "bafyreigzr4amfz4xwbj3xnmx32pwy7q3jvkitmg3mucp3yqo65t4jvtv6a",
+      "author" : {
+        "did" : "did:plc:kcjtqq4blsjo7utiur54vw25",
+        "handle" : "audioboomer.bsky.social",
+        "displayName" : "Lee Kanne ",
+        "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:kcjtqq4blsjo7utiur54vw25/bafkreic54gpbf5zmgsgkntp72bukhdb4cem4oezr7z3xummbspfqxzz7he@jpeg",
+        "associated" : {
+          "chat" : {
+            "allowIncoming" : "following"
+          }
+        },
+        "viewer" : {
+          "muted" : false,
+          "blockedBy" : false
+        },
+        "labels" : [ ],
+        "createdAt" : "2024-06-15T21:07:39.523Z"
+      },
+      "record" : {
+        "$type" : "app.bsky.feed.post",
+        "createdAt" : "2025-02-21T22:34:47.061Z",
+        "embed" : {
+          "$type" : "app.bsky.embed.images",
+          "images" : [ {
+            "alt" : "",
+            "aspectRatio" : {
+              "height" : 1626,
+              "width" : 828
+            },
+            "image" : {
+              "$type" : "blob",
+              "ref" : {
+                "$link" : "bafkreicsfoum6yhcu7fo7uzfz3w63gbfiw5cpxnttph66rxmfkz5axv2ve"
+              },
+              "mimeType" : "image/jpeg",
+              "size" : 590967
+            }
+          } ]
+        },
+        "langs" : [ "en" ],
+        "text" : "TrumpEnomics just did a number on the stock market"
+      },
+      "embed" : {
+        "$type" : "app.bsky.embed.images#view",
+        "images" : [ {
+          "thumb" : "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:kcjtqq4blsjo7utiur54vw25/bafkreicsfoum6yhcu7fo7uzfz3w63gbfiw5cpxnttph66rxmfkz5axv2ve@jpeg",
+          "fullsize" : "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:kcjtqq4blsjo7utiur54vw25/bafkreicsfoum6yhcu7fo7uzfz3w63gbfiw5cpxnttph66rxmfkz5axv2ve@jpeg",
+          "alt" : "",
+          "aspectRatio" : {
+            "height" : 1626,
+            "width" : 828
+          }
+        } ]
+      },
+      "replyCount" : 8,
+      "repostCount" : 21,
+      "likeCount" : 102,
+      "quoteCount" : 1,
+      "indexedAt" : "2025-02-21T22:34:50.718Z",
+      "viewer" : {
+        "like" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.feed.like/3liryispmt72k",
+        "threadMuted" : false,
+        "embeddingDisabled" : false
+      },
+      "labels" : [ ]
+    }
+  }, {
+    "post" : {
+      "uri" : "at://did:plc:nvfposmpmhegtyvhbs75s3pw/app.bsky.feed.post/3lirlw2ckck2e",
+      "cid" : "bafyreihfh74bf7d272plfn3bbijiqysqpml5xaxhkbhco34brymhds5j4m",
+      "author" : {
+        "did" : "did:plc:nvfposmpmhegtyvhbs75s3pw",
+        "handle" : "jamellebouie.net",
+        "displayName" : "jamelle",
+        "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:nvfposmpmhegtyvhbs75s3pw/bafkreiefjdjiahsa4upn3zabt4bxjfculjcxsdrxzc75nqlylfx7xo2izy@jpeg",
+        "associated" : {
+          "chat" : {
+            "allowIncoming" : "following"
+          }
+        },
+        "viewer" : {
+          "muted" : false,
+          "blockedBy" : false,
+          "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3lcooonjqtg2f"
+        },
+        "labels" : [ ],
+        "createdAt" : "2023-04-27T16:31:46.732Z"
+      },
+      "record" : {
+        "$type" : "app.bsky.feed.post",
+        "createdAt" : "2025-02-22T15:07:42.537Z",
+        "embed" : {
+          "$type" : "app.bsky.embed.record",
+          "record" : {
+            "cid" : "bafyreicnitc46myf5g4pjdr47tpf6jcl2piqdcg6ts7imrwrgocerob3uq",
+            "uri" : "at://did:plc:ddvus7otnqtlh7fdooxm6qat/app.bsky.feed.post/3liq7jc73ac2y"
+          }
+        },
+        "langs" : [ "en" ],
+        "text" : "let me say that this is the classic “just asking questions” approach to delegitimizing the achievements of black people. and critically, you don’t even have to be a black person who talks about race. simply being black to these people means you are “obsessed with race.”"
+      },
+      "embed" : {
+        "$type" : "app.bsky.embed.record#view",
+        "record" : {
+          "$type" : "app.bsky.embed.record#viewRecord",
+          "uri" : "at://did:plc:ddvus7otnqtlh7fdooxm6qat/app.bsky.feed.post/3liq7jc73ac2y",
+          "cid" : "bafyreicnitc46myf5g4pjdr47tpf6jcl2piqdcg6ts7imrwrgocerob3uq",
+          "author" : {
+            "did" : "did:plc:ddvus7otnqtlh7fdooxm6qat",
+            "handle" : "maxkennerly.bsky.social",
+            "displayName" : "Max Kennerly",
+            "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:ddvus7otnqtlh7fdooxm6qat/bafkreid6chzk524fo6iggzwv2fmo3ra2znucsqedfecutgw6ic4dnxyeom@jpeg",
+            "associated" : {
+              "chat" : {
+                "allowIncoming" : "all"
+              }
+            },
+            "viewer" : {
+              "muted" : false,
+              "blockedBy" : false
+            },
+            "labels" : [ ],
+            "createdAt" : "2023-05-04T17:03:15.920Z"
+          },
+          "value" : {
+            "$type" : "app.bsky.feed.post",
+            "createdAt" : "2025-02-22T01:53:09.964Z",
+            "embed" : {
+              "$type" : "app.bsky.embed.recordWithMedia",
+              "media" : {
+                "$type" : "app.bsky.embed.images",
+                "images" : [ {
+                  "alt" : "Hegseth had previously taken aim at Brown. “First of all, you gotta fire, you know, you gotta fire the chairman of Joint Chiefs,” he said flatly in a podcast in November. And in one of his books, he questioned whether Brown got the job because he was Black.\n\n“Was it because of his skin color? Or his skill? We’ll never know, but always doubt — which on its face seems unfair to CQ. But since he has made the race card one of his biggest calling cards, it doesn’t really much matter,” Hegseth wrote.",
+                  "aspectRatio" : {
+                    "height" : 197,
+                    "width" : 741
+                  },
+                  "image" : {
+                    "$type" : "blob",
+                    "ref" : {
+                      "$link" : "bafkreie4u5brsz4oxxq3qq5pjdcwbmsisaoodwuirdg6jnctbqwfwoomhm"
+                    },
+                    "mimeType" : "image/jpeg",
+                    "size" : 191746
+                  }
+                }, {
+                  "alt" : "Caine’s military service includes combat roles in Iraq, special operations postings and positions inside some of the Pentagon’s most classified special access programs. However, it does not include key assignments that were identified in law as prerequisites for the job, with an exemption for the president to waive them if necessary in times of national interest.",
+                  "aspectRatio" : {
+                    "height" : 149,
+                    "width" : 720
+                  },
+                  "image" : {
+                    "$type" : "blob",
+                    "ref" : {
+                      "$link" : "bafkreiafxrxcm26qqvlwfmefxm2bht6ir6hel3gypaoqehkeo4wzywxstm"
+                    },
+                    "mimeType" : "image/jpeg",
+                    "size" : 137935
+                  }
+                } ]
+              },
+              "record" : {
+                "$type" : "app.bsky.embed.record",
+                "record" : {
+                  "cid" : "bafyreihu6skk77wf4utoesznscexxu2r3wverjhbms7dolkbmkpyewqroe",
+                  "uri" : "at://did:plc:ovyajbnegrir2ddtwfhijiob/app.bsky.feed.post/3liq5wq4l4s2l"
+                }
+              }
+            },
+            "facets" : [ {
+              "features" : [ {
+                "$type" : "app.bsky.richtext.facet#link",
+                "uri" : "https://apnews.com/article/trump-brown-joint-chiefs-of-staff-firing-fa428cc1508a583b3bf5e7a5a58f6acf"
+              } ],
+              "index" : {
+                "byteEnd" : 299,
+                "byteStart" : 273
+              }
+            } ],
+            "langs" : [ "en" ],
+            "text" : "Just look at these paragraphs from the AP story.\n\nHegseth called Brown unqualified solely because he's Black. Then they fired him... and replaced him with a white guy so indisputably unqualified that he requires a Presidential waiver.\n\nThis is what \"merit\" means to them.\n\napnews.com/article/trum..."
+          },
+          "labels" : [ ],
+          "likeCount" : 14514,
+          "replyCount" : 429,
+          "repostCount" : 5579,
+          "quoteCount" : 304,
+          "indexedAt" : "2025-02-22T01:53:10.624Z",
+          "embeds" : [ {
+            "$type" : "app.bsky.embed.recordWithMedia#view",
+            "media" : {
+              "$type" : "app.bsky.embed.images#view",
+              "images" : [ {
+                "thumb" : "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:ddvus7otnqtlh7fdooxm6qat/bafkreie4u5brsz4oxxq3qq5pjdcwbmsisaoodwuirdg6jnctbqwfwoomhm@jpeg",
+                "fullsize" : "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:ddvus7otnqtlh7fdooxm6qat/bafkreie4u5brsz4oxxq3qq5pjdcwbmsisaoodwuirdg6jnctbqwfwoomhm@jpeg",
+                "alt" : "Hegseth had previously taken aim at Brown. “First of all, you gotta fire, you know, you gotta fire the chairman of Joint Chiefs,” he said flatly in a podcast in November. And in one of his books, he questioned whether Brown got the job because he was Black.\n\n“Was it because of his skin color? Or his skill? We’ll never know, but always doubt — which on its face seems unfair to CQ. But since he has made the race card one of his biggest calling cards, it doesn’t really much matter,” Hegseth wrote.",
+                "aspectRatio" : {
+                  "height" : 197,
+                  "width" : 741
+                }
+              }, {
+                "thumb" : "https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:ddvus7otnqtlh7fdooxm6qat/bafkreiafxrxcm26qqvlwfmefxm2bht6ir6hel3gypaoqehkeo4wzywxstm@jpeg",
+                "fullsize" : "https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:ddvus7otnqtlh7fdooxm6qat/bafkreiafxrxcm26qqvlwfmefxm2bht6ir6hel3gypaoqehkeo4wzywxstm@jpeg",
+                "alt" : "Caine’s military service includes combat roles in Iraq, special operations postings and positions inside some of the Pentagon’s most classified special access programs. However, it does not include key assignments that were identified in law as prerequisites for the job, with an exemption for the president to waive them if necessary in times of national interest.",
+                "aspectRatio" : {
+                  "height" : 149,
+                  "width" : 720
+                }
+              } ]
+            },
+            "record" : {
+              "record" : {
+                "$type" : "app.bsky.embed.record#viewRecord",
+                "uri" : "at://did:plc:ovyajbnegrir2ddtwfhijiob/app.bsky.feed.post/3liq5wq4l4s2l",
+                "cid" : "bafyreihu6skk77wf4utoesznscexxu2r3wverjhbms7dolkbmkpyewqroe",
+                "author" : {
+                  "did" : "did:plc:ovyajbnegrir2ddtwfhijiob",
+                  "handle" : "pwnallthethings.bsky.social",
+                  "displayName" : "Pwnallthethings",
+                  "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:ovyajbnegrir2ddtwfhijiob/bafkreigshibagl3u2yefhuj3qkthwlbkufw4vhpv6cevvgfmp5uwioxmdq@jpeg",
+                  "associated" : {
+                    "chat" : {
+                      "allowIncoming" : "all"
+                    }
+                  },
+                  "viewer" : {
+                    "muted" : false,
+                    "blockedBy" : false
+                  },
+                  "labels" : [ {
+                    "src" : "did:plc:ovyajbnegrir2ddtwfhijiob",
+                    "uri" : "at://did:plc:ovyajbnegrir2ddtwfhijiob/app.bsky.actor.profile/self",
+                    "cid" : "bafyreicdsyikdgapwi7cpbctuj422k4dzzn3hwwjgv3oxykdyo6aluiuxi",
+                    "val" : "!no-unauthenticated",
+                    "cts" : "1970-01-01T00:00:00.000Z"
+                  } ],
+                  "createdAt" : "2023-05-15T14:40:35.094Z"
+                },
+                "value" : {
+                  "$type" : "app.bsky.feed.post",
+                  "createdAt" : "2025-02-22T01:24:53.286Z",
+                  "embed" : {
+                    "$type" : "app.bsky.embed.images",
+                    "images" : [ {
+                      "alt" : "The President may appoint an officer as Chairman of the Joint Chiefs of Staff only if the officer has served as\n(A) the Vice Chairman of the Joint Chiefs of Staff\n(B) the Chief of Staff of the Army, the Chief of Naval Operations, the Chief of Staff of the Air Force, or the Commandant of the Marine Corps or\n(C) the command of a unified or specified combatant command.\n\n(2)The President may waive paragraph (1) in the case of an officer if the President determines such action is necessary in the national interest",
+                      "aspectRatio" : {
+                        "height" : 302,
+                        "width" : 809
+                      },
+                      "image" : {
+                        "$type" : "blob",
+                        "ref" : {
+                          "$link" : "bafkreiah6no7vqjuq2p4mcgsftz4fnraifwgncsdycyya2udmqbuodt43u"
+                        },
+                        "mimeType" : "image/jpeg",
+                        "size" : 165044
+                      }
+                    } ]
+                  },
+                  "langs" : [ "en" ],
+                  "text" : "today in breaking laws no matter how obscure, ladies and gentlemen, the Goldwater-Nichols Act"
+                },
+                "labels" : [ ],
+                "likeCount" : 2067,
+                "replyCount" : 51,
+                "repostCount" : 578,
+                "quoteCount" : 35,
+                "indexedAt" : "2025-02-22T01:24:55.116Z"
+              }
+            }
+          } ]
+        }
+      },
+      "replyCount" : 90,
+      "repostCount" : 1002,
+      "likeCount" : 4878,
+      "quoteCount" : 21,
+      "indexedAt" : "2025-02-22T15:07:42.727Z",
+      "viewer" : {
+        "like" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.feed.like/3liryibii6q26",
+        "threadMuted" : false,
+        "replyDisabled" : false,
+        "embeddingDisabled" : false
+      },
+      "labels" : [ ],
+      "threadgate" : {
+        "uri" : "at://did:plc:nvfposmpmhegtyvhbs75s3pw/app.bsky.feed.threadgate/3lirlw2ckck2e",
+        "cid" : "bafyreiaceo33r6bfg3n2cu4ja4ngnmy5rwea6suogkj5qaivdstpbspboe",
+        "record" : {
+          "$type" : "app.bsky.feed.threadgate",
+          "allow" : [ {
+            "$type" : "app.bsky.feed.threadgate#followerRule"
+          }, {
+            "$type" : "app.bsky.feed.threadgate#followingRule"
+          }, {
+            "$type" : "app.bsky.feed.threadgate#mentionRule"
+          } ],
+          "createdAt" : "2025-02-22T15:07:42.541Z",
+          "hiddenReplies" : [ ],
+          "post" : "at://did:plc:nvfposmpmhegtyvhbs75s3pw/app.bsky.feed.post/3lirlw2ckck2e"
+        },
+        "lists" : [ ]
+      }
+    }
+  }, {
+    "post" : {
       "uri" : "at://did:plc:y4zs4cabaezzwx3bz2e5nnj2/app.bsky.feed.post/3lik4qthxbs2v",
       "cid" : "bafyreigcui42xak7qlwy3e6wudgylclzlfml2spz7edhpu7xb4dwldi4cy",
       "author" : {
@@ -57,10 +551,10 @@
           }
         } ]
       },
-      "replyCount" : 2134,
-      "repostCount" : 28657,
-      "likeCount" : 138913,
-      "quoteCount" : 1378,
+      "replyCount" : 2367,
+      "repostCount" : 30474,
+      "likeCount" : 145817,
+      "quoteCount" : 1543,
       "indexedAt" : "2025-02-19T15:47:45.416Z",
       "viewer" : {
         "like" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.feed.like/3like2o4zyp2i",
@@ -127,9 +621,9 @@
           "width" : 480
         }
       },
-      "replyCount" : 8,
+      "replyCount" : 9,
       "repostCount" : 100,
-      "likeCount" : 305,
+      "likeCount" : 306,
       "quoteCount" : 6,
       "indexedAt" : "2025-02-18T21:13:32.521Z",
       "viewer" : {
@@ -264,7 +758,7 @@
       },
       "replyCount" : 28,
       "repostCount" : 104,
-      "likeCount" : 592,
+      "likeCount" : 598,
       "quoteCount" : 7,
       "indexedAt" : "2025-02-17T06:18:17.418Z",
       "viewer" : {
@@ -323,7 +817,7 @@
       },
       "replyCount" : 165,
       "repostCount" : 107,
-      "likeCount" : 696,
+      "likeCount" : 705,
       "quoteCount" : 18,
       "indexedAt" : "2025-02-19T12:15:10.714Z",
       "viewer" : {
@@ -380,9 +874,9 @@
           "width" : 1280
         }
       },
-      "replyCount" : 19,
-      "repostCount" : 152,
-      "likeCount" : 549,
+      "replyCount" : 21,
+      "repostCount" : 154,
+      "likeCount" : 556,
       "quoteCount" : 11,
       "indexedAt" : "2025-02-19T07:27:37.024Z",
       "viewer" : {
@@ -410,7 +904,13 @@
           "muted" : false,
           "blockedBy" : false
         },
-        "labels" : [ ],
+        "labels" : [ {
+          "src" : "did:plc:mfrcz3kv7bsth54bkyrridp5",
+          "uri" : "at://did:plc:mfrcz3kv7bsth54bkyrridp5/app.bsky.actor.profile/self",
+          "cid" : "bafyreihd6vwmyhgp6lbf3ssa24bvixb6xfapoqglgwxcnqqg63xrtsqohe",
+          "val" : "!no-unauthenticated",
+          "cts" : "1970-01-01T00:00:00.000Z"
+        } ],
         "createdAt" : "2023-07-04T19:08:00.872Z"
       },
       "record" : {
@@ -444,9 +944,9 @@
           "width" : 1114
         }
       },
-      "replyCount" : 237,
-      "repostCount" : 380,
-      "likeCount" : 2062,
+      "replyCount" : 239,
+      "repostCount" : 382,
+      "likeCount" : 2072,
       "quoteCount" : 55,
       "indexedAt" : "2025-02-19T11:54:38.921Z",
       "viewer" : {
@@ -456,203 +956,6 @@
       },
       "labels" : [ ]
     }
-  }, {
-    "post" : {
-      "uri" : "at://did:plc:7ihvojd435lxcyvx5c5r6dip/app.bsky.feed.post/3lihkbdfy2s2j",
-      "cid" : "bafyreieqt7o46clfalxxhepiylt4ai65po4h4skjvbtmrnu22iq5qj2dea",
-      "author" : {
-        "did" : "did:plc:7ihvojd435lxcyvx5c5r6dip",
-        "handle" : "strategywoman.bsky.social",
-        "displayName" : "Yaroslava Antipina",
-        "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:7ihvojd435lxcyvx5c5r6dip/bafkreicfgk2rn2z3bbjemojda7ql7v64a2oseo5vgwmbr6rpkmdmxy5gvy@jpeg",
-        "viewer" : {
-          "muted" : false,
-          "blockedBy" : false
-        },
-        "labels" : [ ],
-        "createdAt" : "2023-09-23T19:49:39.148Z"
-      },
-      "record" : {
-        "$type" : "app.bsky.feed.post",
-        "createdAt" : "2025-02-18T15:11:36.320Z",
-        "embed" : {
-          "$type" : "app.bsky.embed.video",
-          "aspectRatio" : {
-            "height" : 2160,
-            "width" : 3840
-          },
-          "video" : {
-            "$type" : "blob",
-            "ref" : {
-              "$link" : "bafkreig37l7n3tacwi2nzguegerm3n4zasihcawrg6aw5qb32youl57u6u"
-            },
-            "mimeType" : "video/mp4",
-            "size" : 23262767
-          }
-        },
-        "langs" : [ "en" ],
-        "text" : "A calm forest walk\namidst the world’s turmoil."
-      },
-      "embed" : {
-        "$type" : "app.bsky.embed.video#view",
-        "cid" : "bafkreig37l7n3tacwi2nzguegerm3n4zasihcawrg6aw5qb32youl57u6u",
-        "playlist" : "https://video.bsky.app/watch/did%3Aplc%3A7ihvojd435lxcyvx5c5r6dip/bafkreig37l7n3tacwi2nzguegerm3n4zasihcawrg6aw5qb32youl57u6u/playlist.m3u8",
-        "thumbnail" : "https://video.bsky.app/watch/did%3Aplc%3A7ihvojd435lxcyvx5c5r6dip/bafkreig37l7n3tacwi2nzguegerm3n4zasihcawrg6aw5qb32youl57u6u/thumbnail.jpg",
-        "aspectRatio" : {
-          "height" : 2160,
-          "width" : 3840
-        }
-      },
-      "replyCount" : 39,
-      "repostCount" : 76,
-      "likeCount" : 873,
-      "quoteCount" : 3,
-      "indexedAt" : "2025-02-18T15:11:38.520Z",
-      "viewer" : {
-        "like" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.feed.like/3lijtqs56pk2w",
-        "threadMuted" : false,
-        "embeddingDisabled" : false
-      },
-      "labels" : [ ]
-    }
-  }, {
-    "post" : {
-      "uri" : "at://did:plc:4llrhdclvdlmmynkwsmg5tdc/app.bsky.feed.post/3liiqyj6lmn2w",
-      "cid" : "bafyreia5sgcbmuqe26htinyuezsdnyuveljlmndbthei3wqmnovyeqgfui",
-      "author" : {
-        "did" : "did:plc:4llrhdclvdlmmynkwsmg5tdc",
-        "handle" : "atrupar.com",
-        "displayName" : "Aaron Rupar",
-        "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:4llrhdclvdlmmynkwsmg5tdc/bafkreibmhm3h6ar52pogvolisrzjdhwa2myras5vkxzj67twxn2l6pogwu@jpeg",
-        "associated" : {
-          "chat" : {
-            "allowIncoming" : "following"
-          }
-        },
-        "viewer" : {
-          "muted" : false,
-          "blockedBy" : false
-        },
-        "labels" : [ ],
-        "createdAt" : "2023-04-28T00:47:57.437Z"
-      },
-      "record" : {
-        "$type" : "app.bsky.feed.post",
-        "createdAt" : "2025-02-19T02:44:36.283Z",
-        "embed" : {
-          "$type" : "app.bsky.embed.video",
-          "alt" : "",
-          "aspectRatio" : {
-            "height" : 720,
-            "width" : 1280
-          },
-          "captions" : [ {
-            "$type" : "app.bsky.embed.video#caption",
-            "file" : {
-              "$type" : "blob",
-              "ref" : {
-                "$link" : "bafkreigfzf2adwc2nvilu563qkgyjuvrpjfxsurf5yuss6tfv5622hgzpy"
-              },
-              "mimeType" : "text/vtt",
-              "size" : 2367
-            },
-            "lang" : "en"
-          } ],
-          "video" : {
-            "$type" : "blob",
-            "ref" : {
-              "$link" : "bafkreidi352y5pi77dpqmkki5bo7blucwtqjzmzsglyg7yh7zz3q63es6e"
-            },
-            "mimeType" : "video/mp4",
-            "size" : 9988704
-          }
-        },
-        "facets" : [ ],
-        "langs" : [ "en" ],
-        "text" : "Bernie Sanders: \"We're not only dealing with a move toward authoritarianism, we're dealing with what is new to America -- politicians have always lied, nothing new about that. But the level that we're seeing right now. The big lie, over and over again ... \""
-      },
-      "embed" : {
-        "$type" : "app.bsky.embed.video#view",
-        "cid" : "bafkreidi352y5pi77dpqmkki5bo7blucwtqjzmzsglyg7yh7zz3q63es6e",
-        "playlist" : "https://video.bsky.app/watch/did%3Aplc%3A4llrhdclvdlmmynkwsmg5tdc/bafkreidi352y5pi77dpqmkki5bo7blucwtqjzmzsglyg7yh7zz3q63es6e/playlist.m3u8",
-        "thumbnail" : "https://video.bsky.app/watch/did%3Aplc%3A4llrhdclvdlmmynkwsmg5tdc/bafkreidi352y5pi77dpqmkki5bo7blucwtqjzmzsglyg7yh7zz3q63es6e/thumbnail.jpg",
-        "alt" : "",
-        "aspectRatio" : {
-          "height" : 720,
-          "width" : 1280
-        }
-      },
-      "replyCount" : 547,
-      "repostCount" : 6370,
-      "likeCount" : 27669,
-      "quoteCount" : 213,
-      "indexedAt" : "2025-02-19T02:44:37.719Z",
-      "viewer" : {
-        "like" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.feed.like/3lijtoxshgu2y",
-        "threadMuted" : false,
-        "embeddingDisabled" : false
-      },
-      "labels" : [ ]
-    }
-  }, {
-    "post" : {
-      "uri" : "at://did:plc:aabcopzc52gc5asf6hzvxfau/app.bsky.feed.post/3lihlovaw5c2v",
-      "cid" : "bafyreidp6krj336egcn52gamdmbk7dnx5ufr6luxm47qqcrrfjz2flrq4u",
-      "author" : {
-        "did" : "did:plc:aabcopzc52gc5asf6hzvxfau",
-        "handle" : "gnuman1979.bsky.social",
-        "displayName" : "Jamie",
-        "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:aabcopzc52gc5asf6hzvxfau/bafkreiduexashf2ko7wp3jn4i5o4bfxbktoo4eglzbp6dbt2ajvmme4d34@jpeg",
-        "viewer" : {
-          "muted" : false,
-          "blockedBy" : false
-        },
-        "labels" : [ ],
-        "createdAt" : "2023-09-17T22:16:27.512Z"
-      },
-      "record" : {
-        "$type" : "app.bsky.feed.post",
-        "createdAt" : "2025-02-18T15:37:04.977Z",
-        "embed" : {
-          "$type" : "app.bsky.embed.video",
-          "aspectRatio" : {
-            "height" : 168,
-            "width" : 350
-          },
-          "video" : {
-            "$type" : "blob",
-            "ref" : {
-              "$link" : "bafkreideh3ltpd3syol2lltnw6tjezid5sgcko6gpjel6rtx7rozwn6dyy"
-            },
-            "mimeType" : "video/mp4",
-            "size" : 275917
-          }
-        },
-        "langs" : [ "en" ],
-        "text" : "Don't let dad alone with the kids."
-      },
-      "embed" : {
-        "$type" : "app.bsky.embed.video#view",
-        "cid" : "bafkreideh3ltpd3syol2lltnw6tjezid5sgcko6gpjel6rtx7rozwn6dyy",
-        "playlist" : "https://video.bsky.app/watch/did%3Aplc%3Aaabcopzc52gc5asf6hzvxfau/bafkreideh3ltpd3syol2lltnw6tjezid5sgcko6gpjel6rtx7rozwn6dyy/playlist.m3u8",
-        "thumbnail" : "https://video.bsky.app/watch/did%3Aplc%3Aaabcopzc52gc5asf6hzvxfau/bafkreideh3ltpd3syol2lltnw6tjezid5sgcko6gpjel6rtx7rozwn6dyy/thumbnail.jpg",
-        "aspectRatio" : {
-          "height" : 168,
-          "width" : 350
-        }
-      },
-      "replyCount" : 6,
-      "repostCount" : 5,
-      "likeCount" : 35,
-      "quoteCount" : 0,
-      "indexedAt" : "2025-02-18T15:37:06.125Z",
-      "viewer" : {
-        "like" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.feed.like/3lijtmp452m2y",
-        "threadMuted" : false,
-        "embeddingDisabled" : false
-      },
-      "labels" : [ ]
-    }
   } ],
-  "cursor" : "3lijtmp452m2y"
+  "cursor" : "3lijtrkayue2o"
 }
