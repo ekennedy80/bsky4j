@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Actors.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Bluesky-REST-Client</a> &gt; <a href="index.source.html" class="el_package">api.rest.app.bsky.actor.defs</a> &gt; <span class="el_source">Actors.java</span></div><h1>Actors.java</h1><pre class="source lang-java linenums">package api.rest.app.bsky.actor.defs;
+
+import api.rest.JsonFluentObject;
+import api.rest.app.bsky.actor.defs.profile.ProfileView;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ObjectNode;
+import jakarta.annotation.Nonnull;
+import lombok.*;
+
+import java.util.List;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class Actors implements JsonFluentObject {
+
+    @Nonnull
+    @JsonProperty(&quot;actors&quot;)
+    @Getter
+    @Setter
+    private List&lt;ProfileView&gt; actors;
+
+    @Override
+    public ObjectNode asJsonObject() throws JsonProcessingException {
+<span class="nc" id="L32">        ObjectMapper objectMapper = new ObjectMapper();</span>
+<span class="nc" id="L33">        ObjectNode json = new ObjectMapper().createObjectNode();</span>
+<span class="nc" id="L34">        return json.put(&quot;actors&quot;, objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(this));</span>
+    }
+
+    @Override
+    public String asJsonString() throws JsonProcessingException {
+<span class="nc" id="L39">        ObjectMapper objectMapper = new ObjectMapper();</span>
+<span class="nc" id="L40">        return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(this);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

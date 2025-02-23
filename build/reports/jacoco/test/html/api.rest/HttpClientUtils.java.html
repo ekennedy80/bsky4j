@@ -15,20 +15,20 @@ public final class HttpClientUtils {
 
     private HttpClientUtils(){    }
 
-    public static BskySession getSession(String identifier, String password, String authFactorToken) {
-<span class="nc" id="L19">        ObjectMapper mapper = new ObjectMapper();</span>
-<span class="nc" id="L20">        ObjectNode user = mapper.createObjectNode();</span>
-<span class="nc" id="L21">        user.put(&quot;identifier&quot;, identifier);</span>
-<span class="nc" id="L22">        user.put(&quot;password&quot;, password);</span>
-<span class="nc bnc" id="L23" title="All 2 branches missed.">        if(authFactorToken != null) {</span>
-<span class="nc" id="L24">            user.put(&quot;authFactorToken&quot;, authFactorToken);</span>
-        }
-<span class="nc" id="L26">        try (Response response = client.target(BSKY_URL + API_KEY_URL)</span>
-<span class="nc" id="L27">                .request(MediaType.APPLICATION_JSON)</span>
-<span class="nc" id="L28">                .post(Entity.json(user.toString()))) {</span>
-<span class="nc" id="L29">            return response.readEntity(BskySession.class);</span>
-        }
-    }
+//    public static BskySession getSession(String identifier, String password, String authFactorToken) {
+//        ObjectMapper mapper = new ObjectMapper();
+//        ObjectNode user = mapper.createObjectNode();
+//        user.put(&quot;identifier&quot;, identifier);
+//        user.put(&quot;password&quot;, password);
+//        if(authFactorToken != null) {
+//            user.put(&quot;authFactorToken&quot;, authFactorToken);
+//        }
+//        try (Response response = client.target(BSKY_URL + CREATE_SESSION)
+//                .request(MediaType.APPLICATION_JSON)
+//                .post(Entity.json(user.toString()))) {
+//            return response.readEntity(BskySession.class);
+//        }
+//    }
 
 
 

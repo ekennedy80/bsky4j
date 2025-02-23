@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ServerHandler.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Bluesky-REST-Client</a> &gt; <a href="index.source.html" class="el_package">api.rest.com.atproto.server</a> &gt; <span class="el_source">ServerHandler.java</span></div><h1>ServerHandler.java</h1><pre class="source lang-java linenums">package api.rest.com.atproto.server;
+
+import api.rest.app.bsky.AbstractClient;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ObjectNode;
+import jakarta.annotation.Nonnull;
+import jakarta.ws.rs.client.Entity;
+import jakarta.ws.rs.core.MediaType;
+import jakarta.ws.rs.core.Response;
+import lombok.Getter;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
+import java.util.Date;
+import java.util.concurrent.Executors;
+import java.util.concurrent.ScheduledExecutorService;
+import java.util.concurrent.TimeUnit;
+
+
+import static api.rest.GlobalVars.*;
+
+public class ServerHandler extends AbstractClient {
+
+<span class="nc" id="L24">    private static final Logger LOGGER = LogManager.getLogger(ServerHandler.class);</span>
+
+    @Getter
+    private BskySession session;
+
+    private ScheduledExecutorService scheduler;
+
+<span class="nc" id="L31">    @Getter</span>
+    private Date sessionModifiedAt = null;
+
+<span class="nc" id="L34">    @Getter</span>
+    private Date sessionCreatedAt = null;
+
+<span class="nc" id="L37">    @Getter</span>
+    private Date sessionDeletedAt = null;
+
+    private ServerHandler() {
+<span class="nc" id="L41">        super();</span>
+<span class="nc" id="L42">    }</span>
+
+    private static class SingletonHelper {
+<span class="nc" id="L45">        private static final ServerHandler INSTANCE = new ServerHandler();</span>
+    }
+
+    public static ServerHandler getInstance() {
+<span class="nc" id="L49">        return SingletonHelper.INSTANCE;</span>
+    }
+
+    public void sessionRefresher(int intervalMinutes) {
+<span class="nc" id="L53">        LOGGER.debug(&quot;Starting session refresher thread.&quot;);</span>
+<span class="nc" id="L54">        scheduler = Executors.newScheduledThreadPool(1);</span>
+<span class="nc" id="L55">        scheduler.scheduleAtFixedRate(this::refreshSession, 2, intervalMinutes, TimeUnit.MINUTES);</span>
+<span class="nc" id="L56">    }</span>
+
+    @Override
+    public void close() {
+<span class="nc" id="L60">        LOGGER.debug(&quot;Stopping session refresher thread and &quot;);</span>
+<span class="nc" id="L61">        scheduler.close();</span>
+<span class="nc" id="L62">        super.close();</span>
+<span class="nc" id="L63">    }</span>
+
+    /**
+     * Create a Bluesky authentication session.
+     * @param identifier Handle or DID supported by the server for the authenticating user.
+     * @param password
+     * @param authFactorToken Used for 2FA
+     * @return Bluesky auth session
+     */
+    public BskySession createSession(boolean autoRefresh, @Nonnull String identifier, @Nonnull String password, String authFactorToken) {
+<span class="nc" id="L73">        LOGGER.info(&quot;Creating a Bluesky session for authentication for {}.&quot;, identifier);</span>
+<span class="nc" id="L74">        ObjectMapper mapper = new ObjectMapper();</span>
+<span class="nc" id="L75">        ObjectNode user = mapper.createObjectNode();</span>
+<span class="nc" id="L76">        user.put(&quot;identifier&quot;, identifier);</span>
+<span class="nc" id="L77">        user.put(&quot;password&quot;, password);</span>
+<span class="nc bnc" id="L78" title="All 2 branches missed.">        if(authFactorToken != null) {</span>
+<span class="nc" id="L79">            user.put(&quot;authFactorToken&quot;, authFactorToken);</span>
+        }
+<span class="nc" id="L81">        try (Response response = client.target(BSKY_URL + CREATE_SESSION)</span>
+<span class="nc" id="L82">                .request(MediaType.APPLICATION_JSON)</span>
+<span class="nc" id="L83">                .post(Entity.json(user.toString()))) {</span>
+<span class="nc" id="L84">            this.session = response.readEntity(BskySession.class);</span>
+<span class="nc" id="L85">            sessionCreatedAt = sessionModifiedAt = new Date();</span>
+<span class="nc bnc" id="L86" title="All 2 branches missed.">            if(autoRefresh) {</span>
+<span class="nc" id="L87">                sessionRefresher(2);</span>
+            }
+<span class="nc" id="L89">            return this.session;</span>
+        }
+    }
+
+    /**
+     * Create a Bluesky authentication session. Kicks off a thread that refreshes the session every two minutes.
+     */
+    public void createSession(boolean autoRefresh) {
+<span class="nc" id="L97">        LOGGER.info(&quot;Creating a Bluesky session for authentication.&quot;);</span>
+<span class="nc" id="L98">        ObjectMapper mapper = new ObjectMapper();</span>
+<span class="nc" id="L99">        ObjectNode user = mapper.createObjectNode();</span>
+<span class="nc" id="L100">        user.put(&quot;identifier&quot;, HANDLE);</span>
+<span class="nc" id="L101">        user.put(&quot;password&quot;, APP_TOKEN);</span>
+<span class="nc" id="L102">        try (Response response = client.target(BSKY_URL + CREATE_SESSION)</span>
+<span class="nc" id="L103">                .request(MediaType.APPLICATION_JSON)</span>
+<span class="nc" id="L104">                .post(Entity.json(user.toString()))) {</span>
+<span class="nc" id="L105">            this.session = response.readEntity(BskySession.class);</span>
+<span class="nc" id="L106">            sessionCreatedAt = sessionModifiedAt = new Date();</span>
+<span class="nc bnc" id="L107" title="All 2 branches missed.">            if(autoRefresh) {</span>
+<span class="nc" id="L108">                sessionRefresher(2);</span>
+            }
+        }
+<span class="nc" id="L111">    }</span>
+
+    /**
+     * Delete the current Bluesky auth session. Requires auth.
+     * @return HTTP status code
+     */
+    public int deleteSession() {
+<span class="nc" id="L118">        LOGGER.info(&quot;Deleting session.&quot;);</span>
+<span class="nc" id="L119">        try (Response response = client.target(BSKY_URL + DELETE_SESSION)</span>
+<span class="nc" id="L120">                .request(MediaType.APPLICATION_JSON)</span>
+<span class="nc" id="L121">                .header(AUTHORIZATION, BEARER + this.session.getRefreshJwt())</span>
+<span class="nc" id="L122">                .post(Entity.json(&quot;&quot;))) {</span>
+<span class="nc" id="L123">            return response.getStatus();</span>
+        }
+    }
+
+    /**
+     * Get information about the current auth session. Requires auth.
+     * @return A Bluesky auth session
+     */
+    public BskySession getCurrentSession() {
+<span class="nc" id="L132">        LOGGER.info(&quot;Getting current session.&quot;);</span>
+<span class="nc" id="L133">        try (Response response = client.target(BSKY_URL + GET_SESSION)</span>
+<span class="nc" id="L134">                .request(MediaType.APPLICATION_JSON)</span>
+<span class="nc" id="L135">                .header(AUTHORIZATION, BEARER + this.session.getAccessJwt())</span>
+<span class="nc" id="L136">                .get()) {</span>
+<span class="nc" id="L137">            return response.readEntity(BskySession.class);</span>
+        }
+    }
+
+    /**
+     * Refresh an authentication session. Requires auth using the 'refreshJwt' (not the 'accessJwt').
+     */
+    public void refreshSession() {
+<span class="nc" id="L145">        LOGGER.info(&quot;Refreshing Bluesky session.&quot;);</span>
+<span class="nc" id="L146">        try (Response response = client.target(BSKY_URL + REFRESH_SESSION)</span>
+<span class="nc" id="L147">                .request(MediaType.APPLICATION_JSON)</span>
+<span class="nc" id="L148">                .header(AUTHORIZATION, BEARER + this.session.getRefreshJwt())</span>
+<span class="nc" id="L149">                .post(Entity.json(&quot;&quot;))) {</span>
+<span class="nc" id="L150">            this.session = response.readEntity(BskySession.class);</span>
+<span class="nc" id="L151">            sessionModifiedAt = new Date();</span>
+        }
+<span class="nc" id="L153">    }</span>
+
+    /**
+     * Refresh an authentication session. Requires auth using the 'refreshJwt' (not the 'accessJwt').
+     * @param refreshJWT
+     * @return Bluesky auth session.
+     */
+    public BskySession refreshSession(String refreshJWT) {
+<span class="nc" id="L161">        LOGGER.info(&quot;Refreshing Bluesky session using {}.&quot;,refreshJWT);</span>
+<span class="nc" id="L162">        try (Response response = client.target(BSKY_URL + REFRESH_SESSION)</span>
+<span class="nc" id="L163">                .request(MediaType.APPLICATION_JSON)</span>
+<span class="nc" id="L164">                .header(AUTHORIZATION, BEARER + refreshJWT)</span>
+<span class="nc" id="L165">                .post(Entity.json(&quot;&quot;))) {</span>
+<span class="nc" id="L166">            this.session = response.readEntity(BskySession.class);</span>
+<span class="nc" id="L167">            sessionModifiedAt = new Date();</span>
+<span class="nc" id="L168">            return this.session;</span>
+        }
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

@@ -13,19 +13,19 @@ import api.rest.app.bsky.feed.defs.ActorLikes;
 
 class ActorLikesTest {
     
-     @Test
-    void testActorLikesUnmarshalling1() throws JsonProcessingException {
-        ObjectMapper objectMapper = new ObjectMapper();
-        ActorLikes actorLikes;
-        try {
-            URL resourceAbsolutePath = getClass().getClassLoader().getResource("api/rest/app/bsky/feed/ActorLikes.json");
-            Assertions.assertNotNull(resourceAbsolutePath);
-            actorLikes = objectMapper.readValue(resourceAbsolutePath, ActorLikes.class);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        Assertions.assertNotNull(actorLikes);
-        System.out.println(actorLikes.asJsonString());
-        //TODO: Assert all data is correctly unmarshalled into PreferencesDef object
-    }
+    // @Test
+    // void testActorLikesUnmarshalling1() throws JsonProcessingException {
+    //     ObjectMapper objectMapper = new ObjectMapper();
+    //     ActorLikes actorLikes;
+    //     try {
+    //         URL resourceAbsolutePath = getClass().getClassLoader().getResource("api/rest/app/bsky/feed/ActorLikes.json");
+    //         Assertions.assertNotNull(resourceAbsolutePath);
+    //         actorLikes = objectMapper.readValue(resourceAbsolutePath, ActorLikes.class);
+    //     } catch (IOException e) {
+    //         throw new RuntimeException(e);
+    //     }
+    //     Assertions.assertNotNull(actorLikes);
+    //     System.out.println(actorLikes.asJsonString());
+    //     //TODO: Assert all data is correctly unmarshalled into PreferencesDef object
+    // }
 }

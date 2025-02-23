@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>GeneratorView.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Bluesky-REST-Client</a> &gt; <a href="index.source.html" class="el_package">api.rest.app.bsky.feed.defs</a> &gt; <span class="el_source">GeneratorView.java</span></div><h1>GeneratorView.java</h1><pre class="source lang-java linenums">package api.rest.app.bsky.feed.defs;
+
+import java.net.URI;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonSetter;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ObjectNode;
+
+import api.rest.JsonFluentObject;
+import api.rest.app.bsky.actor.defs.Labels;
+import api.rest.app.bsky.actor.defs.Viewer;
+import api.rest.app.bsky.actor.defs.profile.ProfileView;
+import api.rest.app.bsky.feed.defs.facet.Facet;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@EqualsAndHashCode(callSuper=false)
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class GeneratorView implements JsonFluentObject {
+
+    @JsonProperty(&quot;uri&quot;)
+    private URI uri;
+    
+    @JsonProperty(&quot;cid&quot;)
+    private String cid;
+
+    @JsonProperty(&quot;did&quot;)
+    private String did;
+
+    @JsonProperty(&quot;creator&quot;)
+    private ProfileView creator;
+
+    @JsonProperty(&quot;displayName&quot;)
+    private String displayName;
+
+    @JsonProperty(&quot;description&quot;)
+    private String description;
+
+    @JsonProperty(&quot;descriptionFacets&quot;)
+    private List&lt;Facet&gt; descriptionFacets;
+
+    @JsonProperty(&quot;avatar&quot;)
+    private URI avatar;
+
+    @JsonProperty(&quot;likeCount&quot;)
+    private Integer likeCount;
+
+    @JsonProperty(&quot;acceptsInteractions&quot;)
+    private Boolean acceptsInteractions;
+
+    @JsonProperty(&quot;labels&quot;)
+    private List&lt;Labels&gt; labels;
+
+    @JsonProperty(&quot;viewer&quot;)
+    private List&lt;Viewer&gt; viewer;
+
+    @JsonProperty(&quot;indexedAt&quot;)
+    private Date indexedAt;
+
+    @JsonSetter(&quot;indexedAt&quot;)
+    public void setIndexedAt(String date) throws ParseException {
+<span class="nc bnc" id="L74" title="All 2 branches missed.">        if (date != null) {</span>
+<span class="nc bnc" id="L75" title="All 6 branches missed.">            if (date.contains(&quot;:&quot;) || date.contains(&quot;T&quot;) || date.contains(&quot;Z&quot;)) {</span>
+<span class="nc" id="L76">                SimpleDateFormat inputFormat = new SimpleDateFormat(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;);</span>
+<span class="nc" id="L77">                this.indexedAt = inputFormat.parse(date);</span>
+<span class="nc" id="L78">            } else {</span>
+<span class="nc" id="L79">                this.indexedAt = new Date(Long.parseLong(date));</span>
+            }
+        }
+<span class="nc" id="L82">    }</span>
+
+    @Override
+    public ObjectNode asJsonObject() throws JsonProcessingException {
+<span class="nc" id="L86">        ObjectMapper objectMapper = new ObjectMapper();</span>
+<span class="nc" id="L87">        ObjectNode json = new ObjectMapper().createObjectNode();</span>
+<span class="nc" id="L88">        return json.putObject(objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(this));</span>
+    }
+
+    @Override
+    public String asJsonString() throws JsonProcessingException {
+<span class="nc" id="L93">        ObjectMapper objectMapper = new ObjectMapper();</span>
+<span class="nc" id="L94">        return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(this);</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

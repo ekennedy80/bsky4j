@@ -25,6 +25,7 @@ import lombok.ToString;
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "$type", visible = true)
 @JsonSubTypes({
     @JsonSubTypes.Type(value = External.class, name = "app.bsky.embed.external"),
+    @JsonSubTypes.Type(value = ExternalView.class, name = "app.bsky.embed.external#view"),
     @JsonSubTypes.Type(value = EmbededImage.class, name = "app.bsky.embed.images"),
     @JsonSubTypes.Type(value = ImageView.class, name = "app.bsky.embed.images#view"),
     @JsonSubTypes.Type(value = Record.class, name = "app.bsky.embed.record"),

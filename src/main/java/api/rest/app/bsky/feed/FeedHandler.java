@@ -2,17 +2,34 @@ package api.rest.app.bsky.feed;
 
 import api.rest.app.bsky.AbstractClient;
 import api.rest.app.bsky.feed.defs.ActorFeeds;
+import api.rest.app.bsky.feed.defs.ActorLikes;
 import api.rest.app.bsky.feed.defs.DescribeFeedGenerator;
 import jakarta.ws.rs.core.MediaType;
 
 import static api.rest.GlobalVars.*;
 
+import javax.management.ObjectName;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
 public class FeedHandler extends AbstractClient {
 
+    private static final Logger LOGGER = LogManager.getLogger(FeedHandler.class);
+
     public FeedHandler() {
         super();
+    LOGGER.debug("Instantiating ActorHandler.");
+    }
+
+    private static class SingletonHelper {
+        private static final FeedHandler INSTANCE = new FeedHandler();
+    }
+
+    public static FeedHandler getInstance() {
+        return SingletonHelper.INSTANCE;
     }
 
     //TODO: Fix jakarta.ws.rs.NotFoundException: HTTP 404 Not Found error
@@ -24,14 +41,14 @@ public class FeedHandler extends AbstractClient {
     }
 
     //TODO: Create actor feeds json objects
-    public ActorFeeds getActorFeeds(String jwtToken, String actor, Integer limit, String cursor) {
+    public ObjectNode getActorFeeds(String jwtToken, String actor, Integer limit, String cursor) {
         return client.target(BSKY_URL + GET_ACTOR_FEEDS)
             .queryParam("actor", actor)
             .queryParam("limit", limit)
             .queryParam("cursor", cursor)
             .request(MediaType.APPLICATION_JSON)
             .header("Authorization", "Bearer " + jwtToken)
-            .get(ActorFeeds.class);
+            .get(ObjectNode.class);
     }
 
 

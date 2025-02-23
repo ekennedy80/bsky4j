@@ -1,0 +1,129 @@
+{
+    "did" : "did:plc:pgdrqxzv4kxt7tr3sa6pd77y",
+    "handle" : "ekennedy80.bsky.social",
+    "displayName" : "Eddie Kennedy",
+    "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:pgdrqxzv4kxt7tr3sa6pd77y/bafkreibie4drzpb2ses65kqpyt2g2fttrpzwwaqbwvsswnaxdzmi64wsve@jpeg",
+    "createdAt" : 1699856119432,
+    "associated" : {
+      "lists" : 0,
+      "feedgens" : 0,
+      "starterPacks" : 0,
+      "labeler" : false,
+      "chat" : {
+        "allowIncoming" : "all"
+      }
+    },
+    "viewer" : {
+      "muted" : false,
+      "blockedBy" : false,
+      "knownFollowers" : {
+        "count" : 43,
+        "followers" : [ {
+          "did" : "did:plc:kdud3kfgmfjd2e25tmveuxe4",
+          "handle" : "monitorlizard.bsky.social",
+          "displayName" : "A Monitor Lizard",
+          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:kdud3kfgmfjd2e25tmveuxe4/bafkreibu2uaszi34hc6tx2youaejqhy24q4dfojn3psmrelwzt7ubjvjwy@jpeg",
+          "createdAt" : 1695390733983,
+          "associated" : {
+            "chat" : {
+              "allowIncoming" : "none"
+            }
+          },
+          "viewer" : {
+            "muted" : false,
+            "blockedBy" : false,
+            "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3kefeejqzh22u",
+            "followedBy" : "at://did:plc:kdud3kfgmfjd2e25tmveuxe4/app.bsky.graph.follow/3keey377t6s26"
+          },
+          "labels" : [ ]
+        }, {
+          "did" : "did:plc:7rcv5xbo6bclpk7rinne4hvu",
+          "handle" : "daffodil2023.bsky.social",
+          "displayName" : "An Indifferent Penguin ",
+          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:7rcv5xbo6bclpk7rinne4hvu/bafkreidnvq7i24byvcfmfhxqisgopzfzvf6cra4apfgnp4kzcxtitfpgpm@jpeg",
+          "createdAt" : 1695241276136,
+          "associated" : {
+            "chat" : {
+              "allowIncoming" : "none"
+            }
+          },
+          "viewer" : {
+            "muted" : false,
+            "blockedBy" : false,
+            "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3kei5hmjls42h",
+            "followedBy" : "at://did:plc:7rcv5xbo6bclpk7rinne4hvu/app.bsky.graph.follow/3kehzjf32gc2e"
+          },
+          "labels" : [ ]
+        }, {
+          "did" : "did:plc:qa75krlvv3ueklx62kai4367",
+          "handle" : "benigma2017.bsky.social",
+          "displayName" : "🇵🇸 🅲🅷🆄🅲🅺",
+          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:qa75krlvv3ueklx62kai4367/bafkreiaomrqka3rhfvgxd7t5tmllpwyq2nhr2igh5zbclqqeeq6x5igy5e@jpeg",
+          "createdAt" : 1687228798504,
+          "associated" : {
+            "chat" : {
+              "allowIncoming" : "none"
+            }
+          },
+          "viewer" : {
+            "muted" : false,
+            "blockedBy" : false,
+            "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3kegdz2fegd2h",
+            "followedBy" : "at://did:plc:qa75krlvv3ueklx62kai4367/app.bsky.graph.follow/3kegddjfysc24"
+          },
+          "labels" : [ {
+            "ver" : 1,
+            "src" : "did:plc:ar7c4by46qjdydhdevvrndac",
+            "uri" : "at://did:plc:qa75krlvv3ueklx62kai4367/app.bsky.actor.profile/self",
+            "cid" : "bafyreiglelwv4zrip2ypg7hllx6sbnnrg334hhdhi2x3wzsga3eq5fjnxm",
+            "val" : "porn",
+            "cts" : 1737175401597
+          } ]
+        }, {
+          "did" : "did:plc:d5paaiu5yl6sklwtvhi674yo",
+          "handle" : "paulette7.bsky.social",
+          "displayName" : "Paulette",
+          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:d5paaiu5yl6sklwtvhi674yo/bafkreibxvlffv5mqac5fia5xqqmctgmono6lwbvbzxaqa2v5wl73yjyovy@jpeg",
+          "createdAt" : 1696026893316,
+          "associated" : {
+            "chat" : {
+              "allowIncoming" : "following"
+            }
+          },
+          "viewer" : {
+            "muted" : false,
+            "blockedBy" : false,
+            "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3kefvb3ztzs2l",
+            "followedBy" : "at://did:plc:d5paaiu5yl6sklwtvhi674yo/app.bsky.graph.follow/3kefvoxr3yp23"
+          },
+          "labels" : [ {
+            "src" : "did:plc:d5paaiu5yl6sklwtvhi674yo",
+            "uri" : "at://did:plc:d5paaiu5yl6sklwtvhi674yo/app.bsky.actor.profile/self",
+            "cid" : "bafyreihnv5w5oygk4gsvy5y73nftps4aj2g5fq2dgtdqtxqaikfyskh55m",
+            "val" : "!no-unauthenticated",
+            "cts" : 18000000
+          } ]
+        }, {
+          "did" : "did:plc:byxzb3rufvpgerqsih4orbiq",
+          "handle" : "bitpanda.bsky.social",
+          "displayName" : "Bitpanda 🔵",
+          "avatar" : "https://cdn.bsky.app/img/avatar/plain/did:plc:byxzb3rufvpgerqsih4orbiq/bafkreibv2bqmhgtbayic5wmtaw522nnahb575lm54c3psosk2ujjhfpjny@jpeg",
+          "createdAt" : 1700160492820,
+          "viewer" : {
+            "muted" : false,
+            "blockedBy" : false,
+            "following" : "at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3kei5iaokhk22",
+            "followedBy" : "at://did:plc:byxzb3rufvpgerqsih4orbiq/app.bsky.graph.follow/3kehtvbtdu42d"
+          },
+          "labels" : [ ]
+        } ]
+      }
+    },
+    "labels" : [ ],
+    "description" : "Father, husband, full stack software engineer.\nNot a democrat or republican.\nIndependent thinker.",
+    "banner" : "https://cdn.bsky.app/img/banner/plain/did:plc:pgdrqxzv4kxt7tr3sa6pd77y/bafkreid4guwebz3iwbnzd2kd5bpsvzsipjija5urtfyzg3lb2q4cod5zjy@jpeg",
+    "followersCount" : 127,
+    "followsCount" : 220,
+    "postsCount" : 103,
+    "indexedAt" : 1736919804913
+  }

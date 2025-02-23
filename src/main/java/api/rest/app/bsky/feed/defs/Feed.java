@@ -17,10 +17,15 @@ public class Feed {
     private PostView post;
 
     @JsonProperty("reply")
-    private Reply reply;
+    private ReplyRef reply;
 
     @JsonProperty("reason")
-    private Reason reason;
+    @JsonInclude(JsonInclude.Include.NON_NULL)
+    private ReasonRepost reasonRepost;
+
+    // @JsonProperty("reason")
+    // @JsonInclude(JsonInclude.Include.NON_NULL)
+    // private ReasonPin reasonPin;
 
     @JsonProperty("feedContext")
     private String feedContext;
