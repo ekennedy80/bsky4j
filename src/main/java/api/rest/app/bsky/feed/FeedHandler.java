@@ -52,14 +52,14 @@ public class FeedHandler extends AbstractClient {
     }
 
 
-    public ObjectNode getActorLikes(String jwtToken, String actor, Integer limit, String cursor) {
+    public ActorLikes getActorLikes(String jwtToken, String actor, Integer limit, String cursor) {
         return client.target(BSKY_URL + GET_ACTOR_LIKES)
         .queryParam("actor", actor)
         .queryParam("limit", limit)
         .queryParam("cursor", cursor)
         .request(MediaType.APPLICATION_JSON)
         .header(AUTHORIZATION, BEARER+jwtToken)
-        .get(ObjectNode.class);
+        .get(ActorLikes.class);
     }
 
     public void getAuthorFeed() {

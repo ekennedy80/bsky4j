@@ -29,6 +29,7 @@ import lombok.ToString;
     @JsonSubTypes.Type(value = EmbededImage.class, name = "app.bsky.embed.images"),
     @JsonSubTypes.Type(value = ImageView.class, name = "app.bsky.embed.images#view"),
     @JsonSubTypes.Type(value = Record.class, name = "app.bsky.embed.record"),
+    @JsonSubTypes.Type(value = RecordView.class, name = "app.bsky.embed.record#view"),
     @JsonSubTypes.Type(value = EmbededVideo.class, name = "app.bsky.embed.video"),
     @JsonSubTypes.Type(value = VideoView.class, name = "app.bsky.embed.video#view"),
     @JsonSubTypes.Type(value = RecordWithMedia.class, name = "app.bsky.embed.recordWithMedia")}

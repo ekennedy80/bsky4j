@@ -1,6 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ExternalView.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Bluesky-REST-Client</a> &gt; <a href="index.source.html" class="el_package">api.rest.app.bsky.feed.defs.embed</a> &gt; <span class="el_source">ExternalView.java</span></div><h1>ExternalView.java</h1><pre class="source lang-java linenums">package api.rest.app.bsky.feed.defs.embed;
 
-<span class="nc" id="L3">public class ExternalView {</span>
+import java.net.URI;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.node.ObjectNode;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+
+/**
+    &quot;uri&quot; : &quot;https://apnews.com/article/trump-revokes-ethics-rules-drain-swamp-b8e3ba0f98c9c60af11a8e70cbc902bd&quot;,
+    &quot;title&quot; : &quot;Trump has canceled Biden's ethics rules. Critics call it the opposite of 'drain the swamp'&quot;,
+    &quot;description&quot; : &quot;Donald Trump took office eight years ago pledging to “drain the swamp” of the dominance of Washington influence peddlers.&quot;,
+    &quot;thumb&quot; : &quot;https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:y5xyloyy7s4a2bwfeimj7r3b/bafkreidler5ehdk27ujomrhpl3y5h2c2byvslcpexb6p3nshtnbk6gl62e@jpeg&quot;
+ */
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@EqualsAndHashCode(callSuper=true)
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class ExternalView extends AbstractEmbed {
     
+    @JsonProperty(&quot;uri&quot;)
+    private URI uri;
+
+    @JsonProperty(&quot;title&quot;)
+    private String title;
+
+    @JsonProperty(&quot;description&quot;)
+    private String description;
+
+    @JsonProperty(&quot;thumb&quot;)
+    private URI thumb;
+
+    @Override
+    public ObjectNode asJsonObject() throws JsonProcessingException {
+        // TODO Auto-generated method stub
+<span class="nc" id="L44">        throw new UnsupportedOperationException(&quot;Unimplemented method 'asJsonObject'&quot;);</span>
+    }
+
+    @Override
+    public String asJsonString() throws JsonProcessingException {
+        // TODO Auto-generated method stub
+<span class="nc" id="L50">        throw new UnsupportedOperationException(&quot;Unimplemented method 'asJsonString'&quot;);</span>
+    }
 }
+
+
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

@@ -9,36 +9,38 @@ import api.rest.com.atproto.server.BskySession;
 import api.rest.com.atproto.server.ServerHandler;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ObjectNode;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import static api.rest.GlobalVars.*;
 
-<span class="nc" id="L17">public class Main {</span>
+<span class="nc" id="L19">public class Main {</span>
 
-<span class="nc" id="L19">    private static final Logger LOGGER = LogManager.getLogger(Main.class);</span>
+<span class="nc" id="L21">    private static final Logger LOGGER = LogManager.getLogger(Main.class);</span>
 
     public static void main(String[] args) throws JsonProcessingException {
-<span class="nc" id="L22">        ObjectMapper objectMapper = new ObjectMapper();</span>
+<span class="nc" id="L24">        ObjectMapper objectMapper = new ObjectMapper();</span>
 
-<span class="nc" id="L24">        ServerHandler serverHandler = ServerHandler.getInstance();</span>
-<span class="nc" id="L25">        ActorHandler actorHandler = ActorHandler.getInstance();</span>
-<span class="nc" id="L26">        FeedHandler feedHandler = FeedHandler.getInstance();</span>
+<span class="nc" id="L26">        ServerHandler serverHandler = ServerHandler.getInstance();</span>
+        // ActorHandler actorHandler = ActorHandler.getInstance();
+<span class="nc" id="L28">        FeedHandler feedHandler = FeedHandler.getInstance();</span>
 
-<span class="nc" id="L28">        BskySession session = serverHandler.createSession(true, HANDLE, APP_TOKEN, null);</span>
-<span class="nc bnc" id="L29" title="All 2 branches missed.">        if(LOGGER.isInfoEnabled())</span>
-<span class="nc" id="L30">            LOGGER.info(&quot;********** SESSION **********\n{}&quot;,session.asJsonString());</span>
+<span class="nc" id="L30">        BskySession session = serverHandler.createSession(true, HANDLE, APP_TOKEN, null);</span>
+<span class="nc bnc" id="L31" title="All 2 branches missed.">        if(LOGGER.isInfoEnabled())</span>
+<span class="nc" id="L32">            LOGGER.info(&quot;********** SESSION **********\n{}&quot;,session.asJsonString());</span>
 
-<span class="nc" id="L32">        ProfileViewDetailed profile = actorHandler.getProfile(serverHandler.getSession().getAccessJwt(), HANDLE);</span>
-<span class="nc bnc" id="L33" title="All 2 branches missed.">        if(LOGGER.isInfoEnabled())</span>
-<span class="nc" id="L34">            LOGGER.info(objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(profile));</span>
+        // ProfileViewDetailed profile = actorHandler.getProfile(serverHandler.getSession().getAccessJwt(), HANDLE);
+        // if(LOGGER.isInfoEnabled())
+        //     LOGGER.info(objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(profile));
 
-<span class="nc" id="L36">        ActorLikes actorLikes = feedHandler.getActorLikes(serverHandler.getSession().getAccessJwt(), HANDLE, 100, null);</span>
-<span class="nc bnc" id="L37" title="All 2 branches missed.">        if(LOGGER.isInfoEnabled())</span>
-<span class="nc" id="L38">            LOGGER.info(objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(actorLikes));</span>
+<span class="nc" id="L38">        ActorLikes actorLikes = feedHandler.getActorLikes(serverHandler.getSession().getAccessJwt(), HANDLE, 100, null);</span>
+<span class="nc bnc" id="L39" title="All 2 branches missed.">        if(LOGGER.isInfoEnabled())</span>
+<span class="nc" id="L40">            LOGGER.info(objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(actorLikes));</span>
 
-<span class="nc" id="L40">        serverHandler.close();</span>
-<span class="nc" id="L41">    }</span>
+<span class="nc" id="L42">        serverHandler.close();</span>
+<span class="nc" id="L43">    }</span>
 
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>
