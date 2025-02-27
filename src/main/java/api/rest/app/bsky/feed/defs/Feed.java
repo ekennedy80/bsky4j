@@ -19,11 +19,10 @@ public class Feed {
     @JsonProperty("reply")
     private ReplyRef reply;
 
-    @JsonProperty("reason") //reasonPin??
+    @JsonProperty("reason") // reasonPin??
     @JsonInclude(JsonInclude.Include.NON_NULL)
     private ReasonRepost reasonRepost;
 
     @JsonProperty("feedContext")
     private String feedContext;
-    
 }

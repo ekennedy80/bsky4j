@@ -16,14 +16,14 @@ import lombok.NoArgsConstructor;
 @Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class FeedSkeleton implements JsonFluentObject{
-    
+public class FeedSkeleton implements JsonFluentObject {
+
     @JsonProperty("cursor")
     private String cursor;
 
     @JsonProperty("feed")
     private FeedSkeleton feed;
-    
+
     @Override
     public ObjectNode asJsonObject() throws JsonProcessingException {
         // TODO Auto-generated method stub
@@ -35,5 +35,5 @@ public class FeedSkeleton implements JsonFluentObject{
         // TODO Auto-generated method stub
         throw new UnsupportedOperationException("Unimplemented method 'asJsonString'");
     }
-    
+
 }

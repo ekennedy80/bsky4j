@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="api.rest.DataUtilsTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-02-23T22:55:17" hostname="viktor-vaughn" time="0.033">
+<testsuite name="api.rest.DataUtilsTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-02-27T04:44:18" hostname="viktor-vaughn" time="0.029">
   <properties/>
-  <testcase name="testParseRecordUri()" classname="api.rest.DataUtilsTest" time="0.033"/>
+  <testcase name="testParseRecordUri()" classname="api.rest.DataUtilsTest" time="0.029"/>
   <system-out><![CDATA[did:plc:c2nnxxpuckisatkcyk2ffbwu
 app.bsky.feed.post
 3kzgko3cguy2w

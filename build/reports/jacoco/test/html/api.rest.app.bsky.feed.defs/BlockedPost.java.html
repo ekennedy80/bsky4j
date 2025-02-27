@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>BlockedPost.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Bluesky-REST-Client</a> &gt; <a href="index.source.html" class="el_package">api.rest.app.bsky.feed.defs</a> &gt; <span class="el_source">BlockedPost.java</span></div><h1>BlockedPost.java</h1><pre class="source lang-java linenums">package api.rest.app.bsky.feed.defs;
+
+import java.net.URI;
+
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.node.ObjectNode;
+
+import api.rest.JsonFluentObject;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.NoArgsConstructor;
+
+@NoArgsConstructor
+@AllArgsConstructor
+@Builder
+@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class BlockedPost implements JsonFluentObject {
+    
+    @JsonProperty(&quot;uri&quot;)
+    private URI uri;
+
+    @JsonProperty(&quot;blocked&quot;)
+    private Boolean blocked;
+
+    @JsonProperty(&quot;author&quot;)
+    private BlockedAuthor author;
+
+    @Override
+    public ObjectNode asJsonObject() throws JsonProcessingException {
+        // TODO Auto-generated method stub
+<span class="nc" id="L35">        throw new UnsupportedOperationException(&quot;Unimplemented method 'asJsonObject'&quot;);</span>
+    }
+
+    @Override
+    public String asJsonString() throws JsonProcessingException {
+        // TODO Auto-generated method stub
+<span class="nc" id="L41">        throw new UnsupportedOperationException(&quot;Unimplemented method 'asJsonString'&quot;);</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

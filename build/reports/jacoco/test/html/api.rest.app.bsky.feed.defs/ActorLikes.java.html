@@ -34,13 +34,13 @@ public class ActorLikes implements JsonFluentObject {
 
     @Override
     public ObjectNode asJsonObject() throws JsonProcessingException {
-<span class="nc" id="L37">        ObjectNode json = new ObjectMapper().createObjectNode();</span>
-<span class="nc" id="L38">        return json.set(&quot;ActorLikes&quot;, new ObjectMapper().valueToTree(this));</span>
+<span class="fc" id="L37">        ObjectNode json = new ObjectMapper().createObjectNode();</span>
+<span class="fc" id="L38">        return json.set(&quot;ActorLikes&quot;, new ObjectMapper().valueToTree(this));</span>
     }
 
     @Override
     public String asJsonString() throws JsonProcessingException {
-<span class="nc" id="L43">        return asJsonObject().toPrettyString();</span>
+<span class="fc" id="L43">        return asJsonObject().toPrettyString();</span>
     }
     
 }

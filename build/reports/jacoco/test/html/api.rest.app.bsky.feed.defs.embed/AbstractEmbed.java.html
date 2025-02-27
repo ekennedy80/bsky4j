@@ -29,6 +29,7 @@ import lombok.ToString;
     @JsonSubTypes.Type(value = EmbededImage.class, name = &quot;app.bsky.embed.images&quot;),
     @JsonSubTypes.Type(value = ImageView.class, name = &quot;app.bsky.embed.images#view&quot;),
     @JsonSubTypes.Type(value = Record.class, name = &quot;app.bsky.embed.record&quot;),
+    @JsonSubTypes.Type(value = RecordView.class, name = &quot;app.bsky.embed.record#view&quot;),
     @JsonSubTypes.Type(value = EmbededVideo.class, name = &quot;app.bsky.embed.video&quot;),
     @JsonSubTypes.Type(value = VideoView.class, name = &quot;app.bsky.embed.video#view&quot;),
     @JsonSubTypes.Type(value = RecordWithMedia.class, name = &quot;app.bsky.embed.recordWithMedia&quot;)}
@@ -43,9 +44,9 @@ public abstract class AbstractEmbed implements JsonFluentObject {
     @JsonIgnore
     protected final ObjectNode json;
         
-<span class="nc" id="L46">    protected AbstractEmbed(String type) {</span>
-<span class="nc" id="L47">        this.json = new ObjectMapper().createObjectNode();</span>
-<span class="nc" id="L48">        this.type = type;</span>
-<span class="nc" id="L49">    }</span>
+<span class="nc" id="L47">    protected AbstractEmbed(String type) {</span>
+<span class="nc" id="L48">        this.json = new ObjectMapper().createObjectNode();</span>
+<span class="nc" id="L49">        this.type = type;</span>
+<span class="nc" id="L50">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>
