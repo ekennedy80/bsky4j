@@ -15,7 +15,6 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import api.rest.JsonFluentObject;
 import api.rest.app.bsky.actor.defs.Labels;
-import api.rest.app.bsky.actor.defs.Viewer;
 import api.rest.app.bsky.actor.defs.profile.ProfileView;
 import api.rest.app.bsky.feed.defs.facet.Facet;
 import lombok.AllArgsConstructor;
@@ -64,7 +63,7 @@ public class GeneratorView implements JsonFluentObject {
     private List<Labels> labels;
 
     @JsonProperty("viewer")
-    private List<Viewer> viewer;
+    private GeneratorViewerState viewer;
 
     @JsonProperty("indexedAt")
     private Date indexedAt;

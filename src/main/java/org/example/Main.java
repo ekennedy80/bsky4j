@@ -3,10 +3,14 @@ package org.example;
 
 import api.rest.app.bsky.feed.FeedHandler;
 import api.rest.app.bsky.feed.defs.ActorLikes;
+import api.rest.app.bsky.feed.defs.SuggestedFeeds;
+import api.rest.app.bsky.feed.defs.Timeline;
 import api.rest.com.atproto.server.BskySession;
 import api.rest.com.atproto.server.ServerHandler;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ObjectNode;
+
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -31,9 +35,17 @@ public class Main {
         // if(LOGGER.isInfoEnabled())
         //     LOGGER.info(objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(profile));
 
-        ActorLikes actorLikes = feedHandler.getActorLikes(serverHandler.getSession().getAccessJwt(), HANDLE, 100, null);
+        // ActorLikes actorLikes = feedHandler.getActorLikes(serverHandler.getSession().getAccessJwt(), HANDLE, 100, null);
+        // if(LOGGER.isInfoEnabled())
+        //     LOGGER.info(objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(actorLikes));
+
+        // SuggestedFeeds suggestedFeeds = feedHandler.getSuggestedFeeds(serverHandler.getSession().getAccessJwt(), 50, null);
+        // if(LOGGER.isInfoEnabled())
+        //     LOGGER.info(objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(suggestedFeeds));
+
+        ObjectNode timeline = feedHandler.getTimeline(serverHandler.getSession().getAccessJwt(), null, 100, null);
         if(LOGGER.isInfoEnabled())
-            LOGGER.info(objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(actorLikes));
+            LOGGER.info(objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(timeline));
 
         serverHandler.close();
     }

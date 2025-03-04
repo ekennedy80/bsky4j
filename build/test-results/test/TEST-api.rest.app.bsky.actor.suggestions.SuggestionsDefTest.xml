@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="api.rest.app.bsky.actor.suggestions.SuggestionsDefTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2025-02-27T04:44:19" hostname="viktor-vaughn" time="0.073">
+<testsuite name="api.rest.app.bsky.actor.suggestions.SuggestionsDefTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2025-03-04T02:18:37" hostname="viktor-vaughn" time="0.033">
   <properties/>
-  <testcase name="testSuggestionsUnmarshalling1()" classname="api.rest.app.bsky.actor.suggestions.SuggestionsDefTest" time="0.036"/>
-  <testcase name="testSuggestionsUnmarshalling2()" classname="api.rest.app.bsky.actor.suggestions.SuggestionsDefTest" time="0.036"/>
+  <testcase name="testSuggestionsUnmarshalling1()" classname="api.rest.app.bsky.actor.suggestions.SuggestionsDefTest" time="0.016"/>
+  <testcase name="testSuggestionsUnmarshalling2()" classname="api.rest.app.bsky.actor.suggestions.SuggestionsDefTest" time="0.016"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

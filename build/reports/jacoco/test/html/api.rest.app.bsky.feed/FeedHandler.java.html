@@ -12,6 +12,11 @@ import api.rest.app.bsky.feed.defs.Feeds;
 import api.rest.app.bsky.feed.defs.Likes;
 import api.rest.app.bsky.feed.defs.PostThread;
 import api.rest.app.bsky.feed.defs.Posts;
+import api.rest.app.bsky.feed.defs.Quotes;
+import api.rest.app.bsky.feed.defs.RepostedBy;
+import api.rest.app.bsky.feed.defs.SearchPosts;
+import api.rest.app.bsky.feed.defs.SuggestedFeeds;
+import api.rest.app.bsky.feed.defs.Timeline;
 import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
 import jakarta.ws.rs.core.MediaType;
@@ -30,38 +35,38 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 
 public class FeedHandler extends AbstractClient {
 
-<span class="nc" id="L33">    private static final Logger LOGGER = LogManager.getLogger(FeedHandler.class);</span>
+<span class="nc" id="L38">    private static final Logger LOGGER = LogManager.getLogger(FeedHandler.class);</span>
 
     public FeedHandler() {
-<span class="nc" id="L36">        super();</span>
-<span class="nc" id="L37">        LOGGER.debug(&quot;Instantiating ActorHandler.&quot;);</span>
-<span class="nc" id="L38">    }</span>
+<span class="nc" id="L41">        super();</span>
+<span class="nc" id="L42">        LOGGER.debug(&quot;Instantiating ActorHandler.&quot;);</span>
+<span class="nc" id="L43">    }</span>
 
     private static class SingletonHelper {
-<span class="nc" id="L41">        private static final FeedHandler INSTANCE = new FeedHandler();</span>
+<span class="nc" id="L46">        private static final FeedHandler INSTANCE = new FeedHandler();</span>
     }
 
     public static FeedHandler getInstance() {
-<span class="nc" id="L45">        return SingletonHelper.INSTANCE;</span>
+<span class="nc" id="L50">        return SingletonHelper.INSTANCE;</span>
     }
 
     // TODO: Fix jakarta.ws.rs.NotFoundException: HTTP 404 Not Found error
     public DescribeFeedGenerator describeFeedGenerator(String jwtToken) {
-<span class="nc" id="L50">        return client.target(BSKY_URL + DESCRIBE_FEED_GENERATOR)</span>
-<span class="nc" id="L51">                .request(MediaType.APPLICATION_JSON)</span>
-<span class="nc" id="L52">                .header(&quot;Authorization&quot;, &quot;Bearer &quot; + jwtToken)</span>
-<span class="nc" id="L53">                .get(DescribeFeedGenerator.class);</span>
+<span class="nc" id="L55">        return client.target(BSKY_URL + DESCRIBE_FEED_GENERATOR)</span>
+<span class="nc" id="L56">                .request(MediaType.APPLICATION_JSON)</span>
+<span class="nc" id="L57">                .header(&quot;Authorization&quot;, &quot;Bearer &quot; + jwtToken)</span>
+<span class="nc" id="L58">                .get(DescribeFeedGenerator.class);</span>
     }
 
     // TODO: Create actor feeds json objects
     public ObjectNode getActorFeeds(String jwtToken, String actor, Integer limit, String cursor) {
-<span class="nc" id="L58">        return client.target(BSKY_URL + GET_ACTOR_FEEDS)</span>
-<span class="nc" id="L59">                .queryParam(&quot;actor&quot;, actor)</span>
-<span class="nc" id="L60">                .queryParam(&quot;limit&quot;, limit)</span>
-<span class="nc" id="L61">                .queryParam(&quot;cursor&quot;, cursor)</span>
-<span class="nc" id="L62">                .request(MediaType.APPLICATION_JSON)</span>
-<span class="nc" id="L63">                .header(&quot;Authorization&quot;, &quot;Bearer &quot; + jwtToken)</span>
-<span class="nc" id="L64">                .get(ObjectNode.class);</span>
+<span class="nc" id="L63">        return client.target(BSKY_URL + GET_ACTOR_FEEDS)</span>
+<span class="nc" id="L64">                .queryParam(&quot;actor&quot;, actor)</span>
+<span class="nc" id="L65">                .queryParam(&quot;limit&quot;, limit)</span>
+<span class="nc" id="L66">                .queryParam(&quot;cursor&quot;, cursor)</span>
+<span class="nc" id="L67">                .request(MediaType.APPLICATION_JSON)</span>
+<span class="nc" id="L68">                .header(&quot;Authorization&quot;, &quot;Bearer &quot; + jwtToken)</span>
+<span class="nc" id="L69">                .get(ObjectNode.class);</span>
     }
 
     /**
@@ -75,13 +80,13 @@ public class FeedHandler extends AbstractClient {
      * @return
      */
     public ActorLikes getActorLikes(String jwtToken, String actor, Integer limit, String cursor) {
-<span class="nc" id="L78">        return client.target(BSKY_URL + GET_ACTOR_LIKES)</span>
-<span class="nc" id="L79">                .queryParam(&quot;actor&quot;, actor)</span>
-<span class="nc" id="L80">                .queryParam(&quot;limit&quot;, limit)</span>
-<span class="nc" id="L81">                .queryParam(&quot;cursor&quot;, cursor)</span>
-<span class="nc" id="L82">                .request(MediaType.APPLICATION_JSON)</span>
-<span class="nc" id="L83">                .header(AUTHORIZATION, BEARER + jwtToken)</span>
-<span class="nc" id="L84">                .get(ActorLikes.class);</span>
+<span class="nc" id="L83">        return client.target(BSKY_URL + GET_ACTOR_LIKES)</span>
+<span class="nc" id="L84">                .queryParam(&quot;actor&quot;, actor)</span>
+<span class="nc" id="L85">                .queryParam(&quot;limit&quot;, limit)</span>
+<span class="nc" id="L86">                .queryParam(&quot;cursor&quot;, cursor)</span>
+<span class="nc" id="L87">                .request(MediaType.APPLICATION_JSON)</span>
+<span class="nc" id="L88">                .header(AUTHORIZATION, BEARER + jwtToken)</span>
+<span class="nc" id="L89">                .get(ActorLikes.class);</span>
     }
 
     /**
@@ -98,15 +103,15 @@ public class FeedHandler extends AbstractClient {
     public AuthorFeed getAuthorFeed(@Nonnull String jwtToken, @Nonnull String actor, @Nullable Integer limit,
             @Nullable String cursor, @Nullable String filter,
             @Nullable Boolean includePins) {
-<span class="nc" id="L101">        return client.target(BSKY_URL + GET_AUTHOR_FEED)</span>
-<span class="nc" id="L102">                .queryParam(&quot;actor&quot;, actor)</span>
-<span class="nc" id="L103">                .queryParam(&quot;limit&quot;, limit)</span>
-<span class="nc" id="L104">                .queryParam(&quot;cursor&quot;, cursor)</span>
-<span class="nc" id="L105">                .queryParam(&quot;filter&quot;, filter)</span>
-<span class="nc" id="L106">                .queryParam(&quot;includePins&quot;, includePins)</span>
-<span class="nc" id="L107">                .request(MediaType.APPLICATION_JSON)</span>
-<span class="nc" id="L108">                .header(AUTHORIZATION, BEARER + jwtToken)</span>
-<span class="nc" id="L109">                .get(AuthorFeed.class);</span>
+<span class="nc" id="L106">        return client.target(BSKY_URL + GET_AUTHOR_FEED)</span>
+<span class="nc" id="L107">                .queryParam(&quot;actor&quot;, actor)</span>
+<span class="nc" id="L108">                .queryParam(&quot;limit&quot;, limit)</span>
+<span class="nc" id="L109">                .queryParam(&quot;cursor&quot;, cursor)</span>
+<span class="nc" id="L110">                .queryParam(&quot;filter&quot;, filter)</span>
+<span class="nc" id="L111">                .queryParam(&quot;includePins&quot;, includePins)</span>
+<span class="nc" id="L112">                .request(MediaType.APPLICATION_JSON)</span>
+<span class="nc" id="L113">                .header(AUTHORIZATION, BEARER + jwtToken)</span>
+<span class="nc" id="L114">                .get(AuthorFeed.class);</span>
     }
 
     /**
@@ -117,11 +122,11 @@ public class FeedHandler extends AbstractClient {
      * @return
      */
     public FeedGenerator getFeedGenerator(@Nonnull String jwtToken, @Nonnull URI feed) {
-<span class="nc" id="L120">        return client.target(BSKY_URL + GET_FEED_GENERATOR)</span>
-<span class="nc" id="L121">                .queryParam(&quot;feed&quot;, feed.toString())</span>
-<span class="nc" id="L122">                .request(MediaType.APPLICATION_JSON)</span>
-<span class="nc" id="L123">                .header(AUTHORIZATION, BEARER + jwtToken)</span>
-<span class="nc" id="L124">                .get(FeedGenerator.class);</span>
+<span class="nc" id="L125">        return client.target(BSKY_URL + GET_FEED_GENERATOR)</span>
+<span class="nc" id="L126">                .queryParam(&quot;feed&quot;, feed.toString())</span>
+<span class="nc" id="L127">                .request(MediaType.APPLICATION_JSON)</span>
+<span class="nc" id="L128">                .header(AUTHORIZATION, BEARER + jwtToken)</span>
+<span class="nc" id="L129">                .get(FeedGenerator.class);</span>
     }
 
     /**
@@ -132,15 +137,15 @@ public class FeedHandler extends AbstractClient {
      * @return
      */
     public FeedGenerators getFeedGenerators(@Nonnull String jwtToken, @Nonnull Collection&lt;URI&gt; feeds) {
-<span class="nc" id="L135">        ArrayNode jsonArray = new ObjectMapper().createArrayNode();</span>
-<span class="nc bnc" id="L136" title="All 2 branches missed.">        for (URI uri : feeds) {</span>
-<span class="nc" id="L137">            jsonArray.add(uri.toString());</span>
-<span class="nc" id="L138">        }</span>
-<span class="nc" id="L139">        return client.target(BSKY_URL + GET_FEED_GENERATORS)</span>
-<span class="nc" id="L140">                .queryParam(&quot;feeds&quot;, jsonArray.toString())</span>
-<span class="nc" id="L141">                .request(MediaType.APPLICATION_JSON)</span>
-<span class="nc" id="L142">                .header(AUTHORIZATION, BEARER + jwtToken)</span>
-<span class="nc" id="L143">                .get(FeedGenerators.class);</span>
+<span class="nc" id="L140">        ArrayNode jsonArray = new ObjectMapper().createArrayNode();</span>
+<span class="nc bnc" id="L141" title="All 2 branches missed.">        for (URI uri : feeds) {</span>
+<span class="nc" id="L142">            jsonArray.add(uri.toString());</span>
+<span class="nc" id="L143">        }</span>
+<span class="nc" id="L144">        return client.target(BSKY_URL + GET_FEED_GENERATORS)</span>
+<span class="nc" id="L145">                .queryParam(&quot;feeds&quot;, jsonArray.toString())</span>
+<span class="nc" id="L146">                .request(MediaType.APPLICATION_JSON)</span>
+<span class="nc" id="L147">                .header(AUTHORIZATION, BEARER + jwtToken)</span>
+<span class="nc" id="L148">                .get(FeedGenerators.class);</span>
     }
 
     /**
@@ -156,13 +161,13 @@ public class FeedHandler extends AbstractClient {
      */
     public FeedSkeleton getFeedSkeleton(@Nonnull String jwtToken, @Nonnull URI feed, @Nullable Integer limit,
             @Nullable String cursor) {
-<span class="nc" id="L159">        return client.target(BSKY_URL + GET_FEED_SKELETON)</span>
-<span class="nc" id="L160">                .queryParam(&quot;feed&quot;, feed.toString())</span>
-<span class="nc" id="L161">                .queryParam(&quot;limit&quot;, limit)</span>
-<span class="nc" id="L162">                .queryParam(&quot;cursor&quot;, cursor)</span>
-<span class="nc" id="L163">                .request(MediaType.APPLICATION_JSON)</span>
-<span class="nc" id="L164">                .header(AUTHORIZATION, BEARER + jwtToken)</span>
-<span class="nc" id="L165">                .get(FeedSkeleton.class);</span>
+<span class="nc" id="L164">        return client.target(BSKY_URL + GET_FEED_SKELETON)</span>
+<span class="nc" id="L165">                .queryParam(&quot;feed&quot;, feed.toString())</span>
+<span class="nc" id="L166">                .queryParam(&quot;limit&quot;, limit)</span>
+<span class="nc" id="L167">                .queryParam(&quot;cursor&quot;, cursor)</span>
+<span class="nc" id="L168">                .request(MediaType.APPLICATION_JSON)</span>
+<span class="nc" id="L169">                .header(AUTHORIZATION, BEARER + jwtToken)</span>
+<span class="nc" id="L170">                .get(FeedSkeleton.class);</span>
     }
 
     /**
@@ -176,13 +181,13 @@ public class FeedHandler extends AbstractClient {
      * @return
      */
     public Feed getFeed(@Nonnull String jwtToken, @Nonnull URI feed, @Nullable Integer limit, @Nullable String cursor) {
-<span class="nc" id="L179">        return client.target(BSKY_URL + GET_FEED)</span>
-<span class="nc" id="L180">                .queryParam(&quot;feed&quot;, feed.toString())</span>
-<span class="nc" id="L181">                .queryParam(&quot;limit&quot;, limit)</span>
-<span class="nc" id="L182">                .queryParam(&quot;cursor&quot;, cursor)</span>
-<span class="nc" id="L183">                .request(MediaType.APPLICATION_JSON)</span>
-<span class="nc" id="L184">                .header(AUTHORIZATION, BEARER + jwtToken)</span>
-<span class="nc" id="L185">                .get(Feed.class);</span>
+<span class="nc" id="L184">        return client.target(BSKY_URL + GET_FEED)</span>
+<span class="nc" id="L185">                .queryParam(&quot;feed&quot;, feed.toString())</span>
+<span class="nc" id="L186">                .queryParam(&quot;limit&quot;, limit)</span>
+<span class="nc" id="L187">                .queryParam(&quot;cursor&quot;, cursor)</span>
+<span class="nc" id="L188">                .request(MediaType.APPLICATION_JSON)</span>
+<span class="nc" id="L189">                .header(AUTHORIZATION, BEARER + jwtToken)</span>
+<span class="nc" id="L190">                .get(Feed.class);</span>
     }
 
     /**
@@ -197,14 +202,14 @@ public class FeedHandler extends AbstractClient {
      */
     public Likes getLikes(@Nonnull String jwtToken, @Nonnull URI uri, @Nullable String cid, @Nullable Integer limit,
             @Nullable String cursor) {
-<span class="nc" id="L200">        return client.target(BSKY_URL + GET_LIKES)</span>
-<span class="nc" id="L201">                .queryParam(&quot;uri&quot;, uri.toString())</span>
-<span class="nc" id="L202">                .queryParam(&quot;cid&quot;, cid)</span>
-<span class="nc" id="L203">                .queryParam(&quot;limit&quot;, limit)</span>
-<span class="nc" id="L204">                .queryParam(&quot;cursor&quot;, cursor)</span>
-<span class="nc" id="L205">                .request(MediaType.APPLICATION_JSON)</span>
-<span class="nc" id="L206">                .header(AUTHORIZATION, BEARER + jwtToken)</span>
-<span class="nc" id="L207">                .get(Likes.class);</span>
+<span class="nc" id="L205">        return client.target(BSKY_URL + GET_LIKES)</span>
+<span class="nc" id="L206">                .queryParam(&quot;uri&quot;, uri.toString())</span>
+<span class="nc" id="L207">                .queryParam(&quot;cid&quot;, cid)</span>
+<span class="nc" id="L208">                .queryParam(&quot;limit&quot;, limit)</span>
+<span class="nc" id="L209">                .queryParam(&quot;cursor&quot;, cursor)</span>
+<span class="nc" id="L210">                .request(MediaType.APPLICATION_JSON)</span>
+<span class="nc" id="L211">                .header(AUTHORIZATION, BEARER + jwtToken)</span>
+<span class="nc" id="L212">                .get(Likes.class);</span>
     }
 
     /**
@@ -219,23 +224,34 @@ public class FeedHandler extends AbstractClient {
      */
     public Feeds getListFeed(@Nonnull String jwtToken, @Nonnull URI list, @Nullable Integer limit,
             @Nullable String cursor) {
-<span class="nc" id="L222">        return client.target(BSKY_URL + GET_LIST_FEED)</span>
-<span class="nc" id="L223">                .queryParam(&quot;list&quot;, list.toString())</span>
-<span class="nc" id="L224">                .queryParam(&quot;limit&quot;, limit)</span>
-<span class="nc" id="L225">                .queryParam(&quot;cursor&quot;, cursor)</span>
-<span class="nc" id="L226">                .request(MediaType.APPLICATION_JSON)</span>
-<span class="nc" id="L227">                .header(AUTHORIZATION, BEARER + jwtToken)</span>
-<span class="nc" id="L228">                .get(Feeds.class);</span>
+<span class="nc" id="L227">        return client.target(BSKY_URL + GET_LIST_FEED)</span>
+<span class="nc" id="L228">                .queryParam(&quot;list&quot;, list.toString())</span>
+<span class="nc" id="L229">                .queryParam(&quot;limit&quot;, limit)</span>
+<span class="nc" id="L230">                .queryParam(&quot;cursor&quot;, cursor)</span>
+<span class="nc" id="L231">                .request(MediaType.APPLICATION_JSON)</span>
+<span class="nc" id="L232">                .header(AUTHORIZATION, BEARER + jwtToken)</span>
+<span class="nc" id="L233">                .get(Feeds.class);</span>
     }
 
-    public PostThread getPostThread(@Nonnull String jwtToken, @Nonnull URI uri, @Nullable Integer depth, @Nullable Integer parentHeight) {
-<span class="nc" id="L232">        return client.target(BSKY_URL + GET_POST_THREAD)</span>
-<span class="nc" id="L233">                .queryParam(&quot;uri&quot;, uri.toString())</span>
-<span class="nc" id="L234">                .queryParam(&quot;depth&quot;, depth)</span>
-<span class="nc" id="L235">                .queryParam(&quot;parentHeight&quot;, parentHeight)</span>
-<span class="nc" id="L236">                .request(MediaType.APPLICATION_JSON)</span>
-<span class="nc" id="L237">                .header(AUTHORIZATION, BEARER + jwtToken)</span>
-<span class="nc" id="L238">                .get(PostThread.class);</span>
+    /**
+     * Get posts in a thread. Does not require auth, but additional metadata and
+     * filtering will be applied for authed requests.
+     * 
+     * @param jwtToken
+     * @param uri
+     * @param depth
+     * @param parentHeight
+     * @return
+     */
+    public PostThread getPostThread(@Nonnull String jwtToken, @Nonnull URI uri, @Nullable Integer depth,
+            @Nullable Integer parentHeight) {
+<span class="nc" id="L248">        return client.target(BSKY_URL + GET_POST_THREAD)</span>
+<span class="nc" id="L249">                .queryParam(&quot;uri&quot;, uri.toString())</span>
+<span class="nc" id="L250">                .queryParam(&quot;depth&quot;, depth)</span>
+<span class="nc" id="L251">                .queryParam(&quot;parentHeight&quot;, parentHeight)</span>
+<span class="nc" id="L252">                .request(MediaType.APPLICATION_JSON)</span>
+<span class="nc" id="L253">                .header(AUTHORIZATION, BEARER + jwtToken)</span>
+<span class="nc" id="L254">                .get(PostThread.class);</span>
     }
 
     /**
@@ -247,39 +263,168 @@ public class FeedHandler extends AbstractClient {
      * @return
      */
     public Posts getPosts(@Nonnull String jwtToken, @Nonnull Collection&lt;URI&gt; uris) {
-<span class="nc" id="L250">        ArrayNode jsonArray = new ObjectMapper().createArrayNode();</span>
-<span class="nc bnc" id="L251" title="All 2 branches missed.">        for (URI uri : uris) {</span>
-<span class="nc" id="L252">            jsonArray.add(uri.toString());</span>
-<span class="nc" id="L253">        }</span>
-<span class="nc" id="L254">        return client.target(BSKY_URL + GET_POSTS)</span>
-<span class="nc" id="L255">                .queryParam(&quot;uris&quot;, jsonArray.toString())</span>
-<span class="nc" id="L256">                .request(MediaType.APPLICATION_JSON)</span>
-<span class="nc" id="L257">                .header(AUTHORIZATION, BEARER + jwtToken)</span>
-<span class="nc" id="L258">                .get(Posts.class);</span>
+<span class="nc" id="L266">        ArrayNode jsonArray = new ObjectMapper().createArrayNode();</span>
+<span class="nc bnc" id="L267" title="All 2 branches missed.">        for (URI uri : uris) {</span>
+<span class="nc" id="L268">            jsonArray.add(uri.toString());</span>
+<span class="nc" id="L269">        }</span>
+<span class="nc" id="L270">        return client.target(BSKY_URL + GET_POSTS)</span>
+<span class="nc" id="L271">                .queryParam(&quot;uris&quot;, jsonArray.toString())</span>
+<span class="nc" id="L272">                .request(MediaType.APPLICATION_JSON)</span>
+<span class="nc" id="L273">                .header(AUTHORIZATION, BEARER + jwtToken)</span>
+<span class="nc" id="L274">                .get(Posts.class);</span>
     }
 
-    public void getQuotes() {
+    /**
+     * Get a list of quotes for a given post.
+     * 
+     * @param jwtToken
+     * @param uri
+     * @param cid
+     * @param limit
+     * @param cursor
+     * @return
+     */
+    public Quotes getQuotes(@Nonnull String jwtToken, @Nonnull URI uri, @Nullable String cid, @Nullable Integer limit,
+            @Nullable String cursor) {
+<span class="nc" id="L289">        return client.target(BSKY_URL + GET_QUOTES)</span>
+<span class="nc" id="L290">                .queryParam(&quot;uri&quot;, uri.toString())</span>
+<span class="nc" id="L291">                .queryParam(&quot;cid&quot;, cid)</span>
+<span class="nc" id="L292">                .queryParam(&quot;limit&quot;, limit)</span>
+<span class="nc" id="L293">                .queryParam(&quot;cursor&quot;, cursor)</span>
+<span class="nc" id="L294">                .request(MediaType.APPLICATION_JSON)</span>
+<span class="nc" id="L295">                .header(AUTHORIZATION, BEARER + jwtToken)</span>
+<span class="nc" id="L296">                .get(Quotes.class);</span>
+    }
 
-<span class="nc" id="L263">    }</span>
+    /**
+     * Get a list of reposts for a given post.
+     * 
+     * @param jwtToken
+     * @param uri
+     * @param cid
+     * @param limit
+     * @param cursor
+     * @return
+     */
+    public RepostedBy getRepostedBy(@Nonnull String jwtToken, @Nonnull URI uri, @Nullable String cid,
+            @Nullable Integer limit,
+            @Nullable String cursor) {
+<span class="nc" id="L312">        return client.target(BSKY_URL + GET_REPOSTED_BY)</span>
+<span class="nc" id="L313">                .queryParam(&quot;uri&quot;, uri.toString())</span>
+<span class="nc" id="L314">                .queryParam(&quot;cid&quot;, cid)</span>
+<span class="nc" id="L315">                .queryParam(&quot;limit&quot;, limit)</span>
+<span class="nc" id="L316">                .queryParam(&quot;cursor&quot;, cursor)</span>
+<span class="nc" id="L317">                .request(MediaType.APPLICATION_JSON)</span>
+<span class="nc" id="L318">                .header(AUTHORIZATION, BEARER + jwtToken)</span>
+<span class="nc" id="L319">                .get(RepostedBy.class);</span>
+    }
 
-    public void getRepostedBy() {
+    /**
+     * Get a list of suggested feeds (feed generators) for the requesting account.
+     * 
+     * @param jwtToken
+     * @param limit
+     * @param cursor
+     * @return
+     */
+    public SuggestedFeeds getSuggestedFeeds(@Nonnull String jwtToken, @Nullable Integer limit,
+            @Nullable String cursor) {
+<span class="nc" id="L332">        return client.target(BSKY_URL + GET_SUGGESTED_FEEDS)</span>
+<span class="nc" id="L333">                .queryParam(&quot;limit&quot;, limit)</span>
+<span class="nc" id="L334">                .queryParam(&quot;cursor&quot;, cursor)</span>
+<span class="nc" id="L335">                .request(MediaType.APPLICATION_JSON)</span>
+<span class="nc" id="L336">                .header(AUTHORIZATION, BEARER + jwtToken)</span>
+<span class="nc" id="L337">                .get(SuggestedFeeds.class);</span>
+    }
 
-<span class="nc" id="L267">    }</span>
+    /**
+     * Get a view of the requesting account's home timeline. This is expected to be
+     * some form of reverse-chronological feed.
+     * 
+     * @param jwtToken
+     * @param algorithm
+     * @param limit
+     * @param cursor
+     * @return
+     */
+    public Timeline getTimeline(@Nonnull String jwtToken, @Nullable String algorithm, @Nullable Integer limit,
+            @Nullable String cursor) {
+<span class="nc" id="L352">        return client.target(BSKY_URL + GET_TIMELINE)</span>
+<span class="nc" id="L353">                .queryParam(&quot;algorithm&quot;, algorithm)</span>
+<span class="nc" id="L354">                .queryParam(&quot;limit&quot;, limit)</span>
+<span class="nc" id="L355">                .queryParam(&quot;cursor&quot;, cursor)</span>
+<span class="nc" id="L356">                .request(MediaType.APPLICATION_JSON)</span>
+<span class="nc" id="L357">                .header(AUTHORIZATION, BEARER + jwtToken)</span>
+<span class="nc" id="L358">                .get(Timeline.class);</span>
+    }
 
-    public void getSuggestedFeeds() {
-
-<span class="nc" id="L271">    }</span>
-
-    public void getTimeline() {
-
-<span class="nc" id="L275">    }</span>
-
-    public void searchPosts() {
-
-<span class="nc" id="L279">    }</span>
+    /**
+     * Find posts matching search criteria, returning views of those posts.
+     * 
+     * @param jwtToken
+     * @param q        Search query string; syntax, phrase, boolean, and faceting is
+     *                 unspecified, but Lucene query syntax is recommended.
+     * @param sort     Possible values: [top, latest] Specifies the ranking order of
+     *                 results. Default value: latest
+     * @param since    Filter results for posts after the indicated datetime
+     *                 (inclusive). Expected to use 'sortAt' timestamp, which may
+     *                 not match 'createdAt'. Can be a datetime, or just an ISO date
+     *                 (YYYY-MM-DD).
+     * @param until    Filter results for posts before the indicated datetime (not
+     *                 inclusive). Expected to use 'sortAt' timestamp, which may not
+     *                 match 'createdAt'. Can be a datetime, or just an ISO date
+     *                 (YYY-MM-DD).
+     * @param mentions Filter to posts which mention the given account. Handles are
+     *                 resolved to DID before query-time. Only matches rich-text
+     *                 facet mentions.
+     * @param author   Filter to posts by the given account. Handles are resolved to
+     *                 DID before query-time.
+     * @param lang     Filter to posts in the given language. Expected to be based
+     *                 on post language field, though server may override language
+     *                 detection.
+     * @param domain   Filter to posts with URLs (facet links or embeds) linking to
+     *                 the given domain (hostname). Server may apply hostname
+     *                 normalization.
+     * @param url      Filter to posts with links (facet links or embeds) pointing
+     *                 to this URL. Server may apply URL normalization or fuzzy
+     *                 matching.
+     * @param tag      Possible values: &lt;= 640 characters, Filter to posts with the
+     *                 given tag (hashtag), based on rich-text facet or tag field.
+     *                 Do not include the hash (#) prefix. Multiple tags can be
+     *                 specified, with 'AND' matching.
+     * @param limit    Possible values: &gt;= 1 and &lt;= 100. Default value: 25
+     * @param cursor   Optional pagination mechanism; may not necessarily allow
+     *                 scrolling through entire result set.
+     * @return
+     */
+    public SearchPosts searchPosts(@Nonnull String jwtToken, @Nonnull String q, @Nullable String sort,
+            @Nullable String since, @Nullable String until, @Nullable URI mentions, @Nullable URI author,
+            @Nullable String lang, @Nullable String domain, @Nullable URI url, @Nullable String[] tag,
+            @Nullable Integer limit, @Nullable String cursor) {
+<span class="nc" id="L404">        ArrayNode jsonArray = new ObjectMapper().createArrayNode();</span>
+<span class="nc bnc" id="L405" title="All 2 branches missed.">        for (String str : tag) {</span>
+<span class="nc" id="L406">            jsonArray.add(str);</span>
+        }
+<span class="nc" id="L408">        return client.target(BSKY_URL + SEARCH_POSTS)</span>
+<span class="nc" id="L409">                .queryParam(&quot;q&quot;, q)</span>
+<span class="nc" id="L410">                .queryParam(&quot;sort&quot;, sort)</span>
+<span class="nc" id="L411">                .queryParam(&quot;since&quot;, since)</span>
+<span class="nc" id="L412">                .queryParam(&quot;until&quot;, until)</span>
+<span class="nc" id="L413">                .queryParam(&quot;mentions&quot;, mentions)</span>
+<span class="nc" id="L414">                .queryParam(&quot;author&quot;, author)</span>
+<span class="nc" id="L415">                .queryParam(&quot;lang&quot;, lang)</span>
+<span class="nc" id="L416">                .queryParam(&quot;domain&quot;, domain)</span>
+<span class="nc" id="L417">                .queryParam(&quot;url&quot;, url)</span>
+<span class="nc" id="L418">                .queryParam(&quot;tag&quot;, jsonArray)</span>
+<span class="nc" id="L419">                .queryParam(&quot;limit&quot;, limit)</span>
+<span class="nc" id="L420">                .queryParam(&quot;cursor&quot;, cursor)</span>
+<span class="nc" id="L421">                .request(MediaType.APPLICATION_JSON)</span>
+<span class="nc" id="L422">                .header(AUTHORIZATION, BEARER + jwtToken)</span>
+<span class="nc" id="L423">                .get(SearchPosts.class);</span>
+    }
 
     public void sendInteractions() {
 
-<span class="nc" id="L283">    }</span>
+<span class="nc" id="L428">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>
