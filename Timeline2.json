@@ -1,37 +1,4 @@
-> Task :compileJava
-> Task :processResources
-> Task :classes
-
-> Task :run
-21:22:52.624 [main] INFO  api.rest.com.atproto.server.ServerHandler - Creating a Bluesky session for authentication for ekennedy80.bsky.social.
-21:22:53.169 [main] INFO  org.example.Main - ********** SESSION **********
 {
-  "accessJwt" : "eyJ0eXAiOiJhdCtqd3QiLCJhbGciOiJFUzI1NksifQ.eyJzY29wZSI6ImNvbS5hdHByb3RvLmFwcFBhc3NQcml2aWxlZ2VkIiwic3ViIjoiZGlkOnBsYzpwZ2RycXh6djRreHQ3dHIzc2E2cGQ3N3kiLCJpYXQiOjE3NDEwNTQ5NzUsImV4cCI6MTc0MTA2MjE3NSwiYXVkIjoiZGlkOndlYjpwdWZmYmFsbC51cy1lYXN0Lmhvc3QuYnNreS5uZXR3b3JrIn0.PhhW-I4IlxjM4cUIs1czh3469APzuEfYGDqFWgxs9j5i8u69FGzFYqKUG5uk9kHSG9oZJMzJU-uTIKenS9u8XQ",
-  "refreshJwt" : "eyJ0eXAiOiJyZWZyZXNoK2p3dCIsImFsZyI6IkVTMjU2SyJ9.eyJzY29wZSI6ImNvbS5hdHByb3RvLnJlZnJlc2giLCJzdWIiOiJkaWQ6cGxjOnBnZHJxeHp2NGt4dDd0cjNzYTZwZDc3eSIsImF1ZCI6ImRpZDp3ZWI6YnNreS5zb2NpYWwiLCJqdGkiOiJzb05NbkJCZnFZTmJ3dnpMV0Rsb3FrZHV6eCtqZG1yL2RHWmpsRnBxWmY0IiwiaWF0IjoxNzQxMDU0OTc1LCJleHAiOjE3NDg4MzA5NzV9.qPvYUmciI97kdo5haHdbprssAawJA23KNdeaoxZCi9GhUfoTFf3SNUkkNKhFX8gWxGV7eFwgui7ADj4Fb7GHxw",
-  "handle" : "ekennedy80.bsky.social",
-  "did" : "did:plc:pgdrqxzv4kxt7tr3sa6pd77y",
-  "didDoc" : {
-    "@context" : [ "https://www.w3.org/ns/did/v1", "https://w3id.org/security/multikey/v1", "https://w3id.org/security/suites/secp256k1-2019/v1" ],
-    "id" : "did:plc:pgdrqxzv4kxt7tr3sa6pd77y",
-    "alsoKnownAs" : [ "at://ekennedy80.bsky.social" ],
-    "verificationMethod" : [ {
-      "id" : "did:plc:pgdrqxzv4kxt7tr3sa6pd77y#atproto",
-      "type" : "Multikey",
-      "controller" : "did:plc:pgdrqxzv4kxt7tr3sa6pd77y",
-      "publicKeyMultibase" : "zQ3shXML3KPG94nD4LhRtxHn6KHsuW9kZQEepYHJmr3EuYZCF"
-    } ],
-    "service" : [ {
-      "id" : "#atproto_pds",
-      "type" : "AtprotoPersonalDataServer",
-      "serviceEndpoint" : "https://puffball.us-east.host.bsky.network"
-    } ]
-  },
-  "email" : "edward.p.kennedy@icloud.com",
-  "emailConfirmed" : true,
-  "emailAuthFactor" : false,
-  "active" : true
-}
-21:22:53.444 [main] INFO  org.example.Main - {
   "feed" : [ {
     "post" : {
       "uri" : "at://did:plc:6nvbzutsgdtou45xqkjpkjuz/app.bsky.feed.post/3ljjftjmgic2i",
@@ -10685,6 +10652,3 @@
   } ],
   "cursor" : "2025-03-04T01:48:20.846Z"
 }
-
-BUILD SUCCESSFUL in 3s
-3 actionable tasks: 3 executed

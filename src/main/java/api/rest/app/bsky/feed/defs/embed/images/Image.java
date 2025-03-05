@@ -1,13 +1,14 @@
-package api.rest.app.bsky.feed.defs.embed;
+package api.rest.app.bsky.feed.defs.embed.images;
 
-import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
+import api.rest.app.bsky.feed.defs.embed.AbstractEmbed;
+import api.rest.app.bsky.feed.defs.embed.AspectRatio;
+import api.rest.app.bsky.feed.defs.embed.BlobRef;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
-import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
@@ -15,46 +16,19 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 @EqualsAndHashCode(callSuper=true)
-public class EmbededVideo extends AbstractEmbed {
+public class Image extends AbstractEmbed { 
 
-    @Data
-    @NoArgsConstructor
-    @AllArgsConstructor
-    @JsonInclude(JsonInclude.Include.NON_NULL)
-    class AspectRatio {
-        @JsonProperty("width")
-        private Integer width;
+    //AbstractEmbed type: app.bsky.embed.images#image
 
-        @JsonProperty("height")
-        private Integer height;
-    }
+    @JsonProperty("alt")
+    private String alt;
 
-    @Data
-    @NoArgsConstructor
-    @AllArgsConstructor
-    @JsonInclude(JsonInclude.Include.NON_NULL)
-    class Video {
-
-        @JsonProperty("$type")
-        private String type;
-
-        @JsonProperty("ref")
-        private Ref ref;
-
-        @JsonProperty("mimeType")
-        private String mimeType;
-
-        @JsonProperty("size")
-        private int size;
-
-    }
+    @JsonProperty("image")
+    private BlobRef image;
 
     @JsonProperty("aspectRatio")
     private AspectRatio aspectRatio;
-
-    @JsonProperty("video")
-    private Video video;
-
+    
     @Override
     public ObjectNode asJsonObject() throws JsonProcessingException {
         // TODO Auto-generated method stub

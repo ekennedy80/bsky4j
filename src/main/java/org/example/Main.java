@@ -43,9 +43,9 @@ public class Main {
         // if(LOGGER.isInfoEnabled())
         //     LOGGER.info(objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(suggestedFeeds));
 
-        ObjectNode timeline = feedHandler.getTimeline(serverHandler.getSession().getAccessJwt(), null, 100, null);
+        Timeline timeline = feedHandler.getTimeline(serverHandler.getSession().getAccessJwt(), null, 100, null);
         if(LOGGER.isInfoEnabled())
-            LOGGER.info(objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(timeline));
+            LOGGER.info(objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(timeline.asJsonString()));
 
         serverHandler.close();
     }

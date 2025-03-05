@@ -347,7 +347,7 @@ public class FeedHandler extends AbstractClient {
      * @param cursor
      * @return
      */
-    public Timeline getTimeline(@Nonnull String jwtToken, @Nullable String algorithm, @Nullable Integer limit,
+    public ObjectNode getTimeline(@Nonnull String jwtToken, @Nullable String algorithm, @Nullable Integer limit,
             @Nullable String cursor) {
 <span class="nc" id="L352">        return client.target(BSKY_URL + GET_TIMELINE)</span>
 <span class="nc" id="L353">                .queryParam(&quot;algorithm&quot;, algorithm)</span>
@@ -355,7 +355,7 @@ public class FeedHandler extends AbstractClient {
 <span class="nc" id="L355">                .queryParam(&quot;cursor&quot;, cursor)</span>
 <span class="nc" id="L356">                .request(MediaType.APPLICATION_JSON)</span>
 <span class="nc" id="L357">                .header(AUTHORIZATION, BEARER + jwtToken)</span>
-<span class="nc" id="L358">                .get(Timeline.class);</span>
+<span class="nc" id="L358">                .get(ObjectNode.class);</span>
     }
 
     /**

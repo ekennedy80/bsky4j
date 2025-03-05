@@ -15,7 +15,6 @@ import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import api.rest.JsonFluentObject;
 import api.rest.app.bsky.actor.defs.Labels;
-import api.rest.app.bsky.actor.defs.Viewer;
 import api.rest.app.bsky.actor.defs.profile.ProfileView;
 import api.rest.app.bsky.feed.defs.facet.Facet;
 import lombok.AllArgsConstructor;
@@ -71,27 +70,27 @@ public class GeneratorView implements JsonFluentObject {
 
     @JsonSetter(&quot;indexedAt&quot;)
     public void setIndexedAt(String date) throws ParseException {
-<span class="nc bnc" id="L74" title="All 2 branches missed.">        if (date != null) {</span>
-<span class="nc bnc" id="L75" title="All 6 branches missed.">            if (date.contains(&quot;:&quot;) || date.contains(&quot;T&quot;) || date.contains(&quot;Z&quot;)) {</span>
-<span class="nc" id="L76">                SimpleDateFormat inputFormat = new SimpleDateFormat(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;);</span>
-<span class="nc" id="L77">                this.indexedAt = inputFormat.parse(date);</span>
-<span class="nc" id="L78">            } else {</span>
-<span class="nc" id="L79">                this.indexedAt = new Date(Long.parseLong(date));</span>
+<span class="nc bnc" id="L73" title="All 2 branches missed.">        if (date != null) {</span>
+<span class="nc bnc" id="L74" title="All 6 branches missed.">            if (date.contains(&quot;:&quot;) || date.contains(&quot;T&quot;) || date.contains(&quot;Z&quot;)) {</span>
+<span class="nc" id="L75">                SimpleDateFormat inputFormat = new SimpleDateFormat(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;);</span>
+<span class="nc" id="L76">                this.indexedAt = inputFormat.parse(date);</span>
+<span class="nc" id="L77">            } else {</span>
+<span class="nc" id="L78">                this.indexedAt = new Date(Long.parseLong(date));</span>
             }
         }
-<span class="nc" id="L82">    }</span>
+<span class="nc" id="L81">    }</span>
 
     @Override
     public ObjectNode asJsonObject() throws JsonProcessingException {
-<span class="nc" id="L86">        ObjectMapper objectMapper = new ObjectMapper();</span>
-<span class="nc" id="L87">        ObjectNode json = new ObjectMapper().createObjectNode();</span>
-<span class="nc" id="L88">        return json.putObject(objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(this));</span>
+<span class="nc" id="L85">        ObjectMapper objectMapper = new ObjectMapper();</span>
+<span class="nc" id="L86">        ObjectNode json = new ObjectMapper().createObjectNode();</span>
+<span class="nc" id="L87">        return json.putObject(objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(this));</span>
     }
 
     @Override
     public String asJsonString() throws JsonProcessingException {
-<span class="nc" id="L93">        ObjectMapper objectMapper = new ObjectMapper();</span>
-<span class="nc" id="L94">        return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(this);</span>
+<span class="nc" id="L92">        ObjectMapper objectMapper = new ObjectMapper();</span>
+<span class="nc" id="L93">        return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(this);</span>
     }
 
 }

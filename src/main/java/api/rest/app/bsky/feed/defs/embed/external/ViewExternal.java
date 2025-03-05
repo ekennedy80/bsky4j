@@ -1,4 +1,4 @@
-package api.rest.app.bsky.feed.defs.embed;
+package api.rest.app.bsky.feed.defs.embed.external;
 
 import java.net.URI;
 
@@ -7,6 +7,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
+import api.rest.app.bsky.feed.defs.embed.AbstractEmbed;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
@@ -24,7 +25,9 @@ import lombok.NoArgsConstructor;
 @Builder
 @EqualsAndHashCode(callSuper=true)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class ExternalView extends AbstractEmbed {
+public class ViewExternal extends AbstractEmbed {
+
+    //AbstractEmbed type: app.bsky.embed.external#viewExternal
     
     @JsonProperty("uri")
     private URI uri;

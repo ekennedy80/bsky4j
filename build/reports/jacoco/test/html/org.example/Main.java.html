@@ -43,7 +43,7 @@ import static api.rest.GlobalVars.*;
         // if(LOGGER.isInfoEnabled())
         //     LOGGER.info(objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(suggestedFeeds));
 
-<span class="nc" id="L46">        Timeline timeline = feedHandler.getTimeline(serverHandler.getSession().getAccessJwt(), null, 100, null);</span>
+<span class="nc" id="L46">        ObjectNode timeline = feedHandler.getTimeline(serverHandler.getSession().getAccessJwt(), null, 100, null);</span>
 <span class="nc bnc" id="L47" title="All 2 branches missed.">        if(LOGGER.isInfoEnabled())</span>
 <span class="nc" id="L48">            LOGGER.info(objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(timeline));</span>
 
