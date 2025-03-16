@@ -80,14 +80,17 @@ public class ProfileViewBasic implements JsonFluentObject {
     }
 
     public ObjectNode asJsonObject() throws JsonProcessingException {
-        ObjectMapper objectMapper = new ObjectMapper();
         ObjectNode json = new ObjectMapper().createObjectNode();
-        return json.put("profile", objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(this));
+        return json.put("did", this.did)
+            .put("handle", this.handle)
+            .put("displayName", this.displayName)
+            .put("avatar", this.avatar.toString())
+            .put("createdAt", this.createdAt.toString())
+            .put("associated", this.associated.asJsonString());
     }
 
     public String asJsonString() throws JsonProcessingException {
-        ObjectMapper objectMapper = new ObjectMapper();
-        return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(this);
+        return asJsonObject().toPrettyString();
     }
 
 

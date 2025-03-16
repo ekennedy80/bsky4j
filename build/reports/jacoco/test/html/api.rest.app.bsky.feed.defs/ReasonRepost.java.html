@@ -31,14 +31,14 @@ public class ReasonRepost {
 
     @JsonSetter(&quot;indexedAt&quot;)
     public void setIndexedAt(String date) throws ParseException {
-<span class="nc bnc" id="L34" title="All 2 branches missed.">        if (date != null) {</span>
-<span class="nc bnc" id="L35" title="All 6 branches missed.">            if (date.contains(&quot;:&quot;) || date.contains(&quot;T&quot;) || date.contains(&quot;Z&quot;)) {</span>
-<span class="nc" id="L36">                SimpleDateFormat inputFormat = new SimpleDateFormat(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;);</span>
-<span class="nc" id="L37">                this.indexedAt = inputFormat.parse(date);</span>
-<span class="nc" id="L38">            } else {</span>
+<span class="pc bpc" id="L34" title="1 of 2 branches missed.">        if (date != null) {</span>
+<span class="pc bpc" id="L35" title="5 of 6 branches missed.">            if (date.contains(&quot;:&quot;) || date.contains(&quot;T&quot;) || date.contains(&quot;Z&quot;)) {</span>
+<span class="fc" id="L36">                SimpleDateFormat inputFormat = new SimpleDateFormat(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;);</span>
+<span class="fc" id="L37">                this.indexedAt = inputFormat.parse(date);</span>
+<span class="fc" id="L38">            } else {</span>
 <span class="nc" id="L39">                this.indexedAt = new Date(Long.parseLong(date));</span>
             }
         }
-<span class="nc" id="L42">    }</span>
+<span class="fc" id="L42">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

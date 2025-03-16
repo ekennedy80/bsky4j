@@ -8,7 +8,11 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ObjectNode;
 
+import api.rest.JsonFluentObject;
 import api.rest.app.bsky.actor.defs.profile.ProfileViewBasic;
 import jakarta.annotation.Nullable;
 import lombok.AllArgsConstructor;
@@ -20,7 +24,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class ReasonRepost {
+public class ReasonRepost implements JsonFluentObject {
 
     @JsonProperty("by")
     private ProfileViewBasic by;
@@ -39,5 +43,17 @@ public class ReasonRepost {
                 this.indexedAt = new Date(Long.parseLong(date));
             }
         }
+    }
+
+    @Override
+    public ObjectNode asJsonObject() throws JsonProcessingException {
+        ObjectNode json = new ObjectMapper().createObjectNode();
+        return json.put("by", this.by.asJsonString())
+            .put("indexedAt", indexedAt.toString());
+    }
+
+    @Override
+    public String asJsonString() throws JsonProcessingException {
+        return asJsonObject().toPrettyString();
     }
 }

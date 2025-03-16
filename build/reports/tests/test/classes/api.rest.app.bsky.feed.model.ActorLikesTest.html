@@ -41,7 +41,7 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.201s</div>
+<div class="counter">0.598s</div>
 <p>duration</p>
 </div>
 </td>
@@ -79,7 +79,7 @@
 </thead>
 <tr>
 <td class="success">testActorLikesUnmarshalling1()</td>
-<td class="success">0.201s</td>
+<td class="success">0.598s</td>
 <td class="success">passed</td>
 </tr>
 </table>
@@ -122,19 +122,36 @@
           &quot;createdAt&quot; : 1740261298000,
           &quot;embed&quot; : {
             &quot;$type&quot; : &quot;app.bsky.embed.images&quot;,
-            &quot;alt&quot; : null,
-            &quot;image&quot; : null,
-            &quot;aspectRatio&quot; : null
+            &quot;images&quot; : [ {
+              &quot;alt&quot; : &quot;&quot;,
+              &quot;image&quot; : {
+                &quot;$type&quot; : &quot;blob&quot;,
+                &quot;ref&quot; : {
+                  &quot;$link&quot; : &quot;bafkreicwjogcoftu7fq6asngc6zi6ytpzm7y4ipmjikr64vq4q3gqa4jba&quot;
+                },
+                &quot;mimeType&quot; : &quot;image/png&quot;,
+                &quot;size&quot; : 154617
+              },
+              &quot;aspectRatio&quot; : {
+                &quot;width&quot; : 2636,
+                &quot;height&quot; : 1162
+              }
+            } ]
           },
           &quot;langs&quot; : [ &quot;en&quot; ],
           &quot;text&quot; : &quot;Wow Queen Elonia Musk is a greedy fucker. World's richest man and he still wants to charge for his API.\n\nThankfully Bluesky, Mastodon/AP and Linkedin don't charge for access to their API's.&quot;
         },
         &quot;embed&quot; : {
           &quot;$type&quot; : &quot;app.bsky.embed.images#view&quot;,
-          &quot;thumb&quot; : null,
-          &quot;fullsize&quot; : null,
-          &quot;alt&quot; : null,
-          &quot;aspectRatio&quot; : null
+          &quot;images&quot; : [ {
+            &quot;thumb&quot; : &quot;https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:aayuwc3swhguj37ibrmratw2/bafkreicwjogcoftu7fq6asngc6zi6ytpzm7y4ipmjikr64vq4q3gqa4jba@jpeg&quot;,
+            &quot;fullsize&quot; : &quot;https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:aayuwc3swhguj37ibrmratw2/bafkreicwjogcoftu7fq6asngc6zi6ytpzm7y4ipmjikr64vq4q3gqa4jba@jpeg&quot;,
+            &quot;alt&quot; : &quot;&quot;,
+            &quot;aspectRatio&quot; : {
+              &quot;width&quot; : 2636,
+              &quot;height&quot; : 1162
+            }
+          } ]
         },
         &quot;replyCount&quot; : 1,
         &quot;repostCount&quot; : 0,
@@ -166,10 +183,19 @@
           &quot;createdAt&quot; : 1740322505034,
           &quot;embed&quot; : {
             &quot;$type&quot; : &quot;app.bsky.embed.external&quot;,
-            &quot;uri&quot; : null,
-            &quot;title&quot; : null,
-            &quot;description&quot; : null,
-            &quot;thumb&quot; : null
+            &quot;external&quot; : {
+              &quot;uri&quot; : &quot;https://apnews.com/article/trump-revokes-ethics-rules-drain-swamp-b8e3ba0f98c9c60af11a8e70cbc902bd&quot;,
+              &quot;title&quot; : &quot;Trump has canceled Biden's ethics rules. Critics call it the opposite of 'drain the swamp'&quot;,
+              &quot;description&quot; : &quot;Donald Trump took office eight years ago pledging to “drain the swamp” of the dominance of Washington influence peddlers.&quot;,
+              &quot;thumb&quot; : {
+                &quot;$type&quot; : &quot;blob&quot;,
+                &quot;ref&quot; : {
+                  &quot;$link&quot; : &quot;bafkreidler5ehdk27ujomrhpl3y5h2c2byvslcpexb6p3nshtnbk6gl62e&quot;
+                },
+                &quot;mimeType&quot; : &quot;image/jpeg&quot;,
+                &quot;size&quot; : 375039
+              }
+            }
           },
           &quot;facets&quot; : [ {
             &quot;index&quot; : {
@@ -186,10 +212,12 @@
         },
         &quot;embed&quot; : {
           &quot;$type&quot; : &quot;app.bsky.embed.external#view&quot;,
-          &quot;uri&quot; : null,
-          &quot;title&quot; : null,
-          &quot;description&quot; : null,
-          &quot;thumb&quot; : null
+          &quot;external&quot; : {
+            &quot;uri&quot; : &quot;https://apnews.com/article/trump-revokes-ethics-rules-drain-swamp-b8e3ba0f98c9c60af11a8e70cbc902bd&quot;,
+            &quot;title&quot; : &quot;Trump has canceled Biden's ethics rules. Critics call it the opposite of 'drain the swamp'&quot;,
+            &quot;description&quot; : &quot;Donald Trump took office eight years ago pledging to “drain the swamp” of the dominance of Washington influence peddlers.&quot;,
+            &quot;thumb&quot; : &quot;https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:y5xyloyy7s4a2bwfeimj7r3b/bafkreidler5ehdk27ujomrhpl3y5h2c2byvslcpexb6p3nshtnbk6gl62e@jpeg&quot;
+          }
         },
         &quot;replyCount&quot; : 1862,
         &quot;repostCount&quot; : 11856,
@@ -235,100 +263,7 @@
         &quot;labels&quot; : [ ]
       },
       &quot;reply&quot; : {
-        &quot;root&quot; : {
-          &quot;uri&quot; : &quot;at://did:plc:a6jj5lsu5vlgp23dxcmvg3ka/app.bsky.feed.post/3lirxir2eis2k&quot;,
-          &quot;cid&quot; : &quot;bafyreiecykbegafv4uyylu6wvwskvxuvoihx24jnnmz6tcwhzjuvzlzdlu&quot;,
-          &quot;author&quot; : {
-            &quot;did&quot; : &quot;did:plc:a6jj5lsu5vlgp23dxcmvg3ka&quot;,
-            &quot;handle&quot; : &quot;torontojoel.bsky.social&quot;,
-            &quot;displayName&quot; : &quot;Tor Ont &#x1f31f; ١٥٧٤&#x1d634; XRP &amp;  XLM &#x1f31f;&quot;,
-            &quot;avatar&quot; : &quot;https://cdn.bsky.app/img/avatar/plain/did:plc:a6jj5lsu5vlgp23dxcmvg3ka/bafkreig4ww66z375clwbqnze63xqeci7dsjqgt577byginelffaquozw2a@jpeg&quot;,
-            &quot;associated&quot; : {
-              &quot;chat&quot; : {
-                &quot;allowIncoming&quot; : &quot;all&quot;
-              }
-            },
-            &quot;viewer&quot; : {
-              &quot;muted&quot; : false,
-              &quot;blockedBy&quot; : false
-            },
-            &quot;labels&quot; : [ ],
-            &quot;createdAt&quot; : 1731541492712
-          },
-          &quot;record&quot; : {
-            &quot;$type&quot; : &quot;app.bsky.feed.post&quot;,
-            &quot;createdAt&quot; : 1740249301527,
-            &quot;embed&quot; : {
-              &quot;$type&quot; : &quot;app.bsky.embed.images&quot;,
-              &quot;alt&quot; : null,
-              &quot;image&quot; : null,
-              &quot;aspectRatio&quot; : null
-            },
-            &quot;langs&quot; : [ &quot;en&quot; ],
-            &quot;text&quot; : &quot;Who's up for some flag burnin'?&quot;
-          },
-          &quot;embed&quot; : {
-            &quot;$type&quot; : &quot;app.bsky.embed.images#view&quot;,
-            &quot;thumb&quot; : null,
-            &quot;fullsize&quot; : null,
-            &quot;alt&quot; : null,
-            &quot;aspectRatio&quot; : null
-          },
-          &quot;replyCount&quot; : 12,
-          &quot;repostCount&quot; : 91,
-          &quot;likeCount&quot; : 356,
-          &quot;quoteCount&quot; : 1,
-          &quot;indexedAt&quot; : 1740249302520,
-          &quot;viewer&quot; : { },
-          &quot;labels&quot; : [ ]
-        },
-        &quot;parent&quot; : {
-          &quot;uri&quot; : &quot;at://did:plc:a6jj5lsu5vlgp23dxcmvg3ka/app.bsky.feed.post/3lirxir2eis2k&quot;,
-          &quot;cid&quot; : &quot;bafyreiecykbegafv4uyylu6wvwskvxuvoihx24jnnmz6tcwhzjuvzlzdlu&quot;,
-          &quot;author&quot; : {
-            &quot;did&quot; : &quot;did:plc:a6jj5lsu5vlgp23dxcmvg3ka&quot;,
-            &quot;handle&quot; : &quot;torontojoel.bsky.social&quot;,
-            &quot;displayName&quot; : &quot;Tor Ont &#x1f31f; ١٥٧٤&#x1d634; XRP &amp;  XLM &#x1f31f;&quot;,
-            &quot;avatar&quot; : &quot;https://cdn.bsky.app/img/avatar/plain/did:plc:a6jj5lsu5vlgp23dxcmvg3ka/bafkreig4ww66z375clwbqnze63xqeci7dsjqgt577byginelffaquozw2a@jpeg&quot;,
-            &quot;associated&quot; : {
-              &quot;chat&quot; : {
-                &quot;allowIncoming&quot; : &quot;all&quot;
-              }
-            },
-            &quot;viewer&quot; : {
-              &quot;muted&quot; : false,
-              &quot;blockedBy&quot; : false
-            },
-            &quot;labels&quot; : [ ],
-            &quot;createdAt&quot; : 1731541492712
-          },
-          &quot;record&quot; : {
-            &quot;$type&quot; : &quot;app.bsky.feed.post&quot;,
-            &quot;createdAt&quot; : 1740249301527,
-            &quot;embed&quot; : {
-              &quot;$type&quot; : &quot;app.bsky.embed.images&quot;,
-              &quot;alt&quot; : null,
-              &quot;image&quot; : null,
-              &quot;aspectRatio&quot; : null
-            },
-            &quot;langs&quot; : [ &quot;en&quot; ],
-            &quot;text&quot; : &quot;Who's up for some flag burnin'?&quot;
-          },
-          &quot;embed&quot; : {
-            &quot;$type&quot; : &quot;app.bsky.embed.images#view&quot;,
-            &quot;thumb&quot; : null,
-            &quot;fullsize&quot; : null,
-            &quot;alt&quot; : null,
-            &quot;aspectRatio&quot; : null
-          },
-          &quot;replyCount&quot; : 12,
-          &quot;repostCount&quot; : 91,
-          &quot;likeCount&quot; : 356,
-          &quot;quoteCount&quot; : 1,
-          &quot;indexedAt&quot; : 1740249302520,
-          &quot;viewer&quot; : { },
-          &quot;labels&quot; : [ ]
-        }
+        &quot;root&quot; : { }
       }
     }, {
       &quot;post&quot; : {
@@ -362,10 +297,19 @@
           &quot;createdAt&quot; : 1740250168302,
           &quot;embed&quot; : {
             &quot;$type&quot; : &quot;app.bsky.embed.external&quot;,
-            &quot;uri&quot; : null,
-            &quot;title&quot; : null,
-            &quot;description&quot; : null,
-            &quot;thumb&quot; : null
+            &quot;external&quot; : {
+              &quot;uri&quot; : &quot;https://www.good.is/nba-legend-michael-jordan-opens-up-fourth-north-carolina-health-clinic-for-the-uninsured?utm_source=join1440&amp;utm_medium=email&amp;utm_placement=newsletter&amp;user_id=66c4c490600ae1507598089b&quot;,
+              &quot;title&quot; : &quot;NBA legend Michael Jordan opens up fourth North Carolina health clinic for the uninsured&quot;,
+              &quot;description&quot; : &quot;Michael Jordan is quietly becoming the GOAT of healthcare access.&quot;,
+              &quot;thumb&quot; : {
+                &quot;$type&quot; : &quot;blob&quot;,
+                &quot;ref&quot; : {
+                  &quot;$link&quot; : &quot;bafkreib2k7lz72yxilqsdeht2xkvlwemtudj44duaf75xvf6km7sq7qgpq&quot;
+                },
+                &quot;mimeType&quot; : &quot;image/jpeg&quot;,
+                &quot;size&quot; : 827986
+              }
+            }
           },
           &quot;facets&quot; : [ {
             &quot;index&quot; : {
@@ -382,10 +326,12 @@
         },
         &quot;embed&quot; : {
           &quot;$type&quot; : &quot;app.bsky.embed.external#view&quot;,
-          &quot;uri&quot; : null,
-          &quot;title&quot; : null,
-          &quot;description&quot; : null,
-          &quot;thumb&quot; : null
+          &quot;external&quot; : {
+            &quot;uri&quot; : &quot;https://www.good.is/nba-legend-michael-jordan-opens-up-fourth-north-carolina-health-clinic-for-the-uninsured?utm_source=join1440&amp;utm_medium=email&amp;utm_placement=newsletter&amp;user_id=66c4c490600ae1507598089b&quot;,
+            &quot;title&quot; : &quot;NBA legend Michael Jordan opens up fourth North Carolina health clinic for the uninsured&quot;,
+            &quot;description&quot; : &quot;Michael Jordan is quietly becoming the GOAT of healthcare access.&quot;,
+            &quot;thumb&quot; : &quot;https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:utjqvn5pubcwk3o5ajeozcbt/bafkreib2k7lz72yxilqsdeht2xkvlwemtudj44duaf75xvf6km7sq7qgpq@jpeg&quot;
+          }
         },
         &quot;replyCount&quot; : 6,
         &quot;repostCount&quot; : 89,
@@ -472,100 +418,7 @@
         &quot;labels&quot; : [ ]
       },
       &quot;reply&quot; : {
-        &quot;root&quot; : {
-          &quot;uri&quot; : &quot;at://did:plc:yngtevhy5oex4xqhd2c7fsqs/app.bsky.feed.post/3liplbwh6gk2u&quot;,
-          &quot;cid&quot; : &quot;bafyreigbjaya3vktk6m67zfbapu62oliatejp2vmgemik7pnnoad4wqnfa&quot;,
-          &quot;author&quot; : {
-            &quot;did&quot; : &quot;did:plc:yngtevhy5oex4xqhd2c7fsqs&quot;,
-            &quot;handle&quot; : &quot;germanusa.bsky.social&quot;,
-            &quot;displayName&quot; : &quot;&#x1f98b;German_USA - &#x1f308; ally &#x1f308; woke&#x1f499;&#x1f98b;&#x1f1ec;&#x1f1f1; &#x1f1e8;&#x1f1e6; &#x1f1f2;&#x1f1fd; &#x1f1f5;&#x1f1e6; &#x1f1e9;&#x1f1ea;&#x1f1ea;&#x1f1fa;&quot;,
-            &quot;avatar&quot; : &quot;https://cdn.bsky.app/img/avatar/plain/did:plc:yngtevhy5oex4xqhd2c7fsqs/bafkreifgyus5wx6dnccygbcztpohhukxduwunladtu7uehod3ruqvsxm7y@jpeg&quot;,
-            &quot;associated&quot; : {
-              &quot;chat&quot; : {
-                &quot;allowIncoming&quot; : &quot;none&quot;
-              }
-            },
-            &quot;viewer&quot; : {
-              &quot;muted&quot; : false,
-              &quot;blockedBy&quot; : false
-            },
-            &quot;labels&quot; : [ ],
-            &quot;createdAt&quot; : 1731445226645
-          },
-          &quot;record&quot; : {
-            &quot;$type&quot; : &quot;app.bsky.feed.post&quot;,
-            &quot;createdAt&quot; : 1740167467927,
-            &quot;embed&quot; : {
-              &quot;$type&quot; : &quot;app.bsky.embed.images&quot;,
-              &quot;alt&quot; : null,
-              &quot;image&quot; : null,
-              &quot;aspectRatio&quot; : null
-            },
-            &quot;langs&quot; : [ &quot;en&quot; ],
-            &quot;text&quot; : &quot;German \&quot;Der Spiegel \&quot; cover:\nBETRAYED \nFirst Zelensky, soon us? the radical departure of the USA from its allies.&quot;
-          },
-          &quot;embed&quot; : {
-            &quot;$type&quot; : &quot;app.bsky.embed.images#view&quot;,
-            &quot;thumb&quot; : null,
-            &quot;fullsize&quot; : null,
-            &quot;alt&quot; : null,
-            &quot;aspectRatio&quot; : null
-          },
-          &quot;replyCount&quot; : 12,
-          &quot;repostCount&quot; : 155,
-          &quot;likeCount&quot; : 406,
-          &quot;quoteCount&quot; : 11,
-          &quot;indexedAt&quot; : 1740167470418,
-          &quot;viewer&quot; : { },
-          &quot;labels&quot; : [ ]
-        },
-        &quot;parent&quot; : {
-          &quot;uri&quot; : &quot;at://did:plc:yngtevhy5oex4xqhd2c7fsqs/app.bsky.feed.post/3liplbwh6gk2u&quot;,
-          &quot;cid&quot; : &quot;bafyreigbjaya3vktk6m67zfbapu62oliatejp2vmgemik7pnnoad4wqnfa&quot;,
-          &quot;author&quot; : {
-            &quot;did&quot; : &quot;did:plc:yngtevhy5oex4xqhd2c7fsqs&quot;,
-            &quot;handle&quot; : &quot;germanusa.bsky.social&quot;,
-            &quot;displayName&quot; : &quot;&#x1f98b;German_USA - &#x1f308; ally &#x1f308; woke&#x1f499;&#x1f98b;&#x1f1ec;&#x1f1f1; &#x1f1e8;&#x1f1e6; &#x1f1f2;&#x1f1fd; &#x1f1f5;&#x1f1e6; &#x1f1e9;&#x1f1ea;&#x1f1ea;&#x1f1fa;&quot;,
-            &quot;avatar&quot; : &quot;https://cdn.bsky.app/img/avatar/plain/did:plc:yngtevhy5oex4xqhd2c7fsqs/bafkreifgyus5wx6dnccygbcztpohhukxduwunladtu7uehod3ruqvsxm7y@jpeg&quot;,
-            &quot;associated&quot; : {
-              &quot;chat&quot; : {
-                &quot;allowIncoming&quot; : &quot;none&quot;
-              }
-            },
-            &quot;viewer&quot; : {
-              &quot;muted&quot; : false,
-              &quot;blockedBy&quot; : false
-            },
-            &quot;labels&quot; : [ ],
-            &quot;createdAt&quot; : 1731445226645
-          },
-          &quot;record&quot; : {
-            &quot;$type&quot; : &quot;app.bsky.feed.post&quot;,
-            &quot;createdAt&quot; : 1740167467927,
-            &quot;embed&quot; : {
-              &quot;$type&quot; : &quot;app.bsky.embed.images&quot;,
-              &quot;alt&quot; : null,
-              &quot;image&quot; : null,
-              &quot;aspectRatio&quot; : null
-            },
-            &quot;langs&quot; : [ &quot;en&quot; ],
-            &quot;text&quot; : &quot;German \&quot;Der Spiegel \&quot; cover:\nBETRAYED \nFirst Zelensky, soon us? the radical departure of the USA from its allies.&quot;
-          },
-          &quot;embed&quot; : {
-            &quot;$type&quot; : &quot;app.bsky.embed.images#view&quot;,
-            &quot;thumb&quot; : null,
-            &quot;fullsize&quot; : null,
-            &quot;alt&quot; : null,
-            &quot;aspectRatio&quot; : null
-          },
-          &quot;replyCount&quot; : 12,
-          &quot;repostCount&quot; : 155,
-          &quot;likeCount&quot; : 406,
-          &quot;quoteCount&quot; : 11,
-          &quot;indexedAt&quot; : 1740167470418,
-          &quot;viewer&quot; : { },
-          &quot;labels&quot; : [ ]
-        }
+        &quot;root&quot; : { }
       }
     }, {
       &quot;post&quot; : {
@@ -593,19 +446,36 @@
           &quot;createdAt&quot; : 1740177287061,
           &quot;embed&quot; : {
             &quot;$type&quot; : &quot;app.bsky.embed.images&quot;,
-            &quot;alt&quot; : null,
-            &quot;image&quot; : null,
-            &quot;aspectRatio&quot; : null
+            &quot;images&quot; : [ {
+              &quot;alt&quot; : &quot;&quot;,
+              &quot;image&quot; : {
+                &quot;$type&quot; : &quot;blob&quot;,
+                &quot;ref&quot; : {
+                  &quot;$link&quot; : &quot;bafkreicsfoum6yhcu7fo7uzfz3w63gbfiw5cpxnttph66rxmfkz5axv2ve&quot;
+                },
+                &quot;mimeType&quot; : &quot;image/jpeg&quot;,
+                &quot;size&quot; : 590967
+              },
+              &quot;aspectRatio&quot; : {
+                &quot;width&quot; : 828,
+                &quot;height&quot; : 1626
+              }
+            } ]
           },
           &quot;langs&quot; : [ &quot;en&quot; ],
           &quot;text&quot; : &quot;TrumpEnomics just did a number on the stock market&quot;
         },
         &quot;embed&quot; : {
           &quot;$type&quot; : &quot;app.bsky.embed.images#view&quot;,
-          &quot;thumb&quot; : null,
-          &quot;fullsize&quot; : null,
-          &quot;alt&quot; : null,
-          &quot;aspectRatio&quot; : null
+          &quot;images&quot; : [ {
+            &quot;thumb&quot; : &quot;https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:kcjtqq4blsjo7utiur54vw25/bafkreicsfoum6yhcu7fo7uzfz3w63gbfiw5cpxnttph66rxmfkz5axv2ve@jpeg&quot;,
+            &quot;fullsize&quot; : &quot;https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:kcjtqq4blsjo7utiur54vw25/bafkreicsfoum6yhcu7fo7uzfz3w63gbfiw5cpxnttph66rxmfkz5axv2ve@jpeg&quot;,
+            &quot;alt&quot; : &quot;&quot;,
+            &quot;aspectRatio&quot; : {
+              &quot;width&quot; : 828,
+              &quot;height&quot; : 1626
+            }
+          } ]
         },
         &quot;replyCount&quot; : 11,
         &quot;repostCount&quot; : 37,
@@ -641,26 +511,13 @@
           &quot;$type&quot; : &quot;app.bsky.feed.post&quot;,
           &quot;createdAt&quot; : 1740236862537,
           &quot;embed&quot; : {
-            &quot;$type&quot; : &quot;app.bsky.embed.record&quot;,
-            &quot;cid&quot; : null,
-            &quot;uri&quot; : null
+            &quot;$type&quot; : &quot;app.bsky.embed.record&quot;
           },
           &quot;langs&quot; : [ &quot;en&quot; ],
           &quot;text&quot; : &quot;let me say that this is the classic “just asking questions” approach to delegitimizing the achievements of black people. and critically, you don’t even have to be a black person who talks about race. simply being black to these people means you are “obsessed with race.”&quot;
         },
         &quot;embed&quot; : {
-          &quot;$type&quot; : &quot;app.bsky.embed.record#view&quot;,
-          &quot;author&quot; : null,
-          &quot;cid&quot; : null,
-          &quot;embeds&quot; : null,
-          &quot;indexedAt&quot; : null,
-          &quot;labels&quot; : null,
-          &quot;likeCount&quot; : null,
-          &quot;quoteCount&quot; : null,
-          &quot;replyCount&quot; : null,
-          &quot;repostCount&quot; : null,
-          &quot;uri&quot; : null,
-          &quot;value&quot; : null
+          &quot;$type&quot; : &quot;app.bsky.embed.record#view&quot;
         },
         &quot;replyCount&quot; : 139,
         &quot;repostCount&quot; : 1711,
@@ -697,19 +554,36 @@
           &quot;createdAt&quot; : 1739980063304,
           &quot;embed&quot; : {
             &quot;$type&quot; : &quot;app.bsky.embed.images&quot;,
-            &quot;alt&quot; : null,
-            &quot;image&quot; : null,
-            &quot;aspectRatio&quot; : null
+            &quot;images&quot; : [ {
+              &quot;alt&quot; : &quot;&quot;,
+              &quot;image&quot; : {
+                &quot;$type&quot; : &quot;blob&quot;,
+                &quot;ref&quot; : {
+                  &quot;$link&quot; : &quot;bafkreidedm723jzoxgkcjjifrb3poyh6iqtguu3phqpeszbb7zl4qrz46q&quot;
+                },
+                &quot;mimeType&quot; : &quot;image/jpeg&quot;,
+                &quot;size&quot; : 798575
+              },
+              &quot;aspectRatio&quot; : {
+                &quot;width&quot; : 1280,
+                &quot;height&quot; : 1280
+              }
+            } ]
           },
           &quot;langs&quot; : [ &quot;en&quot; ],
           &quot;text&quot; : &quot;I’m George Takei and I approve of this message.&quot;
         },
         &quot;embed&quot; : {
           &quot;$type&quot; : &quot;app.bsky.embed.images#view&quot;,
-          &quot;thumb&quot; : null,
-          &quot;fullsize&quot; : null,
-          &quot;alt&quot; : null,
-          &quot;aspectRatio&quot; : null
+          &quot;images&quot; : [ {
+            &quot;thumb&quot; : &quot;https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:y4zs4cabaezzwx3bz2e5nnj2/bafkreidedm723jzoxgkcjjifrb3poyh6iqtguu3phqpeszbb7zl4qrz46q@jpeg&quot;,
+            &quot;fullsize&quot; : &quot;https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:y4zs4cabaezzwx3bz2e5nnj2/bafkreidedm723jzoxgkcjjifrb3poyh6iqtguu3phqpeszbb7zl4qrz46q@jpeg&quot;,
+            &quot;alt&quot; : &quot;&quot;,
+            &quot;aspectRatio&quot; : {
+              &quot;width&quot; : 1280,
+              &quot;height&quot; : 1280
+            }
+          } ]
         },
         &quot;replyCount&quot; : 2369,
         &quot;repostCount&quot; : 30547,
@@ -769,13 +643,13 @@
         },
         &quot;embed&quot; : {
           &quot;$type&quot; : &quot;app.bsky.embed.video#view&quot;,
-          &quot;cid&quot; : &quot;bafkreifreepdtf5ucx27pfxggapzzswjimq4qth5y4najquxjmtcevm3yq&quot;,
-          &quot;playlist&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3A654masw3zcz3dpiqmhpt43c7/bafkreifreepdtf5ucx27pfxggapzzswjimq4qth5y4najquxjmtcevm3yq/playlist.m3u8&quot;,
-          &quot;thumbnail&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3A654masw3zcz3dpiqmhpt43c7/bafkreifreepdtf5ucx27pfxggapzzswjimq4qth5y4najquxjmtcevm3yq/thumbnail.jpg&quot;,
           &quot;aspectRatio&quot; : {
             &quot;width&quot; : 480,
             &quot;height&quot; : 778
-          }
+          },
+          &quot;cid&quot; : &quot;bafkreifreepdtf5ucx27pfxggapzzswjimq4qth5y4najquxjmtcevm3yq&quot;,
+          &quot;playlist&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3A654masw3zcz3dpiqmhpt43c7/bafkreifreepdtf5ucx27pfxggapzzswjimq4qth5y4najquxjmtcevm3yq/playlist.m3u8&quot;,
+          &quot;thumbnail&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3A654masw3zcz3dpiqmhpt43c7/bafkreifreepdtf5ucx27pfxggapzzswjimq4qth5y4najquxjmtcevm3yq/thumbnail.jpg&quot;
         },
         &quot;replyCount&quot; : 9,
         &quot;repostCount&quot; : 100,
@@ -824,13 +698,13 @@
         },
         &quot;embed&quot; : {
           &quot;$type&quot; : &quot;app.bsky.embed.video#view&quot;,
-          &quot;cid&quot; : &quot;bafkreifxnfp7wkkpbjxdllldcnmskhxrerjbr6kgj6ry3tpuszhd4yj4zy&quot;,
-          &quot;playlist&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3Ayvsdaz5wowzwc5fp57p7qo52/bafkreifxnfp7wkkpbjxdllldcnmskhxrerjbr6kgj6ry3tpuszhd4yj4zy/playlist.m3u8&quot;,
-          &quot;thumbnail&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3Ayvsdaz5wowzwc5fp57p7qo52/bafkreifxnfp7wkkpbjxdllldcnmskhxrerjbr6kgj6ry3tpuszhd4yj4zy/thumbnail.jpg&quot;,
           &quot;aspectRatio&quot; : {
             &quot;width&quot; : 1080,
             &quot;height&quot; : 1246
-          }
+          },
+          &quot;cid&quot; : &quot;bafkreifxnfp7wkkpbjxdllldcnmskhxrerjbr6kgj6ry3tpuszhd4yj4zy&quot;,
+          &quot;playlist&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3Ayvsdaz5wowzwc5fp57p7qo52/bafkreifxnfp7wkkpbjxdllldcnmskhxrerjbr6kgj6ry3tpuszhd4yj4zy/playlist.m3u8&quot;,
+          &quot;thumbnail&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3Ayvsdaz5wowzwc5fp57p7qo52/bafkreifxnfp7wkkpbjxdllldcnmskhxrerjbr6kgj6ry3tpuszhd4yj4zy/thumbnail.jpg&quot;
         },
         &quot;replyCount&quot; : 0,
         &quot;repostCount&quot; : 13,
@@ -879,13 +753,13 @@
         },
         &quot;embed&quot; : {
           &quot;$type&quot; : &quot;app.bsky.embed.video#view&quot;,
-          &quot;cid&quot; : &quot;bafkreigrawduweb5z4tajspadihhjn7xrefnbb5723fnaiewfhedu5e7xq&quot;,
-          &quot;playlist&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3A3fpgkbjy6nhqhg5bpyd6wudm/bafkreigrawduweb5z4tajspadihhjn7xrefnbb5723fnaiewfhedu5e7xq/playlist.m3u8&quot;,
-          &quot;thumbnail&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3A3fpgkbjy6nhqhg5bpyd6wudm/bafkreigrawduweb5z4tajspadihhjn7xrefnbb5723fnaiewfhedu5e7xq/thumbnail.jpg&quot;,
           &quot;aspectRatio&quot; : {
             &quot;width&quot; : 711,
             &quot;height&quot; : 590
-          }
+          },
+          &quot;cid&quot; : &quot;bafkreigrawduweb5z4tajspadihhjn7xrefnbb5723fnaiewfhedu5e7xq&quot;,
+          &quot;playlist&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3A3fpgkbjy6nhqhg5bpyd6wudm/bafkreigrawduweb5z4tajspadihhjn7xrefnbb5723fnaiewfhedu5e7xq/playlist.m3u8&quot;,
+          &quot;thumbnail&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3A3fpgkbjy6nhqhg5bpyd6wudm/bafkreigrawduweb5z4tajspadihhjn7xrefnbb5723fnaiewfhedu5e7xq/thumbnail.jpg&quot;
         },
         &quot;replyCount&quot; : 28,
         &quot;repostCount&quot; : 104,
@@ -934,13 +808,13 @@
         },
         &quot;embed&quot; : {
           &quot;$type&quot; : &quot;app.bsky.embed.video#view&quot;,
-          &quot;cid&quot; : &quot;bafkreibzkelztvuwjb5tdyncx2vueqd24rulb5wswxi7zeerobcnf6f6vq&quot;,
-          &quot;playlist&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3Ahy4kwkakey4eawsw6jjzoc3j/bafkreibzkelztvuwjb5tdyncx2vueqd24rulb5wswxi7zeerobcnf6f6vq/playlist.m3u8&quot;,
-          &quot;thumbnail&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3Ahy4kwkakey4eawsw6jjzoc3j/bafkreibzkelztvuwjb5tdyncx2vueqd24rulb5wswxi7zeerobcnf6f6vq/thumbnail.jpg&quot;,
           &quot;aspectRatio&quot; : {
             &quot;width&quot; : 1280,
             &quot;height&quot; : 720
-          }
+          },
+          &quot;cid&quot; : &quot;bafkreibzkelztvuwjb5tdyncx2vueqd24rulb5wswxi7zeerobcnf6f6vq&quot;,
+          &quot;playlist&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3Ahy4kwkakey4eawsw6jjzoc3j/bafkreibzkelztvuwjb5tdyncx2vueqd24rulb5wswxi7zeerobcnf6f6vq/playlist.m3u8&quot;,
+          &quot;thumbnail&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3Ahy4kwkakey4eawsw6jjzoc3j/bafkreibzkelztvuwjb5tdyncx2vueqd24rulb5wswxi7zeerobcnf6f6vq/thumbnail.jpg&quot;
         },
         &quot;replyCount&quot; : 164,
         &quot;repostCount&quot; : 108,
@@ -989,13 +863,13 @@
         },
         &quot;embed&quot; : {
           &quot;$type&quot; : &quot;app.bsky.embed.video#view&quot;,
-          &quot;cid&quot; : &quot;bafkreiejxnjaqpfogacde36rwfdyb6qosmgerrtfs2ozutsjgnm6d54hmq&quot;,
-          &quot;playlist&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3Avdkutau3xlw4p5jgj7cihr3i/bafkreiejxnjaqpfogacde36rwfdyb6qosmgerrtfs2ozutsjgnm6d54hmq/playlist.m3u8&quot;,
-          &quot;thumbnail&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3Avdkutau3xlw4p5jgj7cihr3i/bafkreiejxnjaqpfogacde36rwfdyb6qosmgerrtfs2ozutsjgnm6d54hmq/thumbnail.jpg&quot;,
           &quot;aspectRatio&quot; : {
             &quot;width&quot; : 1280,
             &quot;height&quot; : 720
-          }
+          },
+          &quot;cid&quot; : &quot;bafkreiejxnjaqpfogacde36rwfdyb6qosmgerrtfs2ozutsjgnm6d54hmq&quot;,
+          &quot;playlist&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3Avdkutau3xlw4p5jgj7cihr3i/bafkreiejxnjaqpfogacde36rwfdyb6qosmgerrtfs2ozutsjgnm6d54hmq/playlist.m3u8&quot;,
+          &quot;thumbnail&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3Avdkutau3xlw4p5jgj7cihr3i/bafkreiejxnjaqpfogacde36rwfdyb6qosmgerrtfs2ozutsjgnm6d54hmq/thumbnail.jpg&quot;
         },
         &quot;replyCount&quot; : 21,
         &quot;repostCount&quot; : 154,
@@ -1055,13 +929,13 @@
         },
         &quot;embed&quot; : {
           &quot;$type&quot; : &quot;app.bsky.embed.video#view&quot;,
-          &quot;cid&quot; : &quot;bafkreidtuyqvatr2svp4chje3sel3phttuqmnv7k434lat2vv4bu4hh23i&quot;,
-          &quot;playlist&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3Amfrcz3kv7bsth54bkyrridp5/bafkreidtuyqvatr2svp4chje3sel3phttuqmnv7k434lat2vv4bu4hh23i/playlist.m3u8&quot;,
-          &quot;thumbnail&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3Amfrcz3kv7bsth54bkyrridp5/bafkreidtuyqvatr2svp4chje3sel3phttuqmnv7k434lat2vv4bu4hh23i/thumbnail.jpg&quot;,
           &quot;aspectRatio&quot; : {
             &quot;width&quot; : 1114,
             &quot;height&quot; : 576
-          }
+          },
+          &quot;cid&quot; : &quot;bafkreidtuyqvatr2svp4chje3sel3phttuqmnv7k434lat2vv4bu4hh23i&quot;,
+          &quot;playlist&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3Amfrcz3kv7bsth54bkyrridp5/bafkreidtuyqvatr2svp4chje3sel3phttuqmnv7k434lat2vv4bu4hh23i/playlist.m3u8&quot;,
+          &quot;thumbnail&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3Amfrcz3kv7bsth54bkyrridp5/bafkreidtuyqvatr2svp4chje3sel3phttuqmnv7k434lat2vv4bu4hh23i/thumbnail.jpg&quot;
         },
         &quot;replyCount&quot; : 239,
         &quot;repostCount&quot; : 384,
@@ -1110,13 +984,13 @@
         },
         &quot;embed&quot; : {
           &quot;$type&quot; : &quot;app.bsky.embed.video#view&quot;,
-          &quot;cid&quot; : &quot;bafkreig37l7n3tacwi2nzguegerm3n4zasihcawrg6aw5qb32youl57u6u&quot;,
-          &quot;playlist&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3A7ihvojd435lxcyvx5c5r6dip/bafkreig37l7n3tacwi2nzguegerm3n4zasihcawrg6aw5qb32youl57u6u/playlist.m3u8&quot;,
-          &quot;thumbnail&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3A7ihvojd435lxcyvx5c5r6dip/bafkreig37l7n3tacwi2nzguegerm3n4zasihcawrg6aw5qb32youl57u6u/thumbnail.jpg&quot;,
           &quot;aspectRatio&quot; : {
             &quot;width&quot; : 3840,
             &quot;height&quot; : 2160
-          }
+          },
+          &quot;cid&quot; : &quot;bafkreig37l7n3tacwi2nzguegerm3n4zasihcawrg6aw5qb32youl57u6u&quot;,
+          &quot;playlist&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3A7ihvojd435lxcyvx5c5r6dip/bafkreig37l7n3tacwi2nzguegerm3n4zasihcawrg6aw5qb32youl57u6u/playlist.m3u8&quot;,
+          &quot;thumbnail&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3A7ihvojd435lxcyvx5c5r6dip/bafkreig37l7n3tacwi2nzguegerm3n4zasihcawrg6aw5qb32youl57u6u/thumbnail.jpg&quot;
         },
         &quot;replyCount&quot; : 39,
         &quot;repostCount&quot; : 76,
@@ -1152,10 +1026,23 @@
           &quot;createdAt&quot; : 1739933076283,
           &quot;embed&quot; : {
             &quot;$type&quot; : &quot;app.bsky.embed.video&quot;,
+            &quot;alt&quot; : &quot;&quot;,
             &quot;aspectRatio&quot; : {
               &quot;width&quot; : 1280,
               &quot;height&quot; : 720
             },
+            &quot;captions&quot; : [ {
+              &quot;$type&quot; : &quot;app.bsky.embed.video#caption&quot;,
+              &quot;file&quot; : {
+                &quot;$type&quot; : &quot;blob&quot;,
+                &quot;ref&quot; : {
+                  &quot;$link&quot; : &quot;bafkreigfzf2adwc2nvilu563qkgyjuvrpjfxsurf5yuss6tfv5622hgzpy&quot;
+                },
+                &quot;mimeType&quot; : &quot;text/vtt&quot;,
+                &quot;size&quot; : 2367
+              },
+              &quot;lang&quot; : &quot;en&quot;
+            } ],
             &quot;video&quot; : {
               &quot;$type&quot; : &quot;blob&quot;,
               &quot;ref&quot; : {
@@ -1171,13 +1058,14 @@
         },
         &quot;embed&quot; : {
           &quot;$type&quot; : &quot;app.bsky.embed.video#view&quot;,
-          &quot;cid&quot; : &quot;bafkreidi352y5pi77dpqmkki5bo7blucwtqjzmzsglyg7yh7zz3q63es6e&quot;,
-          &quot;playlist&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3A4llrhdclvdlmmynkwsmg5tdc/bafkreidi352y5pi77dpqmkki5bo7blucwtqjzmzsglyg7yh7zz3q63es6e/playlist.m3u8&quot;,
-          &quot;thumbnail&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3A4llrhdclvdlmmynkwsmg5tdc/bafkreidi352y5pi77dpqmkki5bo7blucwtqjzmzsglyg7yh7zz3q63es6e/thumbnail.jpg&quot;,
+          &quot;alt&quot; : &quot;&quot;,
           &quot;aspectRatio&quot; : {
             &quot;width&quot; : 1280,
             &quot;height&quot; : 720
-          }
+          },
+          &quot;cid&quot; : &quot;bafkreidi352y5pi77dpqmkki5bo7blucwtqjzmzsglyg7yh7zz3q63es6e&quot;,
+          &quot;playlist&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3A4llrhdclvdlmmynkwsmg5tdc/bafkreidi352y5pi77dpqmkki5bo7blucwtqjzmzsglyg7yh7zz3q63es6e/playlist.m3u8&quot;,
+          &quot;thumbnail&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3A4llrhdclvdlmmynkwsmg5tdc/bafkreidi352y5pi77dpqmkki5bo7blucwtqjzmzsglyg7yh7zz3q63es6e/thumbnail.jpg&quot;
         },
         &quot;replyCount&quot; : 551,
         &quot;repostCount&quot; : 6377,
@@ -1226,13 +1114,13 @@
         },
         &quot;embed&quot; : {
           &quot;$type&quot; : &quot;app.bsky.embed.video#view&quot;,
-          &quot;cid&quot; : &quot;bafkreideh3ltpd3syol2lltnw6tjezid5sgcko6gpjel6rtx7rozwn6dyy&quot;,
-          &quot;playlist&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3Aaabcopzc52gc5asf6hzvxfau/bafkreideh3ltpd3syol2lltnw6tjezid5sgcko6gpjel6rtx7rozwn6dyy/playlist.m3u8&quot;,
-          &quot;thumbnail&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3Aaabcopzc52gc5asf6hzvxfau/bafkreideh3ltpd3syol2lltnw6tjezid5sgcko6gpjel6rtx7rozwn6dyy/thumbnail.jpg&quot;,
           &quot;aspectRatio&quot; : {
             &quot;width&quot; : 350,
             &quot;height&quot; : 168
-          }
+          },
+          &quot;cid&quot; : &quot;bafkreideh3ltpd3syol2lltnw6tjezid5sgcko6gpjel6rtx7rozwn6dyy&quot;,
+          &quot;playlist&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3Aaabcopzc52gc5asf6hzvxfau/bafkreideh3ltpd3syol2lltnw6tjezid5sgcko6gpjel6rtx7rozwn6dyy/playlist.m3u8&quot;,
+          &quot;thumbnail&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3Aaabcopzc52gc5asf6hzvxfau/bafkreideh3ltpd3syol2lltnw6tjezid5sgcko6gpjel6rtx7rozwn6dyy/thumbnail.jpg&quot;
         },
         &quot;replyCount&quot; : 6,
         &quot;repostCount&quot; : 5,
@@ -1269,20 +1157,31 @@
           &quot;createdAt&quot; : 1739914770398,
           &quot;embed&quot; : {
             &quot;$type&quot; : &quot;app.bsky.embed.external&quot;,
-            &quot;uri&quot; : null,
-            &quot;title&quot; : null,
-            &quot;description&quot; : null,
-            &quot;thumb&quot; : null
+            &quot;external&quot; : {
+              &quot;uri&quot; : &quot;https://media.tenor.com/-0u_GCY-iDEAAAAC/homer-simpson.gif?hh=160&amp;ww=220&quot;,
+              &quot;title&quot; : &quot;a cartoon of homer simpson standing in a field&quot;,
+              &quot;description&quot; : &quot;ALT: a cartoon of homer simpson standing in a field&quot;,
+              &quot;thumb&quot; : {
+                &quot;$type&quot; : &quot;blob&quot;,
+                &quot;ref&quot; : {
+                  &quot;$link&quot; : &quot;bafkreig4624mpadyr5xyi6iquuvfzahqrjs5sqqwjksmosexuvvzhmaqxu&quot;
+                },
+                &quot;mimeType&quot; : &quot;image/jpeg&quot;,
+                &quot;size&quot; : 34333
+              }
+            }
           },
           &quot;langs&quot; : [ &quot;en&quot; ],
           &quot;text&quot; : &quot;Congressmen when they are asked if they will cut THEIR budgets and lay off staff as well:&quot;
         },
         &quot;embed&quot; : {
           &quot;$type&quot; : &quot;app.bsky.embed.external#view&quot;,
-          &quot;uri&quot; : null,
-          &quot;title&quot; : null,
-          &quot;description&quot; : null,
-          &quot;thumb&quot; : null
+          &quot;external&quot; : {
+            &quot;uri&quot; : &quot;https://media.tenor.com/-0u_GCY-iDEAAAAC/homer-simpson.gif?hh=160&amp;ww=220&quot;,
+            &quot;title&quot; : &quot;a cartoon of homer simpson standing in a field&quot;,
+            &quot;description&quot; : &quot;ALT: a cartoon of homer simpson standing in a field&quot;,
+            &quot;thumb&quot; : &quot;https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:tsksqpjisdvtusxq6ide5tzj/bafkreig4624mpadyr5xyi6iquuvfzahqrjs5sqqwjksmosexuvvzhmaqxu@jpeg&quot;
+          }
         },
         &quot;replyCount&quot; : 556,
         &quot;repostCount&quot; : 5448,
@@ -1353,10 +1252,23 @@
           &quot;createdAt&quot; : 1739928116644,
           &quot;embed&quot; : {
             &quot;$type&quot; : &quot;app.bsky.embed.video&quot;,
+            &quot;alt&quot; : &quot;&quot;,
             &quot;aspectRatio&quot; : {
               &quot;width&quot; : 1280,
               &quot;height&quot; : 720
             },
+            &quot;captions&quot; : [ {
+              &quot;$type&quot; : &quot;app.bsky.embed.video#caption&quot;,
+              &quot;file&quot; : {
+                &quot;$type&quot; : &quot;blob&quot;,
+                &quot;ref&quot; : {
+                  &quot;$link&quot; : &quot;bafkreif2m6czycz5j3gfldx2udsikezc66yhtfhf7yxrkymq4pwdiaxdzu&quot;
+                },
+                &quot;mimeType&quot; : &quot;text/vtt&quot;,
+                &quot;size&quot; : 2073
+              },
+              &quot;lang&quot; : &quot;en&quot;
+            } ],
             &quot;video&quot; : {
               &quot;$type&quot; : &quot;blob&quot;,
               &quot;ref&quot; : {
@@ -1372,13 +1284,14 @@
         },
         &quot;embed&quot; : {
           &quot;$type&quot; : &quot;app.bsky.embed.video#view&quot;,
-          &quot;cid&quot; : &quot;bafkreib3nkqdih2752qls4zwr2ctxyewgwevyzlngojlbrekwaxrqhudtm&quot;,
-          &quot;playlist&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3A4llrhdclvdlmmynkwsmg5tdc/bafkreib3nkqdih2752qls4zwr2ctxyewgwevyzlngojlbrekwaxrqhudtm/playlist.m3u8&quot;,
-          &quot;thumbnail&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3A4llrhdclvdlmmynkwsmg5tdc/bafkreib3nkqdih2752qls4zwr2ctxyewgwevyzlngojlbrekwaxrqhudtm/thumbnail.jpg&quot;,
+          &quot;alt&quot; : &quot;&quot;,
           &quot;aspectRatio&quot; : {
             &quot;width&quot; : 1280,
             &quot;height&quot; : 720
-          }
+          },
+          &quot;cid&quot; : &quot;bafkreib3nkqdih2752qls4zwr2ctxyewgwevyzlngojlbrekwaxrqhudtm&quot;,
+          &quot;playlist&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3A4llrhdclvdlmmynkwsmg5tdc/bafkreib3nkqdih2752qls4zwr2ctxyewgwevyzlngojlbrekwaxrqhudtm/playlist.m3u8&quot;,
+          &quot;thumbnail&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3A4llrhdclvdlmmynkwsmg5tdc/bafkreib3nkqdih2752qls4zwr2ctxyewgwevyzlngojlbrekwaxrqhudtm/thumbnail.jpg&quot;
         },
         &quot;replyCount&quot; : 1111,
         &quot;repostCount&quot; : 13495,
@@ -1440,9 +1353,21 @@
           &quot;createdAt&quot; : 1739822166479,
           &quot;embed&quot; : {
             &quot;$type&quot; : &quot;app.bsky.embed.images&quot;,
-            &quot;alt&quot; : null,
-            &quot;image&quot; : null,
-            &quot;aspectRatio&quot; : null
+            &quot;images&quot; : [ {
+              &quot;alt&quot; : &quot;Presidents' Day protest on the steps of the Idaho State Capitol. &quot;,
+              &quot;image&quot; : {
+                &quot;$type&quot; : &quot;blob&quot;,
+                &quot;ref&quot; : {
+                  &quot;$link&quot; : &quot;bafkreiaegsf2u4xdtr7nc4vsfe6s6ddkls3xgkyvkyphtmwssqmm5wnrky&quot;
+                },
+                &quot;mimeType&quot; : &quot;image/jpeg&quot;,
+                &quot;size&quot; : 998050
+              },
+              &quot;aspectRatio&quot; : {
+                &quot;width&quot; : 2000,
+                &quot;height&quot; : 1500
+              }
+            } ]
           },
           &quot;facets&quot; : [ {
             &quot;index&quot; : {
@@ -1486,10 +1411,15 @@
         },
         &quot;embed&quot; : {
           &quot;$type&quot; : &quot;app.bsky.embed.images#view&quot;,
-          &quot;thumb&quot; : null,
-          &quot;fullsize&quot; : null,
-          &quot;alt&quot; : null,
-          &quot;aspectRatio&quot; : null
+          &quot;images&quot; : [ {
+            &quot;thumb&quot; : &quot;https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:elsk4pvoxygbgz5qb3j2h2sx/bafkreiaegsf2u4xdtr7nc4vsfe6s6ddkls3xgkyvkyphtmwssqmm5wnrky@jpeg&quot;,
+            &quot;fullsize&quot; : &quot;https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:elsk4pvoxygbgz5qb3j2h2sx/bafkreiaegsf2u4xdtr7nc4vsfe6s6ddkls3xgkyvkyphtmwssqmm5wnrky@jpeg&quot;,
+            &quot;alt&quot; : &quot;Presidents' Day protest on the steps of the Idaho State Capitol. &quot;,
+            &quot;aspectRatio&quot; : {
+              &quot;width&quot; : 2000,
+              &quot;height&quot; : 1500
+            }
+          } ]
         },
         &quot;replyCount&quot; : 15,
         &quot;repostCount&quot; : 108,
@@ -1525,9 +1455,21 @@
           &quot;createdAt&quot; : 1739819161411,
           &quot;embed&quot; : {
             &quot;$type&quot; : &quot;app.bsky.embed.images&quot;,
-            &quot;alt&quot; : null,
-            &quot;image&quot; : null,
-            &quot;aspectRatio&quot; : null
+            &quot;images&quot; : [ {
+              &quot;alt&quot; : &quot;&quot;,
+              &quot;image&quot; : {
+                &quot;$type&quot; : &quot;blob&quot;,
+                &quot;ref&quot; : {
+                  &quot;$link&quot; : &quot;bafkreib4o676c3shohcuv73rjusctkelew2rmv5hmynl2pzvyymisbzham&quot;
+                },
+                &quot;mimeType&quot; : &quot;image/jpeg&quot;,
+                &quot;size&quot; : 919301
+              },
+              &quot;aspectRatio&quot; : {
+                &quot;width&quot; : 2000,
+                &quot;height&quot; : 1500
+              }
+            } ]
           },
           &quot;facets&quot; : [ {
             &quot;index&quot; : {
@@ -1553,10 +1495,15 @@
         },
         &quot;embed&quot; : {
           &quot;$type&quot; : &quot;app.bsky.embed.images#view&quot;,
-          &quot;thumb&quot; : null,
-          &quot;fullsize&quot; : null,
-          &quot;alt&quot; : null,
-          &quot;aspectRatio&quot; : null
+          &quot;images&quot; : [ {
+            &quot;thumb&quot; : &quot;https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:nxhz7gqz3d4zfwvtq3uh4uxx/bafkreib4o676c3shohcuv73rjusctkelew2rmv5hmynl2pzvyymisbzham@jpeg&quot;,
+            &quot;fullsize&quot; : &quot;https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:nxhz7gqz3d4zfwvtq3uh4uxx/bafkreib4o676c3shohcuv73rjusctkelew2rmv5hmynl2pzvyymisbzham@jpeg&quot;,
+            &quot;alt&quot; : &quot;&quot;,
+            &quot;aspectRatio&quot; : {
+              &quot;width&quot; : 2000,
+              &quot;height&quot; : 1500
+            }
+          } ]
         },
         &quot;replyCount&quot; : 0,
         &quot;repostCount&quot; : 6,
@@ -1567,94 +1514,7 @@
         &quot;labels&quot; : [ ]
       },
       &quot;reply&quot; : {
-        &quot;root&quot; : {
-          &quot;uri&quot; : &quot;at://did:plc:nxhz7gqz3d4zfwvtq3uh4uxx/app.bsky.feed.post/3lifgkk7h6s2u&quot;,
-          &quot;cid&quot; : &quot;bafyreibqagfe6foczpffeeu5awy23btqfmn6xj34t2tm7swgj7bh57f5ty&quot;,
-          &quot;author&quot; : {
-            &quot;did&quot; : &quot;did:plc:nxhz7gqz3d4zfwvtq3uh4uxx&quot;,
-            &quot;handle&quot; : &quot;fearlessfreedom.bsky.social&quot;,
-            &quot;displayName&quot; : &quot;Freedom&quot;,
-            &quot;avatar&quot; : &quot;https://cdn.bsky.app/img/avatar/plain/did:plc:nxhz7gqz3d4zfwvtq3uh4uxx/bafkreiet5udfla4vsic73n7ntzdmk6olspbzj6idn733e2yqgrgmvsbf64@jpeg&quot;,
-            &quot;associated&quot; : {
-              &quot;chat&quot; : {
-                &quot;allowIncoming&quot; : &quot;none&quot;
-              }
-            },
-            &quot;viewer&quot; : {
-              &quot;muted&quot; : false,
-              &quot;blockedBy&quot; : false
-            },
-            &quot;labels&quot; : [ ],
-            &quot;createdAt&quot; : 1738865594413
-          },
-          &quot;record&quot; : {
-            &quot;$type&quot; : &quot;app.bsky.feed.post&quot;,
-            &quot;createdAt&quot; : 1739818790992,
-            &quot;facets&quot; : [ {
-              &quot;index&quot; : {
-                &quot;byteStart&quot; : 0,
-                &quot;byteEnd&quot; : 12
-              },
-              &quot;features&quot; : [ {
-                &quot;$type&quot; : &quot;app.bsky.richtext.facet#tag&quot;,
-                &quot;tag&quot; : &quot;trumpmuskgo&quot;
-              } ]
-            } ],
-            &quot;langs&quot; : [ &quot;en&quot; ],
-            &quot;text&quot; : &quot;#trumpmuskgo&quot;
-          },
-          &quot;replyCount&quot; : 54,
-          &quot;repostCount&quot; : 2,
-          &quot;likeCount&quot; : 8,
-          &quot;quoteCount&quot; : 0,
-          &quot;indexedAt&quot; : 1739818791719,
-          &quot;viewer&quot; : { },
-          &quot;labels&quot; : [ ]
-        },
-        &quot;parent&quot; : {
-          &quot;uri&quot; : &quot;at://did:plc:nxhz7gqz3d4zfwvtq3uh4uxx/app.bsky.feed.post/3lifgkk7h6s2u&quot;,
-          &quot;cid&quot; : &quot;bafyreibqagfe6foczpffeeu5awy23btqfmn6xj34t2tm7swgj7bh57f5ty&quot;,
-          &quot;author&quot; : {
-            &quot;did&quot; : &quot;did:plc:nxhz7gqz3d4zfwvtq3uh4uxx&quot;,
-            &quot;handle&quot; : &quot;fearlessfreedom.bsky.social&quot;,
-            &quot;displayName&quot; : &quot;Freedom&quot;,
-            &quot;avatar&quot; : &quot;https://cdn.bsky.app/img/avatar/plain/did:plc:nxhz7gqz3d4zfwvtq3uh4uxx/bafkreiet5udfla4vsic73n7ntzdmk6olspbzj6idn733e2yqgrgmvsbf64@jpeg&quot;,
-            &quot;associated&quot; : {
-              &quot;chat&quot; : {
-                &quot;allowIncoming&quot; : &quot;none&quot;
-              }
-            },
-            &quot;viewer&quot; : {
-              &quot;muted&quot; : false,
-              &quot;blockedBy&quot; : false
-            },
-            &quot;labels&quot; : [ ],
-            &quot;createdAt&quot; : 1738865594413
-          },
-          &quot;record&quot; : {
-            &quot;$type&quot; : &quot;app.bsky.feed.post&quot;,
-            &quot;createdAt&quot; : 1739818790992,
-            &quot;facets&quot; : [ {
-              &quot;index&quot; : {
-                &quot;byteStart&quot; : 0,
-                &quot;byteEnd&quot; : 12
-              },
-              &quot;features&quot; : [ {
-                &quot;$type&quot; : &quot;app.bsky.richtext.facet#tag&quot;,
-                &quot;tag&quot; : &quot;trumpmuskgo&quot;
-              } ]
-            } ],
-            &quot;langs&quot; : [ &quot;en&quot; ],
-            &quot;text&quot; : &quot;#trumpmuskgo&quot;
-          },
-          &quot;replyCount&quot; : 54,
-          &quot;repostCount&quot; : 2,
-          &quot;likeCount&quot; : 8,
-          &quot;quoteCount&quot; : 0,
-          &quot;indexedAt&quot; : 1739818791719,
-          &quot;viewer&quot; : { },
-          &quot;labels&quot; : [ ]
-        }
+        &quot;root&quot; : { }
       }
     }, {
       &quot;post&quot; : {
@@ -1692,90 +1552,7 @@
         &quot;labels&quot; : [ ]
       },
       &quot;reply&quot; : {
-        &quot;root&quot; : {
-          &quot;uri&quot; : &quot;at://did:plc:qxwx3yb4m3dmjbu5luyyi7zm/app.bsky.feed.post/3licovwn3ks2s&quot;,
-          &quot;cid&quot; : &quot;bafyreifkpa4lp5o44uuvuocuv23nd5bkdnadafwwzjkjoqjl226yue56he&quot;,
-          &quot;author&quot; : {
-            &quot;did&quot; : &quot;did:plc:qxwx3yb4m3dmjbu5luyyi7zm&quot;,
-            &quot;handle&quot; : &quot;krassenstein.bsky.social&quot;,
-            &quot;displayName&quot; : &quot;Krassensteins&quot;,
-            &quot;avatar&quot; : &quot;https://cdn.bsky.app/img/avatar/plain/did:plc:qxwx3yb4m3dmjbu5luyyi7zm/bafkreifb3kzfzpt4b2yq4mqs7aywvjteo7uzomcmmbdit24ivyjcw3qp4y@jpeg&quot;,
-            &quot;viewer&quot; : {
-              &quot;muted&quot; : false,
-              &quot;blockedBy&quot; : false
-            },
-            &quot;labels&quot; : [ ],
-            &quot;createdAt&quot; : 1681238006391
-          },
-          &quot;record&quot; : {
-            &quot;$type&quot; : &quot;app.bsky.feed.post&quot;,
-            &quot;createdAt&quot; : 1739724683831,
-            &quot;embed&quot; : {
-              &quot;$type&quot; : &quot;app.bsky.embed.images&quot;,
-              &quot;alt&quot; : null,
-              &quot;image&quot; : null,
-              &quot;aspectRatio&quot; : null
-            },
-            &quot;langs&quot; : [ &quot;en&quot; ],
-            &quot;text&quot; : &quot;&quot;
-          },
-          &quot;embed&quot; : {
-            &quot;$type&quot; : &quot;app.bsky.embed.images#view&quot;,
-            &quot;thumb&quot; : null,
-            &quot;fullsize&quot; : null,
-            &quot;alt&quot; : null,
-            &quot;aspectRatio&quot; : null
-          },
-          &quot;replyCount&quot; : 941,
-          &quot;repostCount&quot; : 6618,
-          &quot;likeCount&quot; : 30118,
-          &quot;quoteCount&quot; : 415,
-          &quot;indexedAt&quot; : 1739724686015,
-          &quot;viewer&quot; : { },
-          &quot;labels&quot; : [ ]
-        },
-        &quot;parent&quot; : {
-          &quot;uri&quot; : &quot;at://did:plc:qxwx3yb4m3dmjbu5luyyi7zm/app.bsky.feed.post/3licovwn3ks2s&quot;,
-          &quot;cid&quot; : &quot;bafyreifkpa4lp5o44uuvuocuv23nd5bkdnadafwwzjkjoqjl226yue56he&quot;,
-          &quot;author&quot; : {
-            &quot;did&quot; : &quot;did:plc:qxwx3yb4m3dmjbu5luyyi7zm&quot;,
-            &quot;handle&quot; : &quot;krassenstein.bsky.social&quot;,
-            &quot;displayName&quot; : &quot;Krassensteins&quot;,
-            &quot;avatar&quot; : &quot;https://cdn.bsky.app/img/avatar/plain/did:plc:qxwx3yb4m3dmjbu5luyyi7zm/bafkreifb3kzfzpt4b2yq4mqs7aywvjteo7uzomcmmbdit24ivyjcw3qp4y@jpeg&quot;,
-            &quot;viewer&quot; : {
-              &quot;muted&quot; : false,
-              &quot;blockedBy&quot; : false
-            },
-            &quot;labels&quot; : [ ],
-            &quot;createdAt&quot; : 1681238006391
-          },
-          &quot;record&quot; : {
-            &quot;$type&quot; : &quot;app.bsky.feed.post&quot;,
-            &quot;createdAt&quot; : 1739724683831,
-            &quot;embed&quot; : {
-              &quot;$type&quot; : &quot;app.bsky.embed.images&quot;,
-              &quot;alt&quot; : null,
-              &quot;image&quot; : null,
-              &quot;aspectRatio&quot; : null
-            },
-            &quot;langs&quot; : [ &quot;en&quot; ],
-            &quot;text&quot; : &quot;&quot;
-          },
-          &quot;embed&quot; : {
-            &quot;$type&quot; : &quot;app.bsky.embed.images#view&quot;,
-            &quot;thumb&quot; : null,
-            &quot;fullsize&quot; : null,
-            &quot;alt&quot; : null,
-            &quot;aspectRatio&quot; : null
-          },
-          &quot;replyCount&quot; : 941,
-          &quot;repostCount&quot; : 6618,
-          &quot;likeCount&quot; : 30118,
-          &quot;quoteCount&quot; : 415,
-          &quot;indexedAt&quot; : 1739724686015,
-          &quot;viewer&quot; : { },
-          &quot;labels&quot; : [ ]
-        }
+        &quot;root&quot; : { }
       }
     }, {
       &quot;post&quot; : {
@@ -1803,26 +1580,13 @@
           &quot;$type&quot; : &quot;app.bsky.feed.post&quot;,
           &quot;createdAt&quot; : 1739672596020,
           &quot;embed&quot; : {
-            &quot;$type&quot; : &quot;app.bsky.embed.record&quot;,
-            &quot;cid&quot; : null,
-            &quot;uri&quot; : null
+            &quot;$type&quot; : &quot;app.bsky.embed.record&quot;
           },
           &quot;langs&quot; : [ &quot;en&quot; ],
           &quot;text&quot; : &quot;worth saying again these these unilateral cuts are illegal. neither trump nor musk has the authority to unilaterally slash appropriated funds.&quot;
         },
         &quot;embed&quot; : {
-          &quot;$type&quot; : &quot;app.bsky.embed.record#view&quot;,
-          &quot;author&quot; : null,
-          &quot;cid&quot; : null,
-          &quot;embeds&quot; : null,
-          &quot;indexedAt&quot; : null,
-          &quot;labels&quot; : null,
-          &quot;likeCount&quot; : null,
-          &quot;quoteCount&quot; : null,
-          &quot;replyCount&quot; : null,
-          &quot;repostCount&quot; : null,
-          &quot;uri&quot; : null,
-          &quot;value&quot; : null
+          &quot;$type&quot; : &quot;app.bsky.embed.record#view&quot;
         },
         &quot;replyCount&quot; : 478,
         &quot;repostCount&quot; : 4412,
@@ -1853,19 +1617,36 @@
           &quot;createdAt&quot; : 1739714999459,
           &quot;embed&quot; : {
             &quot;$type&quot; : &quot;app.bsky.embed.images&quot;,
-            &quot;alt&quot; : null,
-            &quot;image&quot; : null,
-            &quot;aspectRatio&quot; : null
+            &quot;images&quot; : [ {
+              &quot;alt&quot; : &quot;&quot;,
+              &quot;image&quot; : {
+                &quot;$type&quot; : &quot;blob&quot;,
+                &quot;ref&quot; : {
+                  &quot;$link&quot; : &quot;bafkreibzc4a2qtphfqxlm2voyzbktw74cxzvqgx7uyiqoa46oenvsbrrc4&quot;
+                },
+                &quot;mimeType&quot; : &quot;image/jpeg&quot;,
+                &quot;size&quot; : 271083
+              },
+              &quot;aspectRatio&quot; : {
+                &quot;width&quot; : 1061,
+                &quot;height&quot; : 1142
+              }
+            } ]
           },
           &quot;langs&quot; : [ &quot;en&quot; ],
           &quot;text&quot; : &quot;How’s that?&quot;
         },
         &quot;embed&quot; : {
           &quot;$type&quot; : &quot;app.bsky.embed.images#view&quot;,
-          &quot;thumb&quot; : null,
-          &quot;fullsize&quot; : null,
-          &quot;alt&quot; : null,
-          &quot;aspectRatio&quot; : null
+          &quot;images&quot; : [ {
+            &quot;thumb&quot; : &quot;https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:utoncswurgktfdhpfqnaraoj/bafkreibzc4a2qtphfqxlm2voyzbktw74cxzvqgx7uyiqoa46oenvsbrrc4@jpeg&quot;,
+            &quot;fullsize&quot; : &quot;https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:utoncswurgktfdhpfqnaraoj/bafkreibzc4a2qtphfqxlm2voyzbktw74cxzvqgx7uyiqoa46oenvsbrrc4@jpeg&quot;,
+            &quot;alt&quot; : &quot;&quot;,
+            &quot;aspectRatio&quot; : {
+              &quot;width&quot; : 1061,
+              &quot;height&quot; : 1142
+            }
+          } ]
         },
         &quot;replyCount&quot; : 12,
         &quot;repostCount&quot; : 63,
@@ -1897,10 +1678,19 @@
           &quot;createdAt&quot; : 1739721959189,
           &quot;embed&quot; : {
             &quot;$type&quot; : &quot;app.bsky.embed.external&quot;,
-            &quot;uri&quot; : null,
-            &quot;title&quot; : null,
-            &quot;description&quot; : null,
-            &quot;thumb&quot; : null
+            &quot;external&quot; : {
+              &quot;uri&quot; : &quot;https://techcrunch.com/2025/02/16/openai-tries-to-uncensor-chatgpt/&quot;,
+              &quot;title&quot; : &quot;OpenAI Changes AI Model Training For Intellectual Freedom&quot;,
+              &quot;description&quot; : &quot;&quot;,
+              &quot;thumb&quot; : {
+                &quot;$type&quot; : &quot;blob&quot;,
+                &quot;ref&quot; : {
+                  &quot;$link&quot; : &quot;bafkreibfof2cos6nbqravlsioy3n6pkej2uefxy4mqf3hbdsi3j7wecuv4&quot;
+                },
+                &quot;mimeType&quot; : &quot;image/jpeg&quot;,
+                &quot;size&quot; : 171633
+              }
+            }
           },
           &quot;facets&quot; : [ {
             &quot;index&quot; : {
@@ -1916,10 +1706,12 @@
         },
         &quot;embed&quot; : {
           &quot;$type&quot; : &quot;app.bsky.embed.external#view&quot;,
-          &quot;uri&quot; : null,
-          &quot;title&quot; : null,
-          &quot;description&quot; : null,
-          &quot;thumb&quot; : null
+          &quot;external&quot; : {
+            &quot;uri&quot; : &quot;https://techcrunch.com/2025/02/16/openai-tries-to-uncensor-chatgpt/&quot;,
+            &quot;title&quot; : &quot;OpenAI Changes AI Model Training For Intellectual Freedom&quot;,
+            &quot;description&quot; : &quot;&quot;,
+            &quot;thumb&quot; : &quot;https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:ir2b7mnp3f7qouemawhhew72/bafkreibfof2cos6nbqravlsioy3n6pkej2uefxy4mqf3hbdsi3j7wecuv4@jpeg&quot;
+          }
         },
         &quot;replyCount&quot; : 0,
         &quot;repostCount&quot; : 1,
@@ -1951,19 +1743,30 @@
           &quot;createdAt&quot; : 1739722511000,
           &quot;embed&quot; : {
             &quot;$type&quot; : &quot;app.bsky.embed.external&quot;,
-            &quot;uri&quot; : null,
-            &quot;title&quot; : null,
-            &quot;description&quot; : null,
-            &quot;thumb&quot; : null
+            &quot;external&quot; : {
+              &quot;uri&quot; : &quot;https://www.theguardian.com/politics/2025/feb/16/john-major-trump-us-isolationism-threatens-global-democracy?utm_source=dlvr.it&amp;utm_medium=bluesky&amp;CMP=bsky_gu&quot;,
+              &quot;title&quot; : &quot;John Major: Trump’s US isolationism threatens global democracy&quot;,
+              &quot;description&quot; : &quot;Former UK prime minister says US may regret ceding world stage to China and condemns ‘hypocritical’ JD Vance speech\n\nDemocracy around the globe is under threat from the retreat of Donald Trump’s US into isolationism and its likely replacement by China on…&quot;,
+              &quot;thumb&quot; : {
+                &quot;$type&quot; : &quot;blob&quot;,
+                &quot;ref&quot; : {
+                  &quot;$link&quot; : &quot;bafkreie4lnnbtcdxskhlcno7bnb7ielssysafz2trrljf5ng36vzyo6h4y&quot;
+                },
+                &quot;mimeType&quot; : &quot;image/jpeg&quot;,
+                &quot;size&quot; : 61653
+              }
+            }
           },
           &quot;text&quot; : &quot;John Major: Trump’s US isolationism threatens global democracy&quot;
         },
         &quot;embed&quot; : {
           &quot;$type&quot; : &quot;app.bsky.embed.external#view&quot;,
-          &quot;uri&quot; : null,
-          &quot;title&quot; : null,
-          &quot;description&quot; : null,
-          &quot;thumb&quot; : null
+          &quot;external&quot; : {
+            &quot;uri&quot; : &quot;https://www.theguardian.com/politics/2025/feb/16/john-major-trump-us-isolationism-threatens-global-democracy?utm_source=dlvr.it&amp;utm_medium=bluesky&amp;CMP=bsky_gu&quot;,
+            &quot;title&quot; : &quot;John Major: Trump’s US isolationism threatens global democracy&quot;,
+            &quot;description&quot; : &quot;Former UK prime minister says US may regret ceding world stage to China and condemns ‘hypocritical’ JD Vance speech\n\nDemocracy around the globe is under threat from the retreat of Donald Trump’s US into isolationism and its likely replacement by China on…&quot;,
+            &quot;thumb&quot; : &quot;https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:vovinwhtulbsx4mwfw26r5ni/bafkreie4lnnbtcdxskhlcno7bnb7ielssysafz2trrljf5ng36vzyo6h4y@jpeg&quot;
+          }
         },
         &quot;replyCount&quot; : 32,
         &quot;repostCount&quot; : 84,
@@ -2063,20 +1866,31 @@
           &quot;createdAt&quot; : 1739613028696,
           &quot;embed&quot; : {
             &quot;$type&quot; : &quot;app.bsky.embed.external&quot;,
-            &quot;uri&quot; : null,
-            &quot;title&quot; : null,
-            &quot;description&quot; : null,
-            &quot;thumb&quot; : null
+            &quot;external&quot; : {
+              &quot;uri&quot; : &quot;https://www.virgin.com/branson-family/richard-branson-blog/on-ukraine-europe-must-step-into-the-void&quot;,
+              &quot;title&quot; : &quot;On Ukraine, Europe must step into the void | Virgin&quot;,
+              &quot;description&quot; : &quot;&quot;,
+              &quot;thumb&quot; : {
+                &quot;$type&quot; : &quot;blob&quot;,
+                &quot;ref&quot; : {
+                  &quot;$link&quot; : &quot;bafkreihroshbgtbst4udn3oohia2ybzyeqgqx5pr77iv5caqoecbx4sgcm&quot;
+                },
+                &quot;mimeType&quot; : &quot;image/jpeg&quot;,
+                &quot;size&quot; : 349300
+              }
+            }
           },
           &quot;langs&quot; : [ &quot;en&quot; ],
           &quot;text&quot; : &quot;Europe can’t rely on the strength of the transatlantic relationship to help contain Russia’s threat – it must lead from the front and be the true force of support that Ukraine needs. Not just for Ukraine’s sake, but for a free and sovereign Europe.&quot;
         },
         &quot;embed&quot; : {
           &quot;$type&quot; : &quot;app.bsky.embed.external#view&quot;,
-          &quot;uri&quot; : null,
-          &quot;title&quot; : null,
-          &quot;description&quot; : null,
-          &quot;thumb&quot; : null
+          &quot;external&quot; : {
+            &quot;uri&quot; : &quot;https://www.virgin.com/branson-family/richard-branson-blog/on-ukraine-europe-must-step-into-the-void&quot;,
+            &quot;title&quot; : &quot;On Ukraine, Europe must step into the void | Virgin&quot;,
+            &quot;description&quot; : &quot;&quot;,
+            &quot;thumb&quot; : &quot;https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:oe4qpchepoxur6nnvyrk5soj/bafkreihroshbgtbst4udn3oohia2ybzyeqgqx5pr77iv5caqoecbx4sgcm@jpeg&quot;
+          }
         },
         &quot;replyCount&quot; : 2399,
         &quot;repostCount&quot; : 10532,
@@ -2109,19 +1923,36 @@
           &quot;createdAt&quot; : 1739104899056,
           &quot;embed&quot; : {
             &quot;$type&quot; : &quot;app.bsky.embed.images&quot;,
-            &quot;alt&quot; : null,
-            &quot;image&quot; : null,
-            &quot;aspectRatio&quot; : null
+            &quot;images&quot; : [ {
+              &quot;alt&quot; : &quot;&quot;,
+              &quot;image&quot; : {
+                &quot;$type&quot; : &quot;blob&quot;,
+                &quot;ref&quot; : {
+                  &quot;$link&quot; : &quot;bafkreiem7u2blgqcqahvf3zvoxh3wxarw3smq54rwq5siqn54rjr3gjfde&quot;
+                },
+                &quot;mimeType&quot; : &quot;image/jpeg&quot;,
+                &quot;size&quot; : 557304
+              },
+              &quot;aspectRatio&quot; : {
+                &quot;width&quot; : 1599,
+                &quot;height&quot; : 2000
+              }
+            } ]
           },
           &quot;langs&quot; : [ &quot;en&quot; ],
           &quot;text&quot; : &quot;Amazing Switzerland&quot;
         },
         &quot;embed&quot; : {
           &quot;$type&quot; : &quot;app.bsky.embed.images#view&quot;,
-          &quot;thumb&quot; : null,
-          &quot;fullsize&quot; : null,
-          &quot;alt&quot; : null,
-          &quot;aspectRatio&quot; : null
+          &quot;images&quot; : [ {
+            &quot;thumb&quot; : &quot;https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:wdv57ktyddb6dtk3q74z5q3w/bafkreiem7u2blgqcqahvf3zvoxh3wxarw3smq54rwq5siqn54rjr3gjfde@jpeg&quot;,
+            &quot;fullsize&quot; : &quot;https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:wdv57ktyddb6dtk3q74z5q3w/bafkreiem7u2blgqcqahvf3zvoxh3wxarw3smq54rwq5siqn54rjr3gjfde@jpeg&quot;,
+            &quot;alt&quot; : &quot;&quot;,
+            &quot;aspectRatio&quot; : {
+              &quot;width&quot; : 1599,
+              &quot;height&quot; : 2000
+            }
+          } ]
         },
         &quot;replyCount&quot; : 13,
         &quot;repostCount&quot; : 44,
@@ -2154,19 +1985,36 @@
           &quot;createdAt&quot; : 1739190949062,
           &quot;embed&quot; : {
             &quot;$type&quot; : &quot;app.bsky.embed.images&quot;,
-            &quot;alt&quot; : null,
-            &quot;image&quot; : null,
-            &quot;aspectRatio&quot; : null
+            &quot;images&quot; : [ {
+              &quot;alt&quot; : &quot;&quot;,
+              &quot;image&quot; : {
+                &quot;$type&quot; : &quot;blob&quot;,
+                &quot;ref&quot; : {
+                  &quot;$link&quot; : &quot;bafkreifryulzax5nhqjykumzriqdcc2v2isustbrgjdfrr47c7dxy3jn7y&quot;
+                },
+                &quot;mimeType&quot; : &quot;image/jpeg&quot;,
+                &quot;size&quot; : 388975
+              },
+              &quot;aspectRatio&quot; : {
+                &quot;width&quot; : 1600,
+                &quot;height&quot; : 2000
+              }
+            } ]
           },
           &quot;langs&quot; : [ &quot;en&quot; ],
           &quot;text&quot; : &quot;Northern lights over arctic skies&quot;
         },
         &quot;embed&quot; : {
           &quot;$type&quot; : &quot;app.bsky.embed.images#view&quot;,
-          &quot;thumb&quot; : null,
-          &quot;fullsize&quot; : null,
-          &quot;alt&quot; : null,
-          &quot;aspectRatio&quot; : null
+          &quot;images&quot; : [ {
+            &quot;thumb&quot; : &quot;https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:wdv57ktyddb6dtk3q74z5q3w/bafkreifryulzax5nhqjykumzriqdcc2v2isustbrgjdfrr47c7dxy3jn7y@jpeg&quot;,
+            &quot;fullsize&quot; : &quot;https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:wdv57ktyddb6dtk3q74z5q3w/bafkreifryulzax5nhqjykumzriqdcc2v2isustbrgjdfrr47c7dxy3jn7y@jpeg&quot;,
+            &quot;alt&quot; : &quot;&quot;,
+            &quot;aspectRatio&quot; : {
+              &quot;width&quot; : 1600,
+              &quot;height&quot; : 2000
+            }
+          } ]
         },
         &quot;replyCount&quot; : 5,
         &quot;repostCount&quot; : 24,
@@ -2199,19 +2047,36 @@
           &quot;createdAt&quot; : 1739274865565,
           &quot;embed&quot; : {
             &quot;$type&quot; : &quot;app.bsky.embed.images&quot;,
-            &quot;alt&quot; : null,
-            &quot;image&quot; : null,
-            &quot;aspectRatio&quot; : null
+            &quot;images&quot; : [ {
+              &quot;alt&quot; : &quot;&quot;,
+              &quot;image&quot; : {
+                &quot;$type&quot; : &quot;blob&quot;,
+                &quot;ref&quot; : {
+                  &quot;$link&quot; : &quot;bafkreie66ufwgcet3sqymbzpplrrbd7234gekhft7gml4uerbw3r2m3nn4&quot;
+                },
+                &quot;mimeType&quot; : &quot;image/jpeg&quot;,
+                &quot;size&quot; : 372924
+              },
+              &quot;aspectRatio&quot; : {
+                &quot;width&quot; : 1600,
+                &quot;height&quot; : 2000
+              }
+            } ]
           },
           &quot;langs&quot; : [ &quot;en&quot; ],
           &quot;text&quot; : &quot;Heaven is a place on earth&quot;
         },
         &quot;embed&quot; : {
           &quot;$type&quot; : &quot;app.bsky.embed.images#view&quot;,
-          &quot;thumb&quot; : null,
-          &quot;fullsize&quot; : null,
-          &quot;alt&quot; : null,
-          &quot;aspectRatio&quot; : null
+          &quot;images&quot; : [ {
+            &quot;thumb&quot; : &quot;https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:wdv57ktyddb6dtk3q74z5q3w/bafkreie66ufwgcet3sqymbzpplrrbd7234gekhft7gml4uerbw3r2m3nn4@jpeg&quot;,
+            &quot;fullsize&quot; : &quot;https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:wdv57ktyddb6dtk3q74z5q3w/bafkreie66ufwgcet3sqymbzpplrrbd7234gekhft7gml4uerbw3r2m3nn4@jpeg&quot;,
+            &quot;alt&quot; : &quot;&quot;,
+            &quot;aspectRatio&quot; : {
+              &quot;width&quot; : 1600,
+              &quot;height&quot; : 2000
+            }
+          } ]
         },
         &quot;replyCount&quot; : 4,
         &quot;repostCount&quot; : 26,
@@ -2244,19 +2109,36 @@
           &quot;createdAt&quot; : 1739622294890,
           &quot;embed&quot; : {
             &quot;$type&quot; : &quot;app.bsky.embed.images&quot;,
-            &quot;alt&quot; : null,
-            &quot;image&quot; : null,
-            &quot;aspectRatio&quot; : null
+            &quot;images&quot; : [ {
+              &quot;alt&quot; : &quot;&quot;,
+              &quot;image&quot; : {
+                &quot;$type&quot; : &quot;blob&quot;,
+                &quot;ref&quot; : {
+                  &quot;$link&quot; : &quot;bafkreifnq2fbn72ykybjqdr77tk4uosdmud4ubsywzkf7zpxhdxfqqdxu4&quot;
+                },
+                &quot;mimeType&quot; : &quot;image/jpeg&quot;,
+                &quot;size&quot; : 314304
+              },
+              &quot;aspectRatio&quot; : {
+                &quot;width&quot; : 1599,
+                &quot;height&quot; : 2000
+              }
+            } ]
           },
           &quot;langs&quot; : [ &quot;en&quot; ],
           &quot;text&quot; : &quot;Northern lights dancing over Canadian mountain&quot;
         },
         &quot;embed&quot; : {
           &quot;$type&quot; : &quot;app.bsky.embed.images#view&quot;,
-          &quot;thumb&quot; : null,
-          &quot;fullsize&quot; : null,
-          &quot;alt&quot; : null,
-          &quot;aspectRatio&quot; : null
+          &quot;images&quot; : [ {
+            &quot;thumb&quot; : &quot;https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:wdv57ktyddb6dtk3q74z5q3w/bafkreifnq2fbn72ykybjqdr77tk4uosdmud4ubsywzkf7zpxhdxfqqdxu4@jpeg&quot;,
+            &quot;fullsize&quot; : &quot;https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:wdv57ktyddb6dtk3q74z5q3w/bafkreifnq2fbn72ykybjqdr77tk4uosdmud4ubsywzkf7zpxhdxfqqdxu4@jpeg&quot;,
+            &quot;alt&quot; : &quot;&quot;,
+            &quot;aspectRatio&quot; : {
+              &quot;width&quot; : 1599,
+              &quot;height&quot; : 2000
+            }
+          } ]
         },
         &quot;replyCount&quot; : 6,
         &quot;repostCount&quot; : 27,
@@ -2291,26 +2173,13 @@
           &quot;$type&quot; : &quot;app.bsky.feed.post&quot;,
           &quot;createdAt&quot; : 1739560998472,
           &quot;embed&quot; : {
-            &quot;$type&quot; : &quot;app.bsky.embed.record&quot;,
-            &quot;cid&quot; : null,
-            &quot;uri&quot; : null
+            &quot;$type&quot; : &quot;app.bsky.embed.record&quot;
           },
           &quot;langs&quot; : [ &quot;en&quot; ],
           &quot;text&quot; : &quot;How ppl treat support staff shows what kind of person they are. Love that Saquan (literally) pulled their assistant into the parade. He's a part of the team and he deserves to be there and Saquan respected that. Saquan's a good &#x1f95a;&quot;
         },
         &quot;embed&quot; : {
-          &quot;$type&quot; : &quot;app.bsky.embed.record#view&quot;,
-          &quot;author&quot; : null,
-          &quot;cid&quot; : null,
-          &quot;embeds&quot; : null,
-          &quot;indexedAt&quot; : null,
-          &quot;labels&quot; : null,
-          &quot;likeCount&quot; : null,
-          &quot;quoteCount&quot; : null,
-          &quot;replyCount&quot; : null,
-          &quot;repostCount&quot; : null,
-          &quot;uri&quot; : null,
-          &quot;value&quot; : null
+          &quot;$type&quot; : &quot;app.bsky.embed.record#view&quot;
         },
         &quot;replyCount&quot; : 4,
         &quot;repostCount&quot; : 14,
@@ -2362,112 +2231,7 @@
         &quot;labels&quot; : [ ]
       },
       &quot;reply&quot; : {
-        &quot;root&quot; : {
-          &quot;uri&quot; : &quot;at://did:plc:56g2xmm4lqxztygzrvelvfnz/app.bsky.feed.post/3li5whq43es2m&quot;,
-          &quot;cid&quot; : &quot;bafyreifbx7fhyziqkyjuouyingimfjhokqt66bd3lbvvajmzqzio2a3qze&quot;,
-          &quot;author&quot; : {
-            &quot;did&quot; : &quot;did:plc:56g2xmm4lqxztygzrvelvfnz&quot;,
-            &quot;handle&quot; : &quot;akelacooper.bsky.social&quot;,
-            &quot;displayName&quot; : &quot;Akela Cooper&quot;,
-            &quot;avatar&quot; : &quot;https://cdn.bsky.app/img/avatar/plain/did:plc:56g2xmm4lqxztygzrvelvfnz/bafkreiaheot2klc6amswr6h6iqgpqqw2vjatq4jncjqdjzbn7efylg24ba@jpeg&quot;,
-            &quot;associated&quot; : {
-              &quot;chat&quot; : {
-                &quot;allowIncoming&quot; : &quot;following&quot;
-              }
-            },
-            &quot;viewer&quot; : {
-              &quot;muted&quot; : false,
-              &quot;blockedBy&quot; : false
-            },
-            &quot;labels&quot; : [ ],
-            &quot;createdAt&quot; : 1686782306847
-          },
-          &quot;record&quot; : {
-            &quot;$type&quot; : &quot;app.bsky.feed.post&quot;,
-            &quot;createdAt&quot; : 1739560998472,
-            &quot;embed&quot; : {
-              &quot;$type&quot; : &quot;app.bsky.embed.record&quot;,
-              &quot;cid&quot; : null,
-              &quot;uri&quot; : null
-            },
-            &quot;langs&quot; : [ &quot;en&quot; ],
-            &quot;text&quot; : &quot;How ppl treat support staff shows what kind of person they are. Love that Saquan (literally) pulled their assistant into the parade. He's a part of the team and he deserves to be there and Saquan respected that. Saquan's a good &#x1f95a;&quot;
-          },
-          &quot;embed&quot; : {
-            &quot;$type&quot; : &quot;app.bsky.embed.record#view&quot;,
-            &quot;author&quot; : null,
-            &quot;cid&quot; : null,
-            &quot;embeds&quot; : null,
-            &quot;indexedAt&quot; : null,
-            &quot;labels&quot; : null,
-            &quot;likeCount&quot; : null,
-            &quot;quoteCount&quot; : null,
-            &quot;replyCount&quot; : null,
-            &quot;repostCount&quot; : null,
-            &quot;uri&quot; : null,
-            &quot;value&quot; : null
-          },
-          &quot;replyCount&quot; : 4,
-          &quot;repostCount&quot; : 14,
-          &quot;likeCount&quot; : 74,
-          &quot;quoteCount&quot; : 0,
-          &quot;indexedAt&quot; : 1739560998821,
-          &quot;viewer&quot; : { },
-          &quot;labels&quot; : [ ]
-        },
-        &quot;parent&quot; : {
-          &quot;uri&quot; : &quot;at://did:plc:56g2xmm4lqxztygzrvelvfnz/app.bsky.feed.post/3li5whq43es2m&quot;,
-          &quot;cid&quot; : &quot;bafyreifbx7fhyziqkyjuouyingimfjhokqt66bd3lbvvajmzqzio2a3qze&quot;,
-          &quot;author&quot; : {
-            &quot;did&quot; : &quot;did:plc:56g2xmm4lqxztygzrvelvfnz&quot;,
-            &quot;handle&quot; : &quot;akelacooper.bsky.social&quot;,
-            &quot;displayName&quot; : &quot;Akela Cooper&quot;,
-            &quot;avatar&quot; : &quot;https://cdn.bsky.app/img/avatar/plain/did:plc:56g2xmm4lqxztygzrvelvfnz/bafkreiaheot2klc6amswr6h6iqgpqqw2vjatq4jncjqdjzbn7efylg24ba@jpeg&quot;,
-            &quot;associated&quot; : {
-              &quot;chat&quot; : {
-                &quot;allowIncoming&quot; : &quot;following&quot;
-              }
-            },
-            &quot;viewer&quot; : {
-              &quot;muted&quot; : false,
-              &quot;blockedBy&quot; : false
-            },
-            &quot;labels&quot; : [ ],
-            &quot;createdAt&quot; : 1686782306847
-          },
-          &quot;record&quot; : {
-            &quot;$type&quot; : &quot;app.bsky.feed.post&quot;,
-            &quot;createdAt&quot; : 1739560998472,
-            &quot;embed&quot; : {
-              &quot;$type&quot; : &quot;app.bsky.embed.record&quot;,
-              &quot;cid&quot; : null,
-              &quot;uri&quot; : null
-            },
-            &quot;langs&quot; : [ &quot;en&quot; ],
-            &quot;text&quot; : &quot;How ppl treat support staff shows what kind of person they are. Love that Saquan (literally) pulled their assistant into the parade. He's a part of the team and he deserves to be there and Saquan respected that. Saquan's a good &#x1f95a;&quot;
-          },
-          &quot;embed&quot; : {
-            &quot;$type&quot; : &quot;app.bsky.embed.record#view&quot;,
-            &quot;author&quot; : null,
-            &quot;cid&quot; : null,
-            &quot;embeds&quot; : null,
-            &quot;indexedAt&quot; : null,
-            &quot;labels&quot; : null,
-            &quot;likeCount&quot; : null,
-            &quot;quoteCount&quot; : null,
-            &quot;replyCount&quot; : null,
-            &quot;repostCount&quot; : null,
-            &quot;uri&quot; : null,
-            &quot;value&quot; : null
-          },
-          &quot;replyCount&quot; : 4,
-          &quot;repostCount&quot; : 14,
-          &quot;likeCount&quot; : 74,
-          &quot;quoteCount&quot; : 0,
-          &quot;indexedAt&quot; : 1739560998821,
-          &quot;viewer&quot; : { },
-          &quot;labels&quot; : [ ]
-        }
+        &quot;root&quot; : { }
       }
     }, {
       &quot;post&quot; : {
@@ -2511,112 +2275,7 @@
         &quot;labels&quot; : [ ]
       },
       &quot;reply&quot; : {
-        &quot;root&quot; : {
-          &quot;uri&quot; : &quot;at://did:plc:56g2xmm4lqxztygzrvelvfnz/app.bsky.feed.post/3li5whq43es2m&quot;,
-          &quot;cid&quot; : &quot;bafyreifbx7fhyziqkyjuouyingimfjhokqt66bd3lbvvajmzqzio2a3qze&quot;,
-          &quot;author&quot; : {
-            &quot;did&quot; : &quot;did:plc:56g2xmm4lqxztygzrvelvfnz&quot;,
-            &quot;handle&quot; : &quot;akelacooper.bsky.social&quot;,
-            &quot;displayName&quot; : &quot;Akela Cooper&quot;,
-            &quot;avatar&quot; : &quot;https://cdn.bsky.app/img/avatar/plain/did:plc:56g2xmm4lqxztygzrvelvfnz/bafkreiaheot2klc6amswr6h6iqgpqqw2vjatq4jncjqdjzbn7efylg24ba@jpeg&quot;,
-            &quot;associated&quot; : {
-              &quot;chat&quot; : {
-                &quot;allowIncoming&quot; : &quot;following&quot;
-              }
-            },
-            &quot;viewer&quot; : {
-              &quot;muted&quot; : false,
-              &quot;blockedBy&quot; : false
-            },
-            &quot;labels&quot; : [ ],
-            &quot;createdAt&quot; : 1686782306847
-          },
-          &quot;record&quot; : {
-            &quot;$type&quot; : &quot;app.bsky.feed.post&quot;,
-            &quot;createdAt&quot; : 1739560998472,
-            &quot;embed&quot; : {
-              &quot;$type&quot; : &quot;app.bsky.embed.record&quot;,
-              &quot;cid&quot; : null,
-              &quot;uri&quot; : null
-            },
-            &quot;langs&quot; : [ &quot;en&quot; ],
-            &quot;text&quot; : &quot;How ppl treat support staff shows what kind of person they are. Love that Saquan (literally) pulled their assistant into the parade. He's a part of the team and he deserves to be there and Saquan respected that. Saquan's a good &#x1f95a;&quot;
-          },
-          &quot;embed&quot; : {
-            &quot;$type&quot; : &quot;app.bsky.embed.record#view&quot;,
-            &quot;author&quot; : null,
-            &quot;cid&quot; : null,
-            &quot;embeds&quot; : null,
-            &quot;indexedAt&quot; : null,
-            &quot;labels&quot; : null,
-            &quot;likeCount&quot; : null,
-            &quot;quoteCount&quot; : null,
-            &quot;replyCount&quot; : null,
-            &quot;repostCount&quot; : null,
-            &quot;uri&quot; : null,
-            &quot;value&quot; : null
-          },
-          &quot;replyCount&quot; : 4,
-          &quot;repostCount&quot; : 14,
-          &quot;likeCount&quot; : 74,
-          &quot;quoteCount&quot; : 0,
-          &quot;indexedAt&quot; : 1739560998821,
-          &quot;viewer&quot; : { },
-          &quot;labels&quot; : [ ]
-        },
-        &quot;parent&quot; : {
-          &quot;uri&quot; : &quot;at://did:plc:56g2xmm4lqxztygzrvelvfnz/app.bsky.feed.post/3li5whq43es2m&quot;,
-          &quot;cid&quot; : &quot;bafyreifbx7fhyziqkyjuouyingimfjhokqt66bd3lbvvajmzqzio2a3qze&quot;,
-          &quot;author&quot; : {
-            &quot;did&quot; : &quot;did:plc:56g2xmm4lqxztygzrvelvfnz&quot;,
-            &quot;handle&quot; : &quot;akelacooper.bsky.social&quot;,
-            &quot;displayName&quot; : &quot;Akela Cooper&quot;,
-            &quot;avatar&quot; : &quot;https://cdn.bsky.app/img/avatar/plain/did:plc:56g2xmm4lqxztygzrvelvfnz/bafkreiaheot2klc6amswr6h6iqgpqqw2vjatq4jncjqdjzbn7efylg24ba@jpeg&quot;,
-            &quot;associated&quot; : {
-              &quot;chat&quot; : {
-                &quot;allowIncoming&quot; : &quot;following&quot;
-              }
-            },
-            &quot;viewer&quot; : {
-              &quot;muted&quot; : false,
-              &quot;blockedBy&quot; : false
-            },
-            &quot;labels&quot; : [ ],
-            &quot;createdAt&quot; : 1686782306847
-          },
-          &quot;record&quot; : {
-            &quot;$type&quot; : &quot;app.bsky.feed.post&quot;,
-            &quot;createdAt&quot; : 1739560998472,
-            &quot;embed&quot; : {
-              &quot;$type&quot; : &quot;app.bsky.embed.record&quot;,
-              &quot;cid&quot; : null,
-              &quot;uri&quot; : null
-            },
-            &quot;langs&quot; : [ &quot;en&quot; ],
-            &quot;text&quot; : &quot;How ppl treat support staff shows what kind of person they are. Love that Saquan (literally) pulled their assistant into the parade. He's a part of the team and he deserves to be there and Saquan respected that. Saquan's a good &#x1f95a;&quot;
-          },
-          &quot;embed&quot; : {
-            &quot;$type&quot; : &quot;app.bsky.embed.record#view&quot;,
-            &quot;author&quot; : null,
-            &quot;cid&quot; : null,
-            &quot;embeds&quot; : null,
-            &quot;indexedAt&quot; : null,
-            &quot;labels&quot; : null,
-            &quot;likeCount&quot; : null,
-            &quot;quoteCount&quot; : null,
-            &quot;replyCount&quot; : null,
-            &quot;repostCount&quot; : null,
-            &quot;uri&quot; : null,
-            &quot;value&quot; : null
-          },
-          &quot;replyCount&quot; : 4,
-          &quot;repostCount&quot; : 14,
-          &quot;likeCount&quot; : 74,
-          &quot;quoteCount&quot; : 0,
-          &quot;indexedAt&quot; : 1739560998821,
-          &quot;viewer&quot; : { },
-          &quot;labels&quot; : [ ]
-        }
+        &quot;root&quot; : { }
       }
     }, {
       &quot;post&quot; : {
@@ -2657,13 +2316,13 @@
         },
         &quot;embed&quot; : {
           &quot;$type&quot; : &quot;app.bsky.embed.video#view&quot;,
-          &quot;cid&quot; : &quot;bafkreie6gbfaixvsudpamacenzvnryw6k275aflpia7m2cw5nto7cll344&quot;,
-          &quot;playlist&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3Au4siojbqez2awxmevw54jgmv/bafkreie6gbfaixvsudpamacenzvnryw6k275aflpia7m2cw5nto7cll344/playlist.m3u8&quot;,
-          &quot;thumbnail&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3Au4siojbqez2awxmevw54jgmv/bafkreie6gbfaixvsudpamacenzvnryw6k275aflpia7m2cw5nto7cll344/thumbnail.jpg&quot;,
           &quot;aspectRatio&quot; : {
             &quot;width&quot; : 1280,
             &quot;height&quot; : 720
-          }
+          },
+          &quot;cid&quot; : &quot;bafkreie6gbfaixvsudpamacenzvnryw6k275aflpia7m2cw5nto7cll344&quot;,
+          &quot;playlist&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3Au4siojbqez2awxmevw54jgmv/bafkreie6gbfaixvsudpamacenzvnryw6k275aflpia7m2cw5nto7cll344/playlist.m3u8&quot;,
+          &quot;thumbnail&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3Au4siojbqez2awxmevw54jgmv/bafkreie6gbfaixvsudpamacenzvnryw6k275aflpia7m2cw5nto7cll344/thumbnail.jpg&quot;
         },
         &quot;replyCount&quot; : 1,
         &quot;repostCount&quot; : 1,
@@ -2719,13 +2378,13 @@
         },
         &quot;embed&quot; : {
           &quot;$type&quot; : &quot;app.bsky.embed.video#view&quot;,
-          &quot;cid&quot; : &quot;bafkreigpvwplhlqo2bkhkz6zqfkexib4hwvg54noopjao66iqx4gf5k5um&quot;,
-          &quot;playlist&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3Aehbvdmlw2egofamelcht3jdt/bafkreigpvwplhlqo2bkhkz6zqfkexib4hwvg54noopjao66iqx4gf5k5um/playlist.m3u8&quot;,
-          &quot;thumbnail&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3Aehbvdmlw2egofamelcht3jdt/bafkreigpvwplhlqo2bkhkz6zqfkexib4hwvg54noopjao66iqx4gf5k5um/thumbnail.jpg&quot;,
           &quot;aspectRatio&quot; : {
             &quot;width&quot; : 1908,
             &quot;height&quot; : 1080
-          }
+          },
+          &quot;cid&quot; : &quot;bafkreigpvwplhlqo2bkhkz6zqfkexib4hwvg54noopjao66iqx4gf5k5um&quot;,
+          &quot;playlist&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3Aehbvdmlw2egofamelcht3jdt/bafkreigpvwplhlqo2bkhkz6zqfkexib4hwvg54noopjao66iqx4gf5k5um/playlist.m3u8&quot;,
+          &quot;thumbnail&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3Aehbvdmlw2egofamelcht3jdt/bafkreigpvwplhlqo2bkhkz6zqfkexib4hwvg54noopjao66iqx4gf5k5um/thumbnail.jpg&quot;
         },
         &quot;replyCount&quot; : 100,
         &quot;repostCount&quot; : 884,
@@ -2756,6 +2415,7 @@
           &quot;createdAt&quot; : 1739566953378,
           &quot;embed&quot; : {
             &quot;$type&quot; : &quot;app.bsky.embed.video&quot;,
+            &quot;alt&quot; : &quot;Video of a cyclist riding along Milwaukee’s lakefront &quot;,
             &quot;aspectRatio&quot; : {
               &quot;width&quot; : 1080,
               &quot;height&quot; : 608
@@ -2774,13 +2434,14 @@
         },
         &quot;embed&quot; : {
           &quot;$type&quot; : &quot;app.bsky.embed.video#view&quot;,
-          &quot;cid&quot; : &quot;bafkreiezjuvtclkikavokkrczohsnvpvzitdhidh7ll7p47xbrfgd4ot5y&quot;,
-          &quot;playlist&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3Ay7qza6tsh62nufdbhn4xnlkg/bafkreiezjuvtclkikavokkrczohsnvpvzitdhidh7ll7p47xbrfgd4ot5y/playlist.m3u8&quot;,
-          &quot;thumbnail&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3Ay7qza6tsh62nufdbhn4xnlkg/bafkreiezjuvtclkikavokkrczohsnvpvzitdhidh7ll7p47xbrfgd4ot5y/thumbnail.jpg&quot;,
+          &quot;alt&quot; : &quot;Video of a cyclist riding along Milwaukee’s lakefront &quot;,
           &quot;aspectRatio&quot; : {
             &quot;width&quot; : 1080,
             &quot;height&quot; : 608
-          }
+          },
+          &quot;cid&quot; : &quot;bafkreiezjuvtclkikavokkrczohsnvpvzitdhidh7ll7p47xbrfgd4ot5y&quot;,
+          &quot;playlist&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3Ay7qza6tsh62nufdbhn4xnlkg/bafkreiezjuvtclkikavokkrczohsnvpvzitdhidh7ll7p47xbrfgd4ot5y/playlist.m3u8&quot;,
+          &quot;thumbnail&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3Ay7qza6tsh62nufdbhn4xnlkg/bafkreiezjuvtclkikavokkrczohsnvpvzitdhidh7ll7p47xbrfgd4ot5y/thumbnail.jpg&quot;
         },
         &quot;replyCount&quot; : 3,
         &quot;repostCount&quot; : 4,
@@ -2834,13 +2495,13 @@
         },
         &quot;embed&quot; : {
           &quot;$type&quot; : &quot;app.bsky.embed.video#view&quot;,
-          &quot;cid&quot; : &quot;bafkreia2pym3lrspq43pve2s62qwcmus7h4ziyolnovkfpjjob65b26hue&quot;,
-          &quot;playlist&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3A6dncjiyu42adb2irwodoskfz/bafkreia2pym3lrspq43pve2s62qwcmus7h4ziyolnovkfpjjob65b26hue/playlist.m3u8&quot;,
-          &quot;thumbnail&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3A6dncjiyu42adb2irwodoskfz/bafkreia2pym3lrspq43pve2s62qwcmus7h4ziyolnovkfpjjob65b26hue/thumbnail.jpg&quot;,
           &quot;aspectRatio&quot; : {
             &quot;width&quot; : 498,
             &quot;height&quot; : 300
-          }
+          },
+          &quot;cid&quot; : &quot;bafkreia2pym3lrspq43pve2s62qwcmus7h4ziyolnovkfpjjob65b26hue&quot;,
+          &quot;playlist&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3A6dncjiyu42adb2irwodoskfz/bafkreia2pym3lrspq43pve2s62qwcmus7h4ziyolnovkfpjjob65b26hue/playlist.m3u8&quot;,
+          &quot;thumbnail&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3A6dncjiyu42adb2irwodoskfz/bafkreia2pym3lrspq43pve2s62qwcmus7h4ziyolnovkfpjjob65b26hue/thumbnail.jpg&quot;
         },
         &quot;replyCount&quot; : 14,
         &quot;repostCount&quot; : 65,
@@ -2895,13 +2556,13 @@
         },
         &quot;embed&quot; : {
           &quot;$type&quot; : &quot;app.bsky.embed.video#view&quot;,
-          &quot;cid&quot; : &quot;bafkreihuwcepznxj7v4avofrnrfiuxqwucksm6m2qtigz4hdtix6apeute&quot;,
-          &quot;playlist&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3Aamshwsrh42m66em3mfap3kqp/bafkreihuwcepznxj7v4avofrnrfiuxqwucksm6m2qtigz4hdtix6apeute/playlist.m3u8&quot;,
-          &quot;thumbnail&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3Aamshwsrh42m66em3mfap3kqp/bafkreihuwcepznxj7v4avofrnrfiuxqwucksm6m2qtigz4hdtix6apeute/thumbnail.jpg&quot;,
           &quot;aspectRatio&quot; : {
             &quot;width&quot; : 1080,
             &quot;height&quot; : 1920
-          }
+          },
+          &quot;cid&quot; : &quot;bafkreihuwcepznxj7v4avofrnrfiuxqwucksm6m2qtigz4hdtix6apeute&quot;,
+          &quot;playlist&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3Aamshwsrh42m66em3mfap3kqp/bafkreihuwcepznxj7v4avofrnrfiuxqwucksm6m2qtigz4hdtix6apeute/playlist.m3u8&quot;,
+          &quot;thumbnail&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3Aamshwsrh42m66em3mfap3kqp/bafkreihuwcepznxj7v4avofrnrfiuxqwucksm6m2qtigz4hdtix6apeute/thumbnail.jpg&quot;
         },
         &quot;replyCount&quot; : 8,
         &quot;repostCount&quot; : 16,
@@ -2932,6 +2593,7 @@
           &quot;createdAt&quot; : 1739544160576,
           &quot;embed&quot; : {
             &quot;$type&quot; : &quot;app.bsky.embed.video&quot;,
+            &quot;alt&quot; : &quot;&#x1f4f9; buendiaphotography&quot;,
             &quot;aspectRatio&quot; : {
               &quot;width&quot; : 360,
               &quot;height&quot; : 640
@@ -2950,13 +2612,14 @@
         },
         &quot;embed&quot; : {
           &quot;$type&quot; : &quot;app.bsky.embed.video#view&quot;,
-          &quot;cid&quot; : &quot;bafkreic32lez4p6smz5gjxwuqgtnrbu4h6l4ozbx4f6resqg7f7sxfgpgq&quot;,
-          &quot;playlist&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3Am453r6fotgsoegzxtxj7snwa/bafkreic32lez4p6smz5gjxwuqgtnrbu4h6l4ozbx4f6resqg7f7sxfgpgq/playlist.m3u8&quot;,
-          &quot;thumbnail&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3Am453r6fotgsoegzxtxj7snwa/bafkreic32lez4p6smz5gjxwuqgtnrbu4h6l4ozbx4f6resqg7f7sxfgpgq/thumbnail.jpg&quot;,
+          &quot;alt&quot; : &quot;&#x1f4f9; buendiaphotography&quot;,
           &quot;aspectRatio&quot; : {
             &quot;width&quot; : 360,
             &quot;height&quot; : 640
-          }
+          },
+          &quot;cid&quot; : &quot;bafkreic32lez4p6smz5gjxwuqgtnrbu4h6l4ozbx4f6resqg7f7sxfgpgq&quot;,
+          &quot;playlist&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3Am453r6fotgsoegzxtxj7snwa/bafkreic32lez4p6smz5gjxwuqgtnrbu4h6l4ozbx4f6resqg7f7sxfgpgq/playlist.m3u8&quot;,
+          &quot;thumbnail&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3Am453r6fotgsoegzxtxj7snwa/bafkreic32lez4p6smz5gjxwuqgtnrbu4h6l4ozbx4f6resqg7f7sxfgpgq/thumbnail.jpg&quot;
         },
         &quot;replyCount&quot; : 182,
         &quot;repostCount&quot; : 1360,
@@ -2992,6 +2655,7 @@
           &quot;createdAt&quot; : 1739545194956,
           &quot;embed&quot; : {
             &quot;$type&quot; : &quot;app.bsky.embed.video&quot;,
+            &quot;alt&quot; : &quot;a skier in silhouette skis past a glowing orange expanse of lava in the background of the snow field they are skiing on, and the skier turns toward the camera and raises their arms in celebration&quot;,
             &quot;aspectRatio&quot; : {
               &quot;width&quot; : 848,
               &quot;height&quot; : 480
@@ -3010,13 +2674,14 @@
         },
         &quot;embed&quot; : {
           &quot;$type&quot; : &quot;app.bsky.embed.video#view&quot;,
-          &quot;cid&quot; : &quot;bafkreifl22uwoc3wsehhwcz5z6ywcadgymbo5d2l2jviof2ckxzr7puheu&quot;,
-          &quot;playlist&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3Ajpvse5d5p5hdcu3rouohlbpx/bafkreifl22uwoc3wsehhwcz5z6ywcadgymbo5d2l2jviof2ckxzr7puheu/playlist.m3u8&quot;,
-          &quot;thumbnail&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3Ajpvse5d5p5hdcu3rouohlbpx/bafkreifl22uwoc3wsehhwcz5z6ywcadgymbo5d2l2jviof2ckxzr7puheu/thumbnail.jpg&quot;,
+          &quot;alt&quot; : &quot;a skier in silhouette skis past a glowing orange expanse of lava in the background of the snow field they are skiing on, and the skier turns toward the camera and raises their arms in celebration&quot;,
           &quot;aspectRatio&quot; : {
             &quot;width&quot; : 848,
             &quot;height&quot; : 480
-          }
+          },
+          &quot;cid&quot; : &quot;bafkreifl22uwoc3wsehhwcz5z6ywcadgymbo5d2l2jviof2ckxzr7puheu&quot;,
+          &quot;playlist&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3Ajpvse5d5p5hdcu3rouohlbpx/bafkreifl22uwoc3wsehhwcz5z6ywcadgymbo5d2l2jviof2ckxzr7puheu/playlist.m3u8&quot;,
+          &quot;thumbnail&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3Ajpvse5d5p5hdcu3rouohlbpx/bafkreifl22uwoc3wsehhwcz5z6ywcadgymbo5d2l2jviof2ckxzr7puheu/thumbnail.jpg&quot;
         },
         &quot;replyCount&quot; : 20,
         &quot;repostCount&quot; : 80,
@@ -3065,13 +2730,13 @@
         },
         &quot;embed&quot; : {
           &quot;$type&quot; : &quot;app.bsky.embed.video#view&quot;,
-          &quot;cid&quot; : &quot;bafkreicuj4bzff36m7a5xn56ktb7txboewijufgj5rnj2kqevzehw7r7jq&quot;,
-          &quot;playlist&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3Azl7kgfro2rx3pavbslhhdhuy/bafkreicuj4bzff36m7a5xn56ktb7txboewijufgj5rnj2kqevzehw7r7jq/playlist.m3u8&quot;,
-          &quot;thumbnail&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3Azl7kgfro2rx3pavbslhhdhuy/bafkreicuj4bzff36m7a5xn56ktb7txboewijufgj5rnj2kqevzehw7r7jq/thumbnail.jpg&quot;,
           &quot;aspectRatio&quot; : {
             &quot;width&quot; : 960,
             &quot;height&quot; : 720
-          }
+          },
+          &quot;cid&quot; : &quot;bafkreicuj4bzff36m7a5xn56ktb7txboewijufgj5rnj2kqevzehw7r7jq&quot;,
+          &quot;playlist&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3Azl7kgfro2rx3pavbslhhdhuy/bafkreicuj4bzff36m7a5xn56ktb7txboewijufgj5rnj2kqevzehw7r7jq/playlist.m3u8&quot;,
+          &quot;thumbnail&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3Azl7kgfro2rx3pavbslhhdhuy/bafkreicuj4bzff36m7a5xn56ktb7txboewijufgj5rnj2kqevzehw7r7jq/thumbnail.jpg&quot;
         },
         &quot;replyCount&quot; : 4,
         &quot;repostCount&quot; : 12,
@@ -3144,13 +2809,13 @@
         },
         &quot;embed&quot; : {
           &quot;$type&quot; : &quot;app.bsky.embed.video#view&quot;,
-          &quot;cid&quot; : &quot;bafkreidpmciiwrdh7wvpdqhhe2cgk6vdayfycctputskceaymzt3qp6aqi&quot;,
-          &quot;playlist&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3Apnvfahpzogi64j4qxyb4vi6v/bafkreidpmciiwrdh7wvpdqhhe2cgk6vdayfycctputskceaymzt3qp6aqi/playlist.m3u8&quot;,
-          &quot;thumbnail&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3Apnvfahpzogi64j4qxyb4vi6v/bafkreidpmciiwrdh7wvpdqhhe2cgk6vdayfycctputskceaymzt3qp6aqi/thumbnail.jpg&quot;,
           &quot;aspectRatio&quot; : {
             &quot;width&quot; : 576,
             &quot;height&quot; : 1024
-          }
+          },
+          &quot;cid&quot; : &quot;bafkreidpmciiwrdh7wvpdqhhe2cgk6vdayfycctputskceaymzt3qp6aqi&quot;,
+          &quot;playlist&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3Apnvfahpzogi64j4qxyb4vi6v/bafkreidpmciiwrdh7wvpdqhhe2cgk6vdayfycctputskceaymzt3qp6aqi/playlist.m3u8&quot;,
+          &quot;thumbnail&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3Apnvfahpzogi64j4qxyb4vi6v/bafkreidpmciiwrdh7wvpdqhhe2cgk6vdayfycctputskceaymzt3qp6aqi/thumbnail.jpg&quot;
         },
         &quot;replyCount&quot; : 7,
         &quot;repostCount&quot; : 18,
@@ -3205,13 +2870,13 @@
         },
         &quot;embed&quot; : {
           &quot;$type&quot; : &quot;app.bsky.embed.video#view&quot;,
-          &quot;cid&quot; : &quot;bafkreid76cksmrzheudywwax3csp6k7xtk34f4ssxxztd3zx46wojxms4i&quot;,
-          &quot;playlist&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3A7rsjdyalzv3zjtathjdhbb4h/bafkreid76cksmrzheudywwax3csp6k7xtk34f4ssxxztd3zx46wojxms4i/playlist.m3u8&quot;,
-          &quot;thumbnail&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3A7rsjdyalzv3zjtathjdhbb4h/bafkreid76cksmrzheudywwax3csp6k7xtk34f4ssxxztd3zx46wojxms4i/thumbnail.jpg&quot;,
           &quot;aspectRatio&quot; : {
             &quot;width&quot; : 1920,
             &quot;height&quot; : 1080
-          }
+          },
+          &quot;cid&quot; : &quot;bafkreid76cksmrzheudywwax3csp6k7xtk34f4ssxxztd3zx46wojxms4i&quot;,
+          &quot;playlist&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3A7rsjdyalzv3zjtathjdhbb4h/bafkreid76cksmrzheudywwax3csp6k7xtk34f4ssxxztd3zx46wojxms4i/playlist.m3u8&quot;,
+          &quot;thumbnail&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3A7rsjdyalzv3zjtathjdhbb4h/bafkreid76cksmrzheudywwax3csp6k7xtk34f4ssxxztd3zx46wojxms4i/thumbnail.jpg&quot;
         },
         &quot;replyCount&quot; : 2,
         &quot;repostCount&quot; : 5,
@@ -3242,26 +2907,13 @@
           &quot;$type&quot; : &quot;app.bsky.feed.post&quot;,
           &quot;createdAt&quot; : 1739576174403,
           &quot;embed&quot; : {
-            &quot;$type&quot; : &quot;app.bsky.embed.record&quot;,
-            &quot;cid&quot; : null,
-            &quot;uri&quot; : null
+            &quot;$type&quot; : &quot;app.bsky.embed.record&quot;
           },
           &quot;langs&quot; : [ &quot;en&quot; ],
           &quot;text&quot; : &quot;Where you at Dems ? You fighting to get them far better severance or going to ignore them, and all others in similar circumstances?&quot;
         },
         &quot;embed&quot; : {
-          &quot;$type&quot; : &quot;app.bsky.embed.record#view&quot;,
-          &quot;author&quot; : null,
-          &quot;cid&quot; : null,
-          &quot;embeds&quot; : null,
-          &quot;indexedAt&quot; : null,
-          &quot;labels&quot; : null,
-          &quot;likeCount&quot; : null,
-          &quot;quoteCount&quot; : null,
-          &quot;replyCount&quot; : null,
-          &quot;repostCount&quot; : null,
-          &quot;uri&quot; : null,
-          &quot;value&quot; : null
+          &quot;$type&quot; : &quot;app.bsky.embed.record#view&quot;
         },
         &quot;replyCount&quot; : 2780,
         &quot;repostCount&quot; : 7937,
@@ -3379,124 +3031,7 @@
         &quot;labels&quot; : [ ]
       },
       &quot;reply&quot; : {
-        &quot;root&quot; : {
-          &quot;uri&quot; : &quot;at://did:plc:y5xyloyy7s4a2bwfeimj7r3b/app.bsky.feed.post/3li5snpkljc2o&quot;,
-          &quot;cid&quot; : &quot;bafyreiaxceo2oqpjdzl2kygfa7syzto4llaq3qfernmqw5qvljjeftdo5q&quot;,
-          &quot;author&quot; : {
-            &quot;did&quot; : &quot;did:plc:y5xyloyy7s4a2bwfeimj7r3b&quot;,
-            &quot;handle&quot; : &quot;mcuban.bsky.social&quot;,
-            &quot;displayName&quot; : &quot;Mark Cuban&quot;,
-            &quot;avatar&quot; : &quot;https://cdn.bsky.app/img/avatar/plain/did:plc:y5xyloyy7s4a2bwfeimj7r3b/bafkreihxddlkbnblytjdbajg5qopawdfcabg5e7ppwja6zmm3lvnedzojm@jpeg&quot;,
-            &quot;viewer&quot; : {
-              &quot;muted&quot; : false,
-              &quot;blockedBy&quot; : false,
-              &quot;following&quot; : &quot;at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3kebioim7l22d&quot;
-            },
-            &quot;labels&quot; : [ ],
-            &quot;createdAt&quot; : 1683008299464
-          },
-          &quot;record&quot; : {
-            &quot;$type&quot; : &quot;app.bsky.feed.post&quot;,
-            &quot;createdAt&quot; : 1739556904254,
-            &quot;embed&quot; : {
-              &quot;$type&quot; : &quot;app.bsky.embed.record&quot;,
-              &quot;cid&quot; : null,
-              &quot;uri&quot; : null
-            },
-            &quot;facets&quot; : [ {
-              &quot;index&quot; : {
-                &quot;byteStart&quot; : 19,
-                &quot;byteEnd&quot; : 45
-              },
-              &quot;features&quot; : [ {
-                &quot;$type&quot; : &quot;app.bsky.richtext.facet#mention&quot;,
-                &quot;did&quot; : &quot;did:plc:2q2hs5o42jhbd23pp6lkiauh&quot;
-              } ]
-            } ],
-            &quot;langs&quot; : [ &quot;en&quot; ],
-            &quot;text&quot; : &quot;This is so smart.  @petebuttigieg.bsky.social , thoughts ? \n\nAnd if you see this.  A reminder. This is not Twitter.  You can engage here and have thoughtful discussions !  \n\nWe all look forward to reading your thoughts&quot;
-          },
-          &quot;embed&quot; : {
-            &quot;$type&quot; : &quot;app.bsky.embed.record#view&quot;,
-            &quot;author&quot; : null,
-            &quot;cid&quot; : null,
-            &quot;embeds&quot; : null,
-            &quot;indexedAt&quot; : null,
-            &quot;labels&quot; : null,
-            &quot;likeCount&quot; : null,
-            &quot;quoteCount&quot; : null,
-            &quot;replyCount&quot; : null,
-            &quot;repostCount&quot; : null,
-            &quot;uri&quot; : null,
-            &quot;value&quot; : null
-          },
-          &quot;replyCount&quot; : 6089,
-          &quot;repostCount&quot; : 14185,
-          &quot;likeCount&quot; : 84198,
-          &quot;quoteCount&quot; : 1084,
-          &quot;indexedAt&quot; : 1739556904629,
-          &quot;viewer&quot; : { },
-          &quot;labels&quot; : [ ]
-        },
-        &quot;parent&quot; : {
-          &quot;uri&quot; : &quot;at://did:plc:y5xyloyy7s4a2bwfeimj7r3b/app.bsky.feed.post/3li5snpkljc2o&quot;,
-          &quot;cid&quot; : &quot;bafyreiaxceo2oqpjdzl2kygfa7syzto4llaq3qfernmqw5qvljjeftdo5q&quot;,
-          &quot;author&quot; : {
-            &quot;did&quot; : &quot;did:plc:y5xyloyy7s4a2bwfeimj7r3b&quot;,
-            &quot;handle&quot; : &quot;mcuban.bsky.social&quot;,
-            &quot;displayName&quot; : &quot;Mark Cuban&quot;,
-            &quot;avatar&quot; : &quot;https://cdn.bsky.app/img/avatar/plain/did:plc:y5xyloyy7s4a2bwfeimj7r3b/bafkreihxddlkbnblytjdbajg5qopawdfcabg5e7ppwja6zmm3lvnedzojm@jpeg&quot;,
-            &quot;viewer&quot; : {
-              &quot;muted&quot; : false,
-              &quot;blockedBy&quot; : false,
-              &quot;following&quot; : &quot;at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3kebioim7l22d&quot;
-            },
-            &quot;labels&quot; : [ ],
-            &quot;createdAt&quot; : 1683008299464
-          },
-          &quot;record&quot; : {
-            &quot;$type&quot; : &quot;app.bsky.feed.post&quot;,
-            &quot;createdAt&quot; : 1739556904254,
-            &quot;embed&quot; : {
-              &quot;$type&quot; : &quot;app.bsky.embed.record&quot;,
-              &quot;cid&quot; : null,
-              &quot;uri&quot; : null
-            },
-            &quot;facets&quot; : [ {
-              &quot;index&quot; : {
-                &quot;byteStart&quot; : 19,
-                &quot;byteEnd&quot; : 45
-              },
-              &quot;features&quot; : [ {
-                &quot;$type&quot; : &quot;app.bsky.richtext.facet#mention&quot;,
-                &quot;did&quot; : &quot;did:plc:2q2hs5o42jhbd23pp6lkiauh&quot;
-              } ]
-            } ],
-            &quot;langs&quot; : [ &quot;en&quot; ],
-            &quot;text&quot; : &quot;This is so smart.  @petebuttigieg.bsky.social , thoughts ? \n\nAnd if you see this.  A reminder. This is not Twitter.  You can engage here and have thoughtful discussions !  \n\nWe all look forward to reading your thoughts&quot;
-          },
-          &quot;embed&quot; : {
-            &quot;$type&quot; : &quot;app.bsky.embed.record#view&quot;,
-            &quot;author&quot; : null,
-            &quot;cid&quot; : null,
-            &quot;embeds&quot; : null,
-            &quot;indexedAt&quot; : null,
-            &quot;labels&quot; : null,
-            &quot;likeCount&quot; : null,
-            &quot;quoteCount&quot; : null,
-            &quot;replyCount&quot; : null,
-            &quot;repostCount&quot; : null,
-            &quot;uri&quot; : null,
-            &quot;value&quot; : null
-          },
-          &quot;replyCount&quot; : 6089,
-          &quot;repostCount&quot; : 14185,
-          &quot;likeCount&quot; : 84198,
-          &quot;quoteCount&quot; : 1084,
-          &quot;indexedAt&quot; : 1739556904629,
-          &quot;viewer&quot; : { },
-          &quot;labels&quot; : [ ]
-        }
+        &quot;root&quot; : { }
       }
     }, {
       &quot;post&quot; : {
@@ -3534,124 +3069,7 @@
         &quot;labels&quot; : [ ]
       },
       &quot;reply&quot; : {
-        &quot;root&quot; : {
-          &quot;uri&quot; : &quot;at://did:plc:y5xyloyy7s4a2bwfeimj7r3b/app.bsky.feed.post/3li5snpkljc2o&quot;,
-          &quot;cid&quot; : &quot;bafyreiaxceo2oqpjdzl2kygfa7syzto4llaq3qfernmqw5qvljjeftdo5q&quot;,
-          &quot;author&quot; : {
-            &quot;did&quot; : &quot;did:plc:y5xyloyy7s4a2bwfeimj7r3b&quot;,
-            &quot;handle&quot; : &quot;mcuban.bsky.social&quot;,
-            &quot;displayName&quot; : &quot;Mark Cuban&quot;,
-            &quot;avatar&quot; : &quot;https://cdn.bsky.app/img/avatar/plain/did:plc:y5xyloyy7s4a2bwfeimj7r3b/bafkreihxddlkbnblytjdbajg5qopawdfcabg5e7ppwja6zmm3lvnedzojm@jpeg&quot;,
-            &quot;viewer&quot; : {
-              &quot;muted&quot; : false,
-              &quot;blockedBy&quot; : false,
-              &quot;following&quot; : &quot;at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3kebioim7l22d&quot;
-            },
-            &quot;labels&quot; : [ ],
-            &quot;createdAt&quot; : 1683008299464
-          },
-          &quot;record&quot; : {
-            &quot;$type&quot; : &quot;app.bsky.feed.post&quot;,
-            &quot;createdAt&quot; : 1739556904254,
-            &quot;embed&quot; : {
-              &quot;$type&quot; : &quot;app.bsky.embed.record&quot;,
-              &quot;cid&quot; : null,
-              &quot;uri&quot; : null
-            },
-            &quot;facets&quot; : [ {
-              &quot;index&quot; : {
-                &quot;byteStart&quot; : 19,
-                &quot;byteEnd&quot; : 45
-              },
-              &quot;features&quot; : [ {
-                &quot;$type&quot; : &quot;app.bsky.richtext.facet#mention&quot;,
-                &quot;did&quot; : &quot;did:plc:2q2hs5o42jhbd23pp6lkiauh&quot;
-              } ]
-            } ],
-            &quot;langs&quot; : [ &quot;en&quot; ],
-            &quot;text&quot; : &quot;This is so smart.  @petebuttigieg.bsky.social , thoughts ? \n\nAnd if you see this.  A reminder. This is not Twitter.  You can engage here and have thoughtful discussions !  \n\nWe all look forward to reading your thoughts&quot;
-          },
-          &quot;embed&quot; : {
-            &quot;$type&quot; : &quot;app.bsky.embed.record#view&quot;,
-            &quot;author&quot; : null,
-            &quot;cid&quot; : null,
-            &quot;embeds&quot; : null,
-            &quot;indexedAt&quot; : null,
-            &quot;labels&quot; : null,
-            &quot;likeCount&quot; : null,
-            &quot;quoteCount&quot; : null,
-            &quot;replyCount&quot; : null,
-            &quot;repostCount&quot; : null,
-            &quot;uri&quot; : null,
-            &quot;value&quot; : null
-          },
-          &quot;replyCount&quot; : 6089,
-          &quot;repostCount&quot; : 14185,
-          &quot;likeCount&quot; : 84198,
-          &quot;quoteCount&quot; : 1084,
-          &quot;indexedAt&quot; : 1739556904629,
-          &quot;viewer&quot; : { },
-          &quot;labels&quot; : [ ]
-        },
-        &quot;parent&quot; : {
-          &quot;uri&quot; : &quot;at://did:plc:y5xyloyy7s4a2bwfeimj7r3b/app.bsky.feed.post/3li5snpkljc2o&quot;,
-          &quot;cid&quot; : &quot;bafyreiaxceo2oqpjdzl2kygfa7syzto4llaq3qfernmqw5qvljjeftdo5q&quot;,
-          &quot;author&quot; : {
-            &quot;did&quot; : &quot;did:plc:y5xyloyy7s4a2bwfeimj7r3b&quot;,
-            &quot;handle&quot; : &quot;mcuban.bsky.social&quot;,
-            &quot;displayName&quot; : &quot;Mark Cuban&quot;,
-            &quot;avatar&quot; : &quot;https://cdn.bsky.app/img/avatar/plain/did:plc:y5xyloyy7s4a2bwfeimj7r3b/bafkreihxddlkbnblytjdbajg5qopawdfcabg5e7ppwja6zmm3lvnedzojm@jpeg&quot;,
-            &quot;viewer&quot; : {
-              &quot;muted&quot; : false,
-              &quot;blockedBy&quot; : false,
-              &quot;following&quot; : &quot;at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3kebioim7l22d&quot;
-            },
-            &quot;labels&quot; : [ ],
-            &quot;createdAt&quot; : 1683008299464
-          },
-          &quot;record&quot; : {
-            &quot;$type&quot; : &quot;app.bsky.feed.post&quot;,
-            &quot;createdAt&quot; : 1739556904254,
-            &quot;embed&quot; : {
-              &quot;$type&quot; : &quot;app.bsky.embed.record&quot;,
-              &quot;cid&quot; : null,
-              &quot;uri&quot; : null
-            },
-            &quot;facets&quot; : [ {
-              &quot;index&quot; : {
-                &quot;byteStart&quot; : 19,
-                &quot;byteEnd&quot; : 45
-              },
-              &quot;features&quot; : [ {
-                &quot;$type&quot; : &quot;app.bsky.richtext.facet#mention&quot;,
-                &quot;did&quot; : &quot;did:plc:2q2hs5o42jhbd23pp6lkiauh&quot;
-              } ]
-            } ],
-            &quot;langs&quot; : [ &quot;en&quot; ],
-            &quot;text&quot; : &quot;This is so smart.  @petebuttigieg.bsky.social , thoughts ? \n\nAnd if you see this.  A reminder. This is not Twitter.  You can engage here and have thoughtful discussions !  \n\nWe all look forward to reading your thoughts&quot;
-          },
-          &quot;embed&quot; : {
-            &quot;$type&quot; : &quot;app.bsky.embed.record#view&quot;,
-            &quot;author&quot; : null,
-            &quot;cid&quot; : null,
-            &quot;embeds&quot; : null,
-            &quot;indexedAt&quot; : null,
-            &quot;labels&quot; : null,
-            &quot;likeCount&quot; : null,
-            &quot;quoteCount&quot; : null,
-            &quot;replyCount&quot; : null,
-            &quot;repostCount&quot; : null,
-            &quot;uri&quot; : null,
-            &quot;value&quot; : null
-          },
-          &quot;replyCount&quot; : 6089,
-          &quot;repostCount&quot; : 14185,
-          &quot;likeCount&quot; : 84198,
-          &quot;quoteCount&quot; : 1084,
-          &quot;indexedAt&quot; : 1739556904629,
-          &quot;viewer&quot; : { },
-          &quot;labels&quot; : [ ]
-        }
+        &quot;root&quot; : { }
       }
     }, {
       &quot;post&quot; : {
@@ -3709,124 +3127,7 @@
         &quot;labels&quot; : [ ]
       },
       &quot;reply&quot; : {
-        &quot;root&quot; : {
-          &quot;uri&quot; : &quot;at://did:plc:y5xyloyy7s4a2bwfeimj7r3b/app.bsky.feed.post/3li5snpkljc2o&quot;,
-          &quot;cid&quot; : &quot;bafyreiaxceo2oqpjdzl2kygfa7syzto4llaq3qfernmqw5qvljjeftdo5q&quot;,
-          &quot;author&quot; : {
-            &quot;did&quot; : &quot;did:plc:y5xyloyy7s4a2bwfeimj7r3b&quot;,
-            &quot;handle&quot; : &quot;mcuban.bsky.social&quot;,
-            &quot;displayName&quot; : &quot;Mark Cuban&quot;,
-            &quot;avatar&quot; : &quot;https://cdn.bsky.app/img/avatar/plain/did:plc:y5xyloyy7s4a2bwfeimj7r3b/bafkreihxddlkbnblytjdbajg5qopawdfcabg5e7ppwja6zmm3lvnedzojm@jpeg&quot;,
-            &quot;viewer&quot; : {
-              &quot;muted&quot; : false,
-              &quot;blockedBy&quot; : false,
-              &quot;following&quot; : &quot;at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3kebioim7l22d&quot;
-            },
-            &quot;labels&quot; : [ ],
-            &quot;createdAt&quot; : 1683008299464
-          },
-          &quot;record&quot; : {
-            &quot;$type&quot; : &quot;app.bsky.feed.post&quot;,
-            &quot;createdAt&quot; : 1739556904254,
-            &quot;embed&quot; : {
-              &quot;$type&quot; : &quot;app.bsky.embed.record&quot;,
-              &quot;cid&quot; : null,
-              &quot;uri&quot; : null
-            },
-            &quot;facets&quot; : [ {
-              &quot;index&quot; : {
-                &quot;byteStart&quot; : 19,
-                &quot;byteEnd&quot; : 45
-              },
-              &quot;features&quot; : [ {
-                &quot;$type&quot; : &quot;app.bsky.richtext.facet#mention&quot;,
-                &quot;did&quot; : &quot;did:plc:2q2hs5o42jhbd23pp6lkiauh&quot;
-              } ]
-            } ],
-            &quot;langs&quot; : [ &quot;en&quot; ],
-            &quot;text&quot; : &quot;This is so smart.  @petebuttigieg.bsky.social , thoughts ? \n\nAnd if you see this.  A reminder. This is not Twitter.  You can engage here and have thoughtful discussions !  \n\nWe all look forward to reading your thoughts&quot;
-          },
-          &quot;embed&quot; : {
-            &quot;$type&quot; : &quot;app.bsky.embed.record#view&quot;,
-            &quot;author&quot; : null,
-            &quot;cid&quot; : null,
-            &quot;embeds&quot; : null,
-            &quot;indexedAt&quot; : null,
-            &quot;labels&quot; : null,
-            &quot;likeCount&quot; : null,
-            &quot;quoteCount&quot; : null,
-            &quot;replyCount&quot; : null,
-            &quot;repostCount&quot; : null,
-            &quot;uri&quot; : null,
-            &quot;value&quot; : null
-          },
-          &quot;replyCount&quot; : 6089,
-          &quot;repostCount&quot; : 14185,
-          &quot;likeCount&quot; : 84198,
-          &quot;quoteCount&quot; : 1084,
-          &quot;indexedAt&quot; : 1739556904629,
-          &quot;viewer&quot; : { },
-          &quot;labels&quot; : [ ]
-        },
-        &quot;parent&quot; : {
-          &quot;uri&quot; : &quot;at://did:plc:y5xyloyy7s4a2bwfeimj7r3b/app.bsky.feed.post/3li5snpkljc2o&quot;,
-          &quot;cid&quot; : &quot;bafyreiaxceo2oqpjdzl2kygfa7syzto4llaq3qfernmqw5qvljjeftdo5q&quot;,
-          &quot;author&quot; : {
-            &quot;did&quot; : &quot;did:plc:y5xyloyy7s4a2bwfeimj7r3b&quot;,
-            &quot;handle&quot; : &quot;mcuban.bsky.social&quot;,
-            &quot;displayName&quot; : &quot;Mark Cuban&quot;,
-            &quot;avatar&quot; : &quot;https://cdn.bsky.app/img/avatar/plain/did:plc:y5xyloyy7s4a2bwfeimj7r3b/bafkreihxddlkbnblytjdbajg5qopawdfcabg5e7ppwja6zmm3lvnedzojm@jpeg&quot;,
-            &quot;viewer&quot; : {
-              &quot;muted&quot; : false,
-              &quot;blockedBy&quot; : false,
-              &quot;following&quot; : &quot;at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3kebioim7l22d&quot;
-            },
-            &quot;labels&quot; : [ ],
-            &quot;createdAt&quot; : 1683008299464
-          },
-          &quot;record&quot; : {
-            &quot;$type&quot; : &quot;app.bsky.feed.post&quot;,
-            &quot;createdAt&quot; : 1739556904254,
-            &quot;embed&quot; : {
-              &quot;$type&quot; : &quot;app.bsky.embed.record&quot;,
-              &quot;cid&quot; : null,
-              &quot;uri&quot; : null
-            },
-            &quot;facets&quot; : [ {
-              &quot;index&quot; : {
-                &quot;byteStart&quot; : 19,
-                &quot;byteEnd&quot; : 45
-              },
-              &quot;features&quot; : [ {
-                &quot;$type&quot; : &quot;app.bsky.richtext.facet#mention&quot;,
-                &quot;did&quot; : &quot;did:plc:2q2hs5o42jhbd23pp6lkiauh&quot;
-              } ]
-            } ],
-            &quot;langs&quot; : [ &quot;en&quot; ],
-            &quot;text&quot; : &quot;This is so smart.  @petebuttigieg.bsky.social , thoughts ? \n\nAnd if you see this.  A reminder. This is not Twitter.  You can engage here and have thoughtful discussions !  \n\nWe all look forward to reading your thoughts&quot;
-          },
-          &quot;embed&quot; : {
-            &quot;$type&quot; : &quot;app.bsky.embed.record#view&quot;,
-            &quot;author&quot; : null,
-            &quot;cid&quot; : null,
-            &quot;embeds&quot; : null,
-            &quot;indexedAt&quot; : null,
-            &quot;labels&quot; : null,
-            &quot;likeCount&quot; : null,
-            &quot;quoteCount&quot; : null,
-            &quot;replyCount&quot; : null,
-            &quot;repostCount&quot; : null,
-            &quot;uri&quot; : null,
-            &quot;value&quot; : null
-          },
-          &quot;replyCount&quot; : 6089,
-          &quot;repostCount&quot; : 14185,
-          &quot;likeCount&quot; : 84198,
-          &quot;quoteCount&quot; : 1084,
-          &quot;indexedAt&quot; : 1739556904629,
-          &quot;viewer&quot; : { },
-          &quot;labels&quot; : [ ]
-        }
+        &quot;root&quot; : { }
       }
     }, {
       &quot;post&quot; : {
@@ -3849,9 +3150,7 @@
           &quot;$type&quot; : &quot;app.bsky.feed.post&quot;,
           &quot;createdAt&quot; : 1739556904254,
           &quot;embed&quot; : {
-            &quot;$type&quot; : &quot;app.bsky.embed.record&quot;,
-            &quot;cid&quot; : null,
-            &quot;uri&quot; : null
+            &quot;$type&quot; : &quot;app.bsky.embed.record&quot;
           },
           &quot;facets&quot; : [ {
             &quot;index&quot; : {
@@ -3867,18 +3166,7 @@
           &quot;text&quot; : &quot;This is so smart.  @petebuttigieg.bsky.social , thoughts ? \n\nAnd if you see this.  A reminder. This is not Twitter.  You can engage here and have thoughtful discussions !  \n\nWe all look forward to reading your thoughts&quot;
         },
         &quot;embed&quot; : {
-          &quot;$type&quot; : &quot;app.bsky.embed.record#view&quot;,
-          &quot;author&quot; : null,
-          &quot;cid&quot; : null,
-          &quot;embeds&quot; : null,
-          &quot;indexedAt&quot; : null,
-          &quot;labels&quot; : null,
-          &quot;likeCount&quot; : null,
-          &quot;quoteCount&quot; : null,
-          &quot;replyCount&quot; : null,
-          &quot;repostCount&quot; : null,
-          &quot;uri&quot; : null,
-          &quot;value&quot; : null
+          &quot;$type&quot; : &quot;app.bsky.embed.record#view&quot;
         },
         &quot;replyCount&quot; : 6089,
         &quot;repostCount&quot; : 14185,
@@ -3924,114 +3212,7 @@
         &quot;labels&quot; : [ ]
       },
       &quot;reply&quot; : {
-        &quot;root&quot; : {
-          &quot;uri&quot; : &quot;at://did:plc:pjiafkey2cokiupsxpswqlk7/app.bsky.feed.post/3li3edwwzjk2p&quot;,
-          &quot;cid&quot; : &quot;bafyreigw65yutr65oinstnp2njrcqvsvtdnwlzq6aj2mwm7bijziuuijzy&quot;,
-          &quot;author&quot; : {
-            &quot;did&quot; : &quot;did:plc:pjiafkey2cokiupsxpswqlk7&quot;,
-            &quot;handle&quot; : &quot;marcelias.bsky.social&quot;,
-            &quot;displayName&quot; : &quot;Marc Elias&quot;,
-            &quot;avatar&quot; : &quot;https://cdn.bsky.app/img/avatar/plain/did:plc:pjiafkey2cokiupsxpswqlk7/bafkreibda5a7updqoqvq2k4jnklowk5cv2zlljz4zztuzdedfivgnnkwwa@jpeg&quot;,
-            &quot;associated&quot; : {
-              &quot;chat&quot; : {
-                &quot;allowIncoming&quot; : &quot;following&quot;
-              }
-            },
-            &quot;viewer&quot; : {
-              &quot;muted&quot; : false,
-              &quot;blockedBy&quot; : false,
-              &quot;following&quot; : &quot;at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3kefvpas42t22&quot;
-            },
-            &quot;labels&quot; : [ ],
-            &quot;createdAt&quot; : 1683114839832
-          },
-          &quot;record&quot; : {
-            &quot;$type&quot; : &quot;app.bsky.feed.post&quot;,
-            &quot;createdAt&quot; : 1739472824598,
-            &quot;embed&quot; : {
-              &quot;$type&quot; : &quot;app.bsky.embed.record&quot;,
-              &quot;cid&quot; : null,
-              &quot;uri&quot; : null
-            },
-            &quot;langs&quot; : [ &quot;en&quot; ],
-            &quot;text&quot; : &quot;And for the third straight day, the rest of the legacy media did nothing to stand up for the First Amendment. No boycott, no walkout, nothing but business as usual.\n\nThen, they wonder why people are canceling subscriptions and turning off their TV's while independent news outlets are thriving.&quot;
-          },
-          &quot;embed&quot; : {
-            &quot;$type&quot; : &quot;app.bsky.embed.record#view&quot;,
-            &quot;author&quot; : null,
-            &quot;cid&quot; : null,
-            &quot;embeds&quot; : null,
-            &quot;indexedAt&quot; : null,
-            &quot;labels&quot; : null,
-            &quot;likeCount&quot; : null,
-            &quot;quoteCount&quot; : null,
-            &quot;replyCount&quot; : null,
-            &quot;repostCount&quot; : null,
-            &quot;uri&quot; : null,
-            &quot;value&quot; : null
-          },
-          &quot;replyCount&quot; : 491,
-          &quot;repostCount&quot; : 5603,
-          &quot;likeCount&quot; : 19515,
-          &quot;quoteCount&quot; : 210,
-          &quot;indexedAt&quot; : 1739472825037,
-          &quot;viewer&quot; : { },
-          &quot;labels&quot; : [ ]
-        },
-        &quot;parent&quot; : {
-          &quot;uri&quot; : &quot;at://did:plc:pjiafkey2cokiupsxpswqlk7/app.bsky.feed.post/3li3edwwzjk2p&quot;,
-          &quot;cid&quot; : &quot;bafyreigw65yutr65oinstnp2njrcqvsvtdnwlzq6aj2mwm7bijziuuijzy&quot;,
-          &quot;author&quot; : {
-            &quot;did&quot; : &quot;did:plc:pjiafkey2cokiupsxpswqlk7&quot;,
-            &quot;handle&quot; : &quot;marcelias.bsky.social&quot;,
-            &quot;displayName&quot; : &quot;Marc Elias&quot;,
-            &quot;avatar&quot; : &quot;https://cdn.bsky.app/img/avatar/plain/did:plc:pjiafkey2cokiupsxpswqlk7/bafkreibda5a7updqoqvq2k4jnklowk5cv2zlljz4zztuzdedfivgnnkwwa@jpeg&quot;,
-            &quot;associated&quot; : {
-              &quot;chat&quot; : {
-                &quot;allowIncoming&quot; : &quot;following&quot;
-              }
-            },
-            &quot;viewer&quot; : {
-              &quot;muted&quot; : false,
-              &quot;blockedBy&quot; : false,
-              &quot;following&quot; : &quot;at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3kefvpas42t22&quot;
-            },
-            &quot;labels&quot; : [ ],
-            &quot;createdAt&quot; : 1683114839832
-          },
-          &quot;record&quot; : {
-            &quot;$type&quot; : &quot;app.bsky.feed.post&quot;,
-            &quot;createdAt&quot; : 1739472824598,
-            &quot;embed&quot; : {
-              &quot;$type&quot; : &quot;app.bsky.embed.record&quot;,
-              &quot;cid&quot; : null,
-              &quot;uri&quot; : null
-            },
-            &quot;langs&quot; : [ &quot;en&quot; ],
-            &quot;text&quot; : &quot;And for the third straight day, the rest of the legacy media did nothing to stand up for the First Amendment. No boycott, no walkout, nothing but business as usual.\n\nThen, they wonder why people are canceling subscriptions and turning off their TV's while independent news outlets are thriving.&quot;
-          },
-          &quot;embed&quot; : {
-            &quot;$type&quot; : &quot;app.bsky.embed.record#view&quot;,
-            &quot;author&quot; : null,
-            &quot;cid&quot; : null,
-            &quot;embeds&quot; : null,
-            &quot;indexedAt&quot; : null,
-            &quot;labels&quot; : null,
-            &quot;likeCount&quot; : null,
-            &quot;quoteCount&quot; : null,
-            &quot;replyCount&quot; : null,
-            &quot;repostCount&quot; : null,
-            &quot;uri&quot; : null,
-            &quot;value&quot; : null
-          },
-          &quot;replyCount&quot; : 491,
-          &quot;repostCount&quot; : 5603,
-          &quot;likeCount&quot; : 19515,
-          &quot;quoteCount&quot; : 210,
-          &quot;indexedAt&quot; : 1739472825037,
-          &quot;viewer&quot; : { },
-          &quot;labels&quot; : [ ]
-        }
+        &quot;root&quot; : { }
       }
     }, {
       &quot;post&quot; : {
@@ -4055,10 +3236,19 @@
           &quot;createdAt&quot; : 1739574037970,
           &quot;embed&quot; : {
             &quot;$type&quot; : &quot;app.bsky.embed.external&quot;,
-            &quot;uri&quot; : null,
-            &quot;title&quot; : null,
-            &quot;description&quot; : null,
-            &quot;thumb&quot; : null
+            &quot;external&quot; : {
+              &quot;uri&quot; : &quot;https://aldailynews.com/nih-funding-cuts-could-jeopardize-life-saving-research-in-alabama/&quot;,
+              &quot;title&quot; : &quot;NIH funding cuts could jeopardize 'life-saving' research in Alabama&quot;,
+              &quot;description&quot; : &quot;A federal judge temporarily blocked the changes in 22 states Monday after the states sued the Trump Administration over the funding cuts arguing they would be “devastating.” Alabama is not part of tha...&quot;,
+              &quot;thumb&quot; : {
+                &quot;$type&quot; : &quot;blob&quot;,
+                &quot;ref&quot; : {
+                  &quot;$link&quot; : &quot;bafkreifc2f64htir7mmqh2losfd374sbveyfef4laxnwdmnxtp23ens7ga&quot;
+                },
+                &quot;mimeType&quot; : &quot;image/jpeg&quot;,
+                &quot;size&quot; : 965771
+              }
+            }
           },
           &quot;facets&quot; : [ {
             &quot;index&quot; : {
@@ -4075,10 +3265,12 @@
         },
         &quot;embed&quot; : {
           &quot;$type&quot; : &quot;app.bsky.embed.external#view&quot;,
-          &quot;uri&quot; : null,
-          &quot;title&quot; : null,
-          &quot;description&quot; : null,
-          &quot;thumb&quot; : null
+          &quot;external&quot; : {
+            &quot;uri&quot; : &quot;https://aldailynews.com/nih-funding-cuts-could-jeopardize-life-saving-research-in-alabama/&quot;,
+            &quot;title&quot; : &quot;NIH funding cuts could jeopardize 'life-saving' research in Alabama&quot;,
+            &quot;description&quot; : &quot;A federal judge temporarily blocked the changes in 22 states Monday after the states sued the Trump Administration over the funding cuts arguing they would be “devastating.” Alabama is not part of tha...&quot;,
+            &quot;thumb&quot; : &quot;https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:cxrua73vvgqw4lel4nkccky7/bafkreifc2f64htir7mmqh2losfd374sbveyfef4laxnwdmnxtp23ens7ga@jpeg&quot;
+          }
         },
         &quot;replyCount&quot; : 124,
         &quot;repostCount&quot; : 1074,
@@ -4140,10 +3332,19 @@
           &quot;createdAt&quot; : 1739387604113,
           &quot;embed&quot; : {
             &quot;$type&quot; : &quot;app.bsky.embed.external&quot;,
-            &quot;uri&quot; : null,
-            &quot;title&quot; : null,
-            &quot;description&quot; : null,
-            &quot;thumb&quot; : null
+            &quot;external&quot; : {
+              &quot;uri&quot; : &quot;https://www.nbcnews.com/politics/donald-trump/trump-losing-court-boring-reason-adminitrative-procedure-act-rcna191113&quot;,
+              &quot;title&quot; : &quot;This obscure law is one reason Trump's agenda keeps losing in court&quot;,
+              &quot;description&quot; : &quot;Lawsuits challenging Trump policies raise big constitutional questions, but they also rely on a law that requires the government to follow the correct procedures when changing course.&quot;,
+              &quot;thumb&quot; : {
+                &quot;$type&quot; : &quot;blob&quot;,
+                &quot;ref&quot; : {
+                  &quot;$link&quot; : &quot;bafkreicn54lt32gmek2hbvkbu53ub73yh446rad7bpcz7uxkyao76ff5zm&quot;
+                },
+                &quot;mimeType&quot; : &quot;image/jpeg&quot;,
+                &quot;size&quot; : 278563
+              }
+            }
           },
           &quot;facets&quot; : [ {
             &quot;index&quot; : {
@@ -4160,10 +3361,12 @@
         },
         &quot;embed&quot; : {
           &quot;$type&quot; : &quot;app.bsky.embed.external#view&quot;,
-          &quot;uri&quot; : null,
-          &quot;title&quot; : null,
-          &quot;description&quot; : null,
-          &quot;thumb&quot; : null
+          &quot;external&quot; : {
+            &quot;uri&quot; : &quot;https://www.nbcnews.com/politics/donald-trump/trump-losing-court-boring-reason-adminitrative-procedure-act-rcna191113&quot;,
+            &quot;title&quot; : &quot;This obscure law is one reason Trump's agenda keeps losing in court&quot;,
+            &quot;description&quot; : &quot;Lawsuits challenging Trump policies raise big constitutional questions, but they also rely on a law that requires the government to follow the correct procedures when changing course.&quot;,
+            &quot;thumb&quot; : &quot;https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:y5xyloyy7s4a2bwfeimj7r3b/bafkreicn54lt32gmek2hbvkbu53ub73yh446rad7bpcz7uxkyao76ff5zm@jpeg&quot;
+          }
         },
         &quot;replyCount&quot; : 1277,
         &quot;repostCount&quot; : 11182,
@@ -4209,124 +3412,7 @@
         &quot;labels&quot; : [ ]
       },
       &quot;reply&quot; : {
-        &quot;root&quot; : {
-          &quot;uri&quot; : &quot;at://did:plc:f5vv2f7a4huhkcqy6b4fp5ge/app.bsky.feed.post/3jx7iiq7tut2z&quot;,
-          &quot;cid&quot; : &quot;bafyreih2s6tmiwhjes345s6pd2earmia7sopygospztrupwdaqn7ggkqyy&quot;,
-          &quot;author&quot; : {
-            &quot;did&quot; : &quot;did:plc:f5vv2f7a4huhkcqy6b4fp5ge&quot;,
-            &quot;handle&quot; : &quot;notwes.bsky.social&quot;,
-            &quot;displayName&quot; : &quot;Wes&quot;,
-            &quot;avatar&quot; : &quot;https://cdn.bsky.app/img/avatar/plain/did:plc:f5vv2f7a4huhkcqy6b4fp5ge/bafkreiebj773g2oa6omrxl5awgjk2yuegy4c6dwy3725lig5aok7rkib7y@jpeg&quot;,
-            &quot;associated&quot; : {
-              &quot;chat&quot; : {
-                &quot;allowIncoming&quot; : &quot;following&quot;
-              }
-            },
-            &quot;viewer&quot; : {
-              &quot;muted&quot; : false,
-              &quot;blockedBy&quot; : false
-            },
-            &quot;labels&quot; : [ ],
-            &quot;createdAt&quot; : 1681238063831
-          },
-          &quot;record&quot; : {
-            &quot;$type&quot; : &quot;app.bsky.feed.post&quot;,
-            &quot;createdAt&quot; : 1685738649245,
-            &quot;facets&quot; : [ {
-              &quot;index&quot; : {
-                &quot;byteStart&quot; : 4,
-                &quot;byteEnd&quot; : 15
-              },
-              &quot;features&quot; : [ {
-                &quot;$type&quot; : &quot;app.bsky.richtext.facet#mention&quot;,
-                &quot;did&quot; : &quot;did:plc:yk4dd2qkboz2yv6tpubpc6co&quot;
-              } ]
-            } ],
-            &quot;text&quot; : &quot;Hey @dholms.xyz! I see you are the main committer on the \&quot;feed generator\&quot; repo. I just wanted to give a bit of friendly feedback.\n\nAs an example for others goes, it is really unclear where your teams opinions end and the actual implementation details start.&quot;
-          },
-          &quot;replyCount&quot; : 2,
-          &quot;repostCount&quot; : 0,
-          &quot;likeCount&quot; : 2,
-          &quot;quoteCount&quot; : 1,
-          &quot;indexedAt&quot; : 1685738649245,
-          &quot;viewer&quot; : { },
-          &quot;labels&quot; : [ ]
-        },
-        &quot;parent&quot; : {
-          &quot;uri&quot; : &quot;at://did:plc:f5vv2f7a4huhkcqy6b4fp5ge/app.bsky.feed.post/3jx7madrot72a&quot;,
-          &quot;cid&quot; : &quot;bafyreico4k7yj3znx42bgal3tridsucebzimb7iflpmwa3sncjkif2pmr4&quot;,
-          &quot;author&quot; : {
-            &quot;did&quot; : &quot;did:plc:f5vv2f7a4huhkcqy6b4fp5ge&quot;,
-            &quot;handle&quot; : &quot;notwes.bsky.social&quot;,
-            &quot;displayName&quot; : &quot;Wes&quot;,
-            &quot;avatar&quot; : &quot;https://cdn.bsky.app/img/avatar/plain/did:plc:f5vv2f7a4huhkcqy6b4fp5ge/bafkreiebj773g2oa6omrxl5awgjk2yuegy4c6dwy3725lig5aok7rkib7y@jpeg&quot;,
-            &quot;associated&quot; : {
-              &quot;chat&quot; : {
-                &quot;allowIncoming&quot; : &quot;following&quot;
-              }
-            },
-            &quot;viewer&quot; : {
-              &quot;muted&quot; : false,
-              &quot;blockedBy&quot; : false
-            },
-            &quot;labels&quot; : [ ],
-            &quot;createdAt&quot; : 1681238063831
-          },
-          &quot;record&quot; : {
-            &quot;$type&quot; : &quot;app.bsky.feed.post&quot;,
-            &quot;createdAt&quot; : 1685742662699,
-            &quot;embed&quot; : {
-              &quot;$type&quot; : &quot;app.bsky.embed.external&quot;,
-              &quot;uri&quot; : null,
-              &quot;title&quot; : null,
-              &quot;description&quot; : null,
-              &quot;thumb&quot; : null
-            },
-            &quot;facets&quot; : [ {
-              &quot;index&quot; : {
-                &quot;byteStart&quot; : 46,
-                &quot;byteEnd&quot; : 117
-              },
-              &quot;features&quot; : [ {
-                &quot;$type&quot; : &quot;app.bsky.richtext.facet#link&quot;,
-                &quot;uri&quot; : &quot;https://github.com/wesleytodd/platformatic-test-app/blob/main/plugin.js&quot;
-              } ]
-            } ],
-            &quot;text&quot; : &quot;I think this matches your description right?  https://github.com/wesleytodd/platformatic-test-app/blob/main/plugin.js&quot;
-          },
-          &quot;embed&quot; : {
-            &quot;$type&quot; : &quot;app.bsky.embed.external#view&quot;,
-            &quot;uri&quot; : null,
-            &quot;title&quot; : null,
-            &quot;description&quot; : null,
-            &quot;thumb&quot; : null
-          },
-          &quot;replyCount&quot; : 1,
-          &quot;repostCount&quot; : 0,
-          &quot;likeCount&quot; : 1,
-          &quot;quoteCount&quot; : 0,
-          &quot;indexedAt&quot; : 1685742662699,
-          &quot;viewer&quot; : { },
-          &quot;labels&quot; : [ ]
-        },
-        &quot;grandparentAuthor&quot; : {
-          &quot;did&quot; : &quot;did:plc:yk4dd2qkboz2yv6tpubpc6co&quot;,
-          &quot;handle&quot; : &quot;dholms.xyz&quot;,
-          &quot;displayName&quot; : &quot;daniel &#x1fae0;&quot;,
-          &quot;avatar&quot; : &quot;https://cdn.bsky.app/img/avatar/plain/did:plc:yk4dd2qkboz2yv6tpubpc6co/bafkreidc5amuohqqhturw5xeuswgtyrywkpn4z4v7zwbk4f6cdshl5c2ne@jpeg&quot;,
-          &quot;createdAt&quot; : 1668665233996,
-          &quot;associated&quot; : {
-            &quot;chat&quot; : {
-              &quot;allowIncoming&quot; : &quot;following&quot;
-            }
-          },
-          &quot;viewer&quot; : {
-            &quot;muted&quot; : false,
-            &quot;blockedBy&quot; : false,
-            &quot;following&quot; : &quot;at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3lhziph4aoc2x&quot;
-          },
-          &quot;labels&quot; : [ ]
-        }
+        &quot;root&quot; : { }
       }
     }, {
       &quot;post&quot; : {
@@ -4349,19 +3435,36 @@
           &quot;createdAt&quot; : 1739382999673,
           &quot;embed&quot; : {
             &quot;$type&quot; : &quot;app.bsky.embed.images&quot;,
-            &quot;alt&quot; : null,
-            &quot;image&quot; : null,
-            &quot;aspectRatio&quot; : null
+            &quot;images&quot; : [ {
+              &quot;alt&quot; : &quot;&quot;,
+              &quot;image&quot; : {
+                &quot;$type&quot; : &quot;blob&quot;,
+                &quot;ref&quot; : {
+                  &quot;$link&quot; : &quot;bafkreiajd6hkcoyulzbcajx3gldpdyadkcxt3jr4xqemt45t5dwbo7vgvi&quot;
+                },
+                &quot;mimeType&quot; : &quot;image/jpeg&quot;,
+                &quot;size&quot; : 698061
+              },
+              &quot;aspectRatio&quot; : {
+                &quot;width&quot; : 1333,
+                &quot;height&quot; : 2000
+              }
+            } ]
           },
           &quot;langs&quot; : [ &quot;en&quot; ],
           &quot;text&quot; : &quot;&quot;
         },
         &quot;embed&quot; : {
           &quot;$type&quot; : &quot;app.bsky.embed.images#view&quot;,
-          &quot;thumb&quot; : null,
-          &quot;fullsize&quot; : null,
-          &quot;alt&quot; : null,
-          &quot;aspectRatio&quot; : null
+          &quot;images&quot; : [ {
+            &quot;thumb&quot; : &quot;https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:3jg2djfwpsw5xfbot7bwbyah/bafkreiajd6hkcoyulzbcajx3gldpdyadkcxt3jr4xqemt45t5dwbo7vgvi@jpeg&quot;,
+            &quot;fullsize&quot; : &quot;https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:3jg2djfwpsw5xfbot7bwbyah/bafkreiajd6hkcoyulzbcajx3gldpdyadkcxt3jr4xqemt45t5dwbo7vgvi@jpeg&quot;,
+            &quot;alt&quot; : &quot;&quot;,
+            &quot;aspectRatio&quot; : {
+              &quot;width&quot; : 1333,
+              &quot;height&quot; : 2000
+            }
+          } ]
         },
         &quot;replyCount&quot; : 14,
         &quot;repostCount&quot; : 89,
@@ -4392,26 +3495,13 @@
           &quot;$type&quot; : &quot;app.bsky.feed.post&quot;,
           &quot;createdAt&quot; : 1739383879314,
           &quot;embed&quot; : {
-            &quot;$type&quot; : &quot;app.bsky.embed.record&quot;,
-            &quot;cid&quot; : null,
-            &quot;uri&quot; : null
+            &quot;$type&quot; : &quot;app.bsky.embed.record&quot;
           },
           &quot;langs&quot; : [ &quot;en&quot; ],
           &quot;text&quot; : &quot;Correct&quot;
         },
         &quot;embed&quot; : {
-          &quot;$type&quot; : &quot;app.bsky.embed.record#view&quot;,
-          &quot;author&quot; : null,
-          &quot;cid&quot; : null,
-          &quot;embeds&quot; : null,
-          &quot;indexedAt&quot; : null,
-          &quot;labels&quot; : null,
-          &quot;likeCount&quot; : null,
-          &quot;quoteCount&quot; : null,
-          &quot;replyCount&quot; : null,
-          &quot;repostCount&quot; : null,
-          &quot;uri&quot; : null,
-          &quot;value&quot; : null
+          &quot;$type&quot; : &quot;app.bsky.embed.record#view&quot;
         },
         &quot;replyCount&quot; : 7,
         &quot;repostCount&quot; : 2,
@@ -4478,9 +3568,21 @@
           &quot;createdAt&quot; : 1739377847039,
           &quot;embed&quot; : {
             &quot;$type&quot; : &quot;app.bsky.embed.images&quot;,
-            &quot;alt&quot; : null,
-            &quot;image&quot; : null,
-            &quot;aspectRatio&quot; : null
+            &quot;images&quot; : [ {
+              &quot;alt&quot; : &quot;&quot;,
+              &quot;image&quot; : {
+                &quot;$type&quot; : &quot;blob&quot;,
+                &quot;ref&quot; : {
+                  &quot;$link&quot; : &quot;bafkreiawhwpsssawzifcod65qluj4b65zawdfsjkvmlhnb63wtf7zlexeq&quot;
+                },
+                &quot;mimeType&quot; : &quot;image/jpeg&quot;,
+                &quot;size&quot; : 405042
+              },
+              &quot;aspectRatio&quot; : {
+                &quot;width&quot; : 1024,
+                &quot;height&quot; : 768
+              }
+            } ]
           },
           &quot;facets&quot; : [ {
             &quot;index&quot; : {
@@ -4497,10 +3599,15 @@
         },
         &quot;embed&quot; : {
           &quot;$type&quot; : &quot;app.bsky.embed.images#view&quot;,
-          &quot;thumb&quot; : null,
-          &quot;fullsize&quot; : null,
-          &quot;alt&quot; : null,
-          &quot;aspectRatio&quot; : null
+          &quot;images&quot; : [ {
+            &quot;thumb&quot; : &quot;https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:v6tphxwtlwoq6ja2m3deemp2/bafkreiawhwpsssawzifcod65qluj4b65zawdfsjkvmlhnb63wtf7zlexeq@jpeg&quot;,
+            &quot;fullsize&quot; : &quot;https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:v6tphxwtlwoq6ja2m3deemp2/bafkreiawhwpsssawzifcod65qluj4b65zawdfsjkvmlhnb63wtf7zlexeq@jpeg&quot;,
+            &quot;alt&quot; : &quot;&quot;,
+            &quot;aspectRatio&quot; : {
+              &quot;width&quot; : 1024,
+              &quot;height&quot; : 768
+            }
+          } ]
         },
         &quot;replyCount&quot; : 27,
         &quot;repostCount&quot; : 89,
@@ -4532,19 +3639,30 @@
           &quot;createdAt&quot; : 1739384226000,
           &quot;embed&quot; : {
             &quot;$type&quot; : &quot;app.bsky.embed.external&quot;,
-            &quot;uri&quot; : null,
-            &quot;title&quot; : null,
-            &quot;description&quot; : null,
-            &quot;thumb&quot; : null
+            &quot;external&quot; : {
+              &quot;uri&quot; : &quot;https://www.theguardian.com/commentisfree/picture/2025/feb/12/ben-jennings-donald-trump-elon-musk-cuts-cartoon?utm_source=dlvr.it&amp;utm_medium=bluesky&amp;CMP=bsky_gu&quot;,
+              &quot;title&quot; : &quot;Ben Jennings on ‘checks and balances’ in Trump’s White House – cartoon&quot;,
+              &quot;description&quot; : &quot;Continue reading...&quot;,
+              &quot;thumb&quot; : {
+                &quot;$type&quot; : &quot;blob&quot;,
+                &quot;ref&quot; : {
+                  &quot;$link&quot; : &quot;bafkreidx3fnxx6ovbqxruihns3qiry6ald7h2oahyr7fmrj22wngsvaw7i&quot;
+                },
+                &quot;mimeType&quot; : &quot;image/jpeg&quot;,
+                &quot;size&quot; : 183522
+              }
+            }
           },
           &quot;text&quot; : &quot;Ben Jennings on ‘checks and balances’ in Trump’s White House – cartoon&quot;
         },
         &quot;embed&quot; : {
           &quot;$type&quot; : &quot;app.bsky.embed.external#view&quot;,
-          &quot;uri&quot; : null,
-          &quot;title&quot; : null,
-          &quot;description&quot; : null,
-          &quot;thumb&quot; : null
+          &quot;external&quot; : {
+            &quot;uri&quot; : &quot;https://www.theguardian.com/commentisfree/picture/2025/feb/12/ben-jennings-donald-trump-elon-musk-cuts-cartoon?utm_source=dlvr.it&amp;utm_medium=bluesky&amp;CMP=bsky_gu&quot;,
+            &quot;title&quot; : &quot;Ben Jennings on ‘checks and balances’ in Trump’s White House – cartoon&quot;,
+            &quot;description&quot; : &quot;Continue reading...&quot;,
+            &quot;thumb&quot; : &quot;https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:vovinwhtulbsx4mwfw26r5ni/bafkreidx3fnxx6ovbqxruihns3qiry6ald7h2oahyr7fmrj22wngsvaw7i@jpeg&quot;
+          }
         },
         &quot;replyCount&quot; : 4,
         &quot;repostCount&quot; : 63,
@@ -4581,19 +3699,36 @@
           &quot;createdAt&quot; : 1739366394123,
           &quot;embed&quot; : {
             &quot;$type&quot; : &quot;app.bsky.embed.images&quot;,
-            &quot;alt&quot; : null,
-            &quot;image&quot; : null,
-            &quot;aspectRatio&quot; : null
+            &quot;images&quot; : [ {
+              &quot;alt&quot; : &quot;Pastel orange color sunset afterglow over the horizon with gentle waves crashing into the beach &quot;,
+              &quot;image&quot; : {
+                &quot;$type&quot; : &quot;blob&quot;,
+                &quot;ref&quot; : {
+                  &quot;$link&quot; : &quot;bafkreia5dpruzceciqz4lw3oa42q3jehnquqvwuotr73yk45mqyd5yqwka&quot;
+                },
+                &quot;mimeType&quot; : &quot;image/jpeg&quot;,
+                &quot;size&quot; : 963846
+              },
+              &quot;aspectRatio&quot; : {
+                &quot;width&quot; : 1489,
+                &quot;height&quot; : 2000
+              }
+            } ]
           },
           &quot;langs&quot; : [ &quot;en&quot; ],
           &quot;text&quot; : &quot;Nobody but Me… &#x1f33a;&quot;
         },
         &quot;embed&quot; : {
           &quot;$type&quot; : &quot;app.bsky.embed.images#view&quot;,
-          &quot;thumb&quot; : null,
-          &quot;fullsize&quot; : null,
-          &quot;alt&quot; : null,
-          &quot;aspectRatio&quot; : null
+          &quot;images&quot; : [ {
+            &quot;thumb&quot; : &quot;https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:4youk6koejgwe5m4lennnn4g/bafkreia5dpruzceciqz4lw3oa42q3jehnquqvwuotr73yk45mqyd5yqwka@jpeg&quot;,
+            &quot;fullsize&quot; : &quot;https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:4youk6koejgwe5m4lennnn4g/bafkreia5dpruzceciqz4lw3oa42q3jehnquqvwuotr73yk45mqyd5yqwka@jpeg&quot;,
+            &quot;alt&quot; : &quot;Pastel orange color sunset afterglow over the horizon with gentle waves crashing into the beach &quot;,
+            &quot;aspectRatio&quot; : {
+              &quot;width&quot; : 1489,
+              &quot;height&quot; : 2000
+            }
+          } ]
         },
         &quot;replyCount&quot; : 160,
         &quot;repostCount&quot; : 409,
@@ -4635,19 +3770,36 @@
           &quot;createdAt&quot; : 1739308933942,
           &quot;embed&quot; : {
             &quot;$type&quot; : &quot;app.bsky.embed.images&quot;,
-            &quot;alt&quot; : null,
-            &quot;image&quot; : null,
-            &quot;aspectRatio&quot; : null
+            &quot;images&quot; : [ {
+              &quot;alt&quot; : &quot;&quot;,
+              &quot;image&quot; : {
+                &quot;$type&quot; : &quot;blob&quot;,
+                &quot;ref&quot; : {
+                  &quot;$link&quot; : &quot;bafkreih2lu66m5jroavjasn5tsq5mbhwokcleezqrjzveatkf43og3tscm&quot;
+                },
+                &quot;mimeType&quot; : &quot;image/jpeg&quot;,
+                &quot;size&quot; : 341898
+              },
+              &quot;aspectRatio&quot; : {
+                &quot;width&quot; : 1290,
+                &quot;height&quot; : 1768
+              }
+            } ]
           },
           &quot;langs&quot; : [ &quot;en&quot; ],
           &quot;text&quot; : &quot;I’m a LONG time American Gov teacher and these are some of my go-to apps for keeping track of all the (nefarious) shit happening in local, state, and federal government.  5calls is the one you should check out today… super handy.&quot;
         },
         &quot;embed&quot; : {
           &quot;$type&quot; : &quot;app.bsky.embed.images#view&quot;,
-          &quot;thumb&quot; : null,
-          &quot;fullsize&quot; : null,
-          &quot;alt&quot; : null,
-          &quot;aspectRatio&quot; : null
+          &quot;images&quot; : [ {
+            &quot;thumb&quot; : &quot;https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:qemcl6cgej3efqxs4x5jiebp/bafkreih2lu66m5jroavjasn5tsq5mbhwokcleezqrjzveatkf43og3tscm@jpeg&quot;,
+            &quot;fullsize&quot; : &quot;https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:qemcl6cgej3efqxs4x5jiebp/bafkreih2lu66m5jroavjasn5tsq5mbhwokcleezqrjzveatkf43og3tscm@jpeg&quot;,
+            &quot;alt&quot; : &quot;&quot;,
+            &quot;aspectRatio&quot; : {
+              &quot;width&quot; : 1290,
+              &quot;height&quot; : 1768
+            }
+          } ]
         },
         &quot;replyCount&quot; : 30,
         &quot;repostCount&quot; : 198,
@@ -4709,20 +3861,31 @@
           &quot;createdAt&quot; : 1739379281393,
           &quot;embed&quot; : {
             &quot;$type&quot; : &quot;app.bsky.embed.external&quot;,
-            &quot;uri&quot; : null,
-            &quot;title&quot; : null,
-            &quot;description&quot; : null,
-            &quot;thumb&quot; : null
+            &quot;external&quot; : {
+              &quot;uri&quot; : &quot;https://www.thebulwark.com/p/when-president-musk-speaks-donald&quot;,
+              &quot;title&quot; : &quot;When President Musk Speaks, Donald Trump Listens&quot;,
+              &quot;description&quot; : &quot;DOGE is in charge now.&quot;,
+              &quot;thumb&quot; : {
+                &quot;$type&quot; : &quot;blob&quot;,
+                &quot;ref&quot; : {
+                  &quot;$link&quot; : &quot;bafkreiackxi5tjghau7braee6lcvqsygrrtkod6pr5xntyuj3jo5rlwjtq&quot;
+                },
+                &quot;mimeType&quot; : &quot;image/jpeg&quot;,
+                &quot;size&quot; : 622808
+              }
+            }
           },
           &quot;langs&quot; : [ &quot;en&quot; ],
           &quot;text&quot; : &quot;This one is my favorite. Tiny Head Trump.&quot;
         },
         &quot;embed&quot; : {
           &quot;$type&quot; : &quot;app.bsky.embed.external#view&quot;,
-          &quot;uri&quot; : null,
-          &quot;title&quot; : null,
-          &quot;description&quot; : null,
-          &quot;thumb&quot; : null
+          &quot;external&quot; : {
+            &quot;uri&quot; : &quot;https://www.thebulwark.com/p/when-president-musk-speaks-donald&quot;,
+            &quot;title&quot; : &quot;When President Musk Speaks, Donald Trump Listens&quot;,
+            &quot;description&quot; : &quot;DOGE is in charge now.&quot;,
+            &quot;thumb&quot; : &quot;https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:xxg5gz457tajqy33bjfdhw7q/bafkreiackxi5tjghau7braee6lcvqsygrrtkod6pr5xntyuj3jo5rlwjtq@jpeg&quot;
+          }
         },
         &quot;replyCount&quot; : 4,
         &quot;repostCount&quot; : 16,
@@ -4733,102 +3896,7 @@
         &quot;labels&quot; : [ ]
       },
       &quot;reply&quot; : {
-        &quot;root&quot; : {
-          &quot;uri&quot; : &quot;at://did:plc:tsksqpjisdvtusxq6ide5tzj/app.bsky.feed.post/3lhyax675h227&quot;,
-          &quot;cid&quot; : &quot;bafyreidsgkr6ul4sy3xadyv4x35vzccyy6ovbi7cvtnv4o2v4eqeipfpae&quot;,
-          &quot;author&quot; : {
-            &quot;did&quot; : &quot;did:plc:tsksqpjisdvtusxq6ide5tzj&quot;,
-            &quot;handle&quot; : &quot;adamkinzinger.bsky.social&quot;,
-            &quot;displayName&quot; : &quot;Adam Kinzinger&quot;,
-            &quot;avatar&quot; : &quot;https://cdn.bsky.app/img/avatar/plain/did:plc:tsksqpjisdvtusxq6ide5tzj/bafkreidsxdxp3kqmm7p6c34rjixibrazmnhjzzfgctjcrsov4v5wi2hbgi@jpeg&quot;,
-            &quot;associated&quot; : {
-              &quot;chat&quot; : {
-                &quot;allowIncoming&quot; : &quot;all&quot;
-              }
-            },
-            &quot;viewer&quot; : {
-              &quot;muted&quot; : false,
-              &quot;blockedBy&quot; : false,
-              &quot;following&quot; : &quot;at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3laygg5hwfl2g&quot;
-            },
-            &quot;labels&quot; : [ ],
-            &quot;createdAt&quot; : 1693446834034
-          },
-          &quot;record&quot; : {
-            &quot;$type&quot; : &quot;app.bsky.feed.post&quot;,
-            &quot;createdAt&quot; : 1739366095554,
-            &quot;embed&quot; : {
-              &quot;$type&quot; : &quot;app.bsky.embed.images&quot;,
-              &quot;alt&quot; : null,
-              &quot;image&quot; : null,
-              &quot;aspectRatio&quot; : null
-            },
-            &quot;langs&quot; : [ &quot;en&quot; ],
-            &quot;text&quot; : &quot;The new iconic photo that i predicted ultimately destroys the relationship:&quot;
-          },
-          &quot;embed&quot; : {
-            &quot;$type&quot; : &quot;app.bsky.embed.images#view&quot;,
-            &quot;thumb&quot; : null,
-            &quot;fullsize&quot; : null,
-            &quot;alt&quot; : null,
-            &quot;aspectRatio&quot; : null
-          },
-          &quot;replyCount&quot; : 4102,
-          &quot;repostCount&quot; : 6376,
-          &quot;likeCount&quot; : 37248,
-          &quot;quoteCount&quot; : 767,
-          &quot;indexedAt&quot; : 1739366097517,
-          &quot;viewer&quot; : { },
-          &quot;labels&quot; : [ ]
-        },
-        &quot;parent&quot; : {
-          &quot;uri&quot; : &quot;at://did:plc:tsksqpjisdvtusxq6ide5tzj/app.bsky.feed.post/3lhyax675h227&quot;,
-          &quot;cid&quot; : &quot;bafyreidsgkr6ul4sy3xadyv4x35vzccyy6ovbi7cvtnv4o2v4eqeipfpae&quot;,
-          &quot;author&quot; : {
-            &quot;did&quot; : &quot;did:plc:tsksqpjisdvtusxq6ide5tzj&quot;,
-            &quot;handle&quot; : &quot;adamkinzinger.bsky.social&quot;,
-            &quot;displayName&quot; : &quot;Adam Kinzinger&quot;,
-            &quot;avatar&quot; : &quot;https://cdn.bsky.app/img/avatar/plain/did:plc:tsksqpjisdvtusxq6ide5tzj/bafkreidsxdxp3kqmm7p6c34rjixibrazmnhjzzfgctjcrsov4v5wi2hbgi@jpeg&quot;,
-            &quot;associated&quot; : {
-              &quot;chat&quot; : {
-                &quot;allowIncoming&quot; : &quot;all&quot;
-              }
-            },
-            &quot;viewer&quot; : {
-              &quot;muted&quot; : false,
-              &quot;blockedBy&quot; : false,
-              &quot;following&quot; : &quot;at://did:plc:pgdrqxzv4kxt7tr3sa6pd77y/app.bsky.graph.follow/3laygg5hwfl2g&quot;
-            },
-            &quot;labels&quot; : [ ],
-            &quot;createdAt&quot; : 1693446834034
-          },
-          &quot;record&quot; : {
-            &quot;$type&quot; : &quot;app.bsky.feed.post&quot;,
-            &quot;createdAt&quot; : 1739366095554,
-            &quot;embed&quot; : {
-              &quot;$type&quot; : &quot;app.bsky.embed.images&quot;,
-              &quot;alt&quot; : null,
-              &quot;image&quot; : null,
-              &quot;aspectRatio&quot; : null
-            },
-            &quot;langs&quot; : [ &quot;en&quot; ],
-            &quot;text&quot; : &quot;The new iconic photo that i predicted ultimately destroys the relationship:&quot;
-          },
-          &quot;embed&quot; : {
-            &quot;$type&quot; : &quot;app.bsky.embed.images#view&quot;,
-            &quot;thumb&quot; : null,
-            &quot;fullsize&quot; : null,
-            &quot;alt&quot; : null,
-            &quot;aspectRatio&quot; : null
-          },
-          &quot;replyCount&quot; : 4102,
-          &quot;repostCount&quot; : 6376,
-          &quot;likeCount&quot; : 37248,
-          &quot;quoteCount&quot; : 767,
-          &quot;indexedAt&quot; : 1739366097517,
-          &quot;viewer&quot; : { },
-          &quot;labels&quot; : [ ]
-        }
+        &quot;root&quot; : { }
       }
     }, {
       &quot;post&quot; : {
@@ -4857,19 +3925,36 @@
           &quot;createdAt&quot; : 1739366095554,
           &quot;embed&quot; : {
             &quot;$type&quot; : &quot;app.bsky.embed.images&quot;,
-            &quot;alt&quot; : null,
-            &quot;image&quot; : null,
-            &quot;aspectRatio&quot; : null
+            &quot;images&quot; : [ {
+              &quot;alt&quot; : &quot;&quot;,
+              &quot;image&quot; : {
+                &quot;$type&quot; : &quot;blob&quot;,
+                &quot;ref&quot; : {
+                  &quot;$link&quot; : &quot;bafkreibcgtoertrky3uxkm3kh75fvwsqn77nrv6picbh5dyv64n56aqg4q&quot;
+                },
+                &quot;mimeType&quot; : &quot;image/jpeg&quot;,
+                &quot;size&quot; : 941371
+              },
+              &quot;aspectRatio&quot; : {
+                &quot;width&quot; : 1100,
+                &quot;height&quot; : 733
+              }
+            } ]
           },
           &quot;langs&quot; : [ &quot;en&quot; ],
           &quot;text&quot; : &quot;The new iconic photo that i predicted ultimately destroys the relationship:&quot;
         },
         &quot;embed&quot; : {
           &quot;$type&quot; : &quot;app.bsky.embed.images#view&quot;,
-          &quot;thumb&quot; : null,
-          &quot;fullsize&quot; : null,
-          &quot;alt&quot; : null,
-          &quot;aspectRatio&quot; : null
+          &quot;images&quot; : [ {
+            &quot;thumb&quot; : &quot;https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:tsksqpjisdvtusxq6ide5tzj/bafkreibcgtoertrky3uxkm3kh75fvwsqn77nrv6picbh5dyv64n56aqg4q@jpeg&quot;,
+            &quot;fullsize&quot; : &quot;https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:tsksqpjisdvtusxq6ide5tzj/bafkreibcgtoertrky3uxkm3kh75fvwsqn77nrv6picbh5dyv64n56aqg4q@jpeg&quot;,
+            &quot;alt&quot; : &quot;&quot;,
+            &quot;aspectRatio&quot; : {
+              &quot;width&quot; : 1100,
+              &quot;height&quot; : 733
+            }
+          } ]
         },
         &quot;replyCount&quot; : 4102,
         &quot;repostCount&quot; : 6376,
@@ -4905,10 +3990,23 @@
           &quot;createdAt&quot; : 1739376207193,
           &quot;embed&quot; : {
             &quot;$type&quot; : &quot;app.bsky.embed.video&quot;,
+            &quot;alt&quot; : &quot;&quot;,
             &quot;aspectRatio&quot; : {
               &quot;width&quot; : 1920,
               &quot;height&quot; : 1080
             },
+            &quot;captions&quot; : [ {
+              &quot;$type&quot; : &quot;app.bsky.embed.video#caption&quot;,
+              &quot;file&quot; : {
+                &quot;$type&quot; : &quot;blob&quot;,
+                &quot;ref&quot; : {
+                  &quot;$link&quot; : &quot;bafkreieirxo5bktogagxzyd44rlblryhbgmrrcwz4pfn25zs35wgvxhqwy&quot;
+                },
+                &quot;mimeType&quot; : &quot;text/vtt&quot;,
+                &quot;size&quot; : 2042
+              },
+              &quot;lang&quot; : &quot;en&quot;
+            } ],
             &quot;video&quot; : {
               &quot;$type&quot; : &quot;blob&quot;,
               &quot;ref&quot; : {
@@ -4924,13 +4022,14 @@
         },
         &quot;embed&quot; : {
           &quot;$type&quot; : &quot;app.bsky.embed.video#view&quot;,
-          &quot;cid&quot; : &quot;bafkreidasoxnvjshrb4dcqrjvcuezqudew2ajmn4w2qayndocxbqjviap4&quot;,
-          &quot;playlist&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3A4llrhdclvdlmmynkwsmg5tdc/bafkreidasoxnvjshrb4dcqrjvcuezqudew2ajmn4w2qayndocxbqjviap4/playlist.m3u8&quot;,
-          &quot;thumbnail&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3A4llrhdclvdlmmynkwsmg5tdc/bafkreidasoxnvjshrb4dcqrjvcuezqudew2ajmn4w2qayndocxbqjviap4/thumbnail.jpg&quot;,
+          &quot;alt&quot; : &quot;&quot;,
           &quot;aspectRatio&quot; : {
             &quot;width&quot; : 1920,
             &quot;height&quot; : 1080
-          }
+          },
+          &quot;cid&quot; : &quot;bafkreidasoxnvjshrb4dcqrjvcuezqudew2ajmn4w2qayndocxbqjviap4&quot;,
+          &quot;playlist&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3A4llrhdclvdlmmynkwsmg5tdc/bafkreidasoxnvjshrb4dcqrjvcuezqudew2ajmn4w2qayndocxbqjviap4/playlist.m3u8&quot;,
+          &quot;thumbnail&quot; : &quot;https://video.bsky.app/watch/did%3Aplc%3A4llrhdclvdlmmynkwsmg5tdc/bafkreidasoxnvjshrb4dcqrjvcuezqudew2ajmn4w2qayndocxbqjviap4/thumbnail.jpg&quot;
         },
         &quot;replyCount&quot; : 898,
         &quot;repostCount&quot; : 5973,
@@ -5040,74 +4139,7 @@
         &quot;labels&quot; : [ ]
       },
       &quot;reply&quot; : {
-        &quot;root&quot; : {
-          &quot;uri&quot; : &quot;at://did:plc:2darfo36xds4oznvip7x2ux7/app.bsky.feed.post/3lhypwqdzfs27&quot;,
-          &quot;cid&quot; : &quot;bafyreih4lxhitbhvh5csa5eszcs5w6u6q3yfpb2iqvm3qefjpdrec7izwi&quot;,
-          &quot;author&quot; : {
-            &quot;did&quot; : &quot;did:plc:2darfo36xds4oznvip7x2ux7&quot;,
-            &quot;handle&quot; : &quot;mollyknight.bsky.social&quot;,
-            &quot;displayName&quot; : &quot;Molly Knight&quot;,
-            &quot;avatar&quot; : &quot;https://cdn.bsky.app/img/avatar/plain/did:plc:2darfo36xds4oznvip7x2ux7/bafkreieaqhfdtb5xwiprmw3tutd2rnlhc6dqmyu2lhd6q6pqk36nqd3cnu@jpeg&quot;,
-            &quot;associated&quot; : {
-              &quot;chat&quot; : {
-                &quot;allowIncoming&quot; : &quot;following&quot;
-              }
-            },
-            &quot;viewer&quot; : {
-              &quot;muted&quot; : false,
-              &quot;blockedBy&quot; : false
-            },
-            &quot;labels&quot; : [ ],
-            &quot;createdAt&quot; : 1682640286432
-          },
-          &quot;record&quot; : {
-            &quot;$type&quot; : &quot;app.bsky.feed.post&quot;,
-            &quot;createdAt&quot; : 1739382187164,
-            &quot;langs&quot; : [ &quot;en&quot; ],
-            &quot;text&quot; : &quot;It's very cute how Mitch McConnell is doing his little protest votes on Trump nominations now that he's one foot in the grave. He had more power than anyone to stop Trump from ever becoming president again by pushing to convict him in the Senate four years ago but he was too big of a coward.&quot;
-          },
-          &quot;replyCount&quot; : 42,
-          &quot;repostCount&quot; : 199,
-          &quot;likeCount&quot; : 1308,
-          &quot;quoteCount&quot; : 12,
-          &quot;indexedAt&quot; : 1739382187421,
-          &quot;viewer&quot; : { },
-          &quot;labels&quot; : [ ]
-        },
-        &quot;parent&quot; : {
-          &quot;uri&quot; : &quot;at://did:plc:2darfo36xds4oznvip7x2ux7/app.bsky.feed.post/3lhypwqdzfs27&quot;,
-          &quot;cid&quot; : &quot;bafyreih4lxhitbhvh5csa5eszcs5w6u6q3yfpb2iqvm3qefjpdrec7izwi&quot;,
-          &quot;author&quot; : {
-            &quot;did&quot; : &quot;did:plc:2darfo36xds4oznvip7x2ux7&quot;,
-            &quot;handle&quot; : &quot;mollyknight.bsky.social&quot;,
-            &quot;displayName&quot; : &quot;Molly Knight&quot;,
-            &quot;avatar&quot; : &quot;https://cdn.bsky.app/img/avatar/plain/did:plc:2darfo36xds4oznvip7x2ux7/bafkreieaqhfdtb5xwiprmw3tutd2rnlhc6dqmyu2lhd6q6pqk36nqd3cnu@jpeg&quot;,
-            &quot;associated&quot; : {
-              &quot;chat&quot; : {
-                &quot;allowIncoming&quot; : &quot;following&quot;
-              }
-            },
-            &quot;viewer&quot; : {
-              &quot;muted&quot; : false,
-              &quot;blockedBy&quot; : false
-            },
-            &quot;labels&quot; : [ ],
-            &quot;createdAt&quot; : 1682640286432
-          },
-          &quot;record&quot; : {
-            &quot;$type&quot; : &quot;app.bsky.feed.post&quot;,
-            &quot;createdAt&quot; : 1739382187164,
-            &quot;langs&quot; : [ &quot;en&quot; ],
-            &quot;text&quot; : &quot;It's very cute how Mitch McConnell is doing his little protest votes on Trump nominations now that he's one foot in the grave. He had more power than anyone to stop Trump from ever becoming president again by pushing to convict him in the Senate four years ago but he was too big of a coward.&quot;
-          },
-          &quot;replyCount&quot; : 42,
-          &quot;repostCount&quot; : 199,
-          &quot;likeCount&quot; : 1308,
-          &quot;quoteCount&quot; : 12,
-          &quot;indexedAt&quot; : 1739382187421,
-          &quot;viewer&quot; : { },
-          &quot;labels&quot; : [ ]
-        }
+        &quot;root&quot; : { }
       }
     }, {
       &quot;post&quot; : {
@@ -5211,26 +4243,13 @@
           &quot;$type&quot; : &quot;app.bsky.feed.post&quot;,
           &quot;createdAt&quot; : 1739226640503,
           &quot;embed&quot; : {
-            &quot;$type&quot; : &quot;app.bsky.embed.record&quot;,
-            &quot;cid&quot; : null,
-            &quot;uri&quot; : null
+            &quot;$type&quot; : &quot;app.bsky.embed.record&quot;
           },
           &quot;langs&quot; : [ &quot;en&quot; ],
           &quot;text&quot; : &quot;the “administrative state” in practice is a lot of very hard working, practically anonymous people doing the thankless work of making this country run and a drug-addled dipshit is slandering them in order to steal our money for himself&quot;
         },
         &quot;embed&quot; : {
-          &quot;$type&quot; : &quot;app.bsky.embed.record#view&quot;,
-          &quot;author&quot; : null,
-          &quot;cid&quot; : null,
-          &quot;embeds&quot; : null,
-          &quot;indexedAt&quot; : null,
-          &quot;labels&quot; : null,
-          &quot;likeCount&quot; : null,
-          &quot;quoteCount&quot; : null,
-          &quot;replyCount&quot; : null,
-          &quot;repostCount&quot; : null,
-          &quot;uri&quot; : null,
-          &quot;value&quot; : null
+          &quot;$type&quot; : &quot;app.bsky.embed.record#view&quot;
         },
         &quot;replyCount&quot; : 161,
         &quot;repostCount&quot; : 2597,
@@ -5366,19 +4385,36 @@
           &quot;createdAt&quot; : 1739154236910,
           &quot;embed&quot; : {
             &quot;$type&quot; : &quot;app.bsky.embed.images&quot;,
-            &quot;alt&quot; : null,
-            &quot;image&quot; : null,
-            &quot;aspectRatio&quot; : null
+            &quot;images&quot; : [ {
+              &quot;alt&quot; : &quot;&quot;,
+              &quot;image&quot; : {
+                &quot;$type&quot; : &quot;blob&quot;,
+                &quot;ref&quot; : {
+                  &quot;$link&quot; : &quot;bafkreibz5szhl4dhc3zz2fypyhbkfpwgkuy26knqquygdwstdqsrarytxu&quot;
+                },
+                &quot;mimeType&quot; : &quot;image/jpeg&quot;,
+                &quot;size&quot; : 654674
+              },
+              &quot;aspectRatio&quot; : {
+                &quot;width&quot; : 920,
+                &quot;height&quot; : 2000
+              }
+            } ]
           },
           &quot;langs&quot; : [ &quot;en&quot; ],
           &quot;text&quot; : &quot;Something you won’t find on Twitter.&quot;
         },
         &quot;embed&quot; : {
           &quot;$type&quot; : &quot;app.bsky.embed.images#view&quot;,
-          &quot;thumb&quot; : null,
-          &quot;fullsize&quot; : null,
-          &quot;alt&quot; : null,
-          &quot;aspectRatio&quot; : null
+          &quot;images&quot; : [ {
+            &quot;thumb&quot; : &quot;https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:y5xyloyy7s4a2bwfeimj7r3b/bafkreibz5szhl4dhc3zz2fypyhbkfpwgkuy26knqquygdwstdqsrarytxu@jpeg&quot;,
+            &quot;fullsize&quot; : &quot;https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:y5xyloyy7s4a2bwfeimj7r3b/bafkreibz5szhl4dhc3zz2fypyhbkfpwgkuy26knqquygdwstdqsrarytxu@jpeg&quot;,
+            &quot;alt&quot; : &quot;&quot;,
+            &quot;aspectRatio&quot; : {
+              &quot;width&quot; : 920,
+              &quot;height&quot; : 2000
+            }
+          } ]
         },
         &quot;replyCount&quot; : 786,
         &quot;repostCount&quot; : 2779,
@@ -5415,19 +4451,36 @@
           &quot;createdAt&quot; : 1739151159538,
           &quot;embed&quot; : {
             &quot;$type&quot; : &quot;app.bsky.embed.images&quot;,
-            &quot;alt&quot; : null,
-            &quot;image&quot; : null,
-            &quot;aspectRatio&quot; : null
+            &quot;images&quot; : [ {
+              &quot;alt&quot; : &quot;&quot;,
+              &quot;image&quot; : {
+                &quot;$type&quot; : &quot;blob&quot;,
+                &quot;ref&quot; : {
+                  &quot;$link&quot; : &quot;bafkreiej4azyihxkh35as22dnfxpjlzpg3vjdas6ibpsxa2ihjggjymrtu&quot;
+                },
+                &quot;mimeType&quot; : &quot;image/jpeg&quot;,
+                &quot;size&quot; : 241317
+              },
+              &quot;aspectRatio&quot; : {
+                &quot;width&quot; : 1279,
+                &quot;height&quot; : 611
+              }
+            } ]
           },
           &quot;langs&quot; : [ &quot;en&quot; ],
           &quot;text&quot; : &quot;Great point.&quot;
         },
         &quot;embed&quot; : {
           &quot;$type&quot; : &quot;app.bsky.embed.images#view&quot;,
-          &quot;thumb&quot; : null,
-          &quot;fullsize&quot; : null,
-          &quot;alt&quot; : null,
-          &quot;aspectRatio&quot; : null
+          &quot;images&quot; : [ {
+            &quot;thumb&quot; : &quot;https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:y4zs4cabaezzwx3bz2e5nnj2/bafkreiej4azyihxkh35as22dnfxpjlzpg3vjdas6ibpsxa2ihjggjymrtu@jpeg&quot;,
+            &quot;fullsize&quot; : &quot;https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:y4zs4cabaezzwx3bz2e5nnj2/bafkreiej4azyihxkh35as22dnfxpjlzpg3vjdas6ibpsxa2ihjggjymrtu@jpeg&quot;,
+            &quot;alt&quot; : &quot;&quot;,
+            &quot;aspectRatio&quot; : {
+              &quot;width&quot; : 1279,
+              &quot;height&quot; : 611
+            }
+          } ]
         },
         &quot;replyCount&quot; : 1225,
         &quot;repostCount&quot; : 14759,
@@ -5458,9 +4511,21 @@
           &quot;createdAt&quot; : 1739068930031,
           &quot;embed&quot; : {
             &quot;$type&quot; : &quot;app.bsky.embed.images&quot;,
-            &quot;alt&quot; : null,
-            &quot;image&quot; : null,
-            &quot;aspectRatio&quot; : null
+            &quot;images&quot; : [ {
+              &quot;alt&quot; : &quot;&quot;,
+              &quot;image&quot; : {
+                &quot;$type&quot; : &quot;blob&quot;,
+                &quot;ref&quot; : {
+                  &quot;$link&quot; : &quot;bafkreico35r4z6fxtxsnoj2k6jirtwt755jlai7lwzfc4b5cdsoyw7wdly&quot;
+                },
+                &quot;mimeType&quot; : &quot;image/jpeg&quot;,
+                &quot;size&quot; : 313059
+              },
+              &quot;aspectRatio&quot; : {
+                &quot;width&quot; : 843,
+                &quot;height&quot; : 1206
+              }
+            } ]
           },
           &quot;facets&quot; : [ {
             &quot;index&quot; : {
@@ -5504,10 +4569,15 @@
         },
         &quot;embed&quot; : {
           &quot;$type&quot; : &quot;app.bsky.embed.images#view&quot;,
-          &quot;thumb&quot; : null,
-          &quot;fullsize&quot; : null,
-          &quot;alt&quot; : null,
-          &quot;aspectRatio&quot; : null
+          &quot;images&quot; : [ {
+            &quot;thumb&quot; : &quot;https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:r4rcklnbq2oaiatzvx5xyxxv/bafkreico35r4z6fxtxsnoj2k6jirtwt755jlai7lwzfc4b5cdsoyw7wdly@jpeg&quot;,
+            &quot;fullsize&quot; : &quot;https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:r4rcklnbq2oaiatzvx5xyxxv/bafkreico35r4z6fxtxsnoj2k6jirtwt755jlai7lwzfc4b5cdsoyw7wdly@jpeg&quot;,
+            &quot;alt&quot; : &quot;&quot;,
+            &quot;aspectRatio&quot; : {
+              &quot;width&quot; : 843,
+              &quot;height&quot; : 1206
+            }
+          } ]
         },
         &quot;replyCount&quot; : 14,
         &quot;repostCount&quot; : 211,
@@ -5538,9 +4608,7 @@
           &quot;$type&quot; : &quot;app.bsky.feed.post&quot;,
           &quot;createdAt&quot; : 1739125666634,
           &quot;embed&quot; : {
-            &quot;$type&quot; : &quot;app.bsky.embed.record&quot;,
-            &quot;cid&quot; : null,
-            &quot;uri&quot; : null
+            &quot;$type&quot; : &quot;app.bsky.embed.record&quot;
           },
           &quot;facets&quot; : [ {
             &quot;index&quot; : {
@@ -5565,18 +4633,7 @@
           &quot;text&quot; : &quot;Some don't want posts like this on @bsky.app.  I want more.  Why ?\n\nThis is a moderated platform. Which means unbridled hate is removed. And blocked. \n\nMaking this is a platform where we can engage and have real discussions on real issues. \n\n@bsky.app w 100m users changes political discourse.&quot;
         },
         &quot;embed&quot; : {
-          &quot;$type&quot; : &quot;app.bsky.embed.record#view&quot;,
-          &quot;author&quot; : null,
-          &quot;cid&quot; : null,
-          &quot;embeds&quot; : null,
-          &quot;indexedAt&quot; : null,
-          &quot;labels&quot; : null,
-          &quot;likeCount&quot; : null,
-          &quot;quoteCount&quot; : null,
-          &quot;replyCount&quot; : null,
-          &quot;repostCount&quot; : null,
-          &quot;uri&quot; : null,
-          &quot;value&quot; : null
+          &quot;$type&quot; : &quot;app.bsky.embed.record#view&quot;
         },
         &quot;replyCount&quot; : 1939,
         &quot;repostCount&quot; : 1890,
@@ -5614,19 +4671,30 @@
           &quot;createdAt&quot; : 1739150644000,
           &quot;embed&quot; : {
             &quot;$type&quot; : &quot;app.bsky.embed.external&quot;,
-            &quot;uri&quot; : null,
-            &quot;title&quot; : null,
-            &quot;description&quot; : null,
-            &quot;thumb&quot; : null
+            &quot;external&quot; : {
+              &quot;uri&quot; : &quot;https://www.rawstory.com/evangelicals-turn-on-trump-aid/?utm_source=dlvr.it&amp;utm_medium=bluesky&quot;,
+              &quot;title&quot; : &quot;'Crippling crises': Evangelical leaders turn on Trump over 'damaging and wasteful' order&quot;,
+              &quot;description&quot; : &quot;Some evangelicals on Sunday slammed President Donald Trump’s abrupt decision to dismantle the US Agency for International Development (USAID), with one leader calling the move “damaging and wasteful.”\n\nAs Business Insider reports, “at a press panel…&quot;,
+              &quot;thumb&quot; : {
+                &quot;$type&quot; : &quot;blob&quot;,
+                &quot;ref&quot; : {
+                  &quot;$link&quot; : &quot;bafkreihpmed3evi7522u4rxapuxgvg5r55jixik5ve3o7ud4j7m7lp4zmm&quot;
+                },
+                &quot;mimeType&quot; : &quot;image/jpeg&quot;,
+                &quot;size&quot; : 96288
+              }
+            }
           },
           &quot;text&quot; : &quot;'Crippling crises': Evangelical leaders turn on Trump over 'damaging and wasteful' order: Some evangelicals on Sunday slammed President Donald Trump’s abrupt decision to dismantle the US Agency for International Development (USAID), with one leader calling the move “damaging and wasteful.”\n\nAs…&quot;
         },
         &quot;embed&quot; : {
           &quot;$type&quot; : &quot;app.bsky.embed.external#view&quot;,
-          &quot;uri&quot; : null,
-          &quot;title&quot; : null,
-          &quot;description&quot; : null,
-          &quot;thumb&quot; : null
+          &quot;external&quot; : {
+            &quot;uri&quot; : &quot;https://www.rawstory.com/evangelicals-turn-on-trump-aid/?utm_source=dlvr.it&amp;utm_medium=bluesky&quot;,
+            &quot;title&quot; : &quot;'Crippling crises': Evangelical leaders turn on Trump over 'damaging and wasteful' order&quot;,
+            &quot;description&quot; : &quot;Some evangelicals on Sunday slammed President Donald Trump’s abrupt decision to dismantle the US Agency for International Development (USAID), with one leader calling the move “damaging and wasteful.”\n\nAs Business Insider reports, “at a press panel…&quot;,
+            &quot;thumb&quot; : &quot;https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:wjatbj4hiinxfqaeixaw2bcp/bafkreihpmed3evi7522u4rxapuxgvg5r55jixik5ve3o7ud4j7m7lp4zmm@jpeg&quot;
+          }
         },
         &quot;replyCount&quot; : 21,
         &quot;repostCount&quot; : 49,
@@ -5723,10 +4791,11 @@
           &quot;createdAt&quot; : 1738810056390,
           &quot;embed&quot; : {
             &quot;$type&quot; : &quot;app.bsky.embed.external&quot;,
-            &quot;uri&quot; : null,
-            &quot;title&quot; : null,
-            &quot;description&quot; : null,
-            &quot;thumb&quot; : null
+            &quot;external&quot; : {
+              &quot;uri&quot; : &quot;https://theblue.report/&quot;,
+              &quot;title&quot; : &quot;The Blue Report&quot;,
+              &quot;description&quot; : &quot;The top links on Bluesky over the last 24 hours. Updated hourly.&quot;
+            }
           },
           &quot;facets&quot; : [ {
             &quot;index&quot; : {
@@ -5743,10 +4812,11 @@
         },
         &quot;embed&quot; : {
           &quot;$type&quot; : &quot;app.bsky.embed.external#view&quot;,
-          &quot;uri&quot; : null,
-          &quot;title&quot; : null,
-          &quot;description&quot; : null,
-          &quot;thumb&quot; : null
+          &quot;external&quot; : {
+            &quot;uri&quot; : &quot;https://theblue.report/&quot;,
+            &quot;title&quot; : &quot;The Blue Report&quot;,
+            &quot;description&quot; : &quot;The top links on Bluesky over the last 24 hours. Updated hourly.&quot;
+          }
         },
         &quot;replyCount&quot; : 1284,
         &quot;repostCount&quot; : 7546,
@@ -5782,19 +4852,36 @@
           &quot;createdAt&quot; : 1738742378385,
           &quot;embed&quot; : {
             &quot;$type&quot; : &quot;app.bsky.embed.images&quot;,
-            &quot;alt&quot; : null,
-            &quot;image&quot; : null,
-            &quot;aspectRatio&quot; : null
+            &quot;images&quot; : [ {
+              &quot;alt&quot; : &quot;5th February 2025  07.55&quot;,
+              &quot;image&quot; : {
+                &quot;$type&quot; : &quot;blob&quot;,
+                &quot;ref&quot; : {
+                  &quot;$link&quot; : &quot;bafkreiemp4if5gnrllbowehwhr57j7trf3wsqueyz6g624idffs7qhsuoq&quot;
+                },
+                &quot;mimeType&quot; : &quot;image/jpeg&quot;,
+                &quot;size&quot; : 733109
+              },
+              &quot;aspectRatio&quot; : {
+                &quot;width&quot; : 1500,
+                &quot;height&quot; : 2000
+              }
+            } ]
           },
           &quot;langs&quot; : [ &quot;en&quot; ],
           &quot;text&quot; : &quot;5th February 2025  07.55&quot;
         },
         &quot;embed&quot; : {
           &quot;$type&quot; : &quot;app.bsky.embed.images#view&quot;,
-          &quot;thumb&quot; : null,
-          &quot;fullsize&quot; : null,
-          &quot;alt&quot; : null,
-          &quot;aspectRatio&quot; : null
+          &quot;images&quot; : [ {
+            &quot;thumb&quot; : &quot;https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:actxlc22qx4x6excw56vkjfu/bafkreiemp4if5gnrllbowehwhr57j7trf3wsqueyz6g624idffs7qhsuoq@jpeg&quot;,
+            &quot;fullsize&quot; : &quot;https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:actxlc22qx4x6excw56vkjfu/bafkreiemp4if5gnrllbowehwhr57j7trf3wsqueyz6g624idffs7qhsuoq@jpeg&quot;,
+            &quot;alt&quot; : &quot;5th February 2025  07.55&quot;,
+            &quot;aspectRatio&quot; : {
+              &quot;width&quot; : 1500,
+              &quot;height&quot; : 2000
+            }
+          } ]
         },
         &quot;replyCount&quot; : 5,
         &quot;repostCount&quot; : 29,
@@ -5890,9 +4977,21 @@
           &quot;createdAt&quot; : 1738680907007,
           &quot;embed&quot; : {
             &quot;$type&quot; : &quot;app.bsky.embed.images&quot;,
-            &quot;alt&quot; : null,
-            &quot;image&quot; : null,
-            &quot;aspectRatio&quot; : null
+            &quot;images&quot; : [ {
+              &quot;alt&quot; : &quot;&quot;,
+              &quot;image&quot; : {
+                &quot;$type&quot; : &quot;blob&quot;,
+                &quot;ref&quot; : {
+                  &quot;$link&quot; : &quot;bafkreigswdlzoil5imxp3annhy4pehiyx2pfwgwbxxg2tfobukc6ckqjeu&quot;
+                },
+                &quot;mimeType&quot; : &quot;image/jpeg&quot;,
+                &quot;size&quot; : 752733
+              },
+              &quot;aspectRatio&quot; : {
+                &quot;width&quot; : 1511,
+                &quot;height&quot; : 1920
+              }
+            } ]
           },
           &quot;facets&quot; : [ {
             &quot;index&quot; : {
@@ -5990,10 +5089,15 @@
         },
         &quot;embed&quot; : {
           &quot;$type&quot; : &quot;app.bsky.embed.images#view&quot;,
-          &quot;thumb&quot; : null,
-          &quot;fullsize&quot; : null,
-          &quot;alt&quot; : null,
-          &quot;aspectRatio&quot; : null
+          &quot;images&quot; : [ {
+            &quot;thumb&quot; : &quot;https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:4wvqm3lsosxrea7qab65xpod/bafkreigswdlzoil5imxp3annhy4pehiyx2pfwgwbxxg2tfobukc6ckqjeu@jpeg&quot;,
+            &quot;fullsize&quot; : &quot;https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:4wvqm3lsosxrea7qab65xpod/bafkreigswdlzoil5imxp3annhy4pehiyx2pfwgwbxxg2tfobukc6ckqjeu@jpeg&quot;,
+            &quot;alt&quot; : &quot;&quot;,
+            &quot;aspectRatio&quot; : {
+              &quot;width&quot; : 1511,
+              &quot;height&quot; : 1920
+            }
+          } ]
         },
         &quot;replyCount&quot; : 1,
         &quot;repostCount&quot; : 24,
@@ -6031,19 +5135,36 @@
           &quot;createdAt&quot; : 1738711700680,
           &quot;embed&quot; : {
             &quot;$type&quot; : &quot;app.bsky.embed.images&quot;,
-            &quot;alt&quot; : null,
-            &quot;image&quot; : null,
-            &quot;aspectRatio&quot; : null
+            &quot;images&quot; : [ {
+              &quot;alt&quot; : &quot;&quot;,
+              &quot;image&quot; : {
+                &quot;$type&quot; : &quot;blob&quot;,
+                &quot;ref&quot; : {
+                  &quot;$link&quot; : &quot;bafkreiakwvpayv6a4gmglgzy4mamjo2hnhcloqvndmdv5t77bw7lhoo4lu&quot;
+                },
+                &quot;mimeType&quot; : &quot;image/jpeg&quot;,
+                &quot;size&quot; : 535252
+              },
+              &quot;aspectRatio&quot; : {
+                &quot;width&quot; : 640,
+                &quot;height&quot; : 675
+              }
+            } ]
           },
           &quot;langs&quot; : [ &quot;en&quot; ],
           &quot;text&quot; : &quot;Honestly, this might be one of the most iconic sports photographs ever taken…&quot;
         },
         &quot;embed&quot; : {
           &quot;$type&quot; : &quot;app.bsky.embed.images#view&quot;,
-          &quot;thumb&quot; : null,
-          &quot;fullsize&quot; : null,
-          &quot;alt&quot; : null,
-          &quot;aspectRatio&quot; : null
+          &quot;images&quot; : [ {
+            &quot;thumb&quot; : &quot;https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:ehbvdmlw2egofamelcht3jdt/bafkreiakwvpayv6a4gmglgzy4mamjo2hnhcloqvndmdv5t77bw7lhoo4lu@jpeg&quot;,
+            &quot;fullsize&quot; : &quot;https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:ehbvdmlw2egofamelcht3jdt/bafkreiakwvpayv6a4gmglgzy4mamjo2hnhcloqvndmdv5t77bw7lhoo4lu@jpeg&quot;,
+            &quot;alt&quot; : &quot;&quot;,
+            &quot;aspectRatio&quot; : {
+              &quot;width&quot; : 640,
+              &quot;height&quot; : 675
+            }
+          } ]
         },
         &quot;replyCount&quot; : 112,
         &quot;repostCount&quot; : 140,
@@ -6112,19 +5233,58 @@
           &quot;createdAt&quot; : 1738722365787,
           &quot;embed&quot; : {
             &quot;$type&quot; : &quot;app.bsky.embed.images&quot;,
-            &quot;alt&quot; : null,
-            &quot;image&quot; : null,
-            &quot;aspectRatio&quot; : null
+            &quot;images&quot; : [ {
+              &quot;alt&quot; : &quot;&quot;,
+              &quot;image&quot; : {
+                &quot;$type&quot; : &quot;blob&quot;,
+                &quot;ref&quot; : {
+                  &quot;$link&quot; : &quot;bafkreigrq7mfzgsccaywahaddfoghvzv4e3favpqv6aht2ahpyzp72gf4a&quot;
+                },
+                &quot;mimeType&quot; : &quot;image/jpeg&quot;,
+                &quot;size&quot; : 162434
+              },
+              &quot;aspectRatio&quot; : {
+                &quot;width&quot; : 612,
+                &quot;height&quot; : 408
+              }
+            }, {
+              &quot;alt&quot; : &quot;&quot;,
+              &quot;image&quot; : {
+                &quot;$type&quot; : &quot;blob&quot;,
+                &quot;ref&quot; : {
+                  &quot;$link&quot; : &quot;bafkreihzz7odu2lo3nccinhjbmthgleqvpfy5ginsoaiwo5vbb4wozqisa&quot;
+                },
+                &quot;mimeType&quot; : &quot;image/jpeg&quot;,
+                &quot;size&quot; : 137869
+              },
+              &quot;aspectRatio&quot; : {
+                &quot;width&quot; : 612,
+                &quot;height&quot; : 408
+              }
+            } ]
           },
           &quot;langs&quot; : [ &quot;en&quot; ],
           &quot;text&quot; : &quot;Lmao, look at Susie Wiles’ face when Trump says Palestinians shouldn’t go back to Gaza.\n\nLike every Chief of Staff before her, she has zero control…&quot;
         },
         &quot;embed&quot; : {
           &quot;$type&quot; : &quot;app.bsky.embed.images#view&quot;,
-          &quot;thumb&quot; : null,
-          &quot;fullsize&quot; : null,
-          &quot;alt&quot; : null,
-          &quot;aspectRatio&quot; : null
+          &quot;images&quot; : [ {
+            &quot;thumb&quot; : &quot;https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:ehbvdmlw2egofamelcht3jdt/bafkreigrq7mfzgsccaywahaddfoghvzv4e3favpqv6aht2ahpyzp72gf4a@jpeg&quot;,
+            &quot;fullsize&quot; : &quot;https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:ehbvdmlw2egofamelcht3jdt/bafkreigrq7mfzgsccaywahaddfoghvzv4e3favpqv6aht2ahpyzp72gf4a@jpeg&quot;,
+            &quot;alt&quot; : &quot;&quot;,
+            &quot;aspectRatio&quot; : {
+              &quot;width&quot; : 612,
+              &quot;height&quot; : 408
+            }
+          }, {
+            &quot;thumb&quot; : &quot;https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:ehbvdmlw2egofamelcht3jdt/bafkreihzz7odu2lo3nccinhjbmthgleqvpfy5ginsoaiwo5vbb4wozqisa@jpeg&quot;,
+            &quot;fullsize&quot; : &quot;https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:ehbvdmlw2egofamelcht3jdt/bafkreihzz7odu2lo3nccinhjbmthgleqvpfy5ginsoaiwo5vbb4wozqisa@jpeg&quot;,
+            &quot;alt&quot; : &quot;&quot;,
+            &quot;aspectRatio&quot; : {
+              &quot;width&quot; : 612,
+              &quot;height&quot; : 408
+            }
+          } ]
         },
         &quot;replyCount&quot; : 9,
         &quot;repostCount&quot; : 17,
@@ -6155,9 +5315,7 @@
           &quot;$type&quot; : &quot;app.bsky.feed.post&quot;,
           &quot;createdAt&quot; : 1738674646078,
           &quot;embed&quot; : {
-            &quot;$type&quot; : &quot;app.bsky.embed.record&quot;,
-            &quot;cid&quot; : null,
-            &quot;uri&quot; : null
+            &quot;$type&quot; : &quot;app.bsky.embed.record&quot;
           },
           &quot;facets&quot; : [ {
             &quot;index&quot; : {
@@ -6173,18 +5331,7 @@
           &quot;text&quot; : &quot;Added folks to my starter pack. It's growing! \n\nLet me know who I missed, and check out some of my favorite accounts on here. go.bsky.app/6ZPSJH3&quot;
         },
         &quot;embed&quot; : {
-          &quot;$type&quot; : &quot;app.bsky.embed.record#view&quot;,
-          &quot;author&quot; : null,
-          &quot;cid&quot; : null,
-          &quot;embeds&quot; : null,
-          &quot;indexedAt&quot; : null,
-          &quot;labels&quot; : null,
-          &quot;likeCount&quot; : null,
-          &quot;quoteCount&quot; : null,
-          &quot;replyCount&quot; : null,
-          &quot;repostCount&quot; : null,
-          &quot;uri&quot; : null,
-          &quot;value&quot; : null
+          &quot;$type&quot; : &quot;app.bsky.embed.record#view&quot;
         },
         &quot;replyCount&quot; : 86,
         &quot;repostCount&quot; : 155,
@@ -6251,19 +5398,36 @@
           &quot;createdAt&quot; : 1738624812655,
           &quot;embed&quot; : {
             &quot;$type&quot; : &quot;app.bsky.embed.images&quot;,
-            &quot;alt&quot; : null,
-            &quot;image&quot; : null,
-            &quot;aspectRatio&quot; : null
+            &quot;images&quot; : [ {
+              &quot;alt&quot; : &quot;&quot;,
+              &quot;image&quot; : {
+                &quot;$type&quot; : &quot;blob&quot;,
+                &quot;ref&quot; : {
+                  &quot;$link&quot; : &quot;bafkreihgf3b7ld7nxn3ehthfwusfy2fyssnrdpqbqq2dnm3d2ptwykiffe&quot;
+                },
+                &quot;mimeType&quot; : &quot;image/jpeg&quot;,
+                &quot;size&quot; : 194396
+              },
+              &quot;aspectRatio&quot; : {
+                &quot;width&quot; : 1080,
+                &quot;height&quot; : 990
+              }
+            } ]
           },
           &quot;langs&quot; : [ &quot;en&quot; ],
           &quot;text&quot; : &quot;You can tell by how fast they're canceling your policies.&quot;
         },
         &quot;embed&quot; : {
           &quot;$type&quot; : &quot;app.bsky.embed.images#view&quot;,
-          &quot;thumb&quot; : null,
-          &quot;fullsize&quot; : null,
-          &quot;alt&quot; : null,
-          &quot;aspectRatio&quot; : null
+          &quot;images&quot; : [ {
+            &quot;thumb&quot; : &quot;https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:mmzcej7p4u3ttfzrn2vzfzye/bafkreihgf3b7ld7nxn3ehthfwusfy2fyssnrdpqbqq2dnm3d2ptwykiffe@jpeg&quot;,
+            &quot;fullsize&quot; : &quot;https://cdn.bsky.app/img/feed_fullsize/plain/did:plc:mmzcej7p4u3ttfzrn2vzfzye/bafkreihgf3b7ld7nxn3ehthfwusfy2fyssnrdpqbqq2dnm3d2ptwykiffe@jpeg&quot;,
+            &quot;alt&quot; : &quot;&quot;,
+            &quot;aspectRatio&quot; : {
+              &quot;width&quot; : 1080,
+              &quot;height&quot; : 990
+            }
+          } ]
         },
         &quot;replyCount&quot; : 7,
         &quot;repostCount&quot; : 168,
@@ -6300,20 +5464,31 @@
           &quot;createdAt&quot; : 1738692589329,
           &quot;embed&quot; : {
             &quot;$type&quot; : &quot;app.bsky.embed.external&quot;,
-            &quot;uri&quot; : null,
-            &quot;title&quot; : null,
-            &quot;description&quot; : null,
-            &quot;thumb&quot; : null
+            &quot;external&quot; : {
+              &quot;uri&quot; : &quot;https://www.comicsands.com/blackmon-mississippi-masturbation-bill?utm_source=bluesky&amp;utm_medium=infeed&amp;utm_campaign=linkprogram&quot;,
+              &quot;title&quot; : &quot;Mississippi Dem. Epically Trolls Pro-Lifers With Bill Making It A Crime For Men To Masturbate&quot;,
+              &quot;description&quot; : &quot;That is how you do it &#x1f602;&quot;,
+              &quot;thumb&quot; : {
+                &quot;$type&quot; : &quot;blob&quot;,
+                &quot;ref&quot; : {
+                  &quot;$link&quot; : &quot;bafkreiazd3yxf6qvgrvswhen7fm55vxb5xbd5n3ghzn5qlwx7ueq2v2puq&quot;
+                },
+                &quot;mimeType&quot; : &quot;image/jpeg&quot;,
+                &quot;size&quot; : 178173
+              }
+            }
           },
           &quot;langs&quot; : [ &quot;en&quot; ],
           &quot;text&quot; : &quot;Yaasss!!&quot;
         },
         &quot;embed&quot; : {
           &quot;$type&quot; : &quot;app.bsky.embed.external#view&quot;,
-          &quot;uri&quot; : null,
-          &quot;title&quot; : null,
-          &quot;description&quot; : null,
-          &quot;thumb&quot; : null
+          &quot;external&quot; : {
+            &quot;uri&quot; : &quot;https://www.comicsands.com/blackmon-mississippi-masturbation-bill?utm_source=bluesky&amp;utm_medium=infeed&amp;utm_campaign=linkprogram&quot;,
+            &quot;title&quot; : &quot;Mississippi Dem. Epically Trolls Pro-Lifers With Bill Making It A Crime For Men To Masturbate&quot;,
+            &quot;description&quot; : &quot;That is how you do it &#x1f602;&quot;,
+            &quot;thumb&quot; : &quot;https://cdn.bsky.app/img/feed_thumbnail/plain/did:plc:y4zs4cabaezzwx3bz2e5nnj2/bafkreiazd3yxf6qvgrvswhen7fm55vxb5xbd5n3ghzn5qlwx7ueq2v2puq@jpeg&quot;
+          }
         },
         &quot;replyCount&quot; : 1140,
         &quot;repostCount&quot; : 5376,
@@ -6337,7 +5512,7 @@
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 8.12</a> at Mar 4, 2025, 10:21:02 PM</p>
+<a href="http://www.gradle.org">Gradle 8.10</a> at Mar 16, 2025, 5:13:25 PM</p>
 </div>
 </div>
 </body>

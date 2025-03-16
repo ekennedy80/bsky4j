@@ -9,6 +9,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
 import api.rest.JsonFluentObject;
@@ -65,11 +66,29 @@ public class PostView implements JsonFluentObject {
     @Override
     public ObjectNode asJsonObject() throws JsonProcessingException {
         ObjectNode json = new ObjectMapper().createObjectNode();
-        return json.set("post", new ObjectMapper().valueToTree(this));
+
+        ArrayNode array = new ObjectMapper().createArrayNode();
+        for(Labels label : labels) {
+            array.add(label.asJsonString());
+        }
+
+        return json.put("uri", this.uri.toString())
+            .put("cid", this.cid)
+            .put("author", author.asJsonString())
+            .put("record", record.asJsonString())
+            .put("embed", embed.asJsonString())
+            .put("replyCount", replyCount)
+            .put("repostCount", repostCount)
+            .put("likeCount", likeCount)
+            .put("quoteCount", quoteCount)
+            .put("indexedAt", indexedAt.toString())
+            .put("viewer", viewer.asJsonString())
+            .put("labels", array.toPrettyString());
     }
 
     @Override
     public String asJsonString() throws JsonProcessingException {
         return asJsonObject().toPrettyString();
     }
+
 }

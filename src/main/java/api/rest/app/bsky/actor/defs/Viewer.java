@@ -61,9 +61,15 @@ public class Viewer implements JsonFluentObject {
 
     @Override
     public ObjectNode asJsonObject() throws JsonProcessingException {
-        ObjectMapper objectMapper = new ObjectMapper();
         ObjectNode json = new ObjectMapper().createObjectNode();
-        return json.put("profile", objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(this));
+        return json.put("muted", muted)
+            .put("mutedByList", mutedByList.asJsonString())
+            .put("blockedBy", blockedBy)
+            .put("blocking", blocking.toString())
+            .put("blockingByList", blockingByList.asJsonString())
+            .put("following", following.toString())
+            .put("followedBy", followedBy.toString())
+            .put("knownFollowers", knownFollowers.asJsonString());
     }
 
     @Override

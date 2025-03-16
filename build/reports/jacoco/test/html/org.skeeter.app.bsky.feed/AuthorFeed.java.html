@@ -4,28 +4,26 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 
-import java.lang.annotation.Annotation;
-
 @Data
 @AllArgsConstructor
 @Builder
 public class AuthorFeed {
 
-<span class="nc" id="L14">    public enum FilterType {</span>
-<span class="nc" id="L15">        POSTS_WITH_REPLIES(&quot;posts_with_replies&quot;),</span>
-<span class="nc" id="L16">        POSTS_NO_REPLIES(&quot;posts_no_replies&quot;),</span>
-<span class="nc" id="L17">        POSTS_WITH_MEDIA(&quot;posts_with_media&quot;),</span>
-<span class="nc" id="L18">        POSTS_AND_AUTHOR_THREADS(&quot;posts_and_author_threads&quot;);</span>
+<span class="nc" id="L12">    public enum FilterType {</span>
+<span class="nc" id="L13">        POSTS_WITH_REPLIES(&quot;posts_with_replies&quot;),</span>
+<span class="nc" id="L14">        POSTS_NO_REPLIES(&quot;posts_no_replies&quot;),</span>
+<span class="nc" id="L15">        POSTS_WITH_MEDIA(&quot;posts_with_media&quot;),</span>
+<span class="nc" id="L16">        POSTS_AND_AUTHOR_THREADS(&quot;posts_and_author_threads&quot;);</span>
 
         private final String value;
 
-<span class="nc" id="L22">        FilterType(String value) {</span>
-<span class="nc" id="L23">            this.value = value;</span>
-<span class="nc" id="L24">        }</span>
+<span class="nc" id="L20">        FilterType(String value) {</span>
+<span class="nc" id="L21">            this.value = value;</span>
+<span class="nc" id="L22">        }</span>
 
         @Override
         public String toString() {
-<span class="nc" id="L28">            return this.value;</span>
+<span class="nc" id="L26">            return this.value;</span>
         }
     }
 
@@ -35,10 +33,10 @@ public class AuthorFeed {
     private FilterType filter;
     private Boolean includePins;
 
-<span class="nc" id="L38">    public AuthorFeed(String actor) {</span>
-<span class="nc" id="L39">        this.actor = actor;</span>
+<span class="nc" id="L36">    public AuthorFeed(String actor) {</span>
+<span class="nc" id="L37">        this.actor = actor;</span>
         //if null, bsky api defaults to 50
-<span class="nc" id="L41">        this.filter = FilterType.POSTS_WITH_REPLIES;</span>
-<span class="nc" id="L42">    }</span>
+<span class="nc" id="L39">        this.filter = FilterType.POSTS_WITH_REPLIES;</span>
+<span class="nc" id="L40">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

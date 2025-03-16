@@ -2,15 +2,13 @@ package org.example;
 
 
 import api.rest.app.bsky.feed.FeedHandler;
-import api.rest.app.bsky.feed.defs.ActorLikes;
-import api.rest.app.bsky.feed.defs.SuggestedFeeds;
 import api.rest.app.bsky.feed.defs.Timeline;
 import api.rest.com.atproto.server.BskySession;
 import api.rest.com.atproto.server.ServerHandler;
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.StreamReadFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.node.ObjectNode;
-
+import com.fasterxml.jackson.databind.json.JsonMapper;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -21,8 +19,10 @@ public class Main {
     private static final Logger LOGGER = LogManager.getLogger(Main.class);
 
     public static void main(String[] args) throws JsonProcessingException {
-        ObjectMapper objectMapper = new ObjectMapper();
+        //ObjectMapper objectMapper = new ObjectMapper();
+        //objectMapper.enable(StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION);
 
+        ObjectMapper objectMapper = JsonMapper.builder().enable(StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION).build();
         ServerHandler serverHandler = ServerHandler.getInstance();
         // ActorHandler actorHandler = ActorHandler.getInstance();
         FeedHandler feedHandler = FeedHandler.getInstance();

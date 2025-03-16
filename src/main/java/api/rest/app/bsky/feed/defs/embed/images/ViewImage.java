@@ -2,11 +2,13 @@ package api.rest.app.bsky.feed.defs.embed.images;
 
 import java.net.URI;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
-import api.rest.app.bsky.feed.defs.embed.AbstractEmbed;
+import api.rest.JsonFluentObject;
 import api.rest.app.bsky.feed.defs.embed.AspectRatio;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -16,8 +18,10 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-@EqualsAndHashCode(callSuper=true)
-public class ViewImage extends AbstractEmbed {
+@EqualsAndHashCode(callSuper=false)
+@JsonInclude(JsonInclude.Include.NON_NULL)
+@JsonIgnoreProperties(ignoreUnknown = true)
+public class ViewImage implements JsonFluentObject {
 
     //AbstractEmbed type: app.bsky.embed.images#viewImage
 

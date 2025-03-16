@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="api.rest.app.bsky.actor.defs.preferences.PreferencesTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2025-03-05T03:21:01" hostname="viktor-vaughn" time="0.358">
+<testsuite name="api.rest.app.bsky.actor.defs.preferences.PreferencesTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2025-03-16T21:13:24" hostname="viktor-vaughn" time="0.42">
   <properties/>
-  <testcase name="testExample2Unmarshalling()" classname="api.rest.app.bsky.actor.defs.preferences.PreferencesTest" time="0.341"/>
+  <testcase name="testExample2Unmarshalling()" classname="api.rest.app.bsky.actor.defs.preferences.PreferencesTest" time="0.403"/>
   <testcase name="testExample1Unmarshalling()" classname="api.rest.app.bsky.actor.defs.preferences.PreferencesTest" time="0.016"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>

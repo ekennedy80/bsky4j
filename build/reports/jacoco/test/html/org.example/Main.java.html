@@ -2,27 +2,27 @@
 
 
 import api.rest.app.bsky.feed.FeedHandler;
-import api.rest.app.bsky.feed.defs.ActorLikes;
-import api.rest.app.bsky.feed.defs.SuggestedFeeds;
 import api.rest.app.bsky.feed.defs.Timeline;
 import api.rest.com.atproto.server.BskySession;
 import api.rest.com.atproto.server.ServerHandler;
 import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.StreamReadFeature;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.node.ObjectNode;
-
+import com.fasterxml.jackson.databind.json.JsonMapper;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import static api.rest.GlobalVars.*;
 
-<span class="nc" id="L19">public class Main {</span>
+<span class="nc" id="L17">public class Main {</span>
 
-<span class="nc" id="L21">    private static final Logger LOGGER = LogManager.getLogger(Main.class);</span>
+<span class="nc" id="L19">    private static final Logger LOGGER = LogManager.getLogger(Main.class);</span>
 
     public static void main(String[] args) throws JsonProcessingException {
-<span class="nc" id="L24">        ObjectMapper objectMapper = new ObjectMapper();</span>
+        //ObjectMapper objectMapper = new ObjectMapper();
+        //objectMapper.enable(StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION);
 
+<span class="nc" id="L25">        ObjectMapper objectMapper = JsonMapper.builder().enable(StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION).build();</span>
 <span class="nc" id="L26">        ServerHandler serverHandler = ServerHandler.getInstance();</span>
         // ActorHandler actorHandler = ActorHandler.getInstance();
 <span class="nc" id="L28">        FeedHandler feedHandler = FeedHandler.getInstance();</span>
@@ -43,9 +43,9 @@ import static api.rest.GlobalVars.*;
         // if(LOGGER.isInfoEnabled())
         //     LOGGER.info(objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(suggestedFeeds));
 
-<span class="nc" id="L46">        ObjectNode timeline = feedHandler.getTimeline(serverHandler.getSession().getAccessJwt(), null, 100, null);</span>
+<span class="nc" id="L46">        Timeline timeline = feedHandler.getTimeline(serverHandler.getSession().getAccessJwt(), null, 100, null);</span>
 <span class="nc bnc" id="L47" title="All 2 branches missed.">        if(LOGGER.isInfoEnabled())</span>
-<span class="nc" id="L48">            LOGGER.info(objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(timeline));</span>
+<span class="nc" id="L48">            LOGGER.info(objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(timeline.asJsonString()));</span>
 
 <span class="nc" id="L50">        serverHandler.close();</span>
 <span class="nc" id="L51">    }</span>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="api.rest.app.bsky.feed.model.TimelineTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2025-03-16T21:13:25" hostname="viktor-vaughn" time="0.153">
+  <properties/>
+  <testcase name="testTimelineUnmarshalling1()" classname="api.rest.app.bsky.feed.model.TimelineTest" time="0.153">
+    <failure message="java.lang.NullPointerException: Cannot invoke &quot;api.rest.app.bsky.feed.defs.ReplyRef.asJsonString()&quot; because &quot;this.reply&quot; is null" type="java.lang.NullPointerException">java.lang.NullPointerException: Cannot invoke &quot;api.rest.app.bsky.feed.defs.ReplyRef.asJsonString()&quot; because &quot;this.reply&quot; is null
+	at api.rest.app.bsky.feed.defs.FeedViewPost.asJsonObject(FeedViewPost.java:41)
+	at api.rest.app.bsky.feed.defs.FeedViewPost.asJsonString(FeedViewPost.java:48)
+	at api.rest.app.bsky.feed.defs.Timeline.asJsonObject(Timeline.java:37)
+	at api.rest.app.bsky.feed.defs.Timeline.asJsonString(Timeline.java:44)
+	at api.rest.app.bsky.feed.model.TimelineTest.testTimelineUnmarshalling1(TimelineTest.java:28)
+	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
+	at java.base/java.util.ArrayList.forEach(Unknown Source)
+	at java.base/java.util.ArrayList.forEach(Unknown Source)
+</failure>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

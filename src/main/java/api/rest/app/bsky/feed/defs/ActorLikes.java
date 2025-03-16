@@ -30,7 +30,7 @@ public class ActorLikes implements JsonFluentObject {
     private String cursor;
 
     @JsonProperty("feed")
-    private List<Feed> feed;
+    private List<FeedViewPost> feed;
 
     @Override
     public ObjectNode asJsonObject() throws JsonProcessingException {
