@@ -2,7 +2,6 @@
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ObjectNode;
 
@@ -13,7 +12,7 @@ import lombok.Builder;
 
 @AllArgsConstructor
 @Builder
-public class Ref implements JsonFluentObject {
+public class Ref extends JsonFluentObject {
 
     @Nonnull
     @JsonIgnore
@@ -22,18 +21,8 @@ public class Ref implements JsonFluentObject {
     @JsonProperty(&quot;$link&quot;)
     private String link;
 
-<span class="fc" id="L25">    public Ref() {</span>
-<span class="fc" id="L26">        json = new ObjectMapper().createObjectNode();</span>
-<span class="fc" id="L27">    }</span>
-
-    @Override
-    public ObjectNode asJsonObject() throws JsonProcessingException {
-<span class="nc" id="L31">        return json.put(&quot;$link&quot;, link);</span>
-    }
-
-    @Override
-    public String asJsonString() throws JsonProcessingException {
-<span class="nc" id="L36">        return json.put(&quot;$link&quot;, link).toPrettyString();</span>
-    }
+<span class="fc" id="L24">    public Ref() {</span>
+<span class="fc" id="L25">        json = new ObjectMapper().createObjectNode();</span>
+<span class="fc" id="L26">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

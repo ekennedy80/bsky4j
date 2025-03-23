@@ -12,14 +12,12 @@ import jakarta.annotation.Nonnull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 @Data
-@NoArgsConstructor(force = true)
 @AllArgsConstructor
 @ToString(exclude = {&quot;json&quot;})
-@EqualsAndHashCode(exclude = {&quot;json&quot;})
+@EqualsAndHashCode(callSuper = false)
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = &quot;$type&quot;, visible = true)
 @JsonSubTypes({
@@ -27,19 +25,22 @@ import lombok.ToString;
         @JsonSubTypes.Type(value = Mention.class, name = &quot;app.bsky.richtext.facet#mention&quot;),
         @JsonSubTypes.Type(value = Tag.class, name = &quot;app.bsky.richtext.facet#tag&quot;)}
 )
-public abstract class AbstractFacetFeature implements JsonFluentObject {
+public abstract class AbstractFacetFeature extends JsonFluentObject {
 
-    @Nonnull
     @JsonProperty(&quot;$type&quot;)
     private String type;
         
     @Nonnull
     @JsonIgnore
     protected final ObjectNode json;
+
+<span class="fc" id="L37">    protected AbstractFacetFeature() {</span>
+<span class="fc" id="L38">        this.json = new ObjectMapper().createObjectNode();</span>
+<span class="fc" id="L39">    }</span>
         
-<span class="nc" id="L40">    protected AbstractFacetFeature(String type) {</span>
-<span class="nc" id="L41">        this.json = new ObjectMapper().createObjectNode();</span>
-<span class="nc" id="L42">        this.type = type;</span>
-<span class="nc" id="L43">    }</span>
+<span class="nc" id="L41">    protected AbstractFacetFeature(String type) {</span>
+<span class="nc" id="L42">        this.json = new ObjectMapper().createObjectNode();</span>
+<span class="nc" id="L43">        this.type = type;</span>
+<span class="nc" id="L44">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

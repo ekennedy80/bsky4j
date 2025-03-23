@@ -1,5 +1,6 @@
 package api.rest.app.bsky.actor.defs;
 
+import api.rest.JsonFluentObject;
 import api.rest.app.bsky.actor.defs.profile.ProfileView;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
@@ -23,9 +24,10 @@ import java.util.List;
 @AllArgsConstructor
 @Builder
 @Data
+@EqualsAndHashCode(callSuper = false)
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Suggestions {
+public class Suggestions extends JsonFluentObject {
 
     @Nullable
     @JsonProperty("cursor")
@@ -38,15 +40,4 @@ public class Suggestions {
     @Nullable
     @JsonProperty("recId")
     private Long recId;
-
-    public ObjectNode asJsonObject() throws JsonProcessingException {
-        ObjectMapper objectMapper = new ObjectMapper();
-        ObjectNode json = new ObjectMapper().createObjectNode();
-        return json.put("suggestions", objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(this));
-    }
-
-    public String asJsonString() throws JsonProcessingException {
-        ObjectMapper objectMapper = new ObjectMapper();
-        return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(this);
-    }
 }

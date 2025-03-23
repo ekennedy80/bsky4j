@@ -18,7 +18,7 @@ class TimelineTest {
         ObjectMapper objectMapper = new ObjectMapper();
         Timeline timeline;
         try {
-            URL resourceAbsolutePath = getClass().getClassLoader().getResource("api/rest/app/bsky/feed/Timeline4.json");
+            URL resourceAbsolutePath = getClass().getClassLoader().getResource("api/rest/app/bsky/feed/Timeline3.json");
             Assertions.assertNotNull(resourceAbsolutePath);
             timeline = objectMapper.readValue(resourceAbsolutePath, Timeline.class);
         } catch (IOException e) {

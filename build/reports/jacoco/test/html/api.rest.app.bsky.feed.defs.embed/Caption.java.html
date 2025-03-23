@@ -3,6 +3,7 @@
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import api.rest.JsonFluentObject;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
@@ -11,9 +12,9 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Caption {
+public class Caption extends JsonFluentObject {
 
-<span class="nc" id="L16">    class File {</span>
+<span class="nc" id="L17">    class File {</span>
         @JsonProperty(&quot;$type&quot;)
         private String type;
 

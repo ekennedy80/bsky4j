@@ -3,7 +3,6 @@ package api.rest.app.bsky.actor.defs.preferences;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
-import com.fasterxml.jackson.databind.node.ObjectNode;
 import jakarta.annotation.Nullable;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -35,19 +34,4 @@ public class PersonalDetailsPref extends AbstractPreference {
         return this.birthDate;
     }
 
-    @Override
-    public ObjectNode asJsonObject() {
-        if(this.birthDate != null)
-            return json.put("birthDate", this.birthDate.getTime());
-        else
-            return json;
-    }
-
-    @Override
-    public String asJsonString() {
-        if(this.birthDate != null)
-            return json.put("birthDate", this.birthDate.getTime()).toString();
-        else
-            return json.toString();
-    }
 }

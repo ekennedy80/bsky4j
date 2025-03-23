@@ -7,10 +7,6 @@ import java.util.List;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.node.ObjectNode;
-
 import api.rest.JsonFluentObject;
 import api.rest.app.bsky.actor.defs.AssociatedProfile;
 import api.rest.app.bsky.actor.defs.Labels;
@@ -24,7 +20,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Author implements JsonFluentObject {
+public class Author extends JsonFluentObject {
 
     @JsonProperty("did")
     private String did;
@@ -48,17 +44,5 @@ public class Author implements JsonFluentObject {
     private List<Labels> labels;
 
     @JsonProperty("createdAt")
-    private Date createdAt;
-
-    @Override
-    public ObjectNode asJsonObject() throws JsonProcessingException {
-        ObjectNode json = new ObjectMapper().createObjectNode();
-        return json.set("author", new ObjectMapper().valueToTree(this));
-    }
-
-    @Override
-    public String asJsonString() throws JsonProcessingException {
-        return asJsonObject().toPrettyString();
-    }
-    
+    private Date createdAt;    
 }

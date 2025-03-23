@@ -10,10 +10,6 @@ import java.util.List;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.node.ObjectNode;
-
 import api.rest.JsonFluentObject;
 import api.rest.app.bsky.actor.defs.AssociatedProfile;
 import api.rest.app.bsky.actor.defs.Labels;
@@ -23,6 +19,7 @@ import jakarta.annotation.Nullable;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 /**
@@ -31,9 +28,10 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@EqualsAndHashCode(callSuper = false)
 @Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class ProfileViewBasic implements JsonFluentObject {
+public class ProfileViewBasic extends JsonFluentObject {
     
     @Nonnull
     @JsonProperty("did")
@@ -78,20 +76,5 @@ public class ProfileViewBasic implements JsonFluentObject {
             }
         }
     }
-
-    public ObjectNode asJsonObject() throws JsonProcessingException {
-        ObjectNode json = new ObjectMapper().createObjectNode();
-        return json.put("did", this.did)
-            .put("handle", this.handle)
-            .put("displayName", this.displayName)
-            .put("avatar", this.avatar.toString())
-            .put("createdAt", this.createdAt.toString())
-            .put("associated", this.associated.asJsonString());
-    }
-
-    public String asJsonString() throws JsonProcessingException {
-        return asJsonObject().toPrettyString();
-    }
-
 
 }

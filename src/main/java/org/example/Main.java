@@ -1,6 +1,8 @@
 package org.example;
 
 
+import api.rest.app.bsky.actor.ActorHandler;
+import api.rest.app.bsky.actor.defs.profile.ProfileViewDetailed;
 import api.rest.app.bsky.feed.FeedHandler;
 import api.rest.app.bsky.feed.defs.Timeline;
 import api.rest.com.atproto.server.BskySession;
@@ -22,18 +24,18 @@ public class Main {
         //ObjectMapper objectMapper = new ObjectMapper();
         //objectMapper.enable(StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION);
 
-        ObjectMapper objectMapper = JsonMapper.builder().enable(StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION).build();
+        // ObjectMapper objectMapper = JsonMapper.builder().enable(StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION).build();
         ServerHandler serverHandler = ServerHandler.getInstance();
-        // ActorHandler actorHandler = ActorHandler.getInstance();
+        ActorHandler actorHandler = ActorHandler.getInstance();
         FeedHandler feedHandler = FeedHandler.getInstance();
 
         BskySession session = serverHandler.createSession(true, HANDLE, APP_TOKEN, null);
         if(LOGGER.isInfoEnabled())
             LOGGER.info("********** SESSION **********\n{}",session.asJsonString());
 
-        // ProfileViewDetailed profile = actorHandler.getProfile(serverHandler.getSession().getAccessJwt(), HANDLE);
-        // if(LOGGER.isInfoEnabled())
-        //     LOGGER.info(objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(profile));
+        ProfileViewDetailed profile = actorHandler.getProfile(serverHandler.getSession().getAccessJwt(), HANDLE);
+        if(LOGGER.isInfoEnabled())
+            LOGGER.info(profile.asJsonString());
 
         // ActorLikes actorLikes = feedHandler.getActorLikes(serverHandler.getSession().getAccessJwt(), HANDLE, 100, null);
         // if(LOGGER.isInfoEnabled())
@@ -45,7 +47,7 @@ public class Main {
 
         Timeline timeline = feedHandler.getTimeline(serverHandler.getSession().getAccessJwt(), null, 100, null);
         if(LOGGER.isInfoEnabled())
-            LOGGER.info(objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(timeline.asJsonString()));
+            LOGGER.info(timeline.asJsonString());
 
         serverHandler.close();
     }

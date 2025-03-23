@@ -2,14 +2,12 @@ package api.rest.app.bsky.actor.defs.preferences;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.node.ObjectNode;
-
+import api.rest.JsonFluentObject;
 import jakarta.annotation.Nonnull;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 import java.util.List;
@@ -21,22 +19,13 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@EqualsAndHashCode(callSuper = false)
 @Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class Preferences {
+public class Preferences extends JsonFluentObject {
 
     @Nonnull
     @JsonProperty("preferences")
     private List<AbstractPreference> preferenceList;
 
-    public ObjectNode asJsonObject() throws JsonProcessingException {
-        ObjectMapper objectMapper = new ObjectMapper();
-        ObjectNode json = new ObjectMapper().createObjectNode();
-        return json.put("preferences", objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(this));
-    }
-
-    public String asJsonString() throws JsonProcessingException {
-        ObjectMapper objectMapper = new ObjectMapper();
-        return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(this);
-    }
 }

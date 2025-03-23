@@ -27,17 +27,4 @@ public class RecordWithMedia extends AbstractEmbed {
     @JsonProperty("record")
     private Object record;
     
-    
-    @Override
-    public ObjectNode asJsonObject() throws JsonProcessingException {
-        ObjectNode json = new ObjectMapper().createObjectNode();
-        return json.put("media", "media")
-            .put("record", "record");
-    }
-
-    @Override
-    public String asJsonString() throws JsonProcessingException {
-        return asJsonObject().toPrettyString();
-    }
-    
 }

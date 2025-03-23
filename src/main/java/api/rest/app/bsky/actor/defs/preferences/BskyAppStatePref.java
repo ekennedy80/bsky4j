@@ -3,9 +3,6 @@ package api.rest.app.bsky.actor.defs.preferences;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.node.ObjectNode;
 import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
 import lombok.AllArgsConstructor;
@@ -80,16 +77,4 @@ public class BskyAppStatePref extends AbstractPreference {
     @JsonProperty("nuxs")
     private List<Nuxs> nuxs;
 
-    @Override
-    public ObjectNode asJsonObject() throws JsonProcessingException {
-        ObjectMapper objectMapper = new ObjectMapper();
-        ObjectNode json = new ObjectMapper().createObjectNode();
-        return json.put("profile", objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(this));
-    }
-
-    @Override
-    public String asJsonString() throws JsonProcessingException {
-        ObjectMapper objectMapper = new ObjectMapper();
-        return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(this);
-    }
 }

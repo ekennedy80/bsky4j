@@ -5,7 +5,6 @@ import java.io.IOException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.fasterxml.jackson.core.JacksonException;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonNode;
@@ -25,7 +24,7 @@ public class RootDeserializer extends StdDeserializer<Object> {
     private static final Logger LOGGER = LogManager.getLogger(RootDeserializer.class); 
 
     @Override
-    public Object deserialize(JsonParser p, DeserializationContext ctxt) throws IOException, JacksonException {
+    public Object deserialize(JsonParser p, DeserializationContext ctxt) throws IOException {
 
         JsonNode node = p.getCodec().readTree(p);
         String type = node.get("$type").asText();

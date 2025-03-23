@@ -1,11 +1,18 @@
 package api.rest;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.node.ObjectNode;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
 
-public interface JsonFluentObject {
+public abstract class JsonFluentObject {
 
-    public abstract ObjectNode asJsonObject() throws JsonProcessingException;
+    protected static ObjectMapper mapper = new ObjectMapper();
 
-    public abstract String asJsonString()  throws JsonProcessingException;
+    public JsonNode asJsonObject() {
+        return mapper.convertValue(this, JsonNode.class);
+    }
+
+    public String asJsonString() throws JsonProcessingException {
+        return new ObjectMapper().writerWithDefaultPrettyPrinter().writeValueAsString(this);
+    }
 }

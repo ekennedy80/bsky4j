@@ -3,9 +3,6 @@ package api.rest.app.bsky.feed.defs;
 import api.rest.JsonFluentObject;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.node.ObjectNode;
 import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
 import lombok.*;
@@ -17,7 +14,7 @@ import java.util.List;
 @AllArgsConstructor
 @Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class DescribeFeedGenerator implements JsonFluentObject {
+public class DescribeFeedGenerator extends JsonFluentObject {
 
     @Data
     @NoArgsConstructor
@@ -55,18 +52,5 @@ public class DescribeFeedGenerator implements JsonFluentObject {
     @Nullable
     @JsonProperty("links")
     private Links links;
-
-    @Override
-    public ObjectNode asJsonObject() throws JsonProcessingException {
-        ObjectMapper objectMapper = new ObjectMapper();
-        return objectMapper.valueToTree(this);
-//        return json.put("profile", objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(this));
-    }
-
-    @Override
-    public String asJsonString() throws JsonProcessingException {
-        ObjectMapper objectMapper = new ObjectMapper();
-        return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(this);
-    }
 
 }

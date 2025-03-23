@@ -23,18 +23,15 @@ import api.rest.app.bsky.feed.defs.embed.record.RecordWithMediaView;
 import api.rest.app.bsky.feed.defs.embed.video.VideoCaption;
 import api.rest.app.bsky.feed.defs.embed.video.VideoMain;
 import api.rest.app.bsky.feed.defs.embed.video.VideoView;
-import jakarta.annotation.Nonnull;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
-import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 @Data
-@NoArgsConstructor(force = true)
 @AllArgsConstructor
 @ToString(exclude = {"json"})
-@EqualsAndHashCode(exclude = {"json"})
+@EqualsAndHashCode(callSuper = false)
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "$type", visible = true)
 @JsonSubTypes({
@@ -58,16 +55,19 @@ import lombok.ToString;
     @JsonSubTypes.Type(value = VideoMain.class, name = "app.bsky.embed.video"),
     @JsonSubTypes.Type(value = VideoView.class, name = "app.bsky.embed.video#view")
 })
-public abstract class AbstractEmbed implements JsonFluentObject {
+public abstract class AbstractEmbed extends JsonFluentObject {
 
     private static final Logger LOGGER = LogManager.getLogger(AbstractEmbed.class);
     
-    @Nonnull
     @JsonProperty("$type")
     private String type;
         
     @JsonIgnore
     protected final ObjectNode json;
+
+    protected AbstractEmbed() {
+        this.json = new ObjectMapper().createObjectNode();
+    }
         
     protected AbstractEmbed(String type) {
         this.json = new ObjectMapper().createObjectNode();

@@ -2,16 +2,13 @@ package api.rest.app.bsky.actor.defs.preferences;
 
 import api.rest.JsonFluentObject;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.node.ObjectNode;
 import jakarta.annotation.Nonnull;
 import lombok.*;
 
 @Data
 @NoArgsConstructor(force = true)
-@AllArgsConstructor
-@ToString(exclude = {"json"})
-@EqualsAndHashCode(exclude = {"json"})
+@ToString
+@EqualsAndHashCode(callSuper = false)
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = "$type", visible = true)
 @JsonSubTypes({
@@ -28,18 +25,13 @@ import lombok.*;
         @JsonSubTypes.Type(value = SavedFeedsPrefV2.class, name = "app.bsky.actor.defs#savedFeedsPrefV2"),
         @JsonSubTypes.Type(value = ThreadViewPref.class, name = "app.bsky.actor.defs#threadViewPref")}
 )
-public abstract class AbstractPreference implements JsonFluentObject {
+public abstract class AbstractPreference extends JsonFluentObject {
 
     @Nonnull
     @JsonProperty("$type")
     private String type;
 
-    @Nonnull
-    @JsonIgnore
-    protected final ObjectNode json;
-
     protected AbstractPreference(String type) {
-        this.json = new ObjectMapper().createObjectNode();
         this.type = type;
     }
 }

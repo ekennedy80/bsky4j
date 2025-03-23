@@ -5,7 +5,6 @@ import java.io.IOException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import com.fasterxml.jackson.core.JacksonException;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonNode;
@@ -15,52 +14,52 @@ import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 public class RootDeserializer extends StdDeserializer&lt;Object&gt; {
 
     public RootDeserializer() {
-<span class="fc" id="L18">        this(null);</span>
-<span class="fc" id="L19">    }</span>
+<span class="fc" id="L17">        this(null);</span>
+<span class="fc" id="L18">    }</span>
 
     public RootDeserializer(Class&lt;Object&gt; t) {
-<span class="fc" id="L22">        super(t);</span>
-<span class="fc" id="L23">    }</span>
+<span class="fc" id="L21">        super(t);</span>
+<span class="fc" id="L22">    }</span>
 
-<span class="fc" id="L25">    private static final Logger LOGGER = LogManager.getLogger(RootDeserializer.class); </span>
+<span class="fc" id="L24">    private static final Logger LOGGER = LogManager.getLogger(RootDeserializer.class); </span>
 
     @Override
-    public Object deserialize(JsonParser p, DeserializationContext ctxt) throws IOException, JacksonException {
+    public Object deserialize(JsonParser p, DeserializationContext ctxt) throws IOException {
 
-<span class="fc" id="L30">        JsonNode node = p.getCodec().readTree(p);</span>
-<span class="fc" id="L31">        String type = node.get(&quot;$type&quot;).asText();</span>
-<span class="pc bpc" id="L32" title="3 of 4 branches missed.">        switch(type) {</span>
+<span class="fc" id="L29">        JsonNode node = p.getCodec().readTree(p);</span>
+<span class="fc" id="L30">        String type = node.get(&quot;$type&quot;).asText();</span>
+<span class="pc bpc" id="L31" title="3 of 4 branches missed.">        switch(type) {</span>
             case &quot;app.bsky.feed.defs#postView&quot;: 
-<span class="pc bpc" id="L34" title="1 of 2 branches missed.">                if(LOGGER.isDebugEnabled())</span>
-<span class="nc" id="L35">                    LOGGER.info(&quot;Deserialized root to PostView&quot;);</span>
-<span class="fc" id="L36">                return createPostView(p);</span>
+<span class="pc bpc" id="L33" title="1 of 2 branches missed.">                if(LOGGER.isDebugEnabled())</span>
+<span class="nc" id="L34">                    LOGGER.info(&quot;Deserialized root to PostView&quot;);</span>
+<span class="fc" id="L35">                return createPostView(p);</span>
             case &quot;app.bsky.feed.defs#notFoundPost&quot;:
-<span class="nc bnc" id="L38" title="All 2 branches missed.">                if(LOGGER.isDebugEnabled())</span>
-<span class="nc" id="L39">                    LOGGER.info(&quot;Deserialized root to NotFoundPost&quot;);</span>
-<span class="nc" id="L40">                return createNotFoundPost(p);</span>
+<span class="nc bnc" id="L37" title="All 2 branches missed.">                if(LOGGER.isDebugEnabled())</span>
+<span class="nc" id="L38">                    LOGGER.info(&quot;Deserialized root to NotFoundPost&quot;);</span>
+<span class="nc" id="L39">                return createNotFoundPost(p);</span>
             case &quot;app.bsky.feed.defs#blockedPost&quot;:
-<span class="nc bnc" id="L42" title="All 2 branches missed.">                if(LOGGER.isDebugEnabled())</span>
-<span class="nc" id="L43">                    LOGGER.info(&quot;Deserialized root to BlockedPost&quot;);</span>
-<span class="nc" id="L44">                return createBlockedPost(p);</span>
+<span class="nc bnc" id="L41" title="All 2 branches missed.">                if(LOGGER.isDebugEnabled())</span>
+<span class="nc" id="L42">                    LOGGER.info(&quot;Deserialized root to BlockedPost&quot;);</span>
+<span class="nc" id="L43">                return createBlockedPost(p);</span>
             default:
-<span class="nc" id="L46">                return null;</span>
+<span class="nc" id="L45">                return null;</span>
         }
 
     }
 
     private PostView createPostView(JsonParser jsonParser) throws IOException {
-<span class="fc" id="L52">        ObjectMapper objectMapper = new ObjectMapper();</span>
-<span class="fc" id="L53">        return objectMapper.readValue(jsonParser, PostView.class);</span>
+<span class="fc" id="L51">        ObjectMapper objectMapper = new ObjectMapper();</span>
+<span class="fc" id="L52">        return objectMapper.readValue(jsonParser, PostView.class);</span>
     }
 
     private NotFoundPost createNotFoundPost(JsonParser jsonParser) throws IOException {
-<span class="nc" id="L57">        ObjectMapper objectMapper = new ObjectMapper();</span>
-<span class="nc" id="L58">        return objectMapper.readValue(jsonParser, NotFoundPost.class);</span>
+<span class="nc" id="L56">        ObjectMapper objectMapper = new ObjectMapper();</span>
+<span class="nc" id="L57">        return objectMapper.readValue(jsonParser, NotFoundPost.class);</span>
     }
 
     private BlockedPost createBlockedPost(JsonParser jsonParser) throws IOException {
-<span class="nc" id="L62">        ObjectMapper objectMapper = new ObjectMapper();</span>
-<span class="nc" id="L63">        return objectMapper.readValue(jsonParser, BlockedPost.class);</span>
+<span class="nc" id="L61">        ObjectMapper objectMapper = new ObjectMapper();</span>
+<span class="nc" id="L62">        return objectMapper.readValue(jsonParser, BlockedPost.class);</span>
     }
     
 }

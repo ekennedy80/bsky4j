@@ -10,6 +10,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
 
+import api.rest.JsonFluentObject;
 import api.rest.app.bsky.actor.defs.Labels;
 import api.rest.app.bsky.actor.defs.profile.ProfileViewBasic;
 import api.rest.com.atproto.sync.RecordDef;
@@ -17,13 +18,15 @@ import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
 @Data
+@EqualsAndHashCode(callSuper=false)
 @NoArgsConstructor
 @AllArgsConstructor
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class StarterPackViewBasic {
+public class StarterPackViewBasic extends JsonFluentObject{
 
     @Nonnull
     @JsonProperty("uri")

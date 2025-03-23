@@ -4,13 +4,10 @@ import java.net.URI;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.node.ObjectNode;
-
 import api.rest.JsonFluentObject;
 import api.rest.app.bsky.actor.defs.profile.ProfileView;
 
-<span class="nc" id="L13">public class RepostedBy implements JsonFluentObject{</span>
+<span class="nc" id="L10">public class RepostedBy extends JsonFluentObject{</span>
     
     @JsonProperty(&quot;uri&quot;)
     private URI uri;
@@ -24,17 +21,5 @@ import api.rest.app.bsky.actor.defs.profile.ProfileView;
     @JsonProperty(&quot;repostedBy&quot;)
     private List&lt;ProfileView&gt; repostedBy;
 
-    @Override
-    public ObjectNode asJsonObject() throws JsonProcessingException {
-        // TODO Auto-generated method stub
-<span class="nc" id="L30">        throw new UnsupportedOperationException(&quot;Unimplemented method 'asJsonObject'&quot;);</span>
-    }
-
-    @Override
-    public String asJsonString() throws JsonProcessingException {
-        // TODO Auto-generated method stub
-<span class="nc" id="L36">        throw new UnsupportedOperationException(&quot;Unimplemented method 'asJsonString'&quot;);</span>
-    }
-    
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

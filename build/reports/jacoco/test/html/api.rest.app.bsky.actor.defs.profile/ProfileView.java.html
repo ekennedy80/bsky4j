@@ -7,10 +7,6 @@ import java.util.Date;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.node.ObjectNode;
-
 import jakarta.annotation.Nullable;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -34,27 +30,15 @@ public class ProfileView extends ProfileViewBasic {
 
     @JsonSetter(&quot;indexedAt&quot;)
     public void setIndexedAt(String date) throws ParseException {
-<span class="pc bpc" id="L37" title="1 of 2 branches missed.">        if (date != null) {</span>
-<span class="pc bpc" id="L38" title="2 of 6 branches missed.">            if (date.contains(&quot;:&quot;) || date.contains(&quot;T&quot;) || date.contains(&quot;Z&quot;)) {</span>
-<span class="fc" id="L39">                SimpleDateFormat inputFormat = new SimpleDateFormat(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;);</span>
-<span class="fc" id="L40">                this.indexedAt = inputFormat.parse(date);</span>
-<span class="fc" id="L41">            } else {</span>
-<span class="fc" id="L42">                this.indexedAt = new Date(Long.parseLong(date));</span>
+<span class="pc bpc" id="L33" title="1 of 2 branches missed.">        if (date != null) {</span>
+<span class="pc bpc" id="L34" title="2 of 6 branches missed.">            if (date.contains(&quot;:&quot;) || date.contains(&quot;T&quot;) || date.contains(&quot;Z&quot;)) {</span>
+<span class="fc" id="L35">                SimpleDateFormat inputFormat = new SimpleDateFormat(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;);</span>
+<span class="fc" id="L36">                this.indexedAt = inputFormat.parse(date);</span>
+<span class="fc" id="L37">            } else {</span>
+<span class="fc" id="L38">                this.indexedAt = new Date(Long.parseLong(date));</span>
             }
         }
-<span class="fc" id="L45">    }</span>
+<span class="fc" id="L41">    }</span>
 
-    @Override
-    public ObjectNode asJsonObject() throws JsonProcessingException {
-<span class="nc" id="L49">        ObjectMapper objectMapper = new ObjectMapper();</span>
-<span class="nc" id="L50">        ObjectNode json = new ObjectMapper().createObjectNode();</span>
-<span class="nc" id="L51">        return json.put(&quot;profile&quot;, objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(this));</span>
-    }
-
-    @Override
-    public String asJsonString() throws JsonProcessingException {
-<span class="nc" id="L56">        ObjectMapper objectMapper = new ObjectMapper();</span>
-<span class="nc" id="L57">        return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(this);</span>
-    }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

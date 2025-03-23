@@ -2,16 +2,13 @@
 
 import api.rest.JsonFluentObject;
 import com.fasterxml.jackson.annotation.*;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.node.ObjectNode;
 import jakarta.annotation.Nonnull;
 import lombok.*;
 
 @Data
 @NoArgsConstructor(force = true)
-@AllArgsConstructor
-@ToString(exclude = {&quot;json&quot;})
-@EqualsAndHashCode(exclude = {&quot;json&quot;})
+@ToString
+@EqualsAndHashCode(callSuper = false)
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.EXISTING_PROPERTY, property = &quot;$type&quot;, visible = true)
 @JsonSubTypes({
@@ -28,19 +25,14 @@ import lombok.*;
         @JsonSubTypes.Type(value = SavedFeedsPrefV2.class, name = &quot;app.bsky.actor.defs#savedFeedsPrefV2&quot;),
         @JsonSubTypes.Type(value = ThreadViewPref.class, name = &quot;app.bsky.actor.defs#threadViewPref&quot;)}
 )
-public abstract class AbstractPreference implements JsonFluentObject {
+public abstract class AbstractPreference extends JsonFluentObject {
 
     @Nonnull
     @JsonProperty(&quot;$type&quot;)
     private String type;
 
-    @Nonnull
-    @JsonIgnore
-    protected final ObjectNode json;
-
-<span class="nc" id="L41">    protected AbstractPreference(String type) {</span>
-<span class="nc" id="L42">        this.json = new ObjectMapper().createObjectNode();</span>
-<span class="nc" id="L43">        this.type = type;</span>
-<span class="nc" id="L44">    }</span>
+<span class="nc" id="L34">    protected AbstractPreference(String type) {</span>
+<span class="nc" id="L35">        this.type = type;</span>
+<span class="nc" id="L36">    }</span>
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

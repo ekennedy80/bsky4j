@@ -3,9 +3,6 @@
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.node.ObjectNode;
 import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
 import lombok.AllArgsConstructor;
@@ -57,15 +54,15 @@ public class BskyAppStatePref extends AbstractPreference {
 
         @JsonSetter(&quot;expiresAt&quot;)
         public void setExpiresAt(String date) throws ParseException {
-<span class="pc bpc" id="L60" title="3 of 4 branches missed.">            if (date != null &amp;&amp; Long.parseLong(date) &gt; 0) {</span>
-<span class="nc bnc" id="L61" title="All 10 branches missed.">                if (date.contains(&quot;-&quot;) || date.contains(&quot;:&quot;) || date.contains(&quot;T&quot;) || date.contains(&quot;.&quot;) || date.contains(&quot;Z&quot;)) {</span>
-<span class="nc" id="L62">                    SimpleDateFormat inputFormat = new SimpleDateFormat(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;);</span>
-<span class="nc" id="L63">                    this.expiresAt = inputFormat.parse(date);</span>
-<span class="nc" id="L64">                } else {</span>
-<span class="nc" id="L65">                    this.expiresAt = new Date(Long.parseLong(date));</span>
+<span class="pc bpc" id="L57" title="3 of 4 branches missed.">            if (date != null &amp;&amp; Long.parseLong(date) &gt; 0) {</span>
+<span class="nc bnc" id="L58" title="All 10 branches missed.">                if (date.contains(&quot;-&quot;) || date.contains(&quot;:&quot;) || date.contains(&quot;T&quot;) || date.contains(&quot;.&quot;) || date.contains(&quot;Z&quot;)) {</span>
+<span class="nc" id="L59">                    SimpleDateFormat inputFormat = new SimpleDateFormat(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;);</span>
+<span class="nc" id="L60">                    this.expiresAt = inputFormat.parse(date);</span>
+<span class="nc" id="L61">                } else {</span>
+<span class="nc" id="L62">                    this.expiresAt = new Date(Long.parseLong(date));</span>
                 }
             }
-<span class="fc" id="L68">        }</span>
+<span class="fc" id="L65">        }</span>
     }
 
     @Nullable
@@ -80,17 +77,5 @@ public class BskyAppStatePref extends AbstractPreference {
     @JsonProperty(&quot;nuxs&quot;)
     private List&lt;Nuxs&gt; nuxs;
 
-    @Override
-    public ObjectNode asJsonObject() throws JsonProcessingException {
-<span class="nc" id="L85">        ObjectMapper objectMapper = new ObjectMapper();</span>
-<span class="nc" id="L86">        ObjectNode json = new ObjectMapper().createObjectNode();</span>
-<span class="nc" id="L87">        return json.put(&quot;profile&quot;, objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(this));</span>
-    }
-
-    @Override
-    public String asJsonString() throws JsonProcessingException {
-<span class="nc" id="L92">        ObjectMapper objectMapper = new ObjectMapper();</span>
-<span class="nc" id="L93">        return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(this);</span>
-    }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

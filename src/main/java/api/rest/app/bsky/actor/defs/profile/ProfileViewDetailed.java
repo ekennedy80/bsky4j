@@ -9,10 +9,6 @@ import java.util.Date;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.node.ObjectNode;
-
 import api.rest.app.bsky.graph.StarterPackViewBasic;
 import api.rest.com.atproto.repo.StrongRef;
 import jakarta.annotation.Nullable;
@@ -73,21 +69,6 @@ public class ProfileViewDetailed extends ProfileViewBasic  {
                 this.indexedAt = new Date(Long.parseLong(date));
             }
         }
-    }
-
-
-
-    @Override
-    public ObjectNode asJsonObject() throws JsonProcessingException {
-        ObjectMapper objectMapper = new ObjectMapper();
-        ObjectNode json = new ObjectMapper().createObjectNode();
-        return json.put("profile", objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(this));
-    }
-
-    @Override
-    public String asJsonString() throws JsonProcessingException {
-        ObjectMapper objectMapper = new ObjectMapper();
-        return objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(this);
     }
 
 }

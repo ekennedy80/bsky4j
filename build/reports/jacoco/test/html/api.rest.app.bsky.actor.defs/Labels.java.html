@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
+import api.rest.JsonFluentObject;
 import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
 import lombok.AllArgsConstructor;
@@ -20,7 +21,7 @@ import java.util.Date;
 @Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class Labels {
+public class Labels extends JsonFluentObject {
 
     @Nullable
     @JsonProperty(&quot;ver&quot;)
@@ -60,26 +61,27 @@ public class Labels {
 
     @JsonSetter(&quot;cts&quot;)
     public void setCts(String date) throws ParseException {
-<span class="pc bpc" id="L63" title="1 of 2 branches missed.">        if (date != null) {</span>
-<span class="pc bpc" id="L64" title="2 of 6 branches missed.">            if (date.contains(&quot;:&quot;) || date.contains(&quot;T&quot;) || date.contains(&quot;Z&quot;)) {</span>
-<span class="fc" id="L65">                SimpleDateFormat inputFormat = new SimpleDateFormat(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;);</span>
-<span class="fc" id="L66">                this.cts = inputFormat.parse(date);</span>
-<span class="fc" id="L67">            } else {</span>
-<span class="fc" id="L68">                this.cts = new Date(Long.parseLong(date));</span>
+<span class="pc bpc" id="L64" title="1 of 2 branches missed.">        if (date != null) {</span>
+<span class="pc bpc" id="L65" title="2 of 6 branches missed.">            if (date.contains(&quot;:&quot;) || date.contains(&quot;T&quot;) || date.contains(&quot;Z&quot;)) {</span>
+<span class="fc" id="L66">                SimpleDateFormat inputFormat = new SimpleDateFormat(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;);</span>
+<span class="fc" id="L67">                this.cts = inputFormat.parse(date);</span>
+<span class="fc" id="L68">            } else {</span>
+<span class="fc" id="L69">                this.cts = new Date(Long.parseLong(date));</span>
             }
         }
-<span class="fc" id="L71">    }</span>
+<span class="fc" id="L72">    }</span>
 
     @JsonSetter(&quot;exp&quot;)
     public void setExp(String date) throws ParseException {
-<span class="pc bpc" id="L75" title="1 of 2 branches missed.">        if (date != null) {</span>
-<span class="pc bpc" id="L76" title="5 of 6 branches missed.">            if (date.contains(&quot;:&quot;) || date.contains(&quot;T&quot;) || date.contains(&quot;Z&quot;)) {</span>
-<span class="fc" id="L77">                SimpleDateFormat inputFormat = new SimpleDateFormat(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;);</span>
-<span class="fc" id="L78">                this.exp = inputFormat.parse(date);</span>
-<span class="fc" id="L79">            } else {</span>
-<span class="nc" id="L80">                this.exp = new Date(Long.parseLong(date));</span>
+<span class="pc bpc" id="L76" title="1 of 2 branches missed.">        if (date != null) {</span>
+<span class="pc bpc" id="L77" title="5 of 6 branches missed.">            if (date.contains(&quot;:&quot;) || date.contains(&quot;T&quot;) || date.contains(&quot;Z&quot;)) {</span>
+<span class="fc" id="L78">                SimpleDateFormat inputFormat = new SimpleDateFormat(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;);</span>
+<span class="fc" id="L79">                this.exp = inputFormat.parse(date);</span>
+<span class="fc" id="L80">            } else {</span>
+<span class="nc" id="L81">                this.exp = new Date(Long.parseLong(date));</span>
             }
         }
-<span class="fc" id="L83">    }</span>
+<span class="fc" id="L84">    }</span>
+
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

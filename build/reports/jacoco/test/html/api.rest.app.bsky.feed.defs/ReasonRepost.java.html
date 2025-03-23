@@ -8,7 +8,7 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
-
+import api.rest.JsonFluentObject;
 import api.rest.app.bsky.actor.defs.profile.ProfileViewBasic;
 import jakarta.annotation.Nullable;
 import lombok.AllArgsConstructor;
@@ -20,7 +20,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
 @JsonIgnoreProperties(ignoreUnknown = true)
-public class ReasonRepost {
+public class ReasonRepost extends JsonFluentObject {
 
     @JsonProperty(&quot;by&quot;)
     private ProfileViewBasic by;

@@ -3,9 +3,6 @@
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.node.ObjectNode;
 import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
 import lombok.*;
@@ -27,19 +24,19 @@ public class MutedWordsPref extends AbstractPreference {
     @AllArgsConstructor
     public class Items {
 
-<span class="nc" id="L30">        public enum ActorTarget {</span>
-<span class="nc" id="L31">            ALL(&quot;all&quot;),</span>
-<span class="nc" id="L32">            EXCLUDE_FOLLOWING(&quot;exclude-following&quot;);</span>
+<span class="nc" id="L27">        public enum ActorTarget {</span>
+<span class="nc" id="L28">            ALL(&quot;all&quot;),</span>
+<span class="nc" id="L29">            EXCLUDE_FOLLOWING(&quot;exclude-following&quot;);</span>
 
             private final String value;
 
-<span class="nc" id="L36">            ActorTarget(String value) {</span>
-<span class="nc" id="L37">                this.value = value;</span>
-<span class="nc" id="L38">            }</span>
+<span class="nc" id="L33">            ActorTarget(String value) {</span>
+<span class="nc" id="L34">                this.value = value;</span>
+<span class="nc" id="L35">            }</span>
 
             @Override
             public String toString() {
-<span class="nc" id="L42">                return this.value;</span>
+<span class="nc" id="L39">                return this.value;</span>
             }
         }
 
@@ -65,31 +62,20 @@ public class MutedWordsPref extends AbstractPreference {
 
         @JsonSetter(&quot;expiresAt&quot;)
         public void setExpiresAt(String date) throws ParseException {
-<span class="nc bnc" id="L68" title="All 4 branches missed.">            if (date != null &amp;&amp; Long.parseLong(date) &gt; 0) {</span>
-<span class="nc bnc" id="L69" title="All 10 branches missed.">                if (date.contains(&quot;-&quot;) || date.contains(&quot;:&quot;) || date.contains(&quot;T&quot;) || date.contains(&quot;.&quot;) || date.contains(&quot;Z&quot;)) {</span>
-<span class="nc" id="L70">                    SimpleDateFormat inputFormat = new SimpleDateFormat(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;);</span>
-<span class="nc" id="L71">                    this.expiresAt = inputFormat.parse(date);</span>
-<span class="nc" id="L72">                } else {</span>
-<span class="nc" id="L73">                    this.expiresAt = new Date(Long.parseLong(date));</span>
+<span class="nc bnc" id="L65" title="All 4 branches missed.">            if (date != null &amp;&amp; Long.parseLong(date) &gt; 0) {</span>
+<span class="nc bnc" id="L66" title="All 10 branches missed.">                if (date.contains(&quot;-&quot;) || date.contains(&quot;:&quot;) || date.contains(&quot;T&quot;) || date.contains(&quot;.&quot;) || date.contains(&quot;Z&quot;)) {</span>
+<span class="nc" id="L67">                    SimpleDateFormat inputFormat = new SimpleDateFormat(&quot;yyyy-MM-dd'T'HH:mm:ss.SSS'Z'&quot;);</span>
+<span class="nc" id="L68">                    this.expiresAt = inputFormat.parse(date);</span>
+<span class="nc" id="L69">                } else {</span>
+<span class="nc" id="L70">                    this.expiresAt = new Date(Long.parseLong(date));</span>
                 }
             }
-<span class="nc" id="L76">        }</span>
+<span class="nc" id="L73">        }</span>
     }
 
     @Nonnull
     @JsonProperty(&quot;items&quot;)
     private List&lt;Items&gt; items;
 
-    @Override
-    public ObjectNode asJsonObject() throws JsonProcessingException {
-<span class="nc" id="L85">        ObjectMapper objectMapper = new ObjectMapper();</span>
-<span class="nc" id="L86">        return json.put(&quot;items&quot;, objectMapper.writeValueAsString(this.items));</span>
-    }
-
-    @Override
-    public String asJsonString() throws JsonProcessingException {
-<span class="nc" id="L91">        ObjectMapper objectMapper = new ObjectMapper();</span>
-<span class="nc" id="L92">        return json.put(&quot;items&quot;, objectMapper.writeValueAsString(this.items)).toString();</span>
-    }
 }
 </pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.12.202403310830</span></div></body></html>

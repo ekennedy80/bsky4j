@@ -24,16 +24,5 @@ public class RecordWithMediaView extends AbstractEmbed {
     
     @JsonProperty("obj")
     private JsonFluentObject object;
-        
-    @Override
-    public ObjectNode asJsonObject() throws JsonProcessingException {
-        ObjectNode json = new ObjectMapper().createObjectNode();
-        return json.put("obj", object.asJsonString());
-    }
-
-    @Override
-    public String asJsonString() throws JsonProcessingException {
-        return asJsonObject().toPrettyString();
-    }
     
 }
