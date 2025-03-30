@@ -4,13 +4,10 @@ package org.example;
 import api.rest.app.bsky.actor.ActorHandler;
 import api.rest.app.bsky.actor.defs.profile.ProfileViewDetailed;
 import api.rest.app.bsky.feed.FeedHandler;
-import api.rest.app.bsky.feed.defs.Timeline;
+import api.rest.app.bsky.feed.defs.SearchPosts;
 import api.rest.com.atproto.server.BskySession;
 import api.rest.com.atproto.server.ServerHandler;
 import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.core.StreamReadFeature;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.json.JsonMapper;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -21,10 +18,7 @@ public class Main {
     private static final Logger LOGGER = LogManager.getLogger(Main.class);
 
     public static void main(String[] args) throws JsonProcessingException {
-        //ObjectMapper objectMapper = new ObjectMapper();
-        //objectMapper.enable(StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION);
-
-        // ObjectMapper objectMapper = JsonMapper.builder().enable(StreamReadFeature.INCLUDE_SOURCE_IN_LOCATION).build();
+        
         ServerHandler serverHandler = ServerHandler.getInstance();
         ActorHandler actorHandler = ActorHandler.getInstance();
         FeedHandler feedHandler = FeedHandler.getInstance();
@@ -45,9 +39,17 @@ public class Main {
         // if(LOGGER.isInfoEnabled())
         //     LOGGER.info(objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(suggestedFeeds));
 
-        Timeline timeline = feedHandler.getTimeline(serverHandler.getSession().getAccessJwt(), null, 100, null);
+        // Timeline timeline = feedHandler.getTimeline(serverHandler.getSession().getAccessJwt(), null, 100, null);
+        // if(LOGGER.isInfoEnabled())
+        //     LOGGER.info(timeline.asJsonString());
+
+        
+        SearchPosts searchPosts = feedHandler.searchPosts(serverHandler.getSession().getAccessJwt(), "good morning from VB", 
+                            "latest", "2024-11-10", "2025-03-23", null, null, null, 
+                            null, null, null, null, null);
+        
         if(LOGGER.isInfoEnabled())
-            LOGGER.info(timeline.asJsonString());
+            LOGGER.info(searchPosts.asJsonString());
 
         serverHandler.close();
     }

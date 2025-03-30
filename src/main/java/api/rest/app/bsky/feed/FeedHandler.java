@@ -9,6 +9,8 @@ import api.rest.app.bsky.feed.defs.FeedGenerator;
 import api.rest.app.bsky.feed.defs.FeedGenerators;
 import api.rest.app.bsky.feed.defs.FeedSkeleton;
 import api.rest.app.bsky.feed.defs.Feeds;
+import api.rest.app.bsky.feed.defs.Interaction;
+import api.rest.app.bsky.feed.defs.Interactions;
 import api.rest.app.bsky.feed.defs.Likes;
 import api.rest.app.bsky.feed.defs.PostThread;
 import api.rest.app.bsky.feed.defs.Posts;
@@ -19,16 +21,20 @@ import api.rest.app.bsky.feed.defs.SuggestedFeeds;
 import api.rest.app.bsky.feed.defs.Timeline;
 import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
+import jakarta.ws.rs.client.Entity;
+import jakarta.ws.rs.client.WebTarget;
 import jakarta.ws.rs.core.MediaType;
 
 import static api.rest.GlobalVars.*;
 
 import java.net.URI;
 import java.util.Collection;
+import java.util.List;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
+import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
@@ -373,7 +379,7 @@ public class FeedHandler extends AbstractClient {
      * @param until    Filter results for posts before the indicated datetime (not
      *                 inclusive). Expected to use 'sortAt' timestamp, which may not
      *                 match 'createdAt'. Can be a datetime, or just an ISO date
-     *                 (YYY-MM-DD).
+     *                 (YYYY-MM-DD).
      * @param mentions Filter to posts which mention the given account. Handles are
      *                 resolved to DID before query-time. Only matches rich-text
      *                 facet mentions.
@@ -401,29 +407,29 @@ public class FeedHandler extends AbstractClient {
             @Nullable String since, @Nullable String until, @Nullable URI mentions, @Nullable URI author,
             @Nullable String lang, @Nullable String domain, @Nullable URI url, @Nullable String[] tag,
             @Nullable Integer limit, @Nullable String cursor) {
-        ArrayNode jsonArray = new ObjectMapper().createArrayNode();
-        for (String str : tag) {
-            jsonArray.add(str);
-        }
-        return client.target(BSKY_URL + SEARCH_POSTS)
-                .queryParam("q", q)
-                .queryParam("sort", sort)
-                .queryParam("since", since)
-                .queryParam("until", until)
-                .queryParam("mentions", mentions)
-                .queryParam("author", author)
-                .queryParam("lang", lang)
-                .queryParam("domain", domain)
-                .queryParam("url", url)
-                .queryParam("tag", jsonArray)
-                .queryParam("limit", limit)
-                .queryParam("cursor", cursor)
+
+        return client.target(BSKY_URL + SEARCH_POSTS).queryParam("q", q)
+                // .queryParam("sort", sort)
+                // .queryParam("since", since)
+                // .queryParam("until", until)
+                // .queryParam("mentions", mentions)
+                // .queryParam("author", author)
+                // .queryParam("lang", lang)
+                // .queryParam("domain", domain)
+                // .queryParam("url", url)
+                // .queryParam("tag", jsonArray.toString())
+                // .queryParam("limit", limit)
+                // .queryParam("cursor", cursor)
                 .request(MediaType.APPLICATION_JSON)
                 .header(AUTHORIZATION, BEARER + jwtToken)
                 .get(SearchPosts.class);
     }
 
-    public void sendInteractions() {
-
+    public void sendInteractions(@Nonnull String jwtToken, @Nonnull Interactions interactions)
+            throws JsonProcessingException {
+        client.target(BSKY_URL + SEND_INTERACTIONS)
+                .request(MediaType.APPLICATION_JSON)
+                .header(AUTHORIZATION, BEARER + jwtToken)
+                .post(Entity.entity(interactions.asJsonString(), MediaType.APPLICATION_JSON));
     }
 }

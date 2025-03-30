@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="api.rest.app.bsky.actor.defs.profile.ProfileTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-03-23T22:19:48" hostname="viktor-vaughn" time="0.04">
+<testsuite name="api.rest.app.bsky.actor.defs.profile.ProfileTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-03-30T00:20:47" hostname="viktor-vaughn" time="0.042">
   <properties/>
-  <testcase name="profileUnmarshallingTest()" classname="api.rest.app.bsky.actor.defs.profile.ProfileTest" time="0.04"/>
+  <testcase name="profileUnmarshallingTest()" classname="api.rest.app.bsky.actor.defs.profile.ProfileTest" time="0.042"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>

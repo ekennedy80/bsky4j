@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="api.rest.app.bsky.feed.model.TimelineTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-03-23T22:19:49" hostname="viktor-vaughn" time="0.145">
+<testsuite name="api.rest.app.bsky.feed.model.TimelineTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-03-30T00:20:48" hostname="viktor-vaughn" time="0.218">
   <properties/>
-  <testcase name="testTimelineUnmarshalling1()" classname="api.rest.app.bsky.feed.model.TimelineTest" time="0.145"/>
+  <testcase name="testTimelineUnmarshalling1()" classname="api.rest.app.bsky.feed.model.TimelineTest" time="0.218"/>
   <system-out><![CDATA[{
   "cursor" : "2025-03-05T02:56:46.576Z",
   "feed" : [ {

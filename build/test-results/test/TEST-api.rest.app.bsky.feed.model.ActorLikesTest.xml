@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="api.rest.app.bsky.feed.model.ActorLikesTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-03-23T22:19:48" hostname="viktor-vaughn" time="0.594">
+<testsuite name="api.rest.app.bsky.feed.model.ActorLikesTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2025-03-30T00:20:47" hostname="viktor-vaughn" time="0.673">
   <properties/>
-  <testcase name="testActorLikesUnmarshalling1()" classname="api.rest.app.bsky.feed.model.ActorLikesTest" time="0.594"/>
+  <testcase name="testActorLikesUnmarshalling1()" classname="api.rest.app.bsky.feed.model.ActorLikesTest" time="0.673"/>
   <system-out><![CDATA[{
   "cursor" : "3lhey6spugp2v",
   "feed" : [ {
