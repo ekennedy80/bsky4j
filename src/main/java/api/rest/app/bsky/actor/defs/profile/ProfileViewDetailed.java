@@ -9,8 +9,9 @@ import java.util.Date;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonSetter;
-import api.rest.app.bsky.graph.StarterPackViewBasic;
+
 import api.rest.com.atproto.repo.StrongRef;
+import api.rest.graph.defs.StarterPackViewBasic;
 import jakarta.annotation.Nullable;
 import lombok.AllArgsConstructor;
 import lombok.Data;

@@ -7,6 +7,10 @@ import api.rest.app.bsky.feed.FeedHandler;
 import api.rest.app.bsky.feed.defs.SearchPosts;
 import api.rest.com.atproto.server.BskySession;
 import api.rest.com.atproto.server.ServerHandler;
+import api.rest.graph.GraphHandler;
+import api.rest.graph.defs.ActorStarterPacks;
+import api.rest.graph.defs.Follows;
+
 import com.fasterxml.jackson.core.JsonProcessingException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -21,7 +25,8 @@ public class Main {
         
         ServerHandler serverHandler = ServerHandler.getInstance();
         ActorHandler actorHandler = ActorHandler.getInstance();
-        FeedHandler feedHandler = FeedHandler.getInstance();
+        // FeedHandler feedHandler = FeedHandler.getInstance();
+        GraphHandler graphHandler = GraphHandler.getInstance();
 
         BskySession session = serverHandler.createSession(true, HANDLE, APP_TOKEN, null);
         if(LOGGER.isInfoEnabled())
@@ -43,13 +48,15 @@ public class Main {
         // if(LOGGER.isInfoEnabled())
         //     LOGGER.info(timeline.asJsonString());
 
-        
-        SearchPosts searchPosts = feedHandler.searchPosts(serverHandler.getSession().getAccessJwt(), "good morning from VB", 
-                            "latest", "2024-11-10", "2025-03-23", null, null, null, 
-                            null, null, null, null, null);
-        
+        // SearchPosts searchPosts = feedHandler.searchPosts(serverHandler.getSession().getAccessJwt(), "good morning from VB", 
+        //                     "latest", "2024-11-10", "2025-03-23", null, null, null, 
+        // //                     null, null, null, null, null);
+        // if(LOGGER.isInfoEnabled())
+        //     LOGGER.info(searchPosts.asJsonString());
+
+        Follows follows = graphHandler.getFollows(serverHandler.getSession().getAccessJwt(), HANDLE, 50, null);
         if(LOGGER.isInfoEnabled())
-            LOGGER.info(searchPosts.asJsonString());
+            LOGGER.info(follows.asJsonString());
 
         serverHandler.close();
     }

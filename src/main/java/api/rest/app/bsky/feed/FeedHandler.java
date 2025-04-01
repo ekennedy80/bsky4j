@@ -9,7 +9,6 @@ import api.rest.app.bsky.feed.defs.FeedGenerator;
 import api.rest.app.bsky.feed.defs.FeedGenerators;
 import api.rest.app.bsky.feed.defs.FeedSkeleton;
 import api.rest.app.bsky.feed.defs.Feeds;
-import api.rest.app.bsky.feed.defs.Interaction;
 import api.rest.app.bsky.feed.defs.Interactions;
 import api.rest.app.bsky.feed.defs.Likes;
 import api.rest.app.bsky.feed.defs.PostThread;
@@ -22,15 +21,12 @@ import api.rest.app.bsky.feed.defs.Timeline;
 import jakarta.annotation.Nonnull;
 import jakarta.annotation.Nullable;
 import jakarta.ws.rs.client.Entity;
-import jakarta.ws.rs.client.WebTarget;
 import jakarta.ws.rs.core.MediaType;
 
 import static api.rest.GlobalVars.*;
 
 import java.net.URI;
 import java.util.Collection;
-import java.util.List;
-
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

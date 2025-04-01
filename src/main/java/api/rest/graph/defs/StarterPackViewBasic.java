@@ -1,4 +1,4 @@
-package api.rest.app.bsky.graph;
+package api.rest.graph.defs;
 
 import java.net.URI;
 import java.text.ParseException;

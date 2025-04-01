@@ -1,12 +1,11 @@
-package api.rest.app.bsky.graph;
+package api.rest.graph.defs;
 
-import java.net.URI;
+import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import api.rest.JsonFluentObject;
-import jakarta.annotation.Nullable;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
@@ -15,13 +14,12 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Builder
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class ListViewerState extends JsonFluentObject {
+public class ActorStarterPacks extends JsonFluentObject {
 
-    @Nullable
-    @JsonProperty("muted")
-    private Boolean muted;
+    @JsonProperty("cursor")
+    private String cursor;
 
-    @Nullable
-    @JsonProperty("blocked")
-    private URI blocked;
+    @JsonProperty("starterPacks")
+    private List<StarterPackViewBasic> starterPacks;
+    
 }
